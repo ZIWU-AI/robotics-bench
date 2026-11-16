@@ -124,6 +124,11 @@ harbor_run:
   # Modal requires MODAL_TOKEN_ID and MODAL_TOKEN_SECRET repo secrets.
   env: docker
 
+  # Where /run and /cheat docker trials run: github (GitHub-hosted ubuntu-latest)
+  # or self (ZIWU self-hosted pool, labels self-hosted + ziwu-cpu). Override per
+  # comment with runner=self / runner=github. See docs/COMMANDS.md.
+  runner: github
+
   # Environment backend for /validate (oracle and nop).
   # Defaults to docker (fast smoke test on the GH runner). Set to `modal` for
   # repos whose tasks routinely exceed the GH runner's 4 CPUs / ~16 GB RAM.

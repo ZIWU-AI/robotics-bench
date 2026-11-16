@@ -151,6 +151,8 @@ jobs:
       hub_visibility: ${{ steps.parse.outputs.hub_visibility }}
       hub_share_org: ${{ steps.parse.outputs.hub_share_org }}
       hub_share_user: ${{ steps.parse.outputs.hub_share_user }}
+      runner: ${{ steps.parse.outputs.runner }}
+      runs_on: ${{ steps.parse.outputs.runs_on }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -188,6 +190,7 @@ jobs:
             ANALYZE_AGENT=$(yq '.analyze.agent // .harbor_run.analyze.agent // "claude-code"' "$CONFIG_FILE")
             ANALYZE_PORTKEY_KEY=$(yq '.analyze.portkey_key // .harbor_run.analyze.portkey_key // "PORTKEY_API_KEY"' "$CONFIG_FILE")
             ENV_DEFAULT=$(yq '.harbor_run.env // "docker"' "$CONFIG_FILE")
+            RUNNER_DEFAULT=$(yq '.harbor_run.runner // "github"' "$CONFIG_FILE")
             HUB_UPLOAD=$(yq '.harbor_hub.upload // true' "$CONFIG_FILE")
             HUB_VISIBILITY=$(yq '.harbor_hub.visibility // "public"' "$CONFIG_FILE")
             HUB_SHARE_ORG=$(yq -r '.harbor_hub.share_orgs // [] | join(",")' "$CONFIG_FILE")
@@ -206,6 +209,7 @@ jobs:
             ANALYZE_MODEL="sonnet"
             ANALYZE_LLM_PROVIDER="direct"
             ENV_DEFAULT="docker"
+            RUNNER_DEFAULT="github"
             HUB_UPLOAD=true
             HUB_VISIBILITY=public
             HUB_SHARE_ORG=""
@@ -229,6 +233,20 @@ jobs:
           # `ValueError: Model name is required` before reaching the agent --
           # which reads as a gateway or task failure in the PR comment, since the
           # model column simply renders empty.
+          # runner=self|github: where the docker trials run. self = the ZIWU
+          # self-hosted pool (labels self-hosted + ziwu-cpu; rootless docker, no
+          # 2-CPU/7-GB cap); github = GitHub-hosted ubuntu-latest. The default is
+          # harbor_run.runner in .github/llm-config.yml.
+          RUNNER="$RUNNER_DEFAULT"
+          if [[ "$COMMENT_BODY" =~ (^|[[:space:]])runner=([A-Za-z-]+) ]]; then
+            RUNNER="${BASH_REMATCH[2]}"
+          fi
+          case "$RUNNER" in
+            self|selfhost|self-hosted|ziwu) RUNNER=self; RUNS_ON='["self-hosted","ziwu-cpu"]' ;;
+            github|hosted|gh) RUNNER=github; RUNS_ON='"ubuntu-latest"' ;;
+            *) echo "::error::runner=$RUNNER is not valid; use runner=self or runner=github"; exit 1 ;;
+          esac
+
           if [[ "$COMMENT_BODY" =~ agents=([^[:space:]]+) ]]; then
             AGENT_LIST="${BASH_REMATCH[1]}"
             ORIG_AGENTS="$ALL_AGENTS"
@@ -286,6 +304,8 @@ jobs:
           echo "analyze_agent=$ANALYZE_AGENT" >> $GITHUB_OUTPUT
           echo "analyze_portkey_key=$ANALYZE_PORTKEY_KEY" >> $GITHUB_OUTPUT
           echo "env=$ENV" >> $GITHUB_OUTPUT
+          echo "runner=$RUNNER" >> $GITHUB_OUTPUT
+          echo "runs_on=$RUNS_ON" >> $GITHUB_OUTPUT
           echo "hub_upload=$HUB_UPLOAD" >> $GITHUB_OUTPUT
           echo "hub_visibility=$HUB_VISIBILITY" >> $GITHUB_OUTPUT
           echo "hub_share_org=$HUB_SHARE_ORG" >> $GITHUB_OUTPUT
@@ -296,6 +316,7 @@ jobs:
           echo "  Analyze: $ANALYZE"
           echo "  Analyze model: $ANALYZE_MODEL"
           echo "  Environment: $ENV"
+          echo "  Runner: $RUNNER ($RUNS_ON)"
           echo "  Harbor Hub upload: $HUB_UPLOAD ($HUB_VISIBILITY)"
 
   detect-tasks:
@@ -465,7 +486,7 @@ jobs:
   run-cheat-trials-matrix:
     needs: [check-trigger, parse-config, detect-tasks]
     if: needs.check-trigger.outputs.should_run == 'true' && needs.parse-config.outputs.env == 'docker'
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(needs.parse-config.outputs.runs_on) }}
     strategy:
       fail-fast: false
       matrix:
