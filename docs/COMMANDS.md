@@ -40,7 +40,9 @@ On a CPU-tier pull request, `/run` and `/cheat` take `runner=`:
 
 - `runner=github`: GitHub-hosted `ubuntu-latest`. This is the default (`harbor_run.runner` in `.github/llm-config.yml`).
 - `runner=self`: the ZIWU self-hosted pool (runner labels `self-hosted`, `ziwu-cpu`). Each runner runs one trial at a
-  time inside rootless Docker, and refuses a job when its host has less than 50 GB of free disk. `selfhost`,
+  time inside rootless Docker, and refuses a job when its host has less than 50 GB of free disk. Its uplink is slower
+  than GitHub's, so the agent-install limit is widened 4x there (`--agent-setup-timeout-multiplier 4`); the agent's
+  own time budget is unchanged. `selfhost`,
   `self-hosted` and `ziwu` are accepted as aliases.
 
 Only the trial jobs move; parsing, analysis and the result comment stay on GitHub-hosted runners. Example:
