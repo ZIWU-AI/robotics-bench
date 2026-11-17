@@ -697,6 +697,18 @@ jobs:
           # keeps out of instruction.md.
           echo "Appended hints ($HINT_SPEC) to $TASK_PATH/instruction.md ($(printf '%s' "$RENDERED" | wc -l | tr -d ' ') lines)"
 
+      # runner=self only: bake the pinned agent into the task image so Harbor
+      # skips its per-trial download (see .github/scripts/selfhost_prestage_agent.sh).
+      - name: Pre-stage agent in task image (self-hosted)
+        if: needs.parse-config.outputs.env == 'docker' && needs.parse-config.outputs.runner == 'self'
+        env:
+          TASK_PATH: ${{ matrix.task }}
+          AGENT: ${{ matrix.agent_config.agent }}
+          AGENT_VERSION: ${{ matrix.agent_config.kwargs.version }}
+        run: |
+          bash .github/scripts/selfhost_prestage_agent.sh "$TASK_PATH" "$AGENT" "$AGENT_VERSION" \
+            || echo "::warning::agent pre-stage failed; Harbor installs the agent at trial start"
+
       - name: Build Docker environment
         if: needs.parse-config.outputs.env == 'docker'
         env:

@@ -42,8 +42,11 @@ On a CPU-tier pull request, `/run` and `/cheat` take `runner=`:
 - `runner=self`: the ZIWU self-hosted pool (runner labels `self-hosted`, `ziwu-cpu`). Each runner runs one trial at a
   time inside rootless Docker, and refuses a job when its host has less than 50 GB of free disk. Its uplink is slower
   than GitHub's, so the agent-install limit is widened 4x there (`--agent-setup-timeout-multiplier 4`); the agent's
-  own time budget is unchanged. `selfhost`,
-  `self-hosted` and `ziwu` are accepted as aliases.
+  own time budget is unchanged. For `claude-code` with a pinned `version`, the runner also bakes that version into
+  the task image before the build, in the same files Harbor's own install creates (nodejs, npm and the other
+  packages Harbor needs, then the binary under the agent user's `~/.local`). Harbor's version check then passes and
+  it skips the download. Other agents, and anything the pre-stage cannot handle, install as on GitHub-hosted runners.
+  `selfhost`, `self-hosted` and `ziwu` are accepted as aliases.
 
 Only the trial jobs move; parsing, analysis and the result comment stay on GitHub-hosted runners. Example:
 `/run trials=3 runner=self`. GPU-tier pull requests run on the GPU pool and ignore `runner=`.
