@@ -3,7 +3,9 @@
 
   GET  /v1/info           api, backend, budgets, budget left, ops, finished, plus what the case adds (describe())
   POST /v1/<op>   {...}   the case's own operations, declared with @op (actions, observations, queries, ...)
-  POST /v1/finish {}      end the episode: recorded and sealed; nothing is accepted afterwards
+  POST /v1/finish {}      end the episode: recorded and sealed; nothing is accepted afterwards. The root collector
+                          seals an episode the agent left open with {"by": "collector"}; that finish is recorded as
+                          such, and the verifier scores it 0 (calling finish is submitting)
 
 Every request needs "Authorization: Bearer <token>". Answers are JSON objects:
   200 {"ok": true, ..., "left": {...}}                  done
@@ -117,13 +119,14 @@ class Episode:
         return dict(self.describe(), ok=True, api=self.API, backend=self.BACKEND, budgets=self.budgets,
                     left=self.left(), ops=sorted(self.ops) + ["finish"], finished=self.finished)
 
-    def finish(self):
-        """Always possible once (also after the wall budget ran out), so the collector can seal any episode."""
+    def finish(self, by_collector=False):
+        """Always possible once (also after the wall budget ran out), so the collector can seal any episode. The
+        recorded request is {} when the agent finished and {"by": "collector"} when the collector did."""
         if self.finished:
             raise Refused("the episode is already finished")
         if self.started is None:
             self.started = time.monotonic()
-        self.rec.add("finish", {}, {"ok": True}, self.snapshot())
+        self.rec.add("finish", {"by": "collector"} if by_collector else {}, {"ok": True}, self.snapshot())
         self.finished = True
         seal = self.rec.seal({"used": self.used})
         try:
@@ -143,7 +146,7 @@ class Episode:
                 return 200, self.info()
             if name == "finish":
                 try:
-                    return 200, self.finish()
+                    return 200, self.finish(by_collector=body.get("by") == "collector")
                 except Refused as e:
                     return 200, {"ok": False, "refused": e.reasons, "left": self.left()}
             spec = self.ops[name]
