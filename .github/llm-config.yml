@@ -62,6 +62,8 @@ gateways:
     # Do not use https://ark.cn-beijing.volces.com/api/v3: it bills outside the plan.
     base_url: https://ark.cn-beijing.volces.com/api/coding
     api_key_secret: ARK_API_KEY
+    # An agent entry may name another key with `ark_key:` (the Seed plan uses
+    # ARK_SEED_API_KEY); trial jobs only, analysis and review keep ARK_API_KEY.
     surfaces: [anthropic, openai]
   ppapi:
     base_url: https://app-us.ppapi.ai/v1
@@ -209,6 +211,20 @@ harbor_run:
       #   llm_provider: kimi
       model: kimi-k3.1-pro
       llm_provider: ark
+      run: false
+      cheat: false
+      kwargs:
+        version: 2.1.318
+        reasoning_effort: high
+    - agent: claude-code
+      # 2026-11-18: Doubao Seed 2.1 Pro on the Volcengine Ark Seed plan, a
+      # separate subscription from the Coding Plan key above, so it names its own
+      # secret (`ark_key`, the ark counterpart of `portkey_key`). Same Anthropic
+      # surface at the Coding host; the service answers as doubao-seed-2-1-pro.
+      # Opt-in: `/run agents=claude-code:doubao-seed-2.1-pro`.
+      model: doubao-seed-2.1-pro
+      llm_provider: ark
+      ark_key: ARK_SEED_API_KEY
       run: false
       cheat: false
       kwargs:

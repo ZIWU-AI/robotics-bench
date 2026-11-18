@@ -213,8 +213,10 @@ jobs:
           fi
 
           # Override agents: agents=agent1:model1,agent2:model2
-          # Start from the matching config entry (matched by agent name, not
-          # agent:model) and override only agent/model. This carries ALL the
+          # Start from the matching config entry (the entry with the same
+          # agent:model when there is one, so two entries for one agent keep
+          # their own gateway and key; else the first entry for that agent)
+          # and override only agent/model. This carries ALL the
           # config's per-agent knobs through the override — not just kwargs/env
           # (reasoning_effort, CLAUDE_CODE_MAX_OUTPUT_TOKENS) but crucially the
           # gateway config too (llm_provider, portkey_provider, portkey_key).
@@ -233,7 +235,7 @@ jobs:
             AGENT_LIST="${BASH_REMATCH[1]}"
             ORIG_AGENTS="$ALL_AGENTS"
             AGENTS=$(echo "$AGENT_LIST" | tr ',' '\n' | while IFS=: read -r agent model; do
-              CFG=$(echo "$ORIG_AGENTS" | jq -c --arg a "$agent" '[.[] | select(.agent == $a)][0] // {}')
+              CFG=$(echo "$ORIG_AGENTS" | jq -c --arg a "$agent" --arg m "$model" '[.[] | select(.agent == $a and .model == $m)][0] // [.[] | select(.agent == $a)][0] // {}')
               jq -n --arg a "$agent" --arg m "$model" --argjson cfg "$CFG" \
                 '$cfg + {agent: $a,
                          model: (if $m == "" then ($cfg.model // "") else $m end),
@@ -562,7 +564,7 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           kimi_api_key: ${{ secrets.KIMI_CODE_API_KEY }}
-          ark_api_key: ${{ secrets.ARK_API_KEY }}
+          ark_api_key: ${{ secrets[matrix.agent_config.ark_key || 'ARK_API_KEY'] }}
 
       - name: Run cheat trial
         id: trial
