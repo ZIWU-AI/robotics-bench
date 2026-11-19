@@ -240,6 +240,9 @@ jobs:
           fi
 
           # Override agents: agents=agent1:model1,agent2:model2
+          # `model` is the name people write and the results show; an entry's
+          # optional `provider_model` is the id sent to its provider (only for
+          # that exact entry, never inherited by a fallback).
           # Start from the matching config entry (the entry with the same
           # agent:model when there is one, so two entries for one agent keep
           # their own gateway and key; else the first entry for that agent)
@@ -280,7 +283,8 @@ jobs:
               jq -n --arg a "$agent" --arg m "$model" --argjson cfg "$CFG" \
                 '$cfg + {agent: $a,
                          model: (if $m == "" then ($cfg.model // "") else $m end),
-                         kwargs: ($cfg.kwargs // {}), env: ($cfg.env // {})}'
+                         kwargs: ($cfg.kwargs // {}), env: ($cfg.env // {})}
+                 | if .model != ($cfg.model // "") then del(.provider_model) else . end'
             done | jq -s -c '.')
           fi
 
@@ -728,7 +732,7 @@ jobs:
         with:
           provider: ${{ matrix.agent_config.llm_provider || 'direct' }}
           agent: ${{ matrix.agent_config.agent }}
-          model: ${{ matrix.agent_config.model }}
+          model: ${{ matrix.agent_config.provider_model || matrix.agent_config.model }}
           config_file: .github/llm-config.yml
           ppapi_api_key: ${{ secrets.PPAPI_API_KEY }}
           ppapi_base_url: ${{ secrets.PPAPI_BASE_URL }}
@@ -754,7 +758,7 @@ jobs:
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
           TASK_PATH: ${{ matrix.task }}
           AGENT: ${{ matrix.agent_config.agent }}
-          MODEL: ${{ matrix.agent_config.model }}
+          MODEL: ${{ matrix.agent_config.provider_model || matrix.agent_config.model }}
           AGENT_KWARGS_JSON: ${{ toJson(matrix.agent_config.kwargs) }}
           AGENT_ENV_JSON: ${{ toJson(matrix.agent_config.env) }}
           TRIAL_NUM: ${{ matrix.trial }}

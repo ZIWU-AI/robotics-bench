@@ -229,42 +229,25 @@ harbor_run:
         version: 2.1.318
         reasoning_effort: high
     - agent: claude-code
-      # 2026-11-18: Doubao Seed 2.1 Pro on the Volcengine Ark Seed plan, a
-      # separate subscription from the Coding Plan key above, so it names its own
-      # secret (`ark_key`, the ark counterpart of `portkey_key`). Same Anthropic
-      # surface at the Coding host; the service answers as doubao-seed-2-1-pro.
-      # Opt-in: `/run agents=claude-code:doubao-seed-2.1-pro`.
+      # Doubao Seed 2.1 Pro on the Ark model service. `model` is the name to write
+      # in `agents=`; `provider_model` is the id sent to the provider.
+      # `/run agents=claude-code:doubao-seed-2.1-pro`.
       model: doubao-seed-2.1-pro
-      llm_provider: ark
-      ark_key: ARK_SEED_API_KEY
+      provider_model: doubao-seed-2-1-pro-260915
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
       run: false
       cheat: false
       kwargs:
         version: 2.1.318
         reasoning_effort: high
-    # Codex via ppapi. ppapi does NOT serve the OpenAI /v1/responses websocket
-    # codex prefers (it used to 404, which is why codex ran on Portkey with
-    # PORTKEY_API_KEY_SNORKEL). Until 2026-08-14 codex fell back to HTTPS after
-    # the failed dial; then the upgrade started returning HTTP 400 `websocket:
-    # bad handshake` and codex began failing the turn instead, killing every
-    # trial at 2-5s. Fixed in run-trials.yml / run-cheat-trials.yml, which write
-    # a codex config.toml selecting a `ppapi` model provider with
-    # supports_websockets = false (the built-in `openai` provider hardcodes it
-    # true and cannot be overridden) and pass it as `--ak config=<path>`. If
-    # ppapi ever serves the websocket, that block can be dropped.
-    # If trials fail with a 404/handshake error on /v1/responses, revert to:
-    #   llm_provider: portkey
-    #   portkey_key: PORTKEY_API_KEY_SNORKEL
-    # Model stays the BARE slug: codex talks the OpenAI surface directly (no
-    # litellm in the path), so no `openai/` prefix — that prefix is only for the
-    # terminus-2 judges below. The ppapi branch exports OPENAI_API_KEY and
-    # OPENAI_BASE_URL (host + /v1) from PPAPI_API_KEY/PPAPI_BASE_URL.
     - agent: claude-code
-      # Doubao Seed 2.1 Pro on the Ark model service (llm_provider: ark_paygo),
-      # by dated Model ID. Opt-in: `/run agents=claude-code:doubao-seed-2-1-pro-260915`.
-      model: doubao-seed-2-1-pro-260915
-      llm_provider: ark_paygo
-      ark_key: ARK_MODEL_SERVICE_API_KEY
+      # The same model on the Seed plan, only when named explicitly:
+      # `/run agents=claude-code:doubao-seed-2.1-pro@seed-plan`.
+      model: doubao-seed-2.1-pro@seed-plan
+      provider_model: doubao-seed-2.1-pro
+      llm_provider: ark
+      ark_key: ARK_SEED_API_KEY
       run: false
       cheat: false
       kwargs:
