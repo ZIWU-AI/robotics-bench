@@ -65,6 +65,13 @@ gateways:
     # An agent entry may name another key with `ark_key:` (the Seed plan uses
     # ARK_SEED_API_KEY); trial jobs only, analysis and review keep ARK_API_KEY.
     surfaces: [anthropic, openai]
+  ark_paygo:
+    # Volcengine Ark model service. Anthropic surface at this host, OpenAI at
+    # https://ark.cn-beijing.volces.com/api/v3. Models are named by dated Model ID
+    # and must be activated in the Ark console first.
+    base_url: https://ark.cn-beijing.volces.com/api/compatible
+    api_key_secret: ARK_API_KEY
+    surfaces: [anthropic, openai]
   ppapi:
     base_url: https://app-us.ppapi.ai/v1
     api_key_secret: PPAPI_API_KEY
@@ -252,6 +259,17 @@ harbor_run:
     # litellm in the path), so no `openai/` prefix — that prefix is only for the
     # terminus-2 judges below. The ppapi branch exports OPENAI_API_KEY and
     # OPENAI_BASE_URL (host + /v1) from PPAPI_API_KEY/PPAPI_BASE_URL.
+    - agent: claude-code
+      # Doubao Seed 2.1 Pro on the Ark model service (llm_provider: ark_paygo),
+      # by dated Model ID. Opt-in: `/run agents=claude-code:doubao-seed-2-1-pro-260915`.
+      model: doubao-seed-2-1-pro-260915
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs:
+        version: 2.1.318
+        reasoning_effort: high
     - agent: codex
       # 2026-11-10 (Robotics-Bench): /run and /cheat use Kimi k3.1 pro on the Kimi
       # Code official endpoint (gateway `kimi`), with the model, endpoint,
