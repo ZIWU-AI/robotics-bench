@@ -76,11 +76,16 @@ def hours(value) -> str | None:
 def duration(seconds) -> str | None:
     if not seconds:
         return None
-    s = int(float(seconds))
-    h, m = divmod(s // 60, 60)
+    s = float(seconds)
+    if s % 60:
+        amount = int(s) if s.is_integer() else s
+        return f"{amount} second" + ("" if s == 1 else "s")
+    h, m = divmod(int(s) // 60, 60)
     if h and m:
         return f"{h}h {m}m"
-    return f"{h} hours" if h else f"{m} minutes"
+    if h:
+        return f"{h} hour" + ("" if h == 1 else "s")
+    return f"{m} minute" + ("" if m == 1 else "s")
 
 
 def authors_line(md) -> str | None:
