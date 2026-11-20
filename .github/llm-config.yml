@@ -256,6 +256,65 @@ harbor_run:
       kwargs:
         version: 2.1.318
         reasoning_effort: high
+    # Other Doubao Seed chat models on the Ark model service, by the name without
+    # the date; `provider_model` is the dated Model ID (each must be activated in
+    # the Ark console). `/run agents=claude-code:<model>`.
+    - agent: claude-code
+      model: doubao-seed-2.1-turbo
+      provider_model: doubao-seed-2-1-turbo-260628
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.1-lite
+      provider_model: doubao-seed-2-1-lite-260915
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-pro
+      provider_model: doubao-seed-2-0-pro-260215
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-code
+      provider_model: doubao-seed-2-0-code-preview-260215
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-lite
+      provider_model: doubao-seed-2-0-lite-260428
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-mini
+      provider_model: doubao-seed-2-0-mini-260428
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-evolving
+      provider_model: doubao-seed-evolving
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
     - agent: codex
       # 2026-11-10 (Robotics-Bench): /run and /cheat use Kimi k3.1 pro on the Kimi
       # Code official endpoint (gateway `kimi`), with the model, endpoint,
