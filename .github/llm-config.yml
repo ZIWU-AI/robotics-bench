@@ -174,7 +174,10 @@ harbor_run:
       # Docker (CPU) tasks only: the non-docker single job and the GPU pool do not
       # run it.
       # `none`: qodercli talks to Qoder itself, so no LLM gateway env is exported.
-      model: kmodel_latest
+      # Written and shown as kimi-k3.1-pro, the name claude-code uses for the same
+      # model; `provider_model` is what qodercli receives. `qoder:kmodel_latest` also works.
+      model: kimi-k3.1-pro
+      provider_model: kmodel_latest
       llm_provider: none
       # 2026-11-17: the default agent again (11-16 off while the account had no credits).
       run: true
