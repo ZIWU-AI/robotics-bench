@@ -1,0 +1,18 @@
+[
+  {
+    "instance": "dev",
+    "source": "evidence/sequence-source/dev-0-full-0/export/recording.jsonl",
+    "sequence": "evidence/same-sequence/dev-0-sequence-0/export/recording.jsonl",
+    "control_and_finish_snapshots": 157,
+    "exact_equal": true,
+    "sha256": "75c957d0708b97cd3342d68c37c48955a5ac25e57ee67c700e29b61d70f86835"
+  },
+  {
+    "instance": "eval",
+    "source": "evidence/harbor/oracle/park-stair-inspection__X476vLw/artifacts/var/lib/patrol/export/recording.jsonl",
+    "sequence": "evidence/same-sequence/eval-2267763532-sequence-0/export/recording.jsonl",
+    "control_and_finish_snapshots": 148,
+    "exact_equal": true,
+    "sha256": "41ff4a7a4159938dd538ee005ca5a264c280611341b8fa5842bb584de54faca8"
+  }
+]

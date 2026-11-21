@@ -1,0 +1,91 @@
+{
+  "family": "park-steps-v3",
+  "physical_source_commit": "6385b3f797fafe024239835be734ccd974a32b80",
+  "publication_status": "Native attachment pending; complete local graded recordings, not yet uploaded",
+  "clips": [
+    {
+      "label": "oracle",
+      "physical_source_commit": "6385b3f797fafe024239835be734ccd974a32b80",
+      "trial": "eval-2996011289-full-0",
+      "seed": 2996011289,
+      "policy": "full",
+      "reward": 1,
+      "first_violation": null,
+      "failure_reason": "success",
+      "used": {
+        "actions": 157,
+        "observations": 158
+      },
+      "recorded_steps": 23900,
+      "simulated_seconds": 95.60000000000001,
+      "playback_speed": 2,
+      "duration_seconds": 47.84,
+      "frames": 1196,
+      "video_sha256": "3f5b6c6fd9d9839aae3061f9c570bd9b59ac2e1874902a173c06581f4cdf07b0",
+      "recording_sha256": "f20c63b6dd66fa30eafdf82c7298ef7501f71236d5ae7049dec8f4f7c436941d",
+      "renderer_sha256": "c5060b6908d9e9335e4398cee18fcc429616d7f99db0a13295a5e86f36820beb",
+      "video_relative_path": "videos/oracle-v3.mp4",
+      "sidecar_relative_path": "videos/oracle-v3.json",
+      "trial_relative_path": "primary/eval-2996011289-full-0",
+      "exact_replay": true,
+      "predicate_match": true,
+      "render_state_unchanged": true
+    },
+    {
+      "label": "zero",
+      "physical_source_commit": "6385b3f797fafe024239835be734ccd974a32b80",
+      "trial": "eval-2996011289-zero_4_200-0",
+      "seed": 2996011289,
+      "policy": "zero:4,200",
+      "reward": 0,
+      "first_violation": null,
+      "failure_reason": "Incomplete route at event 2/13; control/observation budget exhausted",
+      "used": {
+        "actions": 399,
+        "observations": 400
+      },
+      "recorded_steps": 77975,
+      "simulated_seconds": 311.90000000000003,
+      "playback_speed": 4,
+      "duration_seconds": 78.0,
+      "frames": 1950,
+      "video_sha256": "2aa54e8898eafdbec50c07d04bd5d57896a09ad5ecf1af0cb1f2dfc5743fed2e",
+      "recording_sha256": "44aa8eba121c2f9a9e4c14c32db20ab3834f91fd036dfb9bf074158ace456242",
+      "renderer_sha256": "c5060b6908d9e9335e4398cee18fcc429616d7f99db0a13295a5e86f36820beb",
+      "video_relative_path": "videos/zero-v3.mp4",
+      "sidecar_relative_path": "videos/zero-v3.json",
+      "trial_relative_path": "primary/eval-2996011289-zero_4_200-0",
+      "exact_replay": true,
+      "predicate_match": true,
+      "render_state_unchanged": true
+    },
+    {
+      "label": "fixed",
+      "physical_source_commit": "6385b3f797fafe024239835be734ccd974a32b80",
+      "trial": "eval-2996011289-fixed_-0.9_0.3_6_250-0",
+      "seed": 2996011289,
+      "policy": "fixed:-0.9,0.3,6,250",
+      "reward": 0,
+      "first_violation": null,
+      "failure_reason": "Incomplete route at event 12/13; control/observation budget exhausted",
+      "used": {
+        "actions": 399,
+        "observations": 400
+      },
+      "recorded_steps": 53675,
+      "simulated_seconds": 214.70000000000002,
+      "playback_speed": 4,
+      "duration_seconds": 53.68,
+      "frames": 1342,
+      "video_sha256": "084080499a5257acce641dcd64bd2d55c427fe36f9d7172c113eb30c2774548f",
+      "recording_sha256": "9a8cd74ee2bf4a2022cfa586ac69032170ddc6a081eab1f8c3aa5ae6ea7803ea",
+      "renderer_sha256": "c5060b6908d9e9335e4398cee18fcc429616d7f99db0a13295a5e86f36820beb",
+      "video_relative_path": "videos/fixed-v3.mp4",
+      "sidecar_relative_path": "videos/fixed-v3.json",
+      "trial_relative_path": "primary/eval-2996011289-fixed_-0.9_0.3_6_250-0",
+      "exact_replay": true,
+      "predicate_match": true,
+      "render_state_unchanged": true
+    }
+  ]
+}
