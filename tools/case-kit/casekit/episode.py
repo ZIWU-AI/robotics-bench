@@ -23,7 +23,6 @@ import json
 import os
 import secrets
 import threading
-import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -62,15 +61,20 @@ class Episode:
 
     API = None                       # e.g. "gantry-api-v1"; the verifier checks it in the seal
     BACKEND = None                   # e.g. "mujoco"; the verifier checks it in the seal
-    BUDGETS = {"wall_s": 3600}       # counters for the ops + "wall_s" (seconds from the first request)
+    BUDGETS = {}                     # counters for the ops, e.g. {"actions": 300, "observations": 100}
+    # There is no time budget here. The only clock is the harness's [agent].timeout_sec, which runs from the start
+    # of the agent and is the "You have N seconds" line of instruction.md; when it expires the collector seals
+    # the episode. A second, service-side clock that starts later (at the first request) tells the agent it has
+    # time it does not have, so it is rejected.
 
     def __init__(self, out_dir, budgets=None, meta=None, keep_images=False):
         if not self.API or not self.BACKEND:
             raise TypeError("set API and BACKEND on the Episode subclass")
         self.budgets = dict(self.BUDGETS, **(budgets or {}))
-        if "wall_s" not in self.budgets:
-            raise ValueError("budgets need wall_s")
-        self.used = {k: 0 for k in self.budgets if k != "wall_s"}
+        if "wall_s" in self.budgets:
+            raise ValueError("wall_s is no longer a budget: the only time limit is [agent].timeout_sec in task.toml "
+                             "(the 'You have N seconds' line); remove wall_s from the budgets and from instruction.md")
+        self.used = dict.fromkeys(self.budgets, 0)
         self.ops = {}
         for name in dir(type(self)):
             spec = getattr(getattr(type(self), name), "_casekit_op", None)
@@ -81,7 +85,6 @@ class Episode:
             if spec["budget"] is not None and spec["budget"] not in self.used:
                 raise ValueError(f"op {name} uses budget {spec['budget']!r}, which is not in BUDGETS")
             self.ops[name] = spec
-        self.started = None
         self.finished = False
         self.lock = threading.Lock()
         self.rec = Recording(out_dir, dict(meta or {}, api=self.API, backend=self.BACKEND, budgets=self.budgets),
@@ -102,16 +105,11 @@ class Episode:
 
     # ------------------------------------------------------------------ built in
     def left(self):
-        wall = None if self.started is None else round(self.budgets["wall_s"] - (time.monotonic() - self.started), 1)
-        return dict({k: self.budgets[k] - self.used[k] for k in self.used}, wall_s=wall)
+        return {k: self.budgets[k] - self.used[k] for k in self.used}
 
     def _open(self, budget=None):
-        if self.started is None:
-            self.started = time.monotonic()
         if self.finished:
             raise Refused("the episode is finished")
-        if time.monotonic() - self.started > self.budgets["wall_s"]:
-            raise Refused("the wall-clock budget is used up; call finish")
         if budget is not None and self.used[budget] >= self.budgets[budget]:
             raise Refused(f"the {budget} budget ({self.budgets[budget]}) is used up")
 
@@ -120,12 +118,10 @@ class Episode:
                     left=self.left(), ops=sorted(self.ops) + ["finish"], finished=self.finished)
 
     def finish(self, by_collector=False):
-        """Always possible once (also after the wall budget ran out), so the collector can seal any episode. The
+        """Always possible once (also after the budgets ran out), so the collector can seal any episode. The
         recorded request is {} when the agent finished and {"by": "collector"} when the collector did."""
         if self.finished:
             raise Refused("the episode is already finished")
-        if self.started is None:
-            self.started = time.monotonic()
         self.rec.add("finish", {"by": "collector"} if by_collector else {}, {"ok": True}, self.snapshot())
         self.finished = True
         seal = self.rec.seal({"used": self.used})

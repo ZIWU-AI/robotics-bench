@@ -4,5 +4,5 @@
   "pusher_home": [0.0, -0.2, 0.05],
   "goal": [0.15, 0.12],
   "goal_radius_m": 0.02,
-  "budgets": {"actions": 300, "observations": 100, "wall_s": 1800}
+  "budgets": {"actions": 300, "observations": 100}
 }

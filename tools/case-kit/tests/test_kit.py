@@ -22,7 +22,7 @@ REPO = HERE.parents[1]
 
 class Counter(Episode):
     API, BACKEND = "counter-api-v1", "toy"
-    BUDGETS = {"actions": 3, "wall_s": 60}
+    BUDGETS = {"actions": 3}
 
     def __init__(self, out):
         self.n = 0
@@ -44,6 +44,25 @@ class Counter(Episode):
     @op(record=False)
     def peek(self, body):
         return {"n": self.n}
+
+
+class SingleClockTest(unittest.TestCase):
+    def test_wall_budget_rejected(self):
+        class Timed(Counter):
+            BUDGETS = {"actions": 3, "wall_s": 60}
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            with self.assertRaisesRegex(ValueError, "timeout_sec"):
+                Timed(tmp / "rec")
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_left_has_no_clock(self):
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            self.assertEqual(Counter(tmp / "rec").left(), {"actions": 3})
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
 
 
 class EnvelopeTest(unittest.TestCase):
