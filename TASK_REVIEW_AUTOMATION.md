@@ -419,7 +419,7 @@ Fix a failure by lowering the timeout in `task.toml` — and in `instruction.md`
 Online-control cases (tasks that vendor `tools/case-kit`, i.e. contain a `casekit/` directory) have exactly one time limit: `[agent].timeout_sec`. The harness starts it with the agent, `instruction.md` states it in its last line, and when it runs out the collector seals the episode. The check fails a case that
 
 - sets a `wall_s` budget in its own files (scene or budget JSON, service code); the kit's `Episode` rejects it too;
-- describes a service-side clock in `instruction.md` ("1800 wall seconds", "`info` does not start the timer", "seconds from the first request");
+- describes a service-side clock in `instruction.md` or in the docs under `environment/` such as `/app/API.md` ("1800 wall seconds", "`info` does not start the timer", "seconds from the first request");
 - sets `[agent].timeout_sec` below the template's 18000 s (lifted to 28800 s with the rest of the suite before a release, as for every task).
 
 Why: a service clock that starts at the first request runs behind the harness clock, so it tells the agent it has time it does not have. In trials on `park-stair-inspection` 13 of 33 timed-out agents spent the whole harness budget building an offline replica "before the timer starts" and never sent a control. Fix a failure by re-syncing the kit (`python tools/case-kit/sync.py <task>`), deleting `wall_s` and the sentence about it, and setting `[agent].timeout_sec = 18000.0` together with the "You have 18000 seconds" line. Covered by `fail-static-case-single-clock`.

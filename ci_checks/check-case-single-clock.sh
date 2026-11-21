@@ -13,7 +13,7 @@
 # rest early:
 #
 #   1. no wall_s budget in what the service or verifier loads (environment/, tests/);
-#   2. instruction.md does not describe a service-side wall-clock budget or timer;
+#   2. neither instruction.md nor the docs under environment/ describe a service-side wall-clock budget or timer;
 #   3. [agent].timeout_sec is at least the template's 18000 s (5h): the same
 #      single limit every task gets while authoring, lifted to 28800 s (8h) with
 #      the rest of the suite before a release (see check-task-timeout.sh).
@@ -91,7 +91,7 @@ for top in ("environment", "tests"):
                     problems.append(f"{f}: line {n} puts wall_s in a budget; the case kit rejects it. "
                                     f"The only time limit is [agent].timeout_sec")
 
-# 2. A second clock described in instruction.md.
+# 2. A second clock described to the agent.
 # A budget, not a mention: "Physics never advances with wall-clock time" is fine.
 CLOCK = re.compile(
     r"\b\d[\d,.]*\s*(?:s|sec|seconds?)?\s*(?:of\s+)?wall[- ]?(?:clock[- ]?)?(?:time|seconds?|s)\b"  # 1800 wall seconds
@@ -99,13 +99,17 @@ CLOCK = re.compile(
     r"|\b(?:start|starts|started|starting)\s+the\s+(?:wall[- ]?)?(?:clock|timer)\b"               # does not start the timer
     r"|\bseconds?\s+(?:of\s+wall\s+time\s+)?from\s+the\s+first\s+(?:request|call|operation)\b",
     re.IGNORECASE)
-instruction = task / "instruction.md"
-if instruction.is_file():
-    for n, line in enumerate(instruction.read_text(encoding="utf-8").splitlines(), 1):
+# instruction.md and the documentation shipped in the image (e.g. /app/API.md from environment/).
+docs = [task / "instruction.md"] + sorted(f for f in (task / "environment").rglob("*.md") if "casekit" not in f.parts)
+for doc in docs:
+    if not doc.is_file():
+        continue
+    for n, line in enumerate(doc.read_text(encoding="utf-8").splitlines(), 1):
         m = CLOCK.search(line)
         if m:
-            problems.append(f"{instruction}: line {n} describes a service-side clock ('{m.group(0)}'). "
-                            f"Remove it; the last line ('You have N seconds ...') is the only time limit")
+            problems.append(f"{doc}: line {n} describes a service-side clock ('{m.group(0)}'). "
+                            f"Remove it; the last line of instruction.md ('You have N seconds ...') is the only "
+                            f"time limit")
 
 # 3. The single limit is the template's.
 toml = task / "task.toml"
