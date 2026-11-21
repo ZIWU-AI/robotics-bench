@@ -1,0 +1,25 @@
+{
+  "selected_before_implementation": true,
+  "seed_ids": {
+    "holdout-00": "bebde7628c422ddf413530801c404b72",
+    "holdout-01": "8ff2b2868140a7d06234a19aae355f9a",
+    "holdout-02": "599880b003fc6cdb53d88c9c62ac7826",
+    "holdout-03": "cdd0cd5ab60a6312b7932945bee179dc",
+    "holdout-04": "1fde3671e03a7b7981337936dd5ccce0",
+    "holdout-05": "9fc04bf008ce1e08a0db153983c9d58d",
+    "holdout-06": "6e9dd10dace9e4d4563bff471929a704",
+    "holdout-07": "71cf3c3a85006605c4722b757ace2dc5",
+    "holdout-08": "643ecd91975bc72ad1fab98a5f38986b",
+    "holdout-09": "19bfac2d846051b37729a14451c65fb4",
+    "holdout-10": "7fee28a6d3cd028eff5bec2a55acb8aa",
+    "holdout-11": "7c7228240270067d33428cffd244f58a",
+    "holdout-12": "eb1dccd41ac9f4da504ab6e0de2c15be",
+    "holdout-13": "9109ae5a99acd2e467338e1af7619795",
+    "holdout-14": "a60be3e0fb655175aa073f372ef6f48b",
+    "holdout-15": "7ca188fdf84b084a884c8e770e500899",
+    "holdout-16": "44d0c6f76d5b56dd1ca383bde793fa2b",
+    "holdout-17": "026dd5029f755c0261f431c59f65b8f7",
+    "holdout-18": "d71e1b2ab44f008f82adedd7b28c421f",
+    "holdout-19": "2106622c1e8389766edeef044ead3008"
+  }
+}
