@@ -12,7 +12,7 @@
 # act. The case kit no longer accepts a wall_s budget; this check catches the
 # rest early:
 #
-#   1. no "wall_s" key in the task's own files (scene/budget JSON, service code);
+#   1. no wall_s budget in what the service or verifier loads (environment/, tests/);
 #   2. instruction.md does not describe a service-side wall-clock budget or timer;
 #   3. [agent].timeout_sec is at least the template's 18000 s (5h): the same
 #      single limit every task gets while authoring, lifted to 28800 s (8h) with
@@ -43,6 +43,7 @@ for task_dir in $TASK_DIRS; do
     echo "Checking $task_dir (case)..."
 
     OUT=$(python3 - "$task_dir" "$MIN_CASE_TIMEOUT_SEC" <<'PYEOF'
+import json
 import re
 import sys
 from pathlib import Path
@@ -56,24 +57,47 @@ task = Path(sys.argv[1])
 min_sec = int(sys.argv[2])
 problems = []
 
-# 1. wall_s in the task's own files (the vendored casekit/ copies are the kit's).
-for f in sorted(task.rglob("*")):
-    if not f.is_file() or "casekit" in f.parts or f.suffix not in {".json", ".py", ".toml", ".yaml", ".yml"}:
-        continue
-    try:
-        text = f.read_text(encoding="utf-8")
-    except (UnicodeDecodeError, OSError):
-        continue
-    for n, line in enumerate(text.splitlines(), 1):
-        if re.search(r"""["']?\bwall_s\b["']?\s*[:=]""", line):
-            problems.append(f"{f}: line {n} sets a wall_s budget; the case kit rejects it. "
-                            f"The only time limit is [agent].timeout_sec")
+# 1. A wall_s budget in what the service or verifier loads (environment/, tests/); the vendored casekit/ copies
+#    are the kit's. Only budgets count: a measured "wall_s" elsewhere (authoring notes, metrics) is not a clock.
+def budget_hits(obj, inside=False):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if inside and k == "wall_s":
+                yield True
+            yield from budget_hits(v, inside or "budget" in str(k).lower())
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from budget_hits(v, inside)
+
+for top in ("environment", "tests"):
+    for f in sorted((task / top).rglob("*")):
+        if not f.is_file() or "casekit" in f.parts:
+            continue
+        try:
+            text = f.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError):
+            continue
+        if f.suffix == ".json":
+            try:
+                hit = any(budget_hits(json.loads(text)))
+            except ValueError:
+                hit = False
+            if hit:
+                problems.append(f"{f}: its budgets set wall_s; the case kit rejects it. "
+                                f"The only time limit is [agent].timeout_sec")
+        elif f.suffix == ".py":
+            for n, line in enumerate(text.splitlines(), 1):
+                if re.search(r"budget", line, re.I) and re.search(r"\bwall_s\b", line):
+                    problems.append(f"{f}: line {n} puts wall_s in a budget; the case kit rejects it. "
+                                    f"The only time limit is [agent].timeout_sec")
 
 # 2. A second clock described in instruction.md.
+# A budget, not a mention: "Physics never advances with wall-clock time" is fine.
 CLOCK = re.compile(
-    r"wall[- ]?(clock|time|seconds?)\b"
-    r"|\b(start|starts|started|starting)\s+the\s+(wall[- ]?)?(clock|timer)\b"
-    r"|\bseconds?\s+(of\s+wall\s+time\s+)?from\s+the\s+first\s+(request|call|operation)\b",
+    r"\b\d[\d,.]*\s*(?:s|sec|seconds?)?\s*(?:of\s+)?wall[- ]?(?:clock[- ]?)?(?:time|seconds?|s)\b"  # 1800 wall seconds
+    r"|wall[- ]?(?:clock[- ]?)?(?:time[- ]?)?(?:budget|timer|limit|deadline)\b"                    # wall-clock budget
+    r"|\b(?:start|starts|started|starting)\s+the\s+(?:wall[- ]?)?(?:clock|timer)\b"               # does not start the timer
+    r"|\bseconds?\s+(?:of\s+wall\s+time\s+)?from\s+the\s+first\s+(?:request|call|operation)\b",
     re.IGNORECASE)
 instruction = task / "instruction.md"
 if instruction.is_file():
