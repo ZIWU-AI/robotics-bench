@@ -1,0 +1,6 @@
+{
+  "travel_mm": [220, 90], "max_speed": 14, "hold": 4, "deadline": 130,
+  "head": [82, 45], "belt_v": [2, -2],
+  "carriers": {"amber": [8, 258], "blue": [176, 204], "cyan": [-132, 392]},
+  "budgets": {"actions": 90, "observations": 60, "wall_s": 1800}
+}
