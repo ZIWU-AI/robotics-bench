@@ -7,8 +7,8 @@ The robot-independent parts of an online-control case. What a case is and what t
 |---|---|---|
 | `casekit/recording.py` | service, verifier | hash-chained recording, seal, `verify()` |
 | `casekit/episode.py` | service | the call envelope: `Episode` base class, `@op`, `Refused`, `BadRequest`, `run()` |
-| `casekit/launch.py` | service (root) | `launch()` starts the service once; `finish_and_export()` for the collect hook |
-| `casekit/verify.py` | verifier | `load_export()` checks chain, seal, API, scene and finish; `main(grade)` writes the reward |
+| `casekit/launch.py` | service (root) | `launch()` starts the service once; `finish_and_export()` for the collect hook (its own finish is marked as the collector's) |
+| `casekit/verify.py` | verifier | `load_export()` checks chain, seal, API, scene and that the agent called finish; `main(grade)` writes the reward |
 | `sync.py` | your machine, CI | vendors `casekit/` into every `casekit/` directory of a task; `--check` for CI |
 | `gate.py` | your machine, CI | the CPU gate: builds the task's images and checks the contract end to end |
 | `example/gantry-push/` | | a complete case: three-axis gantry, puck, MuJoCo, closed-loop reference solution |
@@ -50,7 +50,7 @@ python tools/case-kit/gate.py <task> [--json gate.json] [--keep DIR]
 ```
 
 Requires Docker and Python 3.11+. Checks: layout, isolation, api, envelope, finish, nop, oracle, recording, replay,
-truncated (the list with details is at the top of `gate.py`).
+truncated, unfinished (the list with details is at the top of `gate.py`).
 
 ## Tests
 

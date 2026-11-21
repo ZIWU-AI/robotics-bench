@@ -25,8 +25,8 @@ to be fair and verifiable:
 4. Propose it in *Discussions → Task Proposals*, then open a pull request with the CPU tier from your fork
    ([CONTRIBUTING.md](CONTRIBUTING.md)).
 
-Every case starts with a CPU tier that runs in ordinary Docker containers. Once it is merged, its author is granted
-the GPU pool for an optional GPU tier ([docs/LADDER.md](docs/LADDER.md)).
+Every case starts with a CPU tier that runs in ordinary Docker containers, and the CPU tier is a complete case on its
+own. An optional GPU tier on the bench's GPU pool will open later ([docs/LADDER.md](docs/LADDER.md)).
 
 ## Repository
 

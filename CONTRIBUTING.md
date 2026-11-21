@@ -11,7 +11,7 @@ Read [GUIDANCE.md](GUIDANCE.md) for the overall picture and [docs/CASE.md](docs/
 1. **Propose.** Post a short proposal in Discussions; a reviewer approves it.
 2. **Submit the CPU tier.** One PR with the complete case, runnable in Docker on a CPU. CI checks it on every push.
 3. **Review and merge.** Two reviewers approve the current head commit. There is no difficulty threshold.
-4. **Optionally submit the GPU tier.** Once your CPU tier is merged, the GPU pool is granted to you automatically for the GPU tier of the same case.
+4. **GPU tier (opening later).** The GPU pool is not open yet in this repository. The CPU tier is a complete case on its own.
 
 ## Task types
 
@@ -56,7 +56,7 @@ What each step checks and costs is in [docs/LADDER.md](docs/LADDER.md); the slas
 3. **Run the checks locally** (next section).
 4. **Open the PR** from your fork, fill in the PR template, and link the approved proposal under `## Task Proposal`.
 5. **Follow up.** On every push CI runs the static checks, and for Docker-backend cases the Docker build, Oracle and Nop; cases built with the case kit also run the CPU gate. Results are posted on the PR, and a verification card states what ran on the current head commit. When the checks pass, a maintainer assigns a design reviewer and an implementation reviewer (CI assigns them itself when automatic assignment is enabled). The merge gate requires both assigned reviewers to approve the current head commit; a later push needs a fresh approval.
-6. **GPU tier.** After your CPU tier is merged, open the GPU-tier PR for the same case. On it you may run `/scene` (3 per PR per 24 hours, any free GPU) and `/validate` (2 per PR per 24 hours, two GPUs) yourself ([docs/LADDER.md](docs/LADDER.md)). Model trials (`/run`, `/cheat`, `/oracle`) are triggered by maintainers.
+6. **GPU tier (opening later).** The GPU pool is not open yet in this repository. Once it opens: after your CPU tier is merged, open the GPU-tier PR for the same case. On it you may run `/scene` (3 per PR per 24 hours, any free GPU) and `/validate` (2 per PR per 24 hours, two GPUs) yourself ([docs/LADDER.md](docs/LADDER.md)). Model trials (`/run`, `/cheat`, `/oracle`) are triggered by maintainers.
 
 Keep the PR description to conclusions and links; one evidence file per kind is enough.
 

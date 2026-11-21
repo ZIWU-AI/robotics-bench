@@ -53,6 +53,8 @@ Run the same checks locally before pushing; see [docs/CASE.md](CASE.md#5-buildin
 
 ## GPU grant
 
+The GPU pool is not open yet in this repository. What follows describes how it works once it opens.
+
 When the CPU tier of a case has been reviewed and merged into `main`, the GPU pool is granted to its author. The
 author opens the GPU tier as a new pull request on the same task directory and comments `/scene` and `/validate`
 there without waiting for a maintainer.
@@ -131,5 +133,5 @@ gives each run a free GPU and queues runs while all are busy. The pool host has 
 
 The scene check and acceptance together take less than one GPU hour. Model trials dominate GPU use, which is why they
 run only on accepted revisions, and five trials per agent are reserved for reported results. A case whose single trial
-is expected to exceed two hours explains in its proposal where the time goes. Time budgets are wall-clock budgets and
-include transport time between the agent container and the GPU host.
+is expected to exceed two hours explains in its proposal where the time goes. The agent time limit is the only time
+budget and includes transport time between the agent container and the GPU host.

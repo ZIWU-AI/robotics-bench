@@ -41,15 +41,20 @@ Each point is checked by the gate (`python tools/case-kit/gate.py <task>`, secti
    - the launcher writes `/run/<service>/endpoint.json` with `url` and `token` for the agent's client.
 3. **Recording.** Every request that can change the world, its result and the state after it go into a hash-chained,
    sealed recording ([`casekit/recording.py`](../tools/case-kit/casekit/recording.py)). A root collect hook finishes
-   the episode if the agent did not and exports the recording as an artifact.
+   the episode if the agent did not (that finish is recorded as the collector's) and exports the recording as an
+   artifact.
 4. **Replay, not trust.** The verifier re-executes the recording in a fresh copy of your world, compares every
    recorded state, and evaluates your success check on the replayed states. It never runs the agent's program and
    never trusts a score the service computed. Same layout plus same commands must give the same states: exactly on
    CPU engines, or within tolerances you declare in the verifier.
-5. **Budgets.** Counted operations (actions, observations, ...) and wall time are budgeted by the service and
-   declared in `instruction.md`. Calling `finish` is submitting.
+5. **Budgets.** Counted operations (actions, observations, ...) are budgeted by the service and declared in
+   `instruction.md`. Time has one limit only: `[agent].timeout_sec` (the template's 18000 s), which starts with the
+   agent and is the "You have N seconds" line; when it runs out the collector seals the episode. The service keeps
+   no clock of its own (`casekit` rejects a `wall_s` budget, `check-case-single-clock` rejects one described in
+   `instruction.md`), because a clock that starts at the first request tells the agent it has time it does not. Calling `finish` is submitting; an episode the agent did not finish scores 0, even
+   when the world ended in a successful state.
 6. **Calibration of the task.** The reference solution scores 1; an episode that only calls `finish` scores 0; an
-   edited, truncated or state-forged recording scores 0.
+   episode the agent did not finish scores 0; an edited, truncated or state-forged recording scores 0.
 
 ## 3. Declaring the success check
 
@@ -69,8 +74,8 @@ The success check is yours; the bench only fixes how it runs.
 - The case kit (`tools/case-kit`): recording, call envelope, root launcher and collector, verifier helpers, the
   gate, and `sync.py` to vendor them into your task.
 - Harbor runs, CI checks, and review.
-- After your CPU tier is merged, the GPU pool for your GPU tier, granted automatically (see
-  [LADDER.md](LADDER.md)); optionally a real-robot tier on the maintainers' robots.
+- After your CPU tier is merged, the GPU pool for your GPU tier, once the pool opens (see
+  [LADDER.md](LADDER.md)).
 
 ## 5. Building one
 

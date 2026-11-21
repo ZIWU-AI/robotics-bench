@@ -151,6 +151,8 @@ jobs:
       hub_visibility: ${{ steps.parse.outputs.hub_visibility }}
       hub_share_org: ${{ steps.parse.outputs.hub_share_org }}
       hub_share_user: ${{ steps.parse.outputs.hub_share_user }}
+      runner: ${{ steps.parse.outputs.runner }}
+      runs_on: ${{ steps.parse.outputs.runs_on }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -188,6 +190,7 @@ jobs:
             ANALYZE_AGENT=$(yq '.analyze.agent // .harbor_run.analyze.agent // "claude-code"' "$CONFIG_FILE")
             ANALYZE_PORTKEY_KEY=$(yq '.analyze.portkey_key // .harbor_run.analyze.portkey_key // "PORTKEY_API_KEY"' "$CONFIG_FILE")
             ENV_DEFAULT=$(yq '.harbor_run.env // "docker"' "$CONFIG_FILE")
+            RUNNER_DEFAULT=$(yq '.harbor_run.runner // "github"' "$CONFIG_FILE")
             HUB_UPLOAD=$(yq '.harbor_hub.upload // true' "$CONFIG_FILE")
             HUB_VISIBILITY=$(yq '.harbor_hub.visibility // "public"' "$CONFIG_FILE")
             HUB_SHARE_ORG=$(yq -r '.harbor_hub.share_orgs // [] | join(",")' "$CONFIG_FILE")
@@ -206,6 +209,7 @@ jobs:
             ANALYZE_MODEL="sonnet"
             ANALYZE_LLM_PROVIDER="direct"
             ENV_DEFAULT="docker"
+            RUNNER_DEFAULT="github"
             HUB_UPLOAD=true
             HUB_VISIBILITY=public
             HUB_SHARE_ORG=""
@@ -213,8 +217,13 @@ jobs:
           fi
 
           # Override agents: agents=agent1:model1,agent2:model2
-          # Start from the matching config entry (matched by agent name, not
-          # agent:model) and override only agent/model. This carries ALL the
+          # `model` is the name people write and the results show; an entry's
+          # optional `provider_model` is the id sent to its provider (only for
+          # that exact entry, never inherited by a fallback).
+          # Start from the matching config entry (the entry with the same
+          # agent:model when there is one, so two entries for one agent keep
+          # their own gateway and key; else the first entry for that agent)
+          # and override only agent/model. This carries ALL the
           # config's per-agent knobs through the override — not just kwargs/env
           # (reasoning_effort, CLAUDE_CODE_MAX_OUTPUT_TOKENS) but crucially the
           # gateway config too (llm_provider, portkey_provider, portkey_key).
@@ -229,15 +238,30 @@ jobs:
           # `ValueError: Model name is required` before reaching the agent --
           # which reads as a gateway or task failure in the PR comment, since the
           # model column simply renders empty.
+          # runner=self|github: where the docker trials run. self = the ZIWU
+          # self-hosted pool (labels self-hosted + ziwu-cpu; rootless docker, no
+          # 2-CPU/7-GB cap); github = GitHub-hosted ubuntu-latest. The default is
+          # harbor_run.runner in .github/llm-config.yml.
+          RUNNER="$RUNNER_DEFAULT"
+          if [[ "$COMMENT_BODY" =~ (^|[[:space:]])runner=([A-Za-z-]+) ]]; then
+            RUNNER="${BASH_REMATCH[2]}"
+          fi
+          case "$RUNNER" in
+            self|selfhost|self-hosted|ziwu) RUNNER=self; RUNS_ON='["self-hosted","ziwu-cpu"]' ;;
+            github|hosted|gh) RUNNER=github; RUNS_ON='"ubuntu-latest"' ;;
+            *) echo "::error::runner=$RUNNER is not valid; use runner=self or runner=github"; exit 1 ;;
+          esac
+
           if [[ "$COMMENT_BODY" =~ agents=([^[:space:]]+) ]]; then
             AGENT_LIST="${BASH_REMATCH[1]}"
             ORIG_AGENTS="$ALL_AGENTS"
             AGENTS=$(echo "$AGENT_LIST" | tr ',' '\n' | while IFS=: read -r agent model; do
-              CFG=$(echo "$ORIG_AGENTS" | jq -c --arg a "$agent" '[.[] | select(.agent == $a)][0] // {}')
+              CFG=$(echo "$ORIG_AGENTS" | jq -c --arg a "$agent" --arg m "$model" '[.[] | select(.agent == $a and .model == $m)][0] // [.[] | select(.agent == $a)][0] // {}')
               jq -n --arg a "$agent" --arg m "$model" --argjson cfg "$CFG" \
                 '$cfg + {agent: $a,
                          model: (if $m == "" then ($cfg.model // "") else $m end),
-                         kwargs: ($cfg.kwargs // {}), env: ($cfg.env // {})}'
+                         kwargs: ($cfg.kwargs // {}), env: ($cfg.env // {})}
+                 | if .model != ($cfg.model // "") then del(.provider_model) else . end'
             done | jq -s -c '.')
           fi
 
@@ -286,6 +310,8 @@ jobs:
           echo "analyze_agent=$ANALYZE_AGENT" >> $GITHUB_OUTPUT
           echo "analyze_portkey_key=$ANALYZE_PORTKEY_KEY" >> $GITHUB_OUTPUT
           echo "env=$ENV" >> $GITHUB_OUTPUT
+          echo "runner=$RUNNER" >> $GITHUB_OUTPUT
+          echo "runs_on=$RUNS_ON" >> $GITHUB_OUTPUT
           echo "hub_upload=$HUB_UPLOAD" >> $GITHUB_OUTPUT
           echo "hub_visibility=$HUB_VISIBILITY" >> $GITHUB_OUTPUT
           echo "hub_share_org=$HUB_SHARE_ORG" >> $GITHUB_OUTPUT
@@ -296,6 +322,7 @@ jobs:
           echo "  Analyze: $ANALYZE"
           echo "  Analyze model: $ANALYZE_MODEL"
           echo "  Environment: $ENV"
+          echo "  Runner: $RUNNER ($RUNS_ON)"
           echo "  Harbor Hub upload: $HUB_UPLOAD ($HUB_VISIBILITY)"
 
   detect-tasks:
@@ -465,7 +492,7 @@ jobs:
   run-cheat-trials-matrix:
     needs: [check-trigger, parse-config, detect-tasks]
     if: needs.check-trigger.outputs.should_run == 'true' && needs.parse-config.outputs.env == 'docker'
-    runs-on: ubuntu-latest
+    runs-on: ${{ fromJSON(needs.parse-config.outputs.runs_on) }}
     strategy:
       fail-fast: false
       matrix:
@@ -524,6 +551,18 @@ jobs:
             fi
           fi
 
+      # runner=self only: bake the pinned agent into the task image so Harbor
+      # skips its per-trial download (see .github/scripts/selfhost_prestage_agent.sh).
+      - name: Pre-stage agent in task image (self-hosted)
+        if: needs.parse-config.outputs.env == 'docker' && needs.parse-config.outputs.runner == 'self'
+        env:
+          TASK_PATH: ${{ matrix.task }}
+          AGENT: ${{ matrix.agent_config.agent }}
+          AGENT_VERSION: ${{ matrix.agent_config.kwargs.version }}
+        run: |
+          bash .github/scripts/selfhost_prestage_agent.sh "$TASK_PATH" "$AGENT" "$AGENT_VERSION" \
+            || echo "::warning::agent pre-stage failed; Harbor installs the agent at trial start"
+
       - name: Build Docker environment
         if: needs.parse-config.outputs.env == 'docker'
         env:
@@ -550,7 +589,7 @@ jobs:
         with:
           provider: ${{ matrix.agent_config.llm_provider || 'direct' }}
           agent: ${{ matrix.agent_config.agent }}
-          model: ${{ matrix.agent_config.model }}
+          model: ${{ matrix.agent_config.provider_model || matrix.agent_config.model }}
           config_file: .github/llm-config.yml
           ppapi_api_key: ${{ secrets.PPAPI_API_KEY }}
           ppapi_base_url: ${{ secrets.PPAPI_BASE_URL }}
@@ -562,7 +601,7 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           kimi_api_key: ${{ secrets.KIMI_CODE_API_KEY }}
-          ark_api_key: ${{ secrets.ARK_API_KEY }}
+          ark_api_key: ${{ secrets[matrix.agent_config.ark_key || 'ARK_API_KEY'] }}
 
       - name: Run cheat trial
         id: trial
@@ -576,7 +615,7 @@ jobs:
           MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
           TASK_PATH: ${{ matrix.task }}
           AGENT: ${{ matrix.agent_config.agent }}
-          MODEL: ${{ matrix.agent_config.model }}
+          MODEL: ${{ matrix.agent_config.provider_model || matrix.agent_config.model }}
           AGENT_KWARGS_JSON: ${{ toJson(matrix.agent_config.kwargs) }}
           AGENT_ENV_JSON: ${{ toJson(matrix.agent_config.env) }}
           ENV_BACKEND: ${{ needs.parse-config.outputs.env }}
@@ -605,6 +644,15 @@ jobs:
           while IFS= read -r _b64; do
             EXTRA_FLAGS+=("$(printf '%s' "$_b64" | base64 -d)")
           done < <(printf '%s' "$GATEWAY_FLAGS_B64" | base64 -d | jq -r '.[] | @base64')
+
+          # Self-hosted runners have a slower uplink than GitHub-hosted ones, so
+          # installing the agent in the task container (apt + the agent binary)
+          # can exceed Harbor's setup limit. Widen only that limit; the agent's
+          # own time budget from task.toml is unchanged. parse-config only ever
+          # emits "self" or "github" here.
+          if [ "${{ needs.parse-config.outputs.runner }}" = "self" ]; then
+            EXTRA_FLAGS+=(--agent-setup-timeout-multiplier 4)
+          fi
 
           # Per-agent env vars (e.g. CLAUDE_CODE_MAX_OUTPUT_TOKENS) from llm-config.yml.
           if [ -n "$AGENT_ENV_JSON" ] && [ "$AGENT_ENV_JSON" != "null" ] && [ "$AGENT_ENV_JSON" != "{}" ]; then

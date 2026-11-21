@@ -17,6 +17,8 @@ It builds the task's own images (environment/ and tests/) with Docker and checks
   recording  the oracle's export verifies (casekit.recording) and ends with finish; one edited line: reward 0
   replay     one recorded state changed and the chain re-sealed: reward 0 (the verifier replays, it does not trust)
   truncated  the finish entry removed and the chain re-sealed: reward 0
+  unfinished an episode the agent never finishes, collected: the recording ends with the collector's marked finish;
+             the oracle's recording with its finish marked as the collector's and the chain re-sealed: reward 0
 
 Exit code 0 only if every check passes. Needs Docker and Python 3.11+ on the host; nothing else.
 """
@@ -109,6 +111,16 @@ def truncate(export):
     if len(entries) < 2:
         raise ValueError("too few entries")
     _write(export, rechain(copy.deepcopy(entries[:-1])), seal)
+
+
+def collector_finish(export):
+    """Mark the final finish as the collector's (as if the agent had never called it) and re-seal the chain."""
+    entries, seal = recording.verify(export)
+    entries = copy.deepcopy(entries)
+    if not entries or entries[-1]["op"] != "finish":
+        raise ValueError("the recording does not end with finish")
+    entries[-1]["request"] = {"by": "collector"}
+    _write(export, rechain(entries), seal)
 
 
 def edit_line(export):
@@ -311,6 +323,20 @@ def gate(task, work):
     finally:
         ep.close()
 
+    # unfinished: the agent starts the service and never calls finish ---------------------------------------------
+    ep = Episode(env_img, f"{tag}-unfinished", agent)
+    try:
+        ep.run(f"sudo -n {shlex.quote(launcher)}", timeout=300)
+        unfinished = collect(ep, lay, work / "unfinished_export")
+    finally:
+        ep.close()
+    try:
+        last = (recording.verify(unfinished)[0] or [{}])[-1]
+    except ValueError as e:
+        last = {"error": str(e)}
+    marked = last.get("op") == "finish" and (last.get("request") or {}).get("by") == "collector"
+    marked_detail = f"collected without a finish from the agent: last entry {last.get('op')} {last.get('request')}"
+
     # oracle ------------------------------------------------------------------------------------------------------
     ep = Episode(env_img, f"{tag}-oracle", agent)
     try:
@@ -346,6 +372,7 @@ def gate(task, work):
     if reward != "1":
         check("replay", False, "needs an oracle episode with reward 1")
         check("truncated", False, "needs an oracle episode with reward 1")
+        check("unfinished", False, marked_detail + "; needs an oracle episode with reward 1")
         return
     bad = work / "state_tampered"
     shutil.copytree(export, bad, dirs_exist_ok=True)
@@ -357,6 +384,12 @@ def gate(task, work):
     truncate(bad)
     rw, d, _ = verify_export(tests_img, bad, lay, work / "truncated_run")
     check("truncated", rw == "0", f"finish entry removed: reward {rw}; {d.get('problems') or d.get('error') or ''}")
+    bad = work / "collector_finished"
+    shutil.copytree(export, bad, dirs_exist_ok=True)
+    collector_finish(bad)
+    rw, d, _ = verify_export(tests_img, bad, lay, work / "collector_run")
+    check("unfinished", marked and rw == "0", f"{marked_detail}; oracle with the collector's finish: reward {rw}; "
+          f"{d.get('problems') or d.get('error') or ''}")
 
 
 def main():

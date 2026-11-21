@@ -5,7 +5,7 @@ description: >-
 
 inputs:
   provider:
-    description: "Gateway: ppapi | mercor | portkey | kimi | ark | direct | none (agent brings its own credential, e.g. qoder)"
+    description: "Gateway: ppapi | mercor | portkey | kimi | ark | ark_paygo | direct | none (agent brings its own credential, e.g. qoder)"
     required: true
   agent:
     description: "Harbor agent id (claude-code | codex | terminus-2). Selects the auth shape."
@@ -46,7 +46,7 @@ inputs:
     required: false
     default: ""
   ark_api_key:
-    description: "ARK_API_KEY, for llm_provider: ark (Volcengine Ark Coding Plan)"
+    description: "ARK_API_KEY, for llm_provider: ark (Volcengine Ark Coding Plan) or ark_paygo (Ark model service)"
     required: false
     default: ""
 

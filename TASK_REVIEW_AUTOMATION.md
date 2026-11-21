@@ -414,6 +414,16 @@ The suite is lifted to the full 8h in bulk before a release. `ci_checks/timeout-
 
 Fix a failure by lowering the timeout in `task.toml` — and in `instruction.md`, whose "You have N seconds to complete this task" line `check-instruction-suffix.sh` requires to name the same number, so the two always change together. Covered by `fail-static-task-timeout` (over the hard cap) and `fail-static-task-timeout-authoring` (8h — legal under the hard cap, over the authoring cap, and absent from the lifted list).
 
+#### check-case-single-clock
+
+Online-control cases (tasks that vendor `tools/case-kit`, i.e. contain a `casekit/` directory) have exactly one time limit: `[agent].timeout_sec`. The harness starts it with the agent, `instruction.md` states it in its last line, and when it runs out the collector seals the episode. The check fails a case that
+
+- sets a `wall_s` budget in its own files (scene or budget JSON, service code); the kit's `Episode` rejects it too;
+- describes a service-side clock in `instruction.md` or in the docs under `environment/` such as `/app/API.md` ("1800 wall seconds", "`info` does not start the timer", "seconds from the first request");
+- sets `[agent].timeout_sec` below the template's 18000 s (lifted to 28800 s with the rest of the suite before a release, as for every task).
+
+Why: a service clock that starts at the first request runs behind the harness clock, so it tells the agent it has time it does not have. In trials on `park-stair-inspection` 13 of 33 timed-out agents spent the whole harness budget building an offline replica "before the timer starts" and never sent a control. Fix a failure by re-syncing the kit (`python tools/case-kit/sync.py <task>`), deleting `wall_s` and the sentence about it, and setting `[agent].timeout_sec = 18000.0` together with the "You have 18000 seconds" line. Covered by `fail-static-case-single-clock`.
+
 #### check-task-proposal-link
 
 PR-level check (runs once per PR, not per task directory). Verifies that a `new task` PR's description links to an **approved** Task Proposal discussion. Skips automatically on `task fix` PRs.
@@ -719,14 +729,14 @@ e.g. `/review agent=terminus-2 model=openai/gpt-5.6-terra`. The comment footer s
 
 **`/run` overrides:**
 - **`trials=N`** — Number of trials per agent (max 10)
-- **`agents=list`** — Comma-separated `agent:model` pairs. The `:model` half is optional — `agents=codex` runs that agent alone on the model (and gateway) `llm-config.yml` assigns it, which is the cheap way to re-test one arm. The default trial agent is `claude-code` on the Ark Coding Plan; `agents=qoder` runs the Qoder CLI instead (both are Kimi K3.1 Pro). `harbor_run.agents` in `llm-config.yml` sets which one is the default
+- **`agents=list`** — Comma-separated `agent:model` pairs. The `:model` half is optional — `agents=codex` runs that agent alone on the model (and gateway) `llm-config.yml` assigns it, which is the cheap way to re-test one arm. The default trial agent is `qoder` (the Qoder CLI); `agents=claude-code` runs Claude Code on the Ark Coding Plan instead (both are Kimi K3.1 Pro). `harbor_run.agents` in `llm-config.yml` sets which one is the default
 - **`analyze=true|false`** — Run `harbor analyze` on completed trials (default: `true`)
 - **`analyze_model=model-name`** — Model used for analysis (default: `sonnet`)
 - **`env=backend`** — Environment backend for trials (see [Environment backend](#environment-backend))
 - **`hints`** / **`hints=1,3`** — Attach the task's own hints to the instruction (see [Hinted runs](#hinted-runs)). Bare `hints` attaches all of them; a list attaches exactly those
 
 **`/cheat` overrides:**
-- **`agents=list`** — Comma-separated `agent:model` pairs. The `:model` half is optional — `agents=codex` runs that agent alone on the model (and gateway) `llm-config.yml` assigns it, which is the cheap way to re-test one arm. The default trial agent is `claude-code` on the Ark Coding Plan; `agents=qoder` runs the Qoder CLI instead (both are Kimi K3.1 Pro). `harbor_run.agents` in `llm-config.yml` sets which one is the default
+- **`agents=list`** — Comma-separated `agent:model` pairs. The `:model` half is optional — `agents=codex` runs that agent alone on the model (and gateway) `llm-config.yml` assigns it, which is the cheap way to re-test one arm. The default trial agent is `qoder` (the Qoder CLI); `agents=claude-code` runs Claude Code on the Ark Coding Plan instead (both are Kimi K3.1 Pro). `harbor_run.agents` in `llm-config.yml` sets which one is the default
 - **`analyze=true|false`** — Run `harbor analyze` on completed trials (default: `true`)
 - **`analyze_model=model-name`** — Model used for analysis (default: `sonnet`)
 - **`env=backend`** — Environment backend for trials (see [Environment backend](#environment-backend))
@@ -824,13 +834,13 @@ Models are reached through gateways defined once under `gateways:` in [`.github/
 
 | Used by | Secret |
 |---------|--------|
-| Gateway `ark`, the Volcengine Ark Coding Plan (judges for `/review`, `/analyze`, proposal review; `claude-code` trials, the default `/run` and `/cheat` agent) | `ARK_API_KEY` |
+| Gateway `ark`, the Volcengine Ark Coding Plan (judges for `/review`, `/analyze`, proposal review; `claude-code` trials, the fallback trial agent: `agents=claude-code`) | `ARK_API_KEY` |
 | Gateway `kimi` (`codex` trials and the GPU pool trials) | `KIMI_CODE_API_KEY` |
 | Gateway `ppapi` | `PPAPI_API_KEY` (+ optional `PPAPI_BASE_URL`) |
 | Gateway `mercor` | `MERCOR_API_KEY` (+ optional `MERCOR_BASE_URL`) |
 | Gateway `portkey` | `PORTKEY_API_KEY` (+ optional `PORTKEY_BASE_URL`, `PORTKEY_PROVIDER`); an agent may name another secret with `portkey_key` |
 | `llm_provider: direct` | `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`, per configured models |
-| `qoder` agent (the alternative trial agent on docker tasks: `agents=qoder`) | `QODER_PERSONAL_ACCESS_TOKEN` |
+| `qoder` agent (the default `/run` and `/cheat` agent on docker tasks) | `QODER_PERSONAL_ACCESS_TOKEN` |
 | GPU tier (`/validate`, `/scene`, `/oracle`, `/run`, `/cheat`, `/test` on a `tier:gpu` PR) | The GPU pool transport secrets named in `gpu-task-controls.yml`, `gpu-scene-check.yml` and `gpu-trials.yml` |
 | [Authorship Check](#authorship-check) | `PANGRAM_API_KEY` |
 | [Harbor Hub uploads](#harbor-hub-uploads) | `HARBOR_API_KEY` (soft-required: without it, uploads are skipped and the comment says so) |

@@ -249,7 +249,7 @@ jobs:
           fi
 
           # Fallback to workflow run links
-          RUN_URL="https://github.com/${REPO}/actions/runs/${{ github.event.workflow_run.id }}"
+          RUN_URL="https://github.com/${REPO}/actions/runs/${{ github.event.workflow_run.id || github.run_id }}"
 
           echo "static_link=${STATIC_LINK:-$RUN_URL}" >> $GITHUB_OUTPUT
           echo "review_link=${REVIEW_LINK:-$RUN_URL}" >> $GITHUB_OUTPUT
@@ -397,8 +397,11 @@ jobs:
               STATUS="${REST%%:*}"
               LINK="${REST#*:}"
               NOTE=""
-              [ "$STATUS" = "not_applicable" ] && NOTE=" (not run for this commit)"
-              echo "- $(status_emoji "$STATUS") [${NAME}](${LINK})${NOTE}"
+              if [ "$STATUS" = "not_applicable" ]; then
+                echo "- $(status_emoji "$STATUS") ${NAME} (not run for this commit)"
+              else
+                echo "- $(status_emoji "$STATUS") [${NAME}](${LINK})"
+              fi
             done
           }
 

@@ -60,7 +60,7 @@ body:
     id: tiers
     attributes:
       label: Planned tiers
-      description: Each tier is its own PR. The CPU tier comes first; the GPU pool is granted to you once your CPU tier is merged.
+      description: Each tier is its own PR. The CPU tier comes first. The GPU pool opens later; once it does, it is granted to you after your CPU tier is merged.
       options:
         - label: CPU (Docker)
         - label: GPU (GPU pool, Isaac Sim 5.1)

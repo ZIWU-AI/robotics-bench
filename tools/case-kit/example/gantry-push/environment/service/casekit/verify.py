@@ -33,6 +33,8 @@ def load_export(export_dir, api, backend, scene_sha256=None):
         problems.append("the recording is not from this task's scene")
     if not entries or entries[-1]["op"] != "finish":
         problems.append("the episode did not end with finish")
+    elif (entries[-1].get("request") or {}).get("by") == "collector":
+        problems.append("the agent did not call finish; the collector sealed the episode")
     return entries, seal, problems
 
 
