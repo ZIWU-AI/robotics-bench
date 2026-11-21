@@ -1,0 +1,9 @@
+{
+  "x": {"dock": 0, "A": 2, "B": 5, "C": 9, "buffer": 3},
+  "capacity": {"A": 2, "B": 2, "C": 2, "buffer": 1},
+  "start": {"A": ["R1", "O1"], "B": ["R2", "O3"], "C": ["R3", "O2"], "buffer": []},
+  "manifest": [["out", "O1"], ["in", "I1"], ["out", "O2"], ["in", "I2"], ["out", "O3"], ["in", "I3"]],
+  "home": {"R1":"A","R2":"B","R3":"C","I1":"B","I2":"C","I3":"A"},
+  "deadline": 184,
+  "budgets": {"actions": 65, "observations": 70, "wall_s": 1800}
+}
