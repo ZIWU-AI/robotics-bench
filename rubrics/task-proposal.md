@@ -89,7 +89,7 @@ Check that the proposal can meet the contract:
 
 ## Outcome-verified
 
-The case must grade the end state, not the approach. It may restrict the means mechanically — budgets on actions and observations, a wall-time limit, a safety envelope the service enforces by refusing — but it must not require a particular algorithm, sequence of operations or tool.
+The case must grade the end state, not the approach. It may restrict the means mechanically — budgets on actions and observations, a safety envelope the service enforces by refusing — but it must not require a particular algorithm, sequence of operations or tool. Time is not one of the case's own budgets: every task has the same single agent time limit.
 
 ## Misc. considerations
 
