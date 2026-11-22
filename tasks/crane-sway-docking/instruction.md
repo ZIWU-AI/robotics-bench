@@ -18,4 +18,4 @@ Throughout the episode, trolley position must stay in [-0.3, 2.5] m and absolute
 
 Budgets are 100 actions and 110 observations.
 
-You have 1800 seconds to complete this task. Do not cheat by using online solutions or hints specific to this task.
+You have 18000 seconds to complete this task. Do not cheat by using online solutions or hints specific to this task.

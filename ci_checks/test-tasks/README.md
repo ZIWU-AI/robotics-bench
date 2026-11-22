@@ -52,6 +52,7 @@ Each fails one `ci_checks/check-*.sh` script. Runs automatically on every PR tha
 | `fail-static-task-fields-section` | `check-task-fields.sh` (`domain`/`field` written under `[task]` instead of `[metadata]`) | `bash ci_checks/check-task-fields.sh ci_checks/test-tasks/fail-static-task-fields-section` |
 | `fail-static-task-readme` | `check-task-readme.sh` (an explanation section empty, another missing) | `bash ci_checks/check-task-readme.sh ci_checks/test-tasks/fail-static-task-readme` |
 | `fail-static-task-timeout` | `check-task-timeout.sh` (over the 8h hard cap) | `bash ci_checks/check-task-timeout.sh ci_checks/test-tasks/fail-static-task-timeout` |
+| `fail-static-case-single-clock` | `check-case-single-clock.sh` (a case whose instruction adds a service-side wall-clock budget) | `bash ci_checks/check-case-single-clock.sh ci_checks/test-tasks/fail-static-case-single-clock` |
 | `fail-static-task-timeout-authoring` | `check-task-timeout.sh` (8h: under the hard cap, over the 5h authoring cap) | `bash ci_checks/check-task-timeout.sh ci_checks/test-tasks/fail-static-task-timeout-authoring` |
 | `fail-static-test-refs` | `check-test-file-references.sh` | `bash ci_checks/check-test-file-references.sh ci_checks/test-tasks/fail-static-test-refs` |
 | `fail-static-test-sh-sanity` | `check-test-sh-sanity.sh` | `bash ci_checks/check-test-sh-sanity.sh ci_checks/test-tasks/fail-static-test-sh-sanity` |

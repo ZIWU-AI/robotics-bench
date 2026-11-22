@@ -37,7 +37,7 @@ gpus = 0
 workdir = "/tests"
 
 [agent]
-timeout_sec = 1800.0
+timeout_sec = 18000.0
 user = "agent"
 
 [environment]

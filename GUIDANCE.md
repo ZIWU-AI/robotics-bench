@@ -64,8 +64,10 @@ Two kinds of case are supported ([docs/TASK_TYPES.md](docs/TASK_TYPES.md)):
 5. Everything an agent needs to act (frames, units, limits, budgets, the meaning of every field) MUST be stated in
    `instruction.md` or in documentation inside the agent's image. Nothing the agent must not know may be exposed
    through `/v1/info` or any other answer.
-6. Counted operations and wall time MUST be budgeted by the service and stated in `instruction.md`. Calling
-   `finish` is submitting; an episode the agent did not finish MUST score 0.
+6. Counted operations MUST be budgeted by the service and stated in `instruction.md`. Time has one limit,
+   `[agent].timeout_sec` (the "You have N seconds" line); the service MUST NOT keep a clock of its own
+   ([docs/CASE.md](docs/CASE.md) section 2, `check-case-single-clock`). Calling `finish` is submitting; an episode
+   the agent did not finish MUST score 0.
 
 ### 3.3 Recording and verification
 

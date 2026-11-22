@@ -5,5 +5,5 @@
   "rope_m": 0.85,
   "gravity": 9.81,
   "damping_per_s": 0.06,
-  "budgets": {"actions": 100, "observations": 110, "wall_s": 1800}
+  "budgets": {"actions": 100, "observations": 110}
 }
