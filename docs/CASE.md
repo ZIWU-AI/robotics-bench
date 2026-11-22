@@ -47,8 +47,11 @@ Each point is checked by the gate (`python tools/case-kit/gate.py <task>`, secti
    recorded state, and evaluates your success check on the replayed states. It never runs the agent's program and
    never trusts a score the service computed. Same layout plus same commands must give the same states: exactly on
    CPU engines, or within tolerances you declare in the verifier.
-5. **Budgets.** Counted operations (actions, observations, ...) and wall time are budgeted by the service and
-   declared in `instruction.md`. Calling `finish` is submitting; an episode the agent did not finish scores 0, even
+5. **Budgets.** Counted operations (actions, observations, ...) are budgeted by the service and declared in
+   `instruction.md`. Time has one limit only: `[agent].timeout_sec` (the template's 18000 s), which starts with the
+   agent and is the "You have N seconds" line; when it runs out the collector seals the episode. The service keeps
+   no clock of its own (`casekit` rejects a `wall_s` budget, `check-case-single-clock` rejects one described in
+   `instruction.md`), because a clock that starts at the first request tells the agent it has time it does not. Calling `finish` is submitting; an episode the agent did not finish scores 0, even
    when the world ended in a successful state.
 6. **Calibration of the task.** The reference solution scores 1; an episode that only calls `finish` scores 0; an
    episode the agent did not finish scores 0; an edited, truncated or state-forged recording scores 0.

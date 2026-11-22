@@ -11,7 +11,7 @@ Example online-control case built with tools/case-kit: push a puck onto a target
 | **Profile** | https://github.com/your-login |
 | **Tags** | `manipulation` `mujoco` `gantry` `pushing` `online-control` `example` |
 | **Expert time estimate** | 30 minutes |
-| **Agent budget** | 30 minutes |
+| **Agent budget** | 5 hours |
 | **Resources** | 1 CPU · 2 GB RAM |
 
 See [instruction.md](instruction.md) for the task as the agent receives it, and [task.toml](task.toml) for the full environment and verifier configuration.

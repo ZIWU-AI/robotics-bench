@@ -171,11 +171,20 @@ EOF
     fi
     echo "gateway: kimi -> $HOST (agent=$AGENT model=$MODEL)"
     ;;
-  ark)
-    # Volcengine Ark Coding Plan (ARK_API_KEY). Anthropic Messages at the bare
+  ark|ark_paygo)
+    # ark: Volcengine Ark Coding Plan (ARK_API_KEY). Anthropic Messages at the bare
     # host for claude-code, chat completions at host + /v3. Never the plain
-    # /api/v3 host: that one bills outside the Coding Plan.
-    HOST=$(gateway_base_url ark "" "https://ark.cn-beijing.volces.com/api/coding")
+    # /api/v3 host for this one: it bills outside the Coding Plan.
+    # ark_paygo: the Ark model service. Anthropic Messages at /api/compatible,
+    # chat completions at /api/v3; the model is a dated Model ID that must be
+    # activated in the Ark console. Same key variable (an entry's `ark_key`).
+    if [ "$PROVIDER" = "ark" ]; then
+      HOST=$(gateway_base_url ark "" "https://ark.cn-beijing.volces.com/api/coding")
+      OPENAI_HOST="$HOST/v3"
+    else
+      HOST=$(gateway_base_url ark_paygo "" "https://ark.cn-beijing.volces.com/api/compatible")
+      OPENAI_HOST="https://ark.cn-beijing.volces.com/api/v3"
+    fi
     if [ "$AGENT" = "claude-code" ]; then
       setenv ANTHROPIC_AUTH_TOKEN "${ARK_API_KEY:-}"
       setenv ANTHROPIC_BASE_URL   "$HOST"
@@ -188,9 +197,9 @@ EOF
       add_flag "--ae" "DISABLE_AUTOUPDATER=1"
     else
       setenv OPENAI_API_KEY  "${ARK_API_KEY:-}"
-      setenv OPENAI_BASE_URL "$HOST/v3"
+      setenv OPENAI_BASE_URL "$OPENAI_HOST"
     fi
-    echo "gateway: ark -> $HOST (agent=$AGENT model=$MODEL)"
+    echo "gateway: $PROVIDER -> $HOST (agent=$AGENT model=$MODEL)"
     ;;
   none)
     # Agents that bring their own credential and endpoint (qoder: qodercli talks to
