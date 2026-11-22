@@ -3,5 +3,5 @@
   "seats": {"in_a": [0.155, -0.202], "in_b": [0.234, -0.168], "gauge": [0.335, 0.018], "pass": [0.21, 0.207], "rework": [0.126, 0.238]},
   "lot": [{"id": "P17", "seat": "in_a", "deviation_um": 31}, {"id": "P42", "seat": "in_b", "deviation_um": -12}],
   "limit_um": 20,
-  "budgets": {"actions": 90, "observations": 55, "wall_s": 1800}
+  "budgets": {"actions": 90, "observations": 55}
 }

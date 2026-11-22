@@ -133,5 +133,5 @@ gives each run a free GPU and queues runs while all are busy. The pool host has 
 
 The scene check and acceptance together take less than one GPU hour. Model trials dominate GPU use, which is why they
 run only on accepted revisions, and five trials per agent are reserved for reported results. A case whose single trial
-is expected to exceed two hours explains in its proposal where the time goes. Time budgets are wall-clock budgets and
-include transport time between the agent container and the GPU host.
+is expected to exceed two hours explains in its proposal where the time goes. The agent time limit is the only time
+budget and includes transport time between the agent container and the GPU host.

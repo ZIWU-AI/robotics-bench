@@ -65,6 +65,13 @@ gateways:
     # An agent entry may name another key with `ark_key:` (the Seed plan uses
     # ARK_SEED_API_KEY); trial jobs only, analysis and review keep ARK_API_KEY.
     surfaces: [anthropic, openai]
+  ark_paygo:
+    # Volcengine Ark model service. Anthropic surface at this host, OpenAI at
+    # https://ark.cn-beijing.volces.com/api/v3. Models are named by dated Model ID
+    # and must be activated in the Ark console first.
+    base_url: https://ark.cn-beijing.volces.com/api/compatible
+    api_key_secret: ARK_API_KEY
+    surfaces: [anthropic, openai]
   ppapi:
     base_url: https://app-us.ppapi.ai/v1
     api_key_secret: PPAPI_API_KEY
@@ -167,7 +174,10 @@ harbor_run:
       # Docker (CPU) tasks only: the non-docker single job and the GPU pool do not
       # run it.
       # `none`: qodercli talks to Qoder itself, so no LLM gateway env is exported.
-      model: kmodel_latest
+      # Written and shown as kimi-k3.1-pro, the name claude-code uses for the same
+      # model; `provider_model` is what qodercli receives. `qoder:kmodel_latest` also works.
+      model: kimi-k3.1-pro
+      provider_model: kmodel_latest
       llm_provider: none
       # 2026-11-17: the default agent again (11-16 off while the account had no credits).
       run: true
@@ -222,12 +232,23 @@ harbor_run:
         version: 2.1.318
         reasoning_effort: high
     - agent: claude-code
-      # 2026-11-18: Doubao Seed 2.1 Pro on the Volcengine Ark Seed plan, a
-      # separate subscription from the Coding Plan key above, so it names its own
-      # secret (`ark_key`, the ark counterpart of `portkey_key`). Same Anthropic
-      # surface at the Coding host; the service answers as doubao-seed-2-1-pro.
-      # Opt-in: `/run agents=claude-code:doubao-seed-2.1-pro`.
+      # Doubao Seed 2.1 Pro on the Ark model service. `model` is the name to write
+      # in `agents=`; `provider_model` is the id sent to the provider.
+      # `/run agents=claude-code:doubao-seed-2.1-pro`.
       model: doubao-seed-2.1-pro
+      provider_model: doubao-seed-2-1-pro-260915
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs:
+        version: 2.1.318
+        reasoning_effort: high
+    - agent: claude-code
+      # The same model on the Seed plan, only when named explicitly:
+      # `/run agents=claude-code:doubao-seed-2.1-pro@seed-plan`.
+      model: doubao-seed-2.1-pro@seed-plan
+      provider_model: doubao-seed-2.1-pro
       llm_provider: ark
       ark_key: ARK_SEED_API_KEY
       run: false
@@ -235,23 +256,65 @@ harbor_run:
       kwargs:
         version: 2.1.318
         reasoning_effort: high
-    # Codex via ppapi. ppapi does NOT serve the OpenAI /v1/responses websocket
-    # codex prefers (it used to 404, which is why codex ran on Portkey with
-    # PORTKEY_API_KEY_SNORKEL). Until 2026-08-14 codex fell back to HTTPS after
-    # the failed dial; then the upgrade started returning HTTP 400 `websocket:
-    # bad handshake` and codex began failing the turn instead, killing every
-    # trial at 2-5s. Fixed in run-trials.yml / run-cheat-trials.yml, which write
-    # a codex config.toml selecting a `ppapi` model provider with
-    # supports_websockets = false (the built-in `openai` provider hardcodes it
-    # true and cannot be overridden) and pass it as `--ak config=<path>`. If
-    # ppapi ever serves the websocket, that block can be dropped.
-    # If trials fail with a 404/handshake error on /v1/responses, revert to:
-    #   llm_provider: portkey
-    #   portkey_key: PORTKEY_API_KEY_SNORKEL
-    # Model stays the BARE slug: codex talks the OpenAI surface directly (no
-    # litellm in the path), so no `openai/` prefix — that prefix is only for the
-    # terminus-2 judges below. The ppapi branch exports OPENAI_API_KEY and
-    # OPENAI_BASE_URL (host + /v1) from PPAPI_API_KEY/PPAPI_BASE_URL.
+    # Other Doubao Seed chat models on the Ark model service, by the name without
+    # the date; `provider_model` is the dated Model ID (each must be activated in
+    # the Ark console). `/run agents=claude-code:<model>`.
+    - agent: claude-code
+      model: doubao-seed-2.1-turbo
+      provider_model: doubao-seed-2-1-turbo-260628
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.1-lite
+      provider_model: doubao-seed-2-1-lite-260915
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-pro
+      provider_model: doubao-seed-2-0-pro-260215
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-code
+      provider_model: doubao-seed-2-0-code-preview-260215
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-lite
+      provider_model: doubao-seed-2-0-lite-260428
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-2.0-mini
+      provider_model: doubao-seed-2-0-mini-260428
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
+    - agent: claude-code
+      model: doubao-seed-evolving
+      provider_model: doubao-seed-evolving
+      llm_provider: ark_paygo
+      ark_key: ARK_MODEL_SERVICE_API_KEY
+      run: false
+      cheat: false
+      kwargs: {version: 2.1.318, reasoning_effort: high}
     - agent: codex
       # 2026-11-10 (Robotics-Bench): /run and /cheat use Kimi k3.1 pro on the Kimi
       # Code official endpoint (gateway `kimi`), with the model, endpoint,

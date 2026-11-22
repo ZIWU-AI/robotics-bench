@@ -27,7 +27,7 @@ The instruction (or an API document under `/app` that it names with an absolute 
 
 - the goal, in terms of the objects and the end state;
 - how to reach the service (the endpoint file the launcher writes) and every operation the agent may call, with its arguments, units, frames, limits and what it returns, including what a refusal means;
-- the budgets: counted operations, wall time, and that calling `finish` submits;
+- the budgets: counted operations, and that calling `finish` submits. Time is only the final "You have N seconds" line; a second, service-side clock (a wall-time budget, "`info` does not start the timer") is a defect, not a budget;
 - every success condition the verifier tests, with its threshold (docs/CASE.md section 3);
 - anything the author chose that no expertise recovers: coordinate frames, sign conventions, joint ordering, gripper value ranges, camera intrinsics if images are returned.
 

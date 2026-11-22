@@ -239,8 +239,8 @@ simulation time, and a call that returns camera images costs much more than one 
 
 - return images only when the agent asks for them, and keep a separate read-only observation call;
 - offer higher-level actions that run many native steps per call where the case allows it;
-- set wall-clock budgets with transport time included, and check the reference solution's margin on the GPU tier,
-  not only on the CPU tier.
+- remember that transport time counts against the agent time limit (the only time budget; the service keeps no
+  clock of its own), and check the reference solution's margin on the GPU tier, not only on the CPU tier.
 
 ## 8. Self-check before submitting
 

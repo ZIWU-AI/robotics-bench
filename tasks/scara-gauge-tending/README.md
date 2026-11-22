@@ -11,7 +11,7 @@ Load and unload a single-seat inspection gauge with a SCARA robot and sort both 
 | **Profile** | https://github.com/vesterbeyer |
 | **Tags** | `machine-tending` `scara` `inspection` `online-control` |
 | **Expert time estimate** | 30 minutes |
-| **Agent budget** | 30 minutes |
+| **Agent budget** | 5 hours |
 | **Resources** | 1 CPU · 2 GB RAM |
 
 See [instruction.md](instruction.md) for the task as the agent receives it, and [task.toml](task.toml) for the full environment and verifier configuration.
