@@ -45,6 +45,12 @@ def main():
     override = a.output / "override.json"
     selected = instances.select(base, root, override)
     check("normal-launch-selects-eval", selected["selection"]["phase"] == "eval")
+    check(
+        "persisted-count-only-scene",
+        selected["budgets"] == {"actions": 400, "observations": 400}
+        and json.loads((root / "selected-scene.json").read_text()) == selected
+        and (root / "selected-scene.json").stat().st_mode & 0o777 == 0o600,
+    )
     override.write_text(json.dumps({"seed": 0, "phase": "dev"}))
     check(
         "persisted-selection-wins", instances.select(base, root, override) == selected
@@ -59,7 +65,15 @@ def main():
     )
     original = verify.grade(a.export)
     check("original-replay-passes", original["reward"] == 1)
-    for kind in ["meta", "profile", "seed", "digest", "family", "rebound_scene"]:
+    for kind in [
+        "meta",
+        "profile",
+        "seed",
+        "digest",
+        "family",
+        "rebound_scene",
+        "old_clock",
+    ]:
         folder = a.output / kind
         shutil.copytree(a.export, folder)
         seal = json.loads((folder / "seal.json").read_text())
@@ -74,6 +88,11 @@ def main():
             seal["scene_sha256"] = "0" * 64
         elif kind == "family":
             seal["scene"]["selection"]["family"] = "foreign"
+        elif kind == "old_clock":
+            for obj in [seal, meta]:
+                obj["budgets"]["wall_s"] = 1800
+                obj["scene"]["budgets"]["wall_s"] = 1800
+                obj["scene_sha256"] = instances.digest(obj["scene"])
         else:
             scene = instances.make_scene(base, 2147483677, "eval")
             for obj in [seal, meta]:

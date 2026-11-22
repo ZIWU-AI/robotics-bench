@@ -75,6 +75,7 @@ def main():
         "out_of_order",
         "partial",
         "fall",
+        "count_limits",
     ]:
         folder = out / policy
         folder.mkdir(exist_ok=True)
@@ -86,6 +87,15 @@ def main():
         client = Client(f"http://127.0.0.1:{server.server_port}", "regression-token")
         try:
             if policy == "oracle":
+                info = client.info()
+                check(
+                    "count_only_info",
+                    info["budgets"]
+                    == info["left"]
+                    == {"actions": 400, "observations": 400},
+                )
+                check("info_is_free", client.info() == info)
+                check("no_service_start_timer", not hasattr(episode, "started"))
                 before = episode.snapshot()
                 for body in [
                     {"tracks": [True, 0], "flippers": [0] * 4, "steps": 1},
@@ -135,6 +145,32 @@ def main():
                 huge_refusals()
                 solve(client)
                 huge_refusals()
+                check(
+                    "count_only_after_success",
+                    client.info()["left"]
+                    == {k: 400 - v for k, v in episode.used.items()},
+                )
+            elif policy == "count_limits":
+                for _ in range(400):
+                    assert client.control([0, 0], [0] * 4, 1)["ok"]
+                    assert client.observe()["ok"]
+                before = episode.snapshot()
+                count = len(list(recording.read(folder / "recording")))
+                check(
+                    "counts_exhausted",
+                    client.info()["left"] == {"actions": 0, "observations": 0},
+                )
+                check(
+                    "control_limit_refusal",
+                    not client.control([0, 0], [0] * 4, 1)["ok"],
+                )
+                check("observation_limit_refusal", not client.observe()["ok"])
+                check(
+                    "exhaustion_preserves_world_and_recording",
+                    episode.snapshot() == before
+                    and len(list(recording.read(folder / "recording"))) == count
+                    and episode.used == {"actions": 400, "observations": 400},
+                )
             elif policy in ["incomplete", "out_of_order", "partial", "fall"]:
                 info = client.info()
                 route = info["mission"]["route"]
@@ -162,6 +198,20 @@ def main():
                 client.finish()
             if policy == "oracle":
                 recorded, _sealed = recording.verify(folder / "recording")
+                meta = json.loads((folder / "recording/meta.json").read_text())
+                check(
+                    "sealed_count_budgets",
+                    all(
+                        obj["budgets"]
+                        == obj["scene"]["budgets"]
+                        == {"actions": 400, "observations": 400}
+                        and "wall_s" not in json.dumps(obj)
+                        # The kit retains an ISO recording timestamp for provenance;
+                        # it is not an admission timer or a remaining-time budget.
+                        and isinstance(obj["started"], str)
+                        for obj in [meta, _sealed]
+                    ),
+                )
                 check(
                     "huge_refusals_recorded",
                     sum(
