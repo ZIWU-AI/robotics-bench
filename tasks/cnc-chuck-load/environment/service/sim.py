@@ -17,7 +17,7 @@ DEFAULT_PRESSURE = .5
 JAW_CAP_N = 12.
 PROOF_N = 5.
 PROOF_STEPS = 700  # .2 s ramp up, 1 s plateau, .2 s ramp down
-BUDGETS = {'actions': 300, 'observations': 150, 'wall_s': 1800}
+BUDGETS = {'actions': 300, 'observations': 150}
 
 
 def predicates(gap,radial,tilt,loads,opening,clearance,robot_contacts):

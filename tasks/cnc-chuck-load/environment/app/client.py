@@ -3,6 +3,8 @@
 Observations: xyz (m), force_N and jaw_loads_N (N), pressure (normalized),
 gripper_opening_m and chuck_opening_m. chuck(command, pressure=None) accepts
 explicit [0,1] setpoints; an omitted close pressure uses the fixed default 0.5.
+info() is free; budgets and left contain only actions and observations.
+The harness time limit starts with the agent and includes service startup.
 See instruction.md for limits and call semantics.
 """
 import json
