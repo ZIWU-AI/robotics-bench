@@ -1867,17 +1867,14 @@ jobs:
                   ERROR=$(jq -r '.error // "null"' "$RESULT_FILE")
                   DETAIL=$(format_cost_duration "$COST_USD" "$DURATION")
 
-                  # Agent-timeout trials are harness artifacts, not pass/fail
-                  # signal — keep them visible as ⚠️ but exclude from the pass
-                  # fraction (numerator and denominator both).
-                  IS_TIMEOUT=0
+                  # An agent timeout is a scored outcome: the agent used its whole
+                  # [agent].timeout_sec and the verifier then graded what it left.
+                  # Show it as ✅/❌ by reward and count it like any other trial.
                   case "$(printf '%s' "$ERROR" | tr '[:upper:]' '[:lower:]')" in
-                    *timeout*) IS_TIMEOUT=1 ;;
+                    *timeout*) ERROR="null" ;;
                   esac
-                  if [ "$IS_TIMEOUT" -eq 0 ]; then
-                    ROW_TOT=$((ROW_TOT + 1))
-                    if (( $(echo "$REWARD >= 1.0" | bc -l 2>/dev/null || echo 0) )); then ROW_PASS=$((ROW_PASS + 1)); fi
-                  fi
+                  ROW_TOT=$((ROW_TOT + 1))
+                  if (( $(echo "$REWARD >= 1.0" | bc -l 2>/dev/null || echo 0) )); then ROW_PASS=$((ROW_PASS + 1)); fi
                   if [ "$COST_USD" != "null" ] && [ "$(echo "$COST_USD > 0" | bc -l 2>/dev/null || echo 0)" = "1" ]; then ROW_CS=$(echo "$ROW_CS + $COST_USD" | bc -l); ROW_CN=$((ROW_CN + 1)); fi
                   if [ "$DURATION" != "null" ] && [ "$DURATION" -gt 0 ] 2>/dev/null; then ROW_DS=$(echo "$ROW_DS + $DURATION" | bc -l); ROW_DN=$((ROW_DN + 1)); fi
 
@@ -1940,19 +1937,17 @@ jobs:
                   nonbinary.add(str(nb))
               k = f"{d.get('model','')} ({d.get('agent','')})"
               g = per.setdefault(k, {"cs": 0.0, "cn": 0, "ds": 0.0, "dn": 0, "tot": 0, "pass": 0})
-              # Agent-timeout trials are harness artifacts, not pass/fail signal —
-              # exclude from the pass-rate numerator and denominator (still counted
-              # in cost/runtime below, which are real measurements).
+              # Agent timeouts are scored outcomes (the verifier grades what the
+              # agent left), so they count in the pass rate like any other trial.
               err = str(d.get("error") or "").lower()
               if err not in ("", "null") and "timeout" in err:
                   timeouts += 1
-              else:
-                  total += 1; g["tot"] += 1
-                  try:
-                      if float(d.get("reward")) >= 1.0:
-                          passes += 1; g["pass"] += 1
-                  except (TypeError, ValueError):
-                      pass
+              total += 1; g["tot"] += 1
+              try:
+                  if float(d.get("reward")) >= 1.0:
+                      passes += 1; g["pass"] += 1
+              except (TypeError, ValueError):
+                  pass
               c = d.get("cost_usd")
               if c not in (None, "null"):
                   try:
@@ -1973,7 +1968,7 @@ jobs:
           avg_c = cs / cn if cn else None
           avg_d = ds / dn if dn else None
           lines = []
-          to_note = f"; {timeouts} timeout trial(s) excluded" if timeouts else ""
+          to_note = f"; {timeouts} hit the agent timeout" if timeouts else ""
           # Backstop for ci_checks/check-binary-reward, surfaced where reviewers read.
           # A fractional reward shows up here as ❌ with a nonzero score on the hub, which
           # reads as "the agent got partway" when harbor in fact scored it a flat failure.
@@ -1987,8 +1982,6 @@ jobs:
                   " site (see `ci_checks/check-binary-reward.py`).")
           if total:
               lines.append(f"**✅ Pass rate across all trials:** {100.0 * passes / total:.0f}% <sub>({passes}/{total} passed{to_note})</sub>")
-          elif timeouts:
-              lines.append(f"**✅ Pass rate across all trials:** — <sub>(all {timeouts} trial(s) timed out; excluded)</sub>")
           if cn or dn:
               lines.append(f"**💰 Average cost across all trials:** {fmt_cost(avg_c)} <sub>(over {cn} trial(s))</sub>")
               lines.append(f"**⏱️ Average runtime across all trials:** {fmt_dur(avg_d)} <sub>(over {dn} trial(s))</sub>")
@@ -2001,7 +1994,7 @@ jobs:
                   "pass_rate_pct": (round(100.0 * passes / total, 1) if total else None),
                   "n_passed": passes,
                   "n_trials": total,
-                  "n_timeouts_excluded": timeouts,
+                  "n_timeouts": timeouts,
                   "avg_cost_usd": (round(avg_c, 4) if avg_c is not None else None),
                   "avg_duration_secs": (round(avg_d, 1) if avg_d is not None else None),
                   "n_trials_with_cost": cn,
