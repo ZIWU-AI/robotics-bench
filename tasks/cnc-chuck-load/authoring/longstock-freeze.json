@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "frozen_at_utc": "2026-11-23T09:02:33.348826+00:00",
+  "frozen_at_utc": "2026-11-23T09:02:50.491731+00:00",
   "files": {
     "authoring/evidence/compare_numeric_revision.py": "425b41c1574b973ce96860f33d8f0f30d5f055302ead45ab688dd52ea3507688",
     "authoring/evidence/docker_replay.py": "48da1f2d849c43f33498c06311d90243b17fdf9d8e39c3a204f4f27c5bcf48e9",
@@ -15,7 +15,7 @@
     "authoring/provenance/trial-3-scripts.json": "a7f87139888355fdc2648206560b23d4199b323d95967885c78b98746e097425",
     "environment/.dockerignore": "871bc88531d080944ad0369db353e2c92b6c0a53c93aca146d2cf12d21dea27a",
     "environment/Dockerfile": "ca5792cb159e75cbf0a3be03882608df52cffee920c8711ff533fb1dcbd05bb8",
-    "environment/app/API.md": "fcbfe107a9b853cac316a08826e3cdc818974782690fd4ec4b4ed999c20fa9b2",
+    "environment/app/API.md": "b45fa955e557903ee43f3fa5ed2873a67b51a0a9c1e667207822d10dc979252e",
     "environment/app/client.py": "f3f4d84c32b1f97602f5a6d642c9f1f47d31892cb9acaa39d235c803b4437ee8",
     "environment/requirements.txt": "db00752bea31f562ef191c13af48a44a9b11972f6a9ff77a3ea05f3bc836953d",
     "environment/service/casekit/__init__.py": "bfac748343b61d01e55ac8d8608619e53b5be4d17fba095458850aa64593080b",
