@@ -56,3 +56,40 @@ The recovery refinement is tested on a separate deterministic development set
 near angular grid-cell centres. The failed holdout seed is not rerun for tuning.
 A new controller requires a new source freeze and an entirely new holdout set;
 these old 19 successes do not certify that controller.
+
+## Recovery development after the first qualification
+
+`recovery-development.json` contains every completed original/refinement/passive
+and archived-script development outcome, including the rejected candidate.
+`recovery-controllers.tar.gz` stores the exact original controllers and HTTP
+comparison runners; `recovery-controllers.json` binds their hashes and all 612 raw
+files retained in the author workspace, including interrupted runs. The runtime
+and verifier physics are byte-identical to the final frozen implementation.
+
+On the 24 independently selected grid-cell-centre development IDs, the original
+controller passes 11/24 and the offset-grid controller passes 24/24. The local
+ranking candidate was stopped after 13/14 passes and two interrupted exports;
+its failure is retained. It ranked a transient small probe force as promising,
+but the next insertion step could block after stock slip. The final recovery
+covers the coarse cells' centres instead of relying on that ranking.
+
+The nominal-angle 8 N passive baseline passes 5/8 variable development scenes and
+the nominal scene. Two variable-scene failures latch local guide overload, and
+one stops before seating at its force bound. Thus passive alignment remains a
+legitimate shortcut on part of the domain. Its final heldout comparison is
+predeclared on all 20 replacement scenes.
+
+The final controller removes two unused reads while preserving all physical
+commands and waits. `../provenance/controller-regression.json` records exact
+physical-request agreement against the public responses of 140 successful
+physical development traces, with exactly two fewer observations per scene.
+This is a controller regression, not 140 additional physical trials. Fresh live
+final-controller calibration separately passes 11/11. None of these development
+IDs is used by the replacement holdout.
+
+To reproduce an archived controller batch, start from the runtime at `5bdb780`,
+replace `solution/oracle.py` and `authoring/evidence/longstock.py` with the matching
+archived version, and run the supplied `longstock-recovery-development.json`
+manifest into a new output directory. Use the recorded full source commit for
+older pressure/clock versions. All final heldout evaluation uses the current
+source and the new frozen manifest, rather than the archived controllers.

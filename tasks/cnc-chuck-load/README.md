@@ -56,7 +56,7 @@ The Oracle uses only the public Client. It estimates stock stick-out from a
 free-space gravity wrench, searches the entrance at low preload, and surveys
 opposing contacts to estimate the first guide centre. It approaches the second
 guide while monitoring the measured moment about the first guide and following actual blank deflection,
-with coordinated translations and rotations that preserve that pivot. A bounded search over the published angular range handles flat-face contacts whose moments cancel. It then detects the stop,
+with coordinated translations and rotations that preserve that pivot. Coarse and offset angular grids over the published range handle flat-face contacts whose moments cancel. It then detects the stop,
 calibrates pressure from measured jaw loads, unloads servo compression, releases,
 retreats through the complete proof window and calls finish.
 
@@ -107,6 +107,13 @@ k3.1-pro successes on 7b3a413**, with two additional 429 errors excluded from th
 manipulation denominator. [Full log analysis](authoring/official-log-analysis.md)
 compares their strategies and preserves all four outcomes. New local controllers
 are finite comparisons, not new model trials or model population pass rates.
-Maintainers must assess fresh models on this revision. Older pressure and clock
+The final frozen 20-scene controller comparison gives full feedback 20/20,
+entrance-only alignment 1/20, bounded passive insertion 5/20, same-scene blind
+replay 20/20 and cross-scene transfer 0/20. All 175 predeclared traces replay exactly;
+20 full and 18 selected baseline traces additionally agree in constrained Docker.
+On five scenes, gravity-only torque passes 5/5 and wrench-estimated pose 4/5,
+so these results do not make either direct sensor indispensable. The first frozen
+qualification's 19/20 reference result and subsequent separate development/new
+holdout are retained in the report. Maintainers must assess fresh models on this revision. Older pressure and clock
 validation is preserved in [the v3 archive](authoring/validation-v3.md); it is not
 current-head evidence.
