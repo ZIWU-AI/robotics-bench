@@ -5,6 +5,7 @@
   "core_policies": [
     "full",
     "one_plane",
+    "passive",
     "same_replay",
     "transfer"
   ],

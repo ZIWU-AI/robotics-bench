@@ -126,7 +126,13 @@ def archived(c,trial):
         code=item['code'].replace('from client import Client','')
         scope={'Client':lambda:c,'__name__':'archived_policy'}
         try:exec(compile(code,f'official-trial-{trial}-step-{item["step"]}','exec'),scope)
-        except SystemExit:break
+        except (Exception,SystemExit) as exc:
+            # Each archived tool invocation was a separate Python process. An
+            # exit/error ends that snippet, not the later recorded invocations.
+            # Keep the fixed inter-snippet decisions and retain every error.
+            c.note('archived_snippet_error',trial=trial,step=item['step'],
+                   error=f'{type(exc).__name__}: {exc}')
+            print(f'archived snippet {item["step"]}: {type(exc).__name__}: {exc}',flush=True)
 
 
 class Adapted:
@@ -177,8 +183,8 @@ def straight(c):
 
 
 def policy(c,name,source=None):
-    if name in ('full','fixed035','fixed05','full_pressure','no_torque','no_pose','no_force','pose_only','constant_force','one_plane','grid','spiral','supported','overclamp_recover','pressure_reset','pressure_recover','recontact_recover','proof699','proof700','seat_inside','seat_outside','jaw_inside','jaw_outside'):
-        oracle.solve(c,angular=name not in ('one_plane','grid','spiral'),search_order=name,fixed_pressure={'fixed035':.35,'fixed05':.5,'full_pressure':1.}.get(name))
+    if name in ('full','passive','fixed035','fixed05','full_pressure','no_torque','no_pose','no_force','pose_only','constant_force','one_plane','grid','spiral','supported','overclamp_recover','pressure_reset','pressure_recover','recontact_recover','proof699','proof700','seat_inside','seat_outside','jaw_inside','jaw_outside'):
+        oracle.solve(c,angular=name not in ('one_plane','grid','spiral','passive'),passive=name=='passive',search_order=name,fixed_pressure={'fixed035':.35,'fixed05':.5,'full_pressure':1.}.get(name))
     elif name=='straight':straight(c)
     elif name in ('wall','overload_recover'):
         travel(c,[-.155,.008,.208]);travel(c,[-.125,.008,.208])

@@ -6,7 +6,7 @@ sys.path.insert(0,'/app')
 from client import Client
 
 
-def solve(c, sensing='full', unload=True, fixed_pressure=None, angular=True, search_order="radial"):
+def solve(c, sensing='full', unload=True, fixed_pressure=None, angular=True, search_order="radial", passive=False):
     def ok(a):
         if not a.get('ok'):raise RuntimeError(a)
         return a
@@ -40,7 +40,8 @@ def solve(c, sensing='full', unload=True, fixed_pressure=None, angular=True, sea
     free=observe();bias=free['force_N'][0]
     # Gravity wrench gives the held centre-of-mass lever arm before contact.
     stick=.09+free['torque_Nm'][1]/(-free['force_N'][2])
-    travel([-stick-.005,0.,.2+dz]);moving=observe();lag=target[0]-moving['xyz'][0]
+    travel([-stick-.005,0.,.2+dz])
+    lag=target[0]-observe()['xyz'][0] if sensing=='position' else 0.
     def load(o):
         if sensing=='position':return max(0.,3000*(target[0]-o['xyz'][0]-lag))
         return max(0.,bias-o['force_N'][0])
@@ -96,6 +97,17 @@ def solve(c, sensing='full', unload=True, fixed_pressure=None, angular=True, sea
     corrections=0;aligned=False
     for attempt in range(80):
         travel(pose(probe_x,pitch,yaw));o=observe()
+        if passive:
+            # Nominal-angle comparison: permit passive compliance with bounded
+            # axial loading; distinguish the rear guide from the stop using
+            # actual tracked tip progress. No fixture pose is available.
+            front=o['blank_xyz'][0]+.09*o['blank_axis'][0]
+            if front>.088 and load(o)>2.:
+                aligned=True;break
+            if load(o)>8.:raise RuntimeError('passive insertion reached 8 N force limit')
+            if probe_x>=-.035:raise RuntimeError('passive insertion stop absent')
+            probe_x=min(-.035,probe_x+.0005)
+            continue
         f=[a-b for a,b in zip(o['force_N'],free['force_N'])]
         m=[a-b for a,b in zip(o['torque_Nm'],free['torque_Nm'])]
         lever=.002-o['xyz'][0]
@@ -133,23 +145,44 @@ def solve(c, sensing='full', unload=True, fixed_pressure=None, angular=True, sea
         if anchor[1]>0:ys.reverse()
         candidates=[(math.radians(p),math.radians(y))
                     for row,p in enumerate(ps) for y in (ys if row%2==0 else ys[::-1])]
-        for candidate_pitch,candidate_yaw in candidates:
+        def try_angle(candidate_pitch,candidate_yaw):
+            nonlocal pitch,yaw,o
             travel(pose(.079-stick,pitch,yaw))
             pitch=candidate_pitch;yaw=candidate_yaw
             coordinated(pose(.0852-stick,pitch,yaw),[pitch-gravity_angles[0],yaw-gravity_angles[1]]);o=observe()
-            if load(o)>.5:continue
+            if load(o)>.5:return False
             while target[0]<end-1e-9:
                 travel(pose(min(end,target[0]+.0007),pitch,yaw));o=observe()
                 if load(o)>2.:break
-            if load(o)<.5:break
-        else:raise RuntimeError('local angular recovery exhausted')
+            return load(o)<.5
+        found=False
+        for candidate_pitch,candidate_yaw in candidates:
+            found=try_angle(candidate_pitch,candidate_yaw)
+            if found:break
+        if not found:
+            # Sample the centres of the coarse angular cells. A small axial
+            # force at the first probe is not a reliable ranking: stock can slip
+            # in the grip, and a candidate can block at the next insertion step.
+            # This offset grid fills the largest coverage gaps without assuming
+            # that a transient low force identifies the correct neighbourhood.
+            ps=[i+.5 for i in range(-3,3)];ys=ps[:]
+            if anchor[0]>0:ps.reverse()
+            if anchor[1]>0:ys.reverse()
+            for row,p1 in enumerate(ps):
+                for y1 in (ys if row%2==0 else ys[::-1]):
+                    left=ok(c.info())['left']
+                    if left['actions']<30 or left['observations']<14:break
+                    found=try_angle(math.radians(p1),math.radians(y1))
+                    if found:break
+                if found:break
+        if not found:raise RuntimeError('local angular recovery exhausted')
     if hasattr(c,'note'):c.note('angle',pitch=pitch,yaw=yaw,load=load(o))
     # Follow the identified line, with an independent force stop datum.
     while target[0]<-.035-1e-9:
         travel(pose(min(-.035,target[0]+.0007),pitch,yaw));o=observe()
         if load(o)>2.:break
     if load(o)<1.5:raise RuntimeError('stop datum absent')
-    ok(c.wait());seated=observe()
+    ok(c.wait())
     # Establish low pressure before the fastest jaw ramp can contact the blank.
     ok(c.chuck('open', pressure=.12 if fixed_pressure is None else fixed_pressure))
     ok(c.chuck('close', pressure=.12 if fixed_pressure is None else fixed_pressure))
