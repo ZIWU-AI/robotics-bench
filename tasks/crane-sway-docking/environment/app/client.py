@@ -47,8 +47,8 @@ class Client:
     def observe(self):
         return self.call("observe")
 
-    def drive(self, acceleration):
-        return self.call("drive", {"acceleration": acceleration})
+    def drive(self, acceleration, hoist=0.0):
+        return self.call("drive", {"acceleration": acceleration, "hoist": hoist})
 
     def finish(self):
         return self.call("finish")

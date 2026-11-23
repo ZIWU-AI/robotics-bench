@@ -29,7 +29,7 @@ class CraneEpisode(Episode):
         return self.crane.snapshot()
 
     def describe(self):
-        return {"dock_x": self.scene["dock_x"], "rope_m": self.scene["rope_m"]}
+        return {k: self.scene[k] for k in ("dock_x", "rope_m", "final_rope_m", "barrier")}
 
     @op(budget="observations")
     def observe(self, body):
@@ -42,7 +42,12 @@ class CraneEpisode(Episode):
             raise BadRequest("acceleration must be numeric")
         if not -MAX_ACCEL <= a <= MAX_ACCEL:
             raise Refused("acceleration must be in [-1.2, 1.2] m/s^2")
-        self.crane.drive(a)
+        rate = body.get("hoist", 0.0)
+        if type(rate) not in (int, float):
+            raise BadRequest("hoist must be numeric")
+        if not -0.16 <= rate <= 0.16:
+            raise Refused("hoist speed outside [-0.16, 0.16] m/s")
+        self.crane.drive(a, rate)
         return {"executed": True}
 
 

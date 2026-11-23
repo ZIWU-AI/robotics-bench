@@ -21,7 +21,10 @@ def grade(export=Path("/var/lib/crane/export")):
             a = entry["request"]["acceleration"]
             if type(a) not in (float, int) or not -MAX_ACCEL <= a <= MAX_ACCEL:
                 raise ValueError("invalid replay acceleration")
-            crane.drive(a)
+            rate = entry["request"].get("hoist", 0.0)
+            if type(rate) not in (int, float) or not -0.16 <= rate <= 0.16:
+                raise ValueError("invalid replay hoist speed")
+            crane.drive(a, rate)
         if crane.snapshot() != entry["state"]:
             problems.append(f"state mismatch at entry {entry['seq']}")
             break
