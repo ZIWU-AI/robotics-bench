@@ -6,7 +6,7 @@ import math
 import re
 import secrets
 
-VERSION = 'cnc-batch-pressure-sha256-v2'
+VERSION = 'cnc-long-stock-sha256-v3'
 BOUNDS = {'dy_m':[-.002,.002], 'dz_m':[-.002,.002],
           'stock_m':[-.002,.004], 'clamp_ramp_s':[.25,2.0], 'pressure_gain_N':[10.,40.],
           'jaw_friction':[.28,.36]}
@@ -15,6 +15,9 @@ FILES = ['scene.py','sim.py','protocol.py']
 
 def canonical(value):
     return json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False)
+
+
+BOUNDS.update(pitch_rad=(-math.pi/60,math.pi/60), yaw_rad=(-math.pi/60,math.pi/60))
 
 
 def generate(seed):
@@ -43,6 +46,15 @@ def boundaries():
             for friction in (.28,.36):
                 result[f'{name}-g{gain}-f{friction}']=dict(v,pressure_gain_N=gain,jaw_friction=friction)
     result['nominal']=dict(dy_m=0.,dz_m=0.,stock_m=0.,clamp_ramp_s=.5,pressure_gain_N=26.,jaw_friction=.32)
+    for v in result.values(): v.update(pitch_rad=0.,yaw_rad=0.)
+    # Paired geometry/material extrema and all four angular corners.
+    original=list(result.items())
+    result={name:v for name,v in original if name=='nominal'}
+    for i,(name,v) in enumerate(original):
+        if name=='nominal': continue
+        signs=[(-1,-1),(-1,1),(1,-1),(1,1)]
+        a,b=signs[i%4]
+        result[name]=dict(v,pitch_rad=a*math.pi/60,yaw_rad=b*math.pi/60)
     return result
 
 

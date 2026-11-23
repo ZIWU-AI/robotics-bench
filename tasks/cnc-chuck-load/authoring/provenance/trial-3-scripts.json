@@ -1,0 +1,66 @@
+[
+  {
+    "step": 4,
+    "code": "from client import Client\nimport json\nc=Client()\nprint(json.dumps(c.info(), indent=2))\nprint(json.dumps(c.observe(), indent=2))"
+  },
+  {
+    "step": 5,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.075,0,0.2),(-0.066,0,0.2)]:\n    print('move',target,json.dumps(c.move(*target)))\n    print('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 6,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.068,0,0.2),(-0.066,0,0.2)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 7,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.066,0.001,0.2),(-0.066,-0.001,0.2),(-0.066,0,0.201),(-0.066,0,0.199)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 8,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.064,0,0.199),(-0.062,0,0.199),(-0.060,0,0.199)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 9,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.06,0.0005,0.1985),(-0.058,0.0005,0.1985)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 10,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.05,0.0005,0.1985),(-0.04,0.0005,0.1985),(-0.032,0.0005,0.1985),(-0.028,0.0005,0.1985),(-0.026,0.0005,0.1985)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 11,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.024,0.0005,0.1985),(-0.023,0.0005,0.1985),(-0.022,0.0005,0.1985),(-0.021,0.0005,0.1985)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 12,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.020,0.0005,0.1985),(-0.019,0.0005,0.1985),(-0.018,0.0005,0.1985),(-0.017,0.0005,0.1985)]:\n print('move',target,json.dumps(c.move(*target)))\n print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 13,
+    "code": "from client import Client\nimport json\nc=Client()\nprint('move',json.dumps(c.move(-0.0174,0.0005,0.1985)))\nprint('obs',json.dumps(c.observe()))\nprint('open low',json.dumps(c.chuck('open',pressure=0.12)))\nprint('obs',json.dumps(c.observe()))\nprint('close low',json.dumps(c.chuck('close',pressure=0.12)))\nprint('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 14,
+    "code": "from client import Client\nimport json\nc=Client()\nfor i in range(3):\n print('wait',i,json.dumps(c.wait()))\n print('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 15,
+    "code": "from client import Client\nimport json\nc=Client()\nprint('close .30',json.dumps(c.chuck('close',pressure=0.30)))\nprint('obs',json.dumps(c.observe()))\nprint('wait',json.dumps(c.wait()))\nprint('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 16,
+    "code": "from client import Client\nimport json\nc=Client()\nprint('gripper open',json.dumps(c.gripper('open')))\nprint('obs',json.dumps(c.observe()))\nprint('wait',json.dumps(c.wait()))\nprint('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 17,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.0374,0.0005,0.1985),(-0.0574,0.0005,0.1985),(-0.0774,0.0005,0.1985)]:\n print('move',target,json.dumps(c.move(*target)))\n print('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 18,
+    "code": "from client import Client\nimport json\nc=Client()\nfor i in range(4):\n print('wait',i,json.dumps(c.wait()))\n print('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 19,
+    "code": "from client import Client\nimport json\nc=Client()\nprint(json.dumps(c.finish(), indent=2))"
+  }
+]

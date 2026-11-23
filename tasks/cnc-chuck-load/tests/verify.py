@@ -23,7 +23,7 @@ def grade(export=Path('/var/lib/chuck/export')):
     entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')
     meta=json.loads((Path(export)/'meta.json').read_text())
     if meta.get('api')!=protocol.API:
-        raise ValueError('obsolete or incompatible trace API; cnc-chuck-load-v3 required')
+        raise ValueError('obsolete or incompatible trace API; cnc-chuck-load-v4 required')
     meta_keys={'task','tier','scene','scene_sha256','api','backend','budgets','started'}
     seal_keys=meta_keys|{'finished','entries','last_hash','recording_sha256','used'}
     if set(meta)!=meta_keys or set(seal)!=seal_keys:

@@ -42,6 +42,10 @@ class Chuck(Episode):
         return protocol.execute(self.sim,'move',body)
 
     @op(budget='actions')
+    def rotate(self,body):
+        return protocol.execute(self.sim,'rotate',body)
+
+    @op(budget='actions')
     def gripper(self,body):
         return protocol.execute(self.sim,'gripper',body)
 

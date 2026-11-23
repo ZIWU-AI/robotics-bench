@@ -4,7 +4,7 @@ artifacts = ["/app/output", "/var/lib/chuck/export"]
 
 [task]
 name = "robotics-bench/cnc-chuck-load"
-description = "Locate a horizontal chuck through contact feedback, seat a cylindrical blank against its stop, and transfer support from an XYZ gripper to three independently simulated jaws. Calibrate pressure against a jaw-load cap and pass a physical axial pullout test after retreat; independent CPU replay grades the full contact trajectory."
+description = "Align and insert long stock through two guides of an angularly misregistered CNC chuck using a compliant XYZ/pitch/yaw wrist, then calibrate clamping pressure and pass a physical pullout test after release; independent CPU replay grades contact loads and retention."
 authors = [{ name = "Yorkiapolis", email = "43029193+Yorkiapolis@users.noreply.github.com" }]
 keywords = ["manipulation", "machine-tending", "mujoco", "contact", "online-control"]
 
