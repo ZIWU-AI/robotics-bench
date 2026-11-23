@@ -1,0 +1,12 @@
+{
+  "x": {"dock": 0, "A": 2, "B": 5, "C": 9, "buffer": 3},
+  "capacity": {"A": 2, "B": 2, "C": 2, "buffer": 1},
+  "start": {"A": ["R1", "O1"], "B": ["R2", "O3"], "C": ["R3", "O2"], "buffer": []},
+  "manifest": [["out", "O1"], ["in", "I1"], ["out", "O2"], ["in", "I2"], ["out", "O3"], ["in", "I3"]],
+  "home": {"R1":"A","R2":"B","R3":"C","I1":"B","I2":"C","I3":"A"},
+  "deadline": 225,
+  "dock_windows": [[0,40],[45,95],[75,145],[95,170],[120,195],[150,214]],
+  "chilled": ["R2","R3"],
+  "staging_limit": 32,
+  "budgets": {"actions": 65, "observations": 70}
+}
