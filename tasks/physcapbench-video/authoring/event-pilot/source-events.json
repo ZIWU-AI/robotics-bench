@@ -1,0 +1,122 @@
+{
+  "001043ca89f6": {
+    "video_id": "umi500_0152",
+    "sha256": "0734aa3ea20fad127f8dc8f199bb40afe8a2f7492e7135df99059ac480cd22db",
+    "source_table": "table_001",
+    "event_ids": [
+      "event_3",
+      "event_5",
+      "event_8"
+    ]
+  },
+  "02318ea1bb49": {
+    "video_id": "umi500_0431",
+    "sha256": "c2da96b03c462d95e206a97d2822e38df433d4bbe15681c94be0fafda900281b",
+    "source_table": "table_003",
+    "event_ids": [
+      "event_5",
+      "event_7",
+      "event_9"
+    ]
+  },
+  "0eda8aea50da": {
+    "video_id": "umi500_0073",
+    "sha256": "97132bf7856ed81c6b017bce376447fc8648810d75eae80550e9a276a8be2684",
+    "source_table": "table_002",
+    "event_ids": [
+      "event_2",
+      "event_4",
+      "event_6"
+    ]
+  },
+  "368e6603dd38": {
+    "video_id": "umi500_0472",
+    "sha256": "2a44abffc6b6a35056b1926fe656f72bf960b77a65d6916f074586e780765cbd",
+    "source_table": "table_004",
+    "event_ids": [
+      "event_2",
+      "event_4",
+      "event_8"
+    ]
+  },
+  "4475475557e2": {
+    "video_id": "umi500_0176",
+    "sha256": "063ce340e3c44f8362ca981f0cfcfe7103778d3fdb1be2fd489445eb62049cd3",
+    "source_table": "table_005",
+    "event_ids": [
+      "event_3",
+      "event_7",
+      "event_10"
+    ]
+  },
+  "550664151ffc": {
+    "video_id": "umi500_0385",
+    "sha256": "1bc74b10c74b9f56d738c2b928da51241fe22200a58006e1cb9a03908c0169f6",
+    "source_table": "table_004",
+    "event_ids": [
+      "event_2",
+      "event_4",
+      "event_6"
+    ]
+  },
+  "708482394f14": {
+    "video_id": "umi500_0389",
+    "sha256": "dfd6eedb6e3084182e5edfa159aa6c80ae8a01c2b6b3042dce958e39e75c8867",
+    "source_table": "table_004",
+    "event_ids": [
+      "event_3",
+      "event_8",
+      "event_10"
+    ]
+  },
+  "7a29362f00c7": {
+    "video_id": "umi500_0009",
+    "sha256": "db7386f5d77280b6e5e909dde94f73cd81d8c620b500c0af38b06fb8388e8af7",
+    "source_table": "table_001",
+    "event_ids": [
+      "event_2",
+      "event_4",
+      "event_6"
+    ]
+  },
+  "91c587f7a4b6": {
+    "video_id": "umi500_0494",
+    "sha256": "a2b60c7531c1111a8c36d7216d9dc43cf7d893bc37d0551ac6d8e43f89bbf763",
+    "source_table": "table_002",
+    "event_ids": [
+      "event_2",
+      "event_5",
+      "event_9"
+    ]
+  },
+  "bc3468170dbe": {
+    "video_id": "umi500_0302",
+    "sha256": "1459c583386c9fc2ede8164b3f893be1f6f7c441593f18c4636d9391da8e4927",
+    "source_table": "table_005",
+    "event_ids": [
+      "event_3",
+      "event_11",
+      "event_12"
+    ]
+  },
+  "be1ae95c368b": {
+    "video_id": "umi500_0105",
+    "sha256": "971870fa53b656003a3b07832d512f27fdf97cf24d05682e59469a78a91ac254",
+    "source_table": "table_000",
+    "event_ids": [
+      "event_1",
+      "event_3",
+      "event_6"
+    ]
+  },
+  "eefbc4043c80": {
+    "video_id": "umi500_0471",
+    "sha256": "6d8986fccc89fbdd4256311f48c84a7f79041ef5a032e013a5d909f22d8911bd",
+    "source_table": "table_003",
+    "event_ids": [
+      "event_3",
+      "event_5",
+      "event_8"
+    ]
+  }
+}

@@ -1,0 +1,494 @@
+[
+  {
+    "id": "001043ca89f6",
+    "video": "videos/umi/umi500_0152.mp4",
+    "windows": [
+      {
+        "start_seconds": 2.5,
+        "end_seconds": 4.667
+      },
+      {
+        "start_seconds": 5.5,
+        "end_seconds": 8.0
+      },
+      {
+        "start_seconds": 9.667,
+        "end_seconds": 12.5
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "carry",
+        "object": "metal screw second",
+        "change": "position changes"
+      },
+      {
+        "id": "B",
+        "actor": "left gripper, right gripper",
+        "action": "move",
+        "object": "metal screw single",
+        "change": "position changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "carry",
+        "object": "metal screw single",
+        "change": "containment changes"
+      }
+    ]
+  },
+  {
+    "id": "02318ea1bb49",
+    "video": "videos/umi/umi500_0431.mp4",
+    "windows": [
+      {
+        "start_seconds": 10.5,
+        "end_seconds": 11.7
+      },
+      {
+        "start_seconds": 16.233,
+        "end_seconds": 16.667
+      },
+      {
+        "start_seconds": 18.5,
+        "end_seconds": 23.0
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "left gripper, right gripper",
+        "action": "separate",
+        "object": "white lid",
+        "change": "containment changes"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "place",
+        "object": "white lid",
+        "change": "containment changes"
+      },
+      {
+        "id": "C",
+        "actor": "left gripper",
+        "action": "place",
+        "object": "white lid",
+        "change": "support or holding changes"
+      }
+    ]
+  },
+  {
+    "id": "0eda8aea50da",
+    "video": "videos/umi/umi500_0073.mp4",
+    "windows": [
+      {
+        "start_seconds": 0.667,
+        "end_seconds": 3.833
+      },
+      {
+        "start_seconds": 4.667,
+        "end_seconds": 5.167
+      },
+      {
+        "start_seconds": 5.833,
+        "end_seconds": 7.567
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "box lid",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "left gripper",
+        "action": "grasp",
+        "object": "green item",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "C",
+        "actor": "left gripper, right gripper",
+        "action": "move",
+        "object": "green item",
+        "change": "position changes"
+      }
+    ]
+  },
+  {
+    "id": "368e6603dd38",
+    "video": "videos/umi/umi500_0472.mp4",
+    "windows": [
+      {
+        "start_seconds": 2.933,
+        "end_seconds": 5.667
+      },
+      {
+        "start_seconds": 6.2,
+        "end_seconds": 8.833
+      },
+      {
+        "start_seconds": 12.333,
+        "end_seconds": 14.9
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "place",
+        "object": "uncapped blue bottle",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "left gripper",
+        "action": "move",
+        "object": "black base",
+        "change": "position changes"
+      },
+      {
+        "id": "C",
+        "actor": "left gripper",
+        "action": "place",
+        "object": "left blue bottle",
+        "change": "support or holding changes"
+      }
+    ]
+  },
+  {
+    "id": "4475475557e2",
+    "video": "videos/umi/umi500_0176.mp4",
+    "windows": [
+      {
+        "start_seconds": 6.533,
+        "end_seconds": 8.567
+      },
+      {
+        "start_seconds": 13.267,
+        "end_seconds": 15.333
+      },
+      {
+        "start_seconds": 17.4,
+        "end_seconds": 18.933
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "pull",
+        "object": "top drawer",
+        "change": "containment changes"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "pull",
+        "object": "top drawer",
+        "change": "position changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "pull",
+        "object": "top drawer",
+        "change": "shape changes"
+      }
+    ]
+  },
+  {
+    "id": "550664151ffc",
+    "video": "videos/umi/umi500_0385.mp4",
+    "windows": [
+      {
+        "start_seconds": 0.9,
+        "end_seconds": 1.9
+      },
+      {
+        "start_seconds": 4.667,
+        "end_seconds": 6.0
+      },
+      {
+        "start_seconds": 8.5,
+        "end_seconds": 9.2
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "metal part rod",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "rotate",
+        "object": "box lid",
+        "change": "shape changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "metal part rod",
+        "change": "containment changes"
+      }
+    ]
+  },
+  {
+    "id": "708482394f14",
+    "video": "videos/umi/umi500_0389.mp4",
+    "windows": [
+      {
+        "start_seconds": 2.9,
+        "end_seconds": 4.0
+      },
+      {
+        "start_seconds": 9.833,
+        "end_seconds": 11.0
+      },
+      {
+        "start_seconds": 12.2,
+        "end_seconds": 13.167
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "black fabric",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "pink fabric",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "white fabric",
+        "change": "support or holding changes"
+      }
+    ]
+  },
+  {
+    "id": "7a29362f00c7",
+    "video": "videos/umi/umi500_0009.mp4",
+    "windows": [
+      {
+        "start_seconds": 2.833,
+        "end_seconds": 5.0
+      },
+      {
+        "start_seconds": 6.7,
+        "end_seconds": 8.133
+      },
+      {
+        "start_seconds": 13.3,
+        "end_seconds": 15.5
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "contact",
+        "object": "mesh basket",
+        "change": "no lasting state change is visible"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "contact",
+        "object": "foam block",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "carry",
+        "object": "foam block",
+        "change": "position changes"
+      }
+    ]
+  },
+  {
+    "id": "91c587f7a4b6",
+    "video": "videos/umi/umi500_0494.mp4",
+    "windows": [
+      {
+        "start_seconds": 3.867,
+        "end_seconds": 5.4
+      },
+      {
+        "start_seconds": 10.833,
+        "end_seconds": 14.067
+      },
+      {
+        "start_seconds": 16.033,
+        "end_seconds": 17.0
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "grasp",
+        "object": "red edge wood block",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "push",
+        "object": "right box drawer",
+        "change": "containment changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "push",
+        "object": "right box lid",
+        "change": "containment changes"
+      }
+    ]
+  },
+  {
+    "id": "bc3468170dbe",
+    "video": "videos/umi/umi500_0302.mp4",
+    "windows": [
+      {
+        "start_seconds": 3.667,
+        "end_seconds": 5.367
+      },
+      {
+        "start_seconds": 17.5,
+        "end_seconds": 19.167
+      },
+      {
+        "start_seconds": 20.233,
+        "end_seconds": 21.667
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "left gripper, right gripper",
+        "action": "lift",
+        "object": "light blue top",
+        "change": "position changes"
+      },
+      {
+        "id": "B",
+        "actor": "right gripper",
+        "action": "lift",
+        "object": "light blue top",
+        "change": "position changes"
+      },
+      {
+        "id": "C",
+        "actor": "right gripper",
+        "action": "lift",
+        "object": "light blue top",
+        "change": "shape changes"
+      }
+    ]
+  },
+  {
+    "id": "be1ae95c368b",
+    "video": "videos/umi/umi500_0105.mp4",
+    "windows": [
+      {
+        "start_seconds": 0.0,
+        "end_seconds": 4.833
+      },
+      {
+        "start_seconds": 8.067,
+        "end_seconds": 14.0
+      },
+      {
+        "start_seconds": 16.367,
+        "end_seconds": 17.867
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "right gripper",
+        "action": "place",
+        "object": "green cap",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "left gripper, right gripper",
+        "action": "place",
+        "object": "hinged lid small container",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "C",
+        "actor": "left gripper",
+        "action": "grasp",
+        "object": "small bottle black cap",
+        "change": "support or holding changes"
+      }
+    ]
+  },
+  {
+    "id": "eefbc4043c80",
+    "video": "videos/umi/umi500_0471.mp4",
+    "windows": [
+      {
+        "start_seconds": 2.867,
+        "end_seconds": 4.5
+      },
+      {
+        "start_seconds": 6.333,
+        "end_seconds": 7.9
+      },
+      {
+        "start_seconds": 10.533,
+        "end_seconds": 14.333
+      }
+    ],
+    "options": [
+      {
+        "id": "A",
+        "actor": "left gripper, right gripper",
+        "action": "push",
+        "object": "power adapter",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "B",
+        "actor": "left gripper",
+        "action": "grasp",
+        "object": "power adapter",
+        "change": "support or holding changes"
+      },
+      {
+        "id": "C",
+        "actor": "left gripper, right gripper",
+        "action": "push",
+        "object": "usb charger",
+        "change": "support or holding changes"
+      }
+    ]
+  }
+]
