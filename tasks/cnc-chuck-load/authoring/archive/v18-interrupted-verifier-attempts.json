@@ -1,0 +1,50 @@
+[
+  {
+    "instance": "h00-same_replay",
+    "classification": "interrupted unsealed export, excluded from manipulation denominators",
+    "returncode": 1,
+    "verdict": {
+      "reward": 0,
+      "exception": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n"
+    },
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n",
+    "recording_sha256": "2fd9855c558cf82b4f97b8af4902502137cd73e736e91060addab51a654c1331"
+  },
+  {
+    "instance": "h01-same_replay",
+    "classification": "interrupted unsealed export, excluded from manipulation denominators",
+    "returncode": 1,
+    "verdict": {
+      "reward": 0,
+      "exception": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n"
+    },
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n",
+    "recording_sha256": "ccbf6db4de6b7a5ad9ad3dd0b093b5ef75c27b429905912c506e1420ddce95b1"
+  },
+  {
+    "instance": "h02-same_replay",
+    "classification": "interrupted unsealed export, excluded from manipulation denominators",
+    "returncode": 1,
+    "verdict": {
+      "reward": 0,
+      "exception": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n"
+    },
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n",
+    "recording_sha256": "99bd57ef0066c59caefd90b36b530b3d35089bc3e72735f421bc2099f31c17e7"
+  },
+  {
+    "instance": "h03-same_replay",
+    "classification": "interrupted unsealed export, excluded from manipulation denominators",
+    "returncode": 1,
+    "verdict": {
+      "reward": 0,
+      "exception": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n"
+    },
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/verify.py\", line 23, in grade\n    entries,seal,problems=load_export(export,api=protocol.API,backend='mujoco')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/cnc-chuck-difficulty.zWl6yWv4/repo/tasks/cnc-chuck-load/tests/casekit/verify.py\", line 27, in load_export\n    raise NoEpisode(\"no exported recording (the collector found no episode)\")\ncasekit.verify.NoEpisode: no exported recording (the collector found no episode)\n",
+    "recording_sha256": "9690a5ac1030aa24c650bc016668cb81aa4b0f8a0be7f084159b3d471d402bbd"
+  }
+]

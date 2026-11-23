@@ -1,0 +1,26 @@
+{
+  "selected_at_utc": "2026-11-19T03:24:59.873288+00:00",
+  "purpose": "Offline pressure-v3 holdout; selected before implementation, unopened until runtime/controller freeze. Disjoint from v2 published sample.",
+  "seed_ids": {
+    "pressure-00": "976c7351e956fb5bb977a002044fe28e",
+    "pressure-01": "14819d7a4ad1abc9581105049cde3409",
+    "pressure-02": "1a6924f22cf39ae7ccbd150128dbfe9a",
+    "pressure-03": "8dcb96db42685d49663e95d03663e3bd",
+    "pressure-04": "af569ca5e55bc14a14159a8b0a2760cb",
+    "pressure-05": "99351a0026cc4d9c2afe625e90880a89",
+    "pressure-06": "a914ee3ce241c366bf1f9e03f9eb500d",
+    "pressure-07": "498a7f4ae67525bac52e32894663e441",
+    "pressure-08": "4181b4079de62ace8275dfce786b6a47",
+    "pressure-09": "b68e1dae978d72e9179b6b1c6a394106",
+    "pressure-10": "8e4895c062053875295a205b55e0d7a8",
+    "pressure-11": "85682dd5f6607b1a836a084b3bef9a9d",
+    "pressure-12": "dab66dddde7e65c8e2045fb6cf08dd74",
+    "pressure-13": "c3e724beab4d1ad1ee10776ab39b476c",
+    "pressure-14": "78bafe471eb7b99c9fcf27033e4e871a",
+    "pressure-15": "80eee73a798d967c510fee4f32ff1b4f",
+    "pressure-16": "184115f9546ccb71dc21fb4ba2a63f59",
+    "pressure-17": "c85141f22468def0d805bea61f7556e1",
+    "pressure-18": "175b1e5607beefda821728a8cb2a749f",
+    "pressure-19": "90c533baefc68790d57dc844d0d09da8"
+  }
+}

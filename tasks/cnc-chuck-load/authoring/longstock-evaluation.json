@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "kind": "finite controller comparisons, not hosted model assessment",
+  "holdout_count": 20,
+  "core_policies": [
+    "full",
+    "one_plane",
+    "passive",
+    "same_replay",
+    "transfer"
+  ],
+  "additional_policies_first_n_holdouts": 5,
+  "additional_policies": [
+    "straight",
+    "grid",
+    "spiral",
+    "no_force",
+    "no_pose",
+    "no_torque",
+    "pose_only",
+    "constant_force",
+    "fixed035",
+    "fixed05",
+    "full_pressure",
+    "official2",
+    "official3",
+    "official2_adapted",
+    "official3_adapted"
+  ],
+  "selection": "Fresh independent secrets.token_hex(16) after final source freeze; labels h00..h19; first five selected by label before parameter inspection. No holdout tuning.",
+  "transfer": "Cyclic next-instance full action sequence, observations removed.",
+  "baselines": "Same 300 action / 150 observation limits; physical stall or policy failure may stop early. Exact archived scripts plus geometry-only nominal-angle adaptation are distinguished.",
+  "corner_coverage": "81 nominal/paired geometry-material/angular extremes, not the full Cartesian product."
+}

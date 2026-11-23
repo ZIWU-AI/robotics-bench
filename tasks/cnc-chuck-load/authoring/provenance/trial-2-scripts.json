@@ -1,0 +1,110 @@
+[
+  {
+    "step": 4,
+    "code": "from client import Client\nc=Client()\nimport json\nprint(json.dumps(c.info(),indent=2))\nprint(json.dumps(c.observe(),indent=2))"
+  },
+  {
+    "step": 5,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.08,0,0.2),(-0.07,0,0.2)]:\n    r=c.move(*target)\n    print('move',target,json.dumps(r))\n    print('obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 6,
+    "code": "from client import Client\nimport json\nc=Client()\nfor x in [-0.069,-0.068,-0.067]:\n r=c.move(x,0,0.2); print('move',x,json.dumps(r)); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 7,
+    "code": "from client import Client\nimport json\nc=Client()\nfor x in [-0.066,-0.065,-0.064]:\n r=c.move(x,0,0.2); print('move',x,json.dumps(r)); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 8,
+    "code": "from client import Client\nimport json\nc=Client()\nfor target in [(-0.068,0,0.2),(-0.068,0.0005,0.1995)]:\n r=c.move(*target); print('move',target,json.dumps(r)); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 9,
+    "code": "from client import Client\nimport json\nc=Client(); print(json.dumps(c.wait())); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 10,
+    "code": "from client import Client\nimport json\nc=Client()\nfor x in [-0.067,-0.066,-0.065]:\n r=c.move(x,0.0005,0.1995); print('move',x,json.dumps(r)); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 11,
+    "code": "from client import Client\nimport json\nc=Client()\ny=.0005; z=.1995\nr=c.move(-.068,y,z); print('back',json.dumps(r)); print(json.dumps(c.observe()))\nfor i in range(1,11):\n x=round(-.068+i*.0002,7)\n r=c.move(x,y,z); o=c.observe(); print('step',x,json.dumps(r),json.dumps(o))"
+  },
+  {
+    "step": 12,
+    "code": "from client import Client\nimport json\nc=Client()\nseq=[(-.068,.0005,.1995),(-.068,.001,.1990),(-.067,.001,.1990),(-.066,.001,.1990),(-.0655,.001,.1990)]\nfor t in seq:\n r=c.move(*t); o=c.observe(); print(t,json.dumps(r),json.dumps(o))"
+  },
+  {
+    "step": 13,
+    "code": "from client import Client\nimport json\nc=Client()\nseq=[(-.068,.001,.199),(-.068,.0015,.1985),(-.067,.0015,.1985),(-.066,.0015,.1985),(-.0655,.0015,.1985)]\nfor t in seq:\n r=c.move(*t); o=c.observe(); print(t,json.dumps(r),json.dumps(o))"
+  },
+  {
+    "step": 14,
+    "code": "from client import Client\nimport json\nc=Client(); print(json.dumps(c.wait())); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 15,
+    "code": "from client import Client\nimport json\nc=Client()\ny=.0015; z=.1985\ncandidates=[\n (.0015,.2003924),(.0015,.2018924),(0,.1988924),(0,.2003924),(0,.2018924),\n (-.0015,.1988924),(-.0015,.2003924),(-.0015,.2018924)]\nfor ny,nz in candidates:\n    for t in [(-.068,y,z),(-.068,ny,nz),(-.0655,ny,nz)]:\n        r=c.move(*t)\n        if not r.get('ok'): print('REFUSED',t,r); raise SystemExit\n    o=c.observe()\n    print('candidate',ny,nz,json.dumps(o),flush=True)\n    y,z=ny,nz\n    if o['xyz'][0] > -.0659:\n        print('ADMITTED',ny,nz,flush=True)\n        break"
+  },
+  {
+    "step": 16,
+    "code": "from client import Client\nimport json, math\nc=Client()\ny=-.0015; z=.2018924\nactuals=[(yy,zz) for zz in [.196,.198,.200,.202,.204] for yy in [-.004,-.002,0,.002,.004]]\nactuals.sort(key=lambda p:(p[0]-.0005)**2+(p[1]-.1991)**2)\ntested=[]\nfor ay,az in actuals:\n    if any((ay-y0)**2+(az-z0)**2 < .0008**2 for y0,z0 in tested):\n        continue\n    ny=ay; nz=az+.0003924\n    for t in [(-.068,y,z),(-.068,ny,nz),(-.0655,ny,nz)]:\n        r=c.move(*t)\n        if not r.get('ok'): print('REFUSED',t,r); raise SystemExit\n    o=c.observe(); tested.append((ay,az))\n    print('candidate_actual',ay,az,json.dumps(o),flush=True)\n    y,z=ny,nz\n    if o['xyz'][0] > -.0659:\n        print('ADMITTED',ay,az,flush=True)\n        break"
+  },
+  {
+    "step": 17,
+    "code": "from client import Client\nimport json\nc=Client()\ny=-.004; z=.2043924\nstart_y=-.001; start_z=.1988924\nfor t in [(-.068,y,z),(-.068,start_y,start_z),(-.0658,start_y,start_z)]:\n    r=c.move(*t)\n    if not r.get('ok'): print('REFUSED',t,r); raise SystemExit\ny,z=start_y,start_z\npoints=[]\nzs=[.1985,.1990,.1995,.2000,.2005]\nys=[-.001,-.0005,0,.0005,.001]\nfor zi,az in enumerate(zs):\n    row=ys if zi%2==0 else list(reversed(ys))\n    for ay in row:\n        points.append((ay,az+.0003924))\nfor ny,nz in points:\n    if (ny,nz)!=(y,z):\n        r=c.move(-.0658,ny,nz)\n        if not r.get('ok'): print('REFUSED',r); raise SystemExit\n        y,z=ny,nz\n    o=c.observe()\n    print('fine',y,z,json.dumps(o),flush=True)\n    if o['xyz'][0] > -.06585 and abs(o['force_N'][0]) < .2:\n        print('ADMITTED',y,z,flush=True)\n        break"
+  },
+  {
+    "step": 18,
+    "code": "from client import Client\nimport json\nc=Client()\nseq=[(-.068,.001,.2008924),(-.068,0,.2003924),(-.063,0,.2003924)]\nfor t in seq:\n r=c.move(*t); print(t,json.dumps(r)); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 19,
+    "code": "from client import Client\nimport json\nc=Client(); y=0.; z=.2003924\nfor az in [.203,.2035,.204,.2045,.205,.2055]:\n    nz=az+.0003924\n    for t in [(-.068,y,z),(-.068,0,nz),(-.0655,0,nz)]:\n        r=c.move(*t)\n        if not r.get('ok'): print('REFUSED',t,r); raise SystemExit\n    o=c.observe(); print('actual_z_target',az,json.dumps(o),flush=True)\n    y,z=0.,nz\n    if o['xyz'][0]>-.0659:\n        print('ADMITTED'); break"
+  },
+  {
+    "step": 20,
+    "code": "from client import Client\nimport json\nc=Client(); r=c.move(-.064,0,.2058924); print(json.dumps(r)); print(json.dumps(c.observe()))"
+  },
+  {
+    "step": 22,
+    "code": "from client import Client\nimport json\nc=Client()\nfor t in [(-.08,0,.2058924),(-.09,0,.2)]:\n print(t,json.dumps(c.move(*t)))\nprint('close',json.dumps(c.gripper('close')))\nprint('wait',json.dumps(c.wait()))\nprint(json.dumps(c.observe()))"
+  },
+  {
+    "step": 23,
+    "code": "from client import Client\nimport json\nc=Client()\ny=0.; z=.2\nr=c.move(-.068,0,.2); print('standoff',json.dumps(r))\ncandidates=[(.002,.198),(.001,.199),(.0015,.1985),(.0005,.1995),(-.001,.2),(.001,.2),(0,.1985),(0,.2015),(-.0015,.2015),(.002,.2)]\nfor ay,az in candidates:\n    nz=az+.0003924\n    for t in [(-.068,y,z),(-.0655,ay,nz)]:\n        r=c.move(*t)\n        if not r.get('ok'): print('REFUSED',t,r); raise SystemExit\n    o=c.observe(); print('diag',ay,az,json.dumps(o),flush=True)\n    y,z=ay,nz\n    if o['xyz'][0]>-.0659:\n        print('ADMITTED'); break"
+  },
+  {
+    "step": 24,
+    "code": "from client import Client\nimport json\nc=Client()\nfor t in [(-.075,0,.2),(-.068,0,.2)]:\n print(t,json.dumps(c.move(*t)))\nprint(json.dumps(c.observe()))"
+  },
+  {
+    "step": 25,
+    "code": "from client import Client\nimport json\nc=Client(); y=0.; z=.2\ncandidates=[(.002,.198),(.001,.199),(.0015,.1985),(.0005,.1995),(-.001,.2),(.001,.2),(0,.1985),(0,.2015),(-.0015,.2015),(.002,.2)]\nfor ay,az in candidates:\n    nz=az+.0003924\n    for t in [(-.068,y,z),(-.0655,ay,nz)]:\n        r=c.move(*t)\n        if not r.get('ok'): print('REFUSED',t,r); raise SystemExit\n    o=c.observe(); print('diag',ay,az,json.dumps(o),flush=True)\n    y,z=ay,nz\n    if o['xyz'][0]>-.0659:\n        print('ADMITTED'); break"
+  },
+  {
+    "step": 26,
+    "code": "from client import Client\nimport json\nc=Client(); y=.002; z=.2003924\nfor i in range(1,21):\n    x=round(-.0655+i*.002,7)\n    r=c.move(x,y,z)\n    if not r.get('ok'): print('REFUSED',x,r); raise SystemExit\n    o=c.observe(); print('insert',x,json.dumps(o),flush=True)\n    if o['xyz'][0] < x-.001 or o['force_N'][0] < -4:\n        print('BLOCKED',flush=True)\n        break"
+  },
+  {
+    "step": 27,
+    "code": "from client import Client\nimport json\nc=Client(); y=.002; z=.2003924\nfor i in range(1,11):\n x=round(-.0255+i*.001,7)\n r=c.move(x,y,z)\n if not r.get('ok'): print('REFUSED',x,r); raise SystemExit\n o=c.observe(); print('seat',x,json.dumps(o),flush=True)\n if o['xyz'][0] < x-.0008 or o['force_N'][0] < -1.5:\n  print('STOP_CONTACT',flush=True); break"
+  },
+  {
+    "step": 28,
+    "code": "from client import Client\nimport json\nc=Client()\nprint('open_low',json.dumps(c.chuck('open',pressure=.12)))\nprint('close_low',json.dumps(c.chuck('close',pressure=.12)))\nfor i in range(4): print('wait',i,json.dumps(c.wait()))\nprint('low_obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 29,
+    "code": "from client import Client\nimport json\nc=Client()\nprint('raise',json.dumps(c.chuck('close',pressure=.22)))\nprint('settle',json.dumps(c.wait()))\nprint('high_obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 30,
+    "code": "from client import Client\nimport json\nc=Client()\nr=c.gripper('open'); print('gripper_open',json.dumps(r))\nif not r.get('ok'): raise SystemExit\nfor t in [(-.0355,.002,.2003924),(-.0555,.002,.2003924),(-.0755,.002,.2003924),(-.09,.002,.2003924)]:\n r=c.move(*t); print('retreat',t,json.dumps(r))\n if not r.get('ok'): raise SystemExit\nprint('final_wait',json.dumps(c.wait()))\nprint('final_obs',json.dumps(c.observe()))"
+  },
+  {
+    "step": 31,
+    "code": "from client import Client\nimport json\nc=Client(); print(json.dumps(c.finish(),indent=2))"
+  }
+]

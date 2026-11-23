@@ -1,0 +1,29 @@
+{
+  "kind": "Development only: first 24 deterministic IDs with each fixture angle within 0.035 degrees of a half-integer degree; tests coarse-grid coverage, not drawn from holdout IDs",
+  "seed_ids": {
+    "grid-centre-00": "8818807203423dc65c8cfd61283c1cb3",
+    "grid-centre-01": "e8de1c3c5d2c61b4ac5947be9a689790",
+    "grid-centre-02": "96e9d65cffcad334912fd70f2dbd7498",
+    "grid-centre-03": "60d3adac4838c8a3094cd02aaa223ad3",
+    "grid-centre-04": "e38bd8ad43e46ec45be1b3bad89f9f80",
+    "grid-centre-05": "979756e4e0b4fbda4594ea3b364685d0",
+    "grid-centre-06": "2b7a540bcc76d04238d68ce2844de517",
+    "grid-centre-07": "b27988e98f61e7e9489dee4f52cc7cd4",
+    "grid-centre-08": "c6589340f76f61a059eb3c5c03ebe926",
+    "grid-centre-09": "afeb35dee2ee004e16c331c0dd381738",
+    "grid-centre-10": "d35275a0c0359fed4a316b78b91f909f",
+    "grid-centre-11": "cdacc612769793e28dadd44b3b01dfee",
+    "grid-centre-12": "d9ba9e663908dd1c612dd2739524d1a8",
+    "grid-centre-13": "5a58a031c9b0c58c44b20692180d7a3f",
+    "grid-centre-14": "48d117743074737c1d8e9cc9c53df36b",
+    "grid-centre-15": "90e07935c1837d29248bc8c2ea22bc35",
+    "grid-centre-16": "2d324a7019c35dc6fce57ad226231f73",
+    "grid-centre-17": "14249fef90b80e075e5abd3498f45ed3",
+    "grid-centre-18": "9ffdcb3560126213b37009fd539642d8",
+    "grid-centre-19": "7ed5709e949ae0766df88ed1983cee16",
+    "grid-centre-20": "23f1703db3a3517db35e9e134d546202",
+    "grid-centre-21": "f4f6f704d6d0c35962148cdd6ac932aa",
+    "grid-centre-22": "0a7330cc39476524cbd44f5f409cd47b",
+    "grid-centre-23": "a565cde6532c304ae609e1b488d11f13"
+  }
+}

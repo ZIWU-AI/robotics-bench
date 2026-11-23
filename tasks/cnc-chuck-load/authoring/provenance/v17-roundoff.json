@@ -1,0 +1,37 @@
+{
+  "archive": "v17-roundoff.tar.gz",
+  "sha256": "4a79874b9f72761f851c89b2500044d238d89ae9b0c4ae8eece9b6c88f45e9a4",
+  "files": {
+    "runtime/sim.py": "12143b3f4cd17989796ab8dab5dba954498cab54ce20e0ddcb292f9a60a86402",
+    "runtime/scene.py": "b22096a68f973677f54a3e4d7eb06c5dec2a048144bb3997ee094dd6eb6dff6a",
+    "runtime/protocol.py": "22dd81729306eb09a6f21c140a73f8efc00a1022eae5b29c683f9c98a2c0b290",
+    "runtime/verify.py": "83616a4f8ad3a28da928433a65df05f989986201cba5fceaad8b250f7afbadbf",
+    "runtime/requirements.txt": "db00752bea31f562ef191c13af48a44a9b11972f6a9ff77a3ea05f3bc836953d",
+    "export/recording.jsonl": "519a9c5d3a1a63762de343ec32767e17b519c49d6701f305633f4c32e2e845cc",
+    "export/meta.json": "2fea8f50b7148038328146b80705e81b4a630a5f77093f9aef90e0250ee9f372",
+    "export/seal.json": "49800f19781d7d03e12f2f215f488e857400fe6d505fa90d7bddf657b65ff757",
+    "differences.json": "510b0f4ff7367abcf21310ecfd8c5ae840f9761af9dcf458e0c9e2d7033e7139"
+  },
+  "finding": "All integration state and other fields equal; two tilt_deg values differ by 8.881784197001252e-16 degrees between host and pinned container. Both physical verdicts succeed; strict replay rejects.",
+  "host": {
+    "python": "3.12.4",
+    "libc": [
+      "glibc",
+      "2.32"
+    ],
+    "decimal": "2.5.1",
+    "mujoco": "3.3.7",
+    "numpy": "2.5.4"
+  },
+  "docker": {
+    "python": "3.12.16",
+    "libc": [
+      "glibc",
+      "2.36"
+    ],
+    "decimal": "2.5.1",
+    "mujoco": "3.3.7",
+    "numpy": "2.5.4"
+  },
+  "current_treatment": "v18 fixed-precision software-derived angle; exact canonical comparisons retained; no historical trace regrading."
+}
