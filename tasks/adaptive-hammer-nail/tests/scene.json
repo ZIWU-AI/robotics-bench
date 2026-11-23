@@ -1,0 +1,1055 @@
+{
+  "budgets": {
+    "actions": 30,
+    "observations": 32,
+    "strikes": 10
+  },
+  "development": [
+    {
+      "resistance_n": 4
+    },
+    {
+      "resistance_n": 5
+    },
+    {
+      "resistance_n": 6
+    },
+    {
+      "resistance_n": 7
+    },
+    {
+      "resistance_n": 9
+    },
+    {
+      "resistance_n": 10
+    },
+    {
+      "resistance_n": 11
+    },
+    {
+      "resistance_n": 12
+    },
+    {
+      "resistance_n": 14
+    },
+    {
+      "resistance_n": 16
+    },
+    {
+      "resistance_n": 18
+    },
+    {
+      "resistance_n": 20
+    }
+  ],
+  "evaluation": [
+    {
+      "resistance_n": 4.2
+    },
+    {
+      "resistance_n": 4.5
+    },
+    {
+      "resistance_n": 4.8
+    },
+    {
+      "resistance_n": 5.2
+    },
+    {
+      "resistance_n": 5.5
+    },
+    {
+      "resistance_n": 5.8
+    },
+    {
+      "resistance_n": 6.2
+    },
+    {
+      "resistance_n": 6.6
+    },
+    {
+      "resistance_n": 8.3
+    },
+    {
+      "resistance_n": 8.7
+    },
+    {
+      "resistance_n": 9.2
+    },
+    {
+      "resistance_n": 9.6
+    },
+    {
+      "resistance_n": 10.3
+    },
+    {
+      "resistance_n": 10.7
+    },
+    {
+      "resistance_n": 11.2
+    },
+    {
+      "resistance_n": 11.6
+    },
+    {
+      "resistance_n": 13.4
+    },
+    {
+      "resistance_n": 14.2
+    },
+    {
+      "resistance_n": 15.1
+    },
+    {
+      "resistance_n": 15.7
+    },
+    {
+      "resistance_n": 16.5
+    },
+    {
+      "resistance_n": 17.4
+    },
+    {
+      "resistance_n": 18.5
+    },
+    {
+      "resistance_n": 19.4
+    },
+    {
+      "resistance_n": 4.2,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 4.5,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 4.8,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 5.2,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 5.5,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 5.8,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 6.2,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 6.6,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 8.3,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 8.7,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 9.2,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 9.6,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 10.3,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 10.7,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 11.2,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 11.6,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 13.4,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 14.2,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 15.1,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 15.7,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 16.5,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 17.4,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 18.5,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 19.4,
+      "hammer_home": [
+        -0.072,
+        -0.012,
+        0.048
+      ],
+      "nail_home": [
+        0.012,
+        0.009,
+        0.022
+      ]
+    },
+    {
+      "resistance_n": 4.2,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 4.5,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 4.8,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 5.2,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 5.5,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 5.8,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 6.2,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 6.6,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 8.3,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 8.7,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 9.2,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 9.6,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 10.3,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 10.7,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 11.2,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 11.6,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 13.4,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 14.2,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 15.1,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 15.7,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 16.5,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 17.4,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 18.5,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 19.4,
+      "hammer_home": [
+        -0.055,
+        0.011,
+        0.049
+      ],
+      "nail_home": [
+        -0.008,
+        -0.012,
+        0.023
+      ]
+    },
+    {
+      "resistance_n": 4.2,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 4.5,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 4.8,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 5.2,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 5.5,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 5.8,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 6.2,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 6.6,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 8.3,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 8.7,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 9.2,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 9.6,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 10.3,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 10.7,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 11.2,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 11.6,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 13.4,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 14.2,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 15.1,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 15.7,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 16.5,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 17.4,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 18.5,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    },
+    {
+      "resistance_n": 19.4,
+      "hammer_home": [
+        -0.077,
+        0.008,
+        0.053
+      ],
+      "nail_home": [
+        0.014,
+        -0.005,
+        0.024
+      ]
+    }
+  ]
+}
