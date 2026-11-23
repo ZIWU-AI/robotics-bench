@@ -58,8 +58,11 @@ class Client:
     def release(self):
         return self.call("release")
 
-    def inspect(self):
-        return self.call("inspect")
+    def inspect(self, angle=0):
+        return self.call("inspect", {"angle": angle})
 
     def finish(self):
         return self.call("finish")
+
+    def certify(self, part, peak_um):
+        return self.call("certify", {"part": part, "peak_um": peak_um})

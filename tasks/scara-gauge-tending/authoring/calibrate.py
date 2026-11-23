@@ -20,6 +20,15 @@ def run_scenario(tender, scenario):
     client = tender.c
     if scenario == "oracle":
         return tender.tend()
+    if scenario == "three samples without peak reconstruction":
+        certify = client.certify
+        def sampled_peak(part, peak):
+            state = checked(client.observe())["samples"]
+            low, high = state["low"]["0"], state["high"]["0"]
+            raw_peak = max(abs(-40 + 80 * (v - low) / (high - low)) for v in state[part].values())
+            return certify(part, raw_peak)
+        client.certify = sampled_peak
+        return tender.tend()
     if scenario == "finish only":
         return checked(client.finish())
     if scenario == "no unloading":
@@ -61,5 +70,6 @@ def calibrate(scenario, expected):
 
 
 if __name__ == "__main__":
-    for name in ("oracle", "finish only", "no unloading", "bypass gauge", "swapped outputs"):
+    for name in ("oracle", "finish only", "no unloading", "bypass gauge", "swapped outputs",
+                 "three samples without peak reconstruction"):
         calibrate(name, int(name == "oracle"))

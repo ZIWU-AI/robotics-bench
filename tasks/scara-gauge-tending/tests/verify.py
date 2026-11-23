@@ -29,7 +29,7 @@ def grade(export=Path("/var/lib/gauge/export")):
             problems.append(f"state mismatch at {entry['seq']}")
             break
     return {"reward": int(cell.complete() and not problems), "problems": problems,
-            "locations": cell.locations, "readings_um": cell.readings}
+            "locations": cell.locations, "samples": cell.readings}
 
 
 if __name__ == "__main__":

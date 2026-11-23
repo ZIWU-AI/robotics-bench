@@ -26,7 +26,7 @@ class GaugeEpisode(Episode):
                                "scene_sha256": hashlib.sha256(raw).hexdigest()})
 
     def describe(self):
-        return {k: self.scene[k] for k in ("seats", "links", "limit_um")}
+        return {k: self.scene[k] for k in ("seats", "links", "limit_um", "masters")}
 
     def snapshot(self):
         return self.cell.state()
@@ -59,6 +59,10 @@ class GaugeEpisode(Episode):
     @op(budget="actions")
     def inspect(self, body):
         return self.execute("inspect", body)
+
+    @op(budget="actions")
+    def certify(self, body):
+        return self.execute("certify", body)
 
 
 if __name__ == "__main__":

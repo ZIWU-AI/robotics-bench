@@ -1,7 +1,9 @@
 {
   "links": [0.22, 0.19],
-  "seats": {"in_a": [0.155, -0.202], "in_b": [0.234, -0.168], "gauge": [0.335, 0.018], "pass": [0.21, 0.207], "rework": [0.126, 0.238]},
-  "lot": [{"id": "P17", "seat": "in_a", "deviation_um": 31}, {"id": "P42", "seat": "in_b", "deviation_um": -12}],
+  "seats": {"in_a": [0.155, -0.202], "in_b": [0.234, -0.168], "gauge": [0.335, 0.018], "pass": [0.21, 0.207], "rework": [0.126, 0.238], "low": [0.34,-0.12], "high": [0.32,0.11]},
+  "lot": [{"id": "P17", "seat": "in_a", "deviation_um": 12, "ecc_um": 11, "phase_deg": 31}, {"id": "P42", "seat": "in_b", "deviation_um": -12, "ecc_um": 4, "phase_deg": 77}],
+  "masters": {"low": -40, "high": 40},
+  "instrument": {"gain": 1.18, "zero": 17.4},
   "limit_um": 20,
   "budgets": {"actions": 90, "observations": 55}
 }
