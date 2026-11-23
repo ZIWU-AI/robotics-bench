@@ -1,0 +1,11 @@
+{
+  "dock_x": 1.8,
+  "initial_x": 0.2,
+  "initial_angle": 0.10,
+  "rope_m": 0.85,
+  "final_rope_m": 0.98,
+  "barrier": [0.77, 1.23, 0.64],
+  "gravity": 9.81,
+  "damping_per_s": 0.06,
+  "budgets": {"actions": 100, "observations": 110}
+}
