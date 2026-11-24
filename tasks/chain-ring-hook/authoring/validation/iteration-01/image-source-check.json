@@ -1,0 +1,38 @@
+[
+  {
+    "image": "iteration-ring-env:docs01",
+    "matched_files": 11,
+    "actual_hashes": {
+      "serve.py": "b429e7c3397307d5a5fb606e7fd87abb7319c0f9dc2ae9644d9722f9f364b413",
+      "launch.py": "9a50d279a137e6a2c9b1303b6cd6f868f199cc2e74a87fcb464fd0ac2fc357b3",
+      "physics.py": "36da0b0b5ed6c03d3dcb4fcdb7ec3a38f3b0bfe722fcd44d7cd05edaf3316998",
+      "collect.py": "c6005c86d71c05608005a6452dd4bd2b779185a08d8b0a949dbec4b3dc363dc0",
+      "sim.py": "76725766e3b9712069edb461b9be1cf4f13e4ad3788afaab3565cff7869d18d9",
+      "scene.json": "cbdb798e928bc83b96575e229338781fab3d80176534510a4a7bad3cd635b852",
+      "casekit/__init__.py": "a67287c8e0ea06c733aa963330ccd6eb6fbb7fd467fb0566247f7c40c5ecc211",
+      "casekit/verify.py": "195708db75bded28283988417ad04150126808e89f37450bee96701a334f014b",
+      "casekit/launch.py": "62497c80e9ab4fe7144780951cde6dc04c019fee238b3de6f8985c2f87e86799",
+      "casekit/episode.py": "f5ff528b733f36795e9e932be77a0bb189d201324d04e076e988c84994b85e46",
+      "casekit/recording.py": "8b13ceb6ff53ba76e8dddd9d922f1ebcaf0808559dbc859e68c5ba59742db15a"
+    }
+  },
+  {
+    "image": "iteration-ring-tests:docs01",
+    "matched_files": 12,
+    "actual_hashes": {
+      "serve.py": "b429e7c3397307d5a5fb606e7fd87abb7319c0f9dc2ae9644d9722f9f364b413",
+      "verify.py": "de21711c06d22c2b2ad141419498e430f196635d4eafccd876aa826ea81a1182",
+      "test.sh": "09a6960c84698b31a7a908961ff27a579c8636e1567c955f130fbe0028d995b0",
+      "physics.py": "36da0b0b5ed6c03d3dcb4fcdb7ec3a38f3b0bfe722fcd44d7cd05edaf3316998",
+      "Dockerfile": "fe234c3f53f20094dfe89ebaaf0eb486134756283a3c3d775d62395e0e6281e7",
+      "sim.py": "76725766e3b9712069edb461b9be1cf4f13e4ad3788afaab3565cff7869d18d9",
+      "scene.json": "cbdb798e928bc83b96575e229338781fab3d80176534510a4a7bad3cd635b852",
+      "requirements.txt": "8265addb81ded7d8ea5826e9998781742f493f0171dbe628460b99d726770b2c",
+      "casekit/__init__.py": "a67287c8e0ea06c733aa963330ccd6eb6fbb7fd467fb0566247f7c40c5ecc211",
+      "casekit/verify.py": "195708db75bded28283988417ad04150126808e89f37450bee96701a334f014b",
+      "casekit/launch.py": "62497c80e9ab4fe7144780951cde6dc04c019fee238b3de6f8985c2f87e86799",
+      "casekit/episode.py": "f5ff528b733f36795e9e932be77a0bb189d201324d04e076e988c84994b85e46",
+      "casekit/recording.py": "8b13ceb6ff53ba76e8dddd9d922f1ebcaf0808559dbc859e68c5ba59742db15a"
+    }
+  }
+]

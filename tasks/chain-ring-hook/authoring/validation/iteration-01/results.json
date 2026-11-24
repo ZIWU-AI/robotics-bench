@@ -1,0 +1,908 @@
+{
+  "candidate": "ring-round1-docs01",
+  "baseline_head": "3928796e93614f3def8a4a7ce4cc26b17b3142a2",
+  "draw_sha256": "8b46ddae18fb7af8c4205829f61993d7333183dd8cb430ce76348c8127a56ca6",
+  "runs": [
+    {
+      "name": "contact01",
+      "mode": "contact",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 800,
+      "observations": 1,
+      "physics_substeps": 40000,
+      "scene_sha256": "cbdb798e928bc83b96575e229338781fab3d80176534510a4a7bad3cd635b852",
+      "layout_sha256": "48c7003b4baabeee7200969d1170eb7f59d27fd4ca5339471692178614f26db2",
+      "resources": {
+        "elapsed_s": 8.103745684000387,
+        "exit_code": 0,
+        "child_maxrss_kib": 129548,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "82640896",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 136,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "139a92634ddac302d7c91c8e6dd91d9a6cf871cfe055453ad2d674ddda02c71f"
+        },
+        "recording.jsonl": {
+          "bytes": 2515346,
+          "sha256": "353cd31f511e6712d050720e16bbdcd0197bba9db2e07b4181f7d02b537413d5"
+        },
+        "seal.json": {
+          "bytes": 672,
+          "sha256": "cefc7347f576ddcc8e210d8ca23f1f17d865aad087ed8e333c52845f6745a31c"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "ba1f5f66625a84c4e866d7a3e559165ba2d1ecccb6e56489ffe12dd2b8074088",
+      "raw_binding_sha256": "4ac2f6edd7db3df4d3811de9602b093a5d0181bd83e49e9136e734f545a42f07"
+    },
+    {
+      "name": "hanging01",
+      "mode": "hanging",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 51.248
+      },
+      "actions": 800,
+      "observations": 183,
+      "physics_substeps": 35845,
+      "scene_sha256": "cbdb798e928bc83b96575e229338781fab3d80176534510a4a7bad3cd635b852",
+      "layout_sha256": "9445e54e1b1944655c14cdf441acb39065979dde207e27954d8b4a3e92666149",
+      "resources": {
+        "elapsed_s": 12.125038386999222,
+        "exit_code": 0,
+        "child_maxrss_kib": 132508,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "84480000",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 658,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "4ef44c8b19ecd72f7f496bfe2020281f95e0a6ada68c52ab738fad4347b3ef3f"
+        },
+        "recording.jsonl": {
+          "bytes": 3082220,
+          "sha256": "e8771bf69d05be15c87e31d36186a2d3d5dd82a6970ce0e56b2aaed43ff17e9f"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "46635281d7ee0f15abd0f078510590acaa3804202264bc0e3b87dcac4337ffd4"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "91fb6456202e923e48b16ce708f1488e08e4559099a920d822268bf338a9f598",
+      "raw_binding_sha256": "b64d1bec31b054f93e5be65c43ae7fb6068d3af5de5b4284e6b1b419c21242ab"
+    },
+    {
+      "name": "holdout-01-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 18.088
+      },
+      "actions": 470,
+      "observations": 179,
+      "physics_substeps": 19525,
+      "scene_sha256": "d31cc96aa13694eecbe9a36588a06f9c59bc20c672bcb8261484c681b8988d5e",
+      "layout_sha256": "d460f677fc94dfb87c2a027be0067496a997e698f3ebeefcd26d9a17ea391265",
+      "resources": {
+        "elapsed_s": 7.459191615998861,
+        "exit_code": 0,
+        "child_maxrss_kib": 124120,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "76513280",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 335,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "1f60ea60b595a711836b0459b9ab5adc6f961d9005f9ab018147fcfd45a93474"
+        },
+        "recording.jsonl": {
+          "bytes": 1745191,
+          "sha256": "2fb1e1ae3831c7902292dbde13a9f29a1fd5567408f1f158cde0258fec0d7291"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "9506568bd0381945806f2333a3aff53ce525627f5d1934120f8f780bdb53c297"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "73e4d06d5a3b9f41a5323048ede0aa9fe869ad9f2e1945e72c054ef69b01e165",
+      "raw_binding_sha256": "eb44f4dba6cbe4c7266b32f40ed10c6fc79090229e07cdd12823147e318a97ce"
+    },
+    {
+      "name": "holdout-01-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "d31cc96aa13694eecbe9a36588a06f9c59bc20c672bcb8261484c681b8988d5e",
+      "layout_sha256": "d460f677fc94dfb87c2a027be0067496a997e698f3ebeefcd26d9a17ea391265",
+      "resources": {
+        "elapsed_s": 1.1250648360000923,
+        "exit_code": 0,
+        "child_maxrss_kib": 116964,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "65155072",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "c0b25288d75d1d568b4cd6bbbf97ca67b13ce6ec053eae9b45c55947184b20c6"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "26005360b98ca5f61a4bdfea50501435a36d246c2126a412c365e9a1d4f47e77"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "7b1f7d84e3b3c1ee14b1f693b93a78cd7868c93d579e3b4bc27714109fb58edc"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "2b01078f0858cc783de42b372c3335a04f68e29868fec9ce5b3a2484e2677e56",
+      "raw_binding_sha256": "ba7eb14c8254cff1b2bc0d0ec47e98ee7b4d6facf1aa3dfb58a1b9e3b8e15ff5"
+    },
+    {
+      "name": "holdout-02-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 16.294
+      },
+      "actions": 469,
+      "observations": 178,
+      "physics_substeps": 19520,
+      "scene_sha256": "88c54edcc8f02b909c5693f3c56a068580b217138d17ac5ca8cc78a680167a9a",
+      "layout_sha256": "2fa7cbd81765fab05c258877b94306c614c5d132461a9c4b82a07ad9a143c241",
+      "resources": {
+        "elapsed_s": 7.2939503800007515,
+        "exit_code": 0,
+        "child_maxrss_kib": 125016,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "75784192",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 335,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "b43fa264f0ede028bcc6c175501b2cd3cc17d91a23cc114ebe8a8aed1a8fec2c"
+        },
+        "recording.jsonl": {
+          "bytes": 1742959,
+          "sha256": "0b8268edde7e762243c60d68be8aa9842762d6e4570359502a6e81b414eab49d"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "3895a26a9e53e457eaa8bc797afdab1c2d4e4223b07d1deddf7957726c3ced92"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "d5a0303622bc366a5eac391dd51df993a93575530217c99ba08a322c98c55893",
+      "raw_binding_sha256": "a55cf0b4bb76b43bbdb2c5344c68eb0953a39969895ece861ac95491a2a70a4b"
+    },
+    {
+      "name": "holdout-02-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "88c54edcc8f02b909c5693f3c56a068580b217138d17ac5ca8cc78a680167a9a",
+      "layout_sha256": "2fa7cbd81765fab05c258877b94306c614c5d132461a9c4b82a07ad9a143c241",
+      "resources": {
+        "elapsed_s": 1.1694785519994184,
+        "exit_code": 0,
+        "child_maxrss_kib": 118112,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "65708032",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "a85c151f5d034c8335a9b14750f2c272da493e2a85a8af022bd9c8a385787baf"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "2710cab5da0bf2cf3f8cbbead330bb43ad12b71f36bc7fb77a9db5ddf3d8c138"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "b06fd337a3364af64df141439f3a40e2a6276128f252babe806c8af1290d3f7a"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "3ba7f67a5b94c276312735fda1d99f149271478b1af8c34dd3a07fa2a8b8df17",
+      "raw_binding_sha256": "7b6cfedbd17fdc4507ef8189f55464bd9fa3bbfec37a85b7fc4bb12bad8e8736"
+    },
+    {
+      "name": "holdout-03-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 22.832
+      },
+      "actions": 475,
+      "observations": 184,
+      "physics_substeps": 19550,
+      "scene_sha256": "021f053ba2616990f63f63ecb211fe485b33a3d9f95f137892fce90abfa4a164",
+      "layout_sha256": "31588f5639a25e6f801258d0a78a6af7bb184cd223882e98983b7fed71d52dcb",
+      "resources": {
+        "elapsed_s": 8.000456263998785,
+        "exit_code": 0,
+        "child_maxrss_kib": 124948,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "76136448",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 332,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "57264dab7cb4016a14a67650a5b8d886bc4cbe4f080c5962c4f773468c8866ae"
+        },
+        "recording.jsonl": {
+          "bytes": 1767977,
+          "sha256": "ddd1ab5e91de04591d144ee7dd00f87166fd9e9b2a853055bb2cb98e1b894442"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "6890afd33daf3780324c8d5d4f2052434a03b1799629e41402eae86de8fc0bc5"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "a46424c9c06658522c2e0507956d7ec057bfee73c7dbb3ee9a725ba208277f08",
+      "raw_binding_sha256": "261cc515e660bdac85352eee43bf0c37809fd1bb51d8e3cad71e1e0c13c55c3b"
+    },
+    {
+      "name": "holdout-03-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "021f053ba2616990f63f63ecb211fe485b33a3d9f95f137892fce90abfa4a164",
+      "layout_sha256": "31588f5639a25e6f801258d0a78a6af7bb184cd223882e98983b7fed71d52dcb",
+      "resources": {
+        "elapsed_s": 1.2191119830004027,
+        "exit_code": 0,
+        "child_maxrss_kib": 116680,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "65359872",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "2744c7c68b0058e1c74186b7244b4c35d9d3b56e144ef322b56b5e1b3328bc13"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "ce9b771d9d2c3b806201e7eb32d7b90b076b73d28f33c1a57297feee189b4a69"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "1c59fd92d0ebc3d7c661199634f0c9ba5b3f05cad35f12cc349a48790525139f"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "50bb3d532b5e7802b7080b713ce6b4b31cbcc71e513a815d77947a3f8897c63a",
+      "raw_binding_sha256": "6ed41aaaeb4837ec9c5b10acb296da4695525a7373be2bc63d889cc8e3679a23"
+    },
+    {
+      "name": "holdout-04-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 13.616
+      },
+      "actions": 475,
+      "observations": 184,
+      "physics_substeps": 19550,
+      "scene_sha256": "ddd01d703af477e0a494f24c1da99b1cd630c6166f1a7edb26d29a70cff9af22",
+      "layout_sha256": "bb8e194184ebfe924395f1e357f23639247b9cb4366b2eb3485634f3370eee24",
+      "resources": {
+        "elapsed_s": 8.008041580000281,
+        "exit_code": 0,
+        "child_maxrss_kib": 123644,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "74805248",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 337,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "2b7513185ad945bf3b4f750ffaa1200484995feae5df094376d0f1677b7d7c6d"
+        },
+        "recording.jsonl": {
+          "bytes": 1767085,
+          "sha256": "1912e57684e5a4112ba851bae41230bd3ae96be6281a22ee814983e9d317106b"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "47e07432d3df7d69b8a30c28c3012c5e1063d04f41afe6ba902e5b616670d302"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "ae255403397e7f2d600976e447fe255d4fbc200067821f9887386376fd64b9e2",
+      "raw_binding_sha256": "315dd6ba20774021354d65d7aa9edc6d46188a16227b549b199ce3135604f1b4"
+    },
+    {
+      "name": "holdout-04-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "ddd01d703af477e0a494f24c1da99b1cd630c6166f1a7edb26d29a70cff9af22",
+      "layout_sha256": "bb8e194184ebfe924395f1e357f23639247b9cb4366b2eb3485634f3370eee24",
+      "resources": {
+        "elapsed_s": 1.27084622700022,
+        "exit_code": 0,
+        "child_maxrss_kib": 117392,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "64823296",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "6c0d037fd86a5b16c2af501d27eb345ffd2e2d61289d6357362047b2c67ab3e0"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "de4b42620bfe32ca956b3a57e531c739e04de07ff44329b0a78cbaa7157faf86"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "0100ee1c75ffb240871d468d126c59640b8ea27142a4ea460c1148215e2240f9"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "b732541edf5f189f7199ec19f39cca0c9fbf9ec06c214c10aa95b43ff0607ccd",
+      "raw_binding_sha256": "0b6af0c304c2784b9c03ef35b28e57fd38094ba1b3abac87ff7171bd64495d25"
+    },
+    {
+      "name": "holdout-05-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 20.13
+      },
+      "actions": 473,
+      "observations": 182,
+      "physics_substeps": 19540,
+      "scene_sha256": "471e529e09dc49a4b388018146fdf9ebafe2278fd86f70ee73b060a3f17ace9f",
+      "layout_sha256": "d3ad68664eb90e314f6f3f76a1e0139fe1102b2419b0de24c21cf8eda58db086",
+      "resources": {
+        "elapsed_s": 7.507791071999236,
+        "exit_code": 0,
+        "child_maxrss_kib": 125272,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "76107776",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 328,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "a4e68a776b69e4a60fb1f9b040b399bfbaf1abbfb00f2e667ca92cd105f3fb28"
+        },
+        "recording.jsonl": {
+          "bytes": 1760311,
+          "sha256": "597affb950570a83e40ef8d13297941924e10b952db564346a66df6f00da0801"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "f15a15149c1fc3775bb90a90a1ee79701c83bc0d23d6eb71bb49f88f8d5795bf"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "bc36d91ef92d9f00ecdcf2f5fb6285c21e9ed4d5ffe21a641561398a6716f6cf",
+      "raw_binding_sha256": "8c75554cffac4d0274b863599e9a054c0bbeb552042f7bf75b711d296df76a74"
+    },
+    {
+      "name": "holdout-05-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "471e529e09dc49a4b388018146fdf9ebafe2278fd86f70ee73b060a3f17ace9f",
+      "layout_sha256": "d3ad68664eb90e314f6f3f76a1e0139fe1102b2419b0de24c21cf8eda58db086",
+      "resources": {
+        "elapsed_s": 1.068843585999275,
+        "exit_code": 0,
+        "child_maxrss_kib": 117048,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "66019328",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "8912d4d88e8818c2218d8a24cea9991e30578e02835af4bf8a8dbadaa3ed360b"
+        },
+        "recording.jsonl": {
+          "bytes": 1102,
+          "sha256": "a3806f3af26e34479f8c962ce2b00f6a3cb415384cf4398e7783a3bc8e4dc642"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "50199b5955bc82fde30a1daa65821849e515ca093f31a4d2f0bf65c221f92420"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "e3a43c65fdc6dd0fb66e5c29e8cbea54ea77cbde2962d45c2ef48edaacf0edb0",
+      "raw_binding_sha256": "41d988f25f6f3fedcf45a94a1ade04d185f0dbfd2096cb49d33aed64ecbfddcd"
+    },
+    {
+      "name": "holdout-06-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 15.186
+      },
+      "actions": 470,
+      "observations": 179,
+      "physics_substeps": 19525,
+      "scene_sha256": "a1eac26102a0d29d34756bcada21efae081a6d8a32fa04055724f17f1c2cfb61",
+      "layout_sha256": "9fe5e5ca3cadad8b0744d73d81555cee8196b3da3a18a2610d63068fda359190",
+      "resources": {
+        "elapsed_s": 7.449417468998945,
+        "exit_code": 0,
+        "child_maxrss_kib": 123708,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "75694080",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 331,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "f42af3abc102a86905dbf0f5016937ade51018222ff9230b2d9b229cb89a059a"
+        },
+        "recording.jsonl": {
+          "bytes": 1750274,
+          "sha256": "8e7d93c22a946e526684ca228a5ce859f5d59ae4eca3cef91020b45e8a858a89"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "7ea29d05c83be6b78cf9ec8d3ba9aba61991101147465b0f67e53dcb59f6341d"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "0cf65d7e6b6f5d5246edd8ad673b0768e5de9785d65c75abc37b19632f0e09f6",
+      "raw_binding_sha256": "9d3b3191214dfba12fae28bc55bddeb93949f82121fe544d80454b12701080e0"
+    },
+    {
+      "name": "holdout-06-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "a1eac26102a0d29d34756bcada21efae081a6d8a32fa04055724f17f1c2cfb61",
+      "layout_sha256": "9fe5e5ca3cadad8b0744d73d81555cee8196b3da3a18a2610d63068fda359190",
+      "resources": {
+        "elapsed_s": 1.1190608060005616,
+        "exit_code": 0,
+        "child_maxrss_kib": 116244,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "65359872",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "de2106a0efc7251c5110706d663f0bee9aad793af9ce51df42a07876cb877262"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "d584686e7ef26e04b82c9bb8595dd660c8e9598d05361e1e7416326803fea809"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "4ca06c4ecc233b0e636b277b785b1793902f57596db265eddd71f7528aa55d32"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "5c90dfabe494ef264a1e19a9561df4d0079466d4946fe0e50279dd24ba2969f8",
+      "raw_binding_sha256": "20e454b67a3f7795cbeb34db43d3e6b6645c29ec2cc74aa9ae43fb00ecce2e4b"
+    },
+    {
+      "name": "holdout-07-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 20.826
+      },
+      "actions": 473,
+      "observations": 182,
+      "physics_substeps": 19540,
+      "scene_sha256": "2b1411f998004861a3d2b3c5fd94ec57487c5d74ebb03db37d3ef438f7e8dc80",
+      "layout_sha256": "cb18586cb2c22452c964d5a46953ebdd3e929dd107a98bb6ebc369868c03eb14",
+      "resources": {
+        "elapsed_s": 7.398267654998563,
+        "exit_code": 0,
+        "child_maxrss_kib": 123812,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "76681216",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 334,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "121fd5919042cb4f0af36b7782edcfcad8db11b175384d55a4308cc99caa6e96"
+        },
+        "recording.jsonl": {
+          "bytes": 1765874,
+          "sha256": "be9d5fee44e6c164b95599f1d38d1ed1c7e3e9bee6f4d66c352174254ac1193f"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "d0c459b8956a0f26d0d44e65a98f09703de7720a5349daa9af35586eb19f28b7"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "dbeed1c087962a60729127b40041830ae49bc1f6d02457506b989a7505e85677",
+      "raw_binding_sha256": "90af240dda12b3a90fb749c3692abca3d8a0ae373b60022904da223d4b31e688"
+    },
+    {
+      "name": "holdout-07-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "2b1411f998004861a3d2b3c5fd94ec57487c5d74ebb03db37d3ef438f7e8dc80",
+      "layout_sha256": "cb18586cb2c22452c964d5a46953ebdd3e929dd107a98bb6ebc369868c03eb14",
+      "resources": {
+        "elapsed_s": 0.9680804580002587,
+        "exit_code": 0,
+        "child_maxrss_kib": 117176,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "65699840",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "e27b6831d0f9c20cc3f441792bf1efcab5417cad70dd854ee55b4606c4b1f79b"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "7f94054ca2c93c312de83e6ef8bdd1a477e924786ffb2df6fab7ab1d44c8bacf"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "e3d9e74c475c8132a371adfbd19061705c96a2c2811a6c6246f0ffe7dd436215"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "73d094f1c5639f56d69ca48115ce8dcd0b1666c040b68358aa728c18c1e23e29",
+      "raw_binding_sha256": "28fd134b445c8eca93df1f28717d1b891fc03e8607568fdad0a31cb92e4c12f1"
+    },
+    {
+      "name": "holdout-08-oracle",
+      "mode": "oracle",
+      "expected_reward": 1,
+      "actual": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "stable_seconds": 19.150000000000002
+      },
+      "actions": 473,
+      "observations": 182,
+      "physics_substeps": 19540,
+      "scene_sha256": "6343e6f7f20ec64521b069e55e1d480f32de6cee96346f0404ca1a9f7a400b41",
+      "layout_sha256": "e8332bd670c5c556ef282533231e5d6e6b9bd4f47440e4c2fc75ac2d6997c755",
+      "resources": {
+        "elapsed_s": 7.250389520000681,
+        "exit_code": 0,
+        "child_maxrss_kib": 123880,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "75526144",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 336,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "f0e09afe8fa8b8019204706590efa23fb48f677cfa047ab2dd5deec4e56aaa32"
+        },
+        "recording.jsonl": {
+          "bytes": 1766636,
+          "sha256": "78e1ef6168dda5e2ebc59ffda474beb87fd35707a93ad63ec6552e6ee789eb46"
+        },
+        "seal.json": {
+          "bytes": 674,
+          "sha256": "933abb848388e54807d5612c9a6e4c88428d7e6dc48e550bcef16259d7baf077"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "f6a317dd4c4121a657018ad9f34390d8e16cfdbd253ea55e93644f95aedd4027",
+      "raw_binding_sha256": "20bd87e7de83bef74d63ca9c8cbaddb3979fa6e0bd29166a450568ac8b8299ea"
+    },
+    {
+      "name": "holdout-08-nop",
+      "mode": "nop",
+      "expected_reward": 0,
+      "actual": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "stable_seconds": 0.0
+      },
+      "actions": 0,
+      "observations": 0,
+      "physics_substeps": 0,
+      "scene_sha256": "6343e6f7f20ec64521b069e55e1d480f32de6cee96346f0404ca1a9f7a400b41",
+      "layout_sha256": "e8332bd670c5c556ef282533231e5d6e6b9bd4f47440e4c2fc75ac2d6997c755",
+      "resources": {
+        "elapsed_s": 1.0245702650008752,
+        "exit_code": 0,
+        "child_maxrss_kib": 117960,
+        "cpu_max": "100000 100000",
+        "memory_max": "2147483648",
+        "memory_peak": "65622016",
+        "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+      },
+      "sampled_ring_contact_controls": 0,
+      "sampled_chain_contact_controls": 0,
+      "export_files": {
+        "meta.json": {
+          "bytes": 380,
+          "sha256": "796ebd4a2f116b3ec543043d395905c15810fd7fc2925e9ced3587074faa9b71"
+        },
+        "recording.jsonl": {
+          "bytes": 1103,
+          "sha256": "ea6ffd51a19692ba51f7822762193e664e40727e5a1a7d26a776118cd9281d36"
+        },
+        "seal.json": {
+          "bytes": 668,
+          "sha256": "2fa0d9007530476be922f18e9fcb08585043d1c1b3ed6164bcfb189b9f39aed3"
+        }
+      },
+      "verifier_image_id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+      "docker_limits": {
+        "NanoCpus": 1000000000,
+        "Memory": 2147483648,
+        "MemorySwap": 2147483648,
+        "NetworkMode": "none"
+      },
+      "raw_commands_sha256": "7b848e8745c6cc489d178b008a60214e2a185510f3c8b6fdc8d184c481bb8aa0",
+      "raw_binding_sha256": "6a1f10eaca9400a6a2e5eec0a004ad56afe48072834c478c2c5c9c238935f3c7"
+    }
+  ],
+  "status": "measured results; independent final iteration audit and main-owned four-trial confirmation (Qoder/Qwen4-Max ×2 and Codex/k3.1-pro ×2) remain separate"
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "iteration-ring-driver.py",
+    "tested_original_raw_sha256": "e6b626862c7e8c2454d23dcec3b24a565b6ca6ee2cf1e64d2266234e7ef61ae8",
+    "packaged_raw_sha256": "e979565beccf3ceb00d150b402846a47910c1e8a0b9bd8e662c0f57adecaa884",
+    "packaging_changes": [
+      "added benchmark canary comment"
+    ]
+  },
+  {
+    "name": "iteration-ring-measure.py",
+    "tested_original_raw_sha256": "a6e53827d10bd27bbe888af18d74668d138e317aff5ade003aa6a51311c5eb89",
+    "packaged_raw_sha256": "236daf7555acab129fd797b5482e570a4a30399d08d942202acc9d83bf37f4e8",
+    "packaging_changes": [
+      "added benchmark canary comment"
+    ]
+  },
+  {
+    "name": "iteration-ring-run.py",
+    "tested_original_raw_sha256": "d69af33ad9b4033fbf0b839a8b18d79555d38053712131e65bdcd74ee280d41e",
+    "packaged_raw_sha256": "9b53569e9608955b4cb8ba2de474adeee396508aa0c3c23c78c72df5841ef084",
+    "packaging_changes": [
+      "added benchmark canary comment",
+      "resolve task relative to packaged directory",
+      "external output directory from RING_DIAGNOSTIC_OUTPUT",
+      "read immutable packaged freeze; compare published LF-normalized bytes to support Git checkout line endings"
+    ]
+  }
+]

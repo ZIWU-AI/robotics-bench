@@ -1,0 +1,13 @@
+{
+  "task": "chain-ring-hook",
+  "tier": "cpu",
+  "scene_sha256": "cbdb798e928bc83b96575e229338781fab3d80176534510a4a7bad3cd635b852",
+  "layout_sha256": "9445e54e1b1944655c14cdf441acb39065979dde207e27954d8b4a3e92666149",
+  "api": "chain-ring-api-v1",
+  "backend": "mujoco",
+  "budgets": {
+    "actions": 800,
+    "observations": 800
+  },
+  "started": "2026-11-22T13:00:53+0000"
+}

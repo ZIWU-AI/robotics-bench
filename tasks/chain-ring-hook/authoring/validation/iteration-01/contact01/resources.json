@@ -1,0 +1,9 @@
+{
+  "elapsed_s": 8.103745684000387,
+  "exit_code": 0,
+  "child_maxrss_kib": 129548,
+  "cpu_max": "100000 100000",
+  "memory_max": "2147483648",
+  "memory_peak": "82640896",
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+}

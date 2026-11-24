@@ -1,0 +1,26 @@
+{
+  "move_finish_exact_replay": true,
+  "reward": 0,
+  "source_sha256": {
+    "tests\\sim.py": "76725766e3b9712069edb461b9be1cf4f13e4ad3788afaab3565cff7869d18d9",
+    "tests\\serve.py": "b429e7c3397307d5a5fb606e7fd87abb7319c0f9dc2ae9644d9722f9f364b413",
+    "tests\\verify.py": "de21711c06d22c2b2ad141419498e430f196635d4eafccd876aa826ea81a1182"
+  },
+  "synthetic_topology_regression": [
+    {
+      "linked": true,
+      "qualified": true,
+      "captured": true
+    },
+    {
+      "linked": false,
+      "qualified": false,
+      "captured": false
+    },
+    {
+      "linked": true,
+      "qualified": false,
+      "captured": false
+    }
+  ]
+}

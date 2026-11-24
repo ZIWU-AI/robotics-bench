@@ -1,0 +1,32 @@
+== frozen layouts (16) ==
+  L00 hx=-0.120 hy=0.020 len=0.500 -> success=True stable=7.90 max_swing=0.302 act=498 obs=400 replay=True
+  L01 hx=+0.120 hy=0.060 len=0.500 -> success=True stable=8.54 max_swing=0.316 act=446 obs=349 replay=True
+  L02 hx=-0.120 hy=0.060 len=0.500 -> success=True stable=8.53 max_swing=0.302 act=445 obs=348 replay=True
+  L03 hx=+0.120 hy=0.020 len=0.500 -> success=True stable=9.03 max_swing=0.290 act=438 obs=340 replay=True
+  L04 hx=-0.120 hy=0.060 len=0.600 -> success=True stable=9.70 max_swing=0.328 act=544 obs=449 replay=True
+  L05 hx=+0.120 hy=0.020 len=0.600 -> success=True stable=5.58 max_swing=0.344 act=514 obs=419 replay=True
+  L06 hx=-0.120 hy=0.020 len=0.600 -> success=True stable=10.92 max_swing=0.319 act=509 obs=414 replay=True
+  L07 hx=+0.120 hy=0.060 len=0.600 -> success=True stable=6.06 max_swing=0.338 act=434 obs=338 replay=True
+  L08 hx=+0.030 hy=0.047 len=0.598 -> success=True stable=9.52 max_swing=0.334 act=424 obs=357 replay=True
+  L09 hx=-0.079 hy=0.040 len=0.563 -> success=True stable=11.42 max_swing=0.311 act=465 obs=382 replay=True
+  L10 hx=+0.007 hy=0.058 len=0.563 -> success=True stable=9.74 max_swing=0.319 act=504 obs=446 replay=True
+  L11 hx=-0.039 hy=0.055 len=0.552 -> success=True stable=10.72 max_swing=0.317 act=406 obs=335 replay=True
+  L12 hx=+0.046 hy=0.037 len=0.552 -> success=True stable=8.77 max_swing=0.327 act=454 obs=382 replay=True
+  L13 hx=-0.067 hy=0.040 len=0.563 -> success=True stable=7.60 max_swing=0.336 act=429 obs=349 replay=True
+  L14 hx=-0.106 hy=0.038 len=0.561 -> success=True stable=9.01 max_swing=0.340 act=564 obs=471 replay=True
+  L15 hx=+0.062 hy=0.057 len=0.519 -> success=True stable=8.59 max_swing=0.311 act=381 obs=302 replay=True
+== unseen layouts (8) ==
+  U00 hx=+0.037 hy=0.026 len=0.576 -> success=True stable=9.37 act=473 obs=406 replay=True
+  U01 hx=-0.027 hy=0.027 len=0.509 -> success=True stable=8.78 act=443 obs=377 replay=True
+  U02 hx=-0.055 hy=0.024 len=0.507 -> success=True stable=7.39 act=459 obs=384 replay=True
+  U03 hx=-0.042 hy=0.058 len=0.528 -> success=True stable=6.79 act=414 obs=343 replay=True
+  U04 hx=+0.062 hy=0.059 len=0.505 -> success=True stable=6.89 act=341 obs=262 replay=True
+  U05 hx=-0.093 hy=0.045 len=0.589 -> success=True stable=4.91 act=450 obs=364 replay=True
+  U06 hx=+0.092 hy=0.046 len=0.540 -> success=True stable=6.11 act=462 obs=374 replay=True
+  U07 hx=+0.079 hy=0.041 len=0.572 -> success=True stable=5.05 act=494 obs=411 replay=True
+== ablations ==
+  ablation1 drag clamped        : 0/16 pass
+  ablation2 blind x=0 oracle    : 0/9 pass (9 layouts with |hook_x|>=0.08)
+  ablation3 nop                 : 0/16 pass
+summary -> proto_ring_summary.json
+ALL CHECKS PASS

@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-22T13:01:46.097081+00:00",
+  "candidate_freeze_sha256": "6411b139c8255e5ca2d2be074d47bbeda89baaed3b4c7c3fb72efd61f4f09b3b",
+  "diagnostic_harness_frozen": true,
+  "tools": {
+    "iteration-ring-driver.py": "e6b626862c7e8c2454d23dcec3b24a565b6ca6ee2cf1e64d2266234e7ef61ae8",
+    "iteration-ring-measure.py": "a6e53827d10bd27bbe888af18d74668d138e317aff5ade003aa6a51311c5eb89",
+    "iteration-ring-run.py": "d69af33ad9b4033fbf0b839a8b18d79555d38053712131e65bdcd74ee280d41e"
+  },
+  "scene_routing": "--scene copies exact supplied diagnostic scene to protected service before launch and read-only mounts same file into independent verifier; oracle unchanged and launched as agent over public HTTP; single-layout fixture per config ensures exactly one execution each",
+  "ready_for_independent_draw": true,
+  "quickstart_result": "quickstart01/driver.json: finished false, grip_open false, 799 action/observation budgets before verification observation; continuation move accepted",
+  "resource_status": "contact01 and hanging01 executing; neither is holdout selection"
+}

@@ -1,0 +1,120 @@
+{
+  "protocol": "ring-round1-independent-uniform8-v1",
+  "created_utc": "2026-11-22T13:03:00.545854+00:00",
+  "candidate": "ring-round1-docs01",
+  "candidate_freeze_sha256": "6411b139c8255e5ca2d2be074d47bbeda89baaed3b4c7c3fb72efd61f4f09b3b",
+  "harness_freeze_sha256": "fc811c7e8e406b74dd9f4492ba6b267b51e2094b070615f37eb26760b28a31ed",
+  "seed_decimal": "22094628646776282176272582511616956627",
+  "seed_source": "one secrets.randbits(128) draw after verified candidate/harness freeze",
+  "rng": "Python random.Random(int(seed_decimal)); uniform in length,mass,hook_y,hook_z order",
+  "ranges": {
+    "length": [
+      0.5,
+      0.62
+    ],
+    "mass": [
+      0.09,
+      0.16
+    ],
+    "hook_y": [
+      -0.03,
+      0.04
+    ],
+    "hook_z": [
+      0.86,
+      0.91
+    ]
+  },
+  "rejected_exact_duplicates": 0,
+  "draw": [
+    {
+      "id": "ring-holdout-01",
+      "layout": {
+        "length": 0.5207990070699537,
+        "mass": 0.10061532128442358,
+        "hook_y": -0.01759452130608382,
+        "hook_z": 0.8736730973351
+      },
+      "layout_sha256": "d460f677fc94dfb87c2a027be0067496a997e698f3ebeefcd26d9a17ea391265",
+      "scene_sha256": "d31cc96aa13694eecbe9a36588a06f9c59bc20c672bcb8261484c681b8988d5e"
+    },
+    {
+      "id": "ring-holdout-02",
+      "layout": {
+        "length": 0.5490256986205327,
+        "mass": 0.09095206603276845,
+        "hook_y": -0.024784904847527614,
+        "hook_z": 0.8739935393234429
+      },
+      "layout_sha256": "2fa7cbd81765fab05c258877b94306c614c5d132461a9c4b82a07ad9a143c241",
+      "scene_sha256": "88c54edcc8f02b909c5693f3c56a068580b217138d17ac5ca8cc78a680167a9a"
+    },
+    {
+      "id": "ring-holdout-03",
+      "layout": {
+        "length": 0.5986022069294555,
+        "mass": 0.15050400115158452,
+        "hook_y": -0.0012431687662461215,
+        "hook_z": 0.8864282571860072
+      },
+      "layout_sha256": "31588f5639a25e6f801258d0a78a6af7bb184cd223882e98983b7fed71d52dcb",
+      "scene_sha256": "021f053ba2616990f63f63ecb211fe485b33a3d9f95f137892fce90abfa4a164"
+    },
+    {
+      "id": "ring-holdout-04",
+      "layout": {
+        "length": 0.5093641477852732,
+        "mass": 0.13026462292907454,
+        "hook_y": 0.028878260992602718,
+        "hook_z": 0.8912900071439561
+      },
+      "layout_sha256": "bb8e194184ebfe924395f1e357f23639247b9cb4366b2eb3485634f3370eee24",
+      "scene_sha256": "ddd01d703af477e0a494f24c1da99b1cd630c6166f1a7edb26d29a70cff9af22"
+    },
+    {
+      "id": "ring-holdout-05",
+      "layout": {
+        "length": 0.5811120710446047,
+        "mass": 0.10885136696583124,
+        "hook_y": -0.0027746213529475754,
+        "hook_z": 0.8729200960516725
+      },
+      "layout_sha256": "d3ad68664eb90e314f6f3f76a1e0139fe1102b2419b0de24c21cf8eda58db086",
+      "scene_sha256": "471e529e09dc49a4b388018146fdf9ebafe2278fd86f70ee73b060a3f17ace9f"
+    },
+    {
+      "id": "ring-holdout-06",
+      "layout": {
+        "length": 0.5102960299673055,
+        "mass": 0.09891014367794555,
+        "hook_y": -0.01048801657351138,
+        "hook_z": 0.8871886997630909
+      },
+      "layout_sha256": "9fe5e5ca3cadad8b0744d73d81555cee8196b3da3a18a2610d63068fda359190",
+      "scene_sha256": "a1eac26102a0d29d34756bcada21efae081a6d8a32fa04055724f17f1c2cfb61"
+    },
+    {
+      "id": "ring-holdout-07",
+      "layout": {
+        "length": 0.6040949672779723,
+        "mass": 0.10771175124143482,
+        "hook_y": -0.017357749708926548,
+        "hook_z": 0.8720244036749751
+      },
+      "layout_sha256": "cb18586cb2c22452c964d5a46953ebdd3e929dd107a98bb6ebc369868c03eb14",
+      "scene_sha256": "2b1411f998004861a3d2b3c5fd94ec57487c5d74ebb03db37d3ef438f7e8dc80"
+    },
+    {
+      "id": "ring-holdout-08",
+      "layout": {
+        "length": 0.5083371101103765,
+        "mass": 0.15384470666975747,
+        "hook_y": 0.004637107085046527,
+        "hook_z": 0.9096569089660234
+      },
+      "layout_sha256": "e8332bd670c5c556ef282533231e5d6e6b9bd4f47440e4c2fc75ac2d6997c755",
+      "scene_sha256": "6343e6f7f20ec64521b069e55e1d480f32de6cee96346f0404ca1a9f7a400b41"
+    }
+  ],
+  "draw_sha256": "8b46ddae18fb7af8c4205829f61993d7333183dd8cb430ce76348c8127a56ca6"
+}

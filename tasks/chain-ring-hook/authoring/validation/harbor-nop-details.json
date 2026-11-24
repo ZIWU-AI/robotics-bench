@@ -1,0 +1,9 @@
+{
+  "reward": 0,
+  "success": false,
+  "problems": [
+    "the agent did not call finish; the collector sealed the episode",
+    "invalid request at 0: finish request must be empty"
+  ],
+  "stable_seconds": 0.0
+}

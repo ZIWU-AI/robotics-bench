@@ -1,0 +1,47 @@
+{
+  "concept": "ManiLadder SwingRing-v1",
+  "reference_video": "https://maniladder-benchmark.github.io/videos/tasks/SwingRing-v1.mp4",
+  "assets": [
+    {
+      "kind": "A",
+      "description": "Authored capsule chain, closed segmented ring with central aperture, capsule J hook and Cartesian hand; no third-party asset files",
+      "authors": [
+        "Rick Ray",
+        "Maofei Li"
+      ],
+      "license": "Apache-2.0"
+    }
+  ],
+  "infrastructure": {
+    "repository": "https://github.com/ZIWU-AI/robotics-bench",
+    "commit": "69a36e73c24ba5a18ee3cd299bd74f92acf81fdf",
+    "paths": [
+      "tools/case-kit/casekit",
+      "tools/case-kit/example"
+    ],
+    "license": "Apache-2.0",
+    "reuse": "Vendored casekit and adapted transport/container scaffolding only; own task physics"
+  },
+  "license": "Apache-2.0 (repository root LICENSE; authored adaptation)",
+  "concept_source": {
+    "repository": "https://github.com/HeegerGao/ManiLadder-Benchmark",
+    "commit": "936c50effd7ab2e312bcb8cf98d142f6d9a20ef4",
+    "paths": [
+      "maniladder/envs/deformable/single_arm_dex/level_4/swing_ring.py",
+      "maniladder/utils/swing_capture.py",
+      "maniladder/assets/xml/deformable/ring_fixed_swing.xml"
+    ],
+    "license": "MIT",
+    "copied_code_or_assets": false,
+    "verification": "Source paths, commit and concept reviewed in independent high design review"
+  },
+  "adaptations": [
+    "MuJoCo CPU engine and abstract single Cartesian manipulator",
+    "Only chain-top actuation; no hand-ring contact at any time",
+    "Eight collidable passive capsule links and a closed ring assembled from capsule segments with a real central hole, not a gap in the circumference",
+    "Physical capsule J hook without scripted capture or latch",
+    "Actual RGB feedback and robot proprioception only",
+    "Independent length, mass and hook-position configuration factors; per-episode random frozen layout",
+    "Qualified >=0.30 m/s entry before release, continuous topology and load-window support checked in independent replay"
+  ]
+}

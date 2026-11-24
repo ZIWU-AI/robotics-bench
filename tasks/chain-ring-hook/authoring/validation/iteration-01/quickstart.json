@@ -1,0 +1,62 @@
+{
+  "info": {
+    "limits": [
+      [
+        -0.25,
+        0.25
+      ],
+      [
+        -0.6,
+        0.65
+      ],
+      [
+        0.75,
+        1.95
+      ]
+    ],
+    "max_step_m": 0.11,
+    "action_duration_s": 0.1,
+    "allowed_steps": [
+      5,
+      25,
+      50
+    ],
+    "step_duration_s": 0.002,
+    "trials": 1,
+    "camera": {
+      "width": 400,
+      "height": 400,
+      "orthographic_height_m": 1.8,
+      "center_z_m": 0.9,
+      "front_right": "x",
+      "side_right": "y",
+      "up": "z"
+    },
+    "images": "Two RGB PNG frames, base64 encoded, with SHA256 and simulation step",
+    "ok": true,
+    "api": "chain-ring-api-v1",
+    "backend": "mujoco",
+    "budgets": {
+      "actions": 800,
+      "observations": 800
+    },
+    "left": {
+      "actions": 799,
+      "observations": 799
+    },
+    "ops": [
+      "move",
+      "observe",
+      "release",
+      "finish"
+    ],
+    "finished": false
+  },
+  "grip_open": false,
+  "step": 50,
+  "rgb_sha256": {
+    "front": "c3f8aae9a88b4d416fa4742e0afa92c7ac2009bbf7f6338f6a78ce0b14c0ee81",
+    "side": "5c5ec0f2ae8d6d5a5405dc22a09fcb1a81a7ad563db9c6dd0397d179ec7383af"
+  },
+  "continued_move_ok": true
+}

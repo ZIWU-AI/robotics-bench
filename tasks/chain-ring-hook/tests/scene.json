@@ -1,0 +1,25 @@
+{
+  "task": "chain-ring-hook",
+  "budgets": {
+    "actions": 800,
+    "observations": 800
+  },
+  "layouts": [
+    {"length": 0.5, "mass": 0.09, "hook_x": -0.12, "hook_y": 0.02, "hook_z": 0.86},
+    {"length": 0.5, "mass": 0.09, "hook_x": 0.12, "hook_y": 0.06, "hook_z": 0.91},
+    {"length": 0.5, "mass": 0.16, "hook_x": -0.12, "hook_y": 0.06, "hook_z": 0.91},
+    {"length": 0.5, "mass": 0.16, "hook_x": 0.12, "hook_y": 0.02, "hook_z": 0.86},
+    {"length": 0.6, "mass": 0.09, "hook_x": -0.12, "hook_y": 0.06, "hook_z": 0.86},
+    {"length": 0.6, "mass": 0.09, "hook_x": 0.12, "hook_y": 0.02, "hook_z": 0.91},
+    {"length": 0.6, "mass": 0.16, "hook_x": -0.12, "hook_y": 0.02, "hook_z": 0.91},
+    {"length": 0.6, "mass": 0.16, "hook_x": 0.12, "hook_y": 0.06, "hook_z": 0.86},
+    {"length": 0.5975, "mass": 0.1253, "hook_x": 0.0303, "hook_y": 0.0467, "hook_z": 0.8618},
+    {"length": 0.5628, "mass": 0.1463, "hook_x": -0.0789, "hook_y": 0.0399, "hook_z": 0.8846},
+    {"length": 0.5631, "mass": 0.1109, "hook_x": 0.0068, "hook_y": 0.0576, "hook_z": 0.8952},
+    {"length": 0.5517, "mass": 0.1535, "hook_x": -0.0392, "hook_y": 0.0547, "hook_z": 0.8796},
+    {"length": 0.5519, "mass": 0.1158, "hook_x": 0.0461, "hook_y": 0.0375, "hook_z": 0.8712},
+    {"length": 0.5634, "mass": 0.1095, "hook_x": -0.0674, "hook_y": 0.0398, "hook_z": 0.8706},
+    {"length": 0.5607, "mass": 0.1084, "hook_x": -0.1056, "hook_y": 0.038, "hook_z": 0.8772},
+    {"length": 0.5187, "mass": 0.1287, "hook_x": 0.0624, "hook_y": 0.0566, "hook_z": 0.8732}
+  ]
+}

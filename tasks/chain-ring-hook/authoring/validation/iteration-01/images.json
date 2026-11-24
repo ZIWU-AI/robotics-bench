@@ -1,0 +1,18 @@
+[
+  {
+    "tag": "iteration-ring-env:docs01",
+    "id": "sha256:ec328a9f1ff2e14d3d6e89e40069eac20d55e598907ac4abb6cd53d91d09a302",
+    "repo_digests": [
+      "iteration-ring-env@sha256:ec328a9f1ff2e14d3d6e89e40069eac20d55e598907ac4abb6cd53d91d09a302"
+    ],
+    "created": "2026-11-22T11:11:07.634959051Z"
+  },
+  {
+    "tag": "iteration-ring-tests:docs01",
+    "id": "sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c",
+    "repo_digests": [
+      "iteration-ring-tests@sha256:13e98dd6e84396ab32b1c1b0ab10791eb09cfc611d5815b26a8cd11c7008f34c"
+    ],
+    "created": "2026-11-22T11:11:10.298132787Z"
+  }
+]

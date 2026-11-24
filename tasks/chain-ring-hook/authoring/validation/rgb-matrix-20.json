@@ -1,0 +1,354 @@
+[
+  {
+    "layout": {
+      "length": 0.5,
+      "mass": 0.09,
+      "hook_y": -0.03,
+      "hook_z": 0.86
+    },
+    "success": true,
+    "final_hold_s": 18.306,
+    "entry": {
+      "time": 3.801999999999803,
+      "speed": 0.9553014121039566,
+      "normal_speed": 0.953690800568668,
+      "radial": 7.717334376785351e-05,
+      "direction": 0.954936434514806,
+      "qualified": true
+    },
+    "release_time": 4.019999999999779,
+    "release_after_entry": true,
+    "mean_ring_support_n": 2.851839291282459,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5,
+      "mass": 0.09,
+      "hook_y": 0.04,
+      "hook_z": 0.91
+    },
+    "success": true,
+    "final_hold_s": 18.956,
+    "entry": {
+      "time": 3.8779999999997945,
+      "speed": 0.8791708769803583,
+      "normal_speed": 0.8767112849228343,
+      "radial": 0.002570176297304289,
+      "direction": 0.8777549223162422,
+      "qualified": true
+    },
+    "release_time": 4.0999999999997705,
+    "release_after_entry": true,
+    "mean_ring_support_n": 2.855769899811898,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5,
+      "mass": 0.16,
+      "hook_y": -0.03,
+      "hook_z": 0.86
+    },
+    "success": true,
+    "final_hold_s": 4.566,
+    "entry": {
+      "time": 3.817999999999801,
+      "speed": 0.9373288231444177,
+      "normal_speed": 0.937318697275221,
+      "radial": 0.0008645724585705868,
+      "direction": 0.9370836608149965,
+      "qualified": true
+    },
+    "release_time": 4.039999999999777,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.6200487884167085,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5,
+      "mass": 0.16,
+      "hook_y": 0.04,
+      "hook_z": 0.91
+    },
+    "success": true,
+    "final_hold_s": 12.52,
+    "entry": {
+      "time": 3.8939999999997927,
+      "speed": 0.893365018471098,
+      "normal_speed": 0.8927754882577049,
+      "radial": 0.0012681560232987556,
+      "direction": 0.892204775330703,
+      "qualified": true
+    },
+    "release_time": 4.119999999999768,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.529559501999364,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.62,
+      "mass": 0.09,
+      "hook_y": -0.03,
+      "hook_z": 0.86
+    },
+    "success": true,
+    "final_hold_s": 26.310000000000002,
+    "entry": {
+      "time": 3.837999999999799,
+      "speed": 0.9657564954082674,
+      "normal_speed": 0.9646610471212858,
+      "radial": 0.001333483092079619,
+      "direction": 0.9657149097657275,
+      "qualified": true
+    },
+    "release_time": 4.059999999999775,
+    "release_after_entry": true,
+    "mean_ring_support_n": 2.844928864068643,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.62,
+      "mass": 0.09,
+      "hook_y": 0.04,
+      "hook_z": 0.91
+    },
+    "success": true,
+    "final_hold_s": 25.516000000000002,
+    "entry": {
+      "time": 3.9119999999997908,
+      "speed": 0.9191751353662011,
+      "normal_speed": 0.9179770183775663,
+      "radial": 0.00021103467947365806,
+      "direction": 0.9185463836273167,
+      "qualified": true
+    },
+    "release_time": 4.129999999999767,
+    "release_after_entry": true,
+    "mean_ring_support_n": 2.838677593610777,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.62,
+      "mass": 0.16,
+      "hook_y": -0.03,
+      "hook_z": 0.86
+    },
+    "success": true,
+    "final_hold_s": 24.804000000000002,
+    "entry": {
+      "time": 3.855999999999797,
+      "speed": 0.942174118239146,
+      "normal_speed": 0.9420540488277376,
+      "radial": 0.002047788230836693,
+      "direction": 0.9421433116497263,
+      "qualified": true
+    },
+    "release_time": 4.079999999999773,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.5342461127975575,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.62,
+      "mass": 0.16,
+      "hook_y": 0.04,
+      "hook_z": 0.91
+    },
+    "success": true,
+    "final_hold_s": 21.348,
+    "entry": {
+      "time": 3.9299999999997888,
+      "speed": 0.9340039236333376,
+      "normal_speed": 0.9340026463236445,
+      "radial": 0.001118162326760249,
+      "direction": 0.9335277868045971,
+      "qualified": true
+    },
+    "release_time": 4.149999999999765,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.540141790164157,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5270357753924182,
+      "mass": 0.11429426797283994,
+      "hook_y": 0.020245858801683718,
+      "hook_z": 0.8678668357931195
+    },
+    "success": true,
+    "final_hold_s": 17.038,
+    "entry": {
+      "time": 3.871999999999795,
+      "speed": 0.9119623192764286,
+      "normal_speed": 0.9112440894256645,
+      "radial": 0.0021175099411829133,
+      "direction": 0.9111242308160982,
+      "qualified": true
+    },
+    "release_time": 4.089999999999772,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.099165127583011,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.6130279172752418,
+      "mass": 0.13202806902317543,
+      "hook_y": 0.03468203258375542,
+      "hook_z": 0.9037409580810869
+    },
+    "success": true,
+    "final_hold_s": 20.69,
+    "entry": {
+      "time": 3.91799999999979,
+      "speed": 0.9260734036280691,
+      "normal_speed": 0.9260260558548737,
+      "radial": 0.0010179939334950849,
+      "direction": 0.9255214907154634,
+      "qualified": true
+    },
+    "release_time": 4.139999999999766,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.278450664753344,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5888780291778152,
+      "mass": 0.11348137555804286,
+      "hook_y": -0.003069206359054003,
+      "hook_z": 0.8711630884979723
+    },
+    "success": true,
+    "final_hold_s": 18.648,
+    "entry": {
+      "time": 3.865999999999796,
+      "speed": 0.936914939294569,
+      "normal_speed": 0.9365489335136105,
+      "radial": 0.0036945454189407905,
+      "direction": 0.9366509242900679,
+      "qualified": true
+    },
+    "release_time": 4.089999999999772,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.0545696354157545,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.6038356744253928,
+      "mass": 0.1258411668191487,
+      "hook_y": -0.028458082552660722,
+      "hook_z": 0.8920133308041626
+    },
+    "success": true,
+    "final_hold_s": 24.232,
+    "entry": {
+      "time": 3.845999999999798,
+      "speed": 0.9430058137711195,
+      "normal_speed": 0.9428921643372868,
+      "radial": 0.0018917851655378072,
+      "direction": 0.9429564765511561,
+      "qualified": true
+    },
+    "release_time": 4.069999999999774,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.1892586694250635,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5427696432637571,
+      "mass": 0.13402909038746913,
+      "hook_y": -0.01554346212403981,
+      "hook_z": 0.8664504031954605
+    },
+    "success": true,
+    "final_hold_s": 16.576,
+    "entry": {
+      "time": 3.8419999999997985,
+      "speed": 0.9367730816544926,
+      "normal_speed": 0.9366535278212947,
+      "radial": 0.004822245272890306,
+      "direction": 0.9365076930265368,
+      "qualified": true
+    },
+    "release_time": 4.069999999999774,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.2606487632431516,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.566233481653106,
+      "mass": 0.11824420577365514,
+      "hook_y": 0.01687183053499703,
+      "hook_z": 0.8997105955599796
+    },
+    "success": true,
+    "final_hold_s": 18.3,
+    "entry": {
+      "time": 3.8799999999997943,
+      "speed": 0.9245925700861765,
+      "normal_speed": 0.9242325134489241,
+      "radial": 0.0001273857783497261,
+      "direction": 0.9240378107817845,
+      "qualified": true
+    },
+    "release_time": 4.0999999999997705,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.119558053938722,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5220171192428923,
+      "mass": 0.11082003617761799,
+      "hook_y": 0.0044933977929844104,
+      "hook_z": 0.88081164068673
+    },
+    "success": true,
+    "final_hold_s": 18.192,
+    "entry": {
+      "time": 3.8519999999997974,
+      "speed": 0.9232930290642155,
+      "normal_speed": 0.9224860384875813,
+      "radial": 0.0026906359007614336,
+      "direction": 0.9226577970627196,
+      "qualified": true
+    },
+    "release_time": 4.069999999999774,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.063645762218578,
+    "mean_chain_support_n": 0.0
+  },
+  {
+    "layout": {
+      "length": 0.5004460882459224,
+      "mass": 0.11533617472211125,
+      "hook_y": -0.00496033328767094,
+      "hook_z": 0.900898777087614
+    },
+    "success": true,
+    "final_hold_s": 9.062,
+    "entry": {
+      "time": 3.835999999999799,
+      "speed": 0.9252144502332098,
+      "normal_speed": 0.9244329539538946,
+      "radial": 0.0004758963771628107,
+      "direction": 0.9246049443782994,
+      "qualified": true
+    },
+    "release_time": 4.059999999999775,
+    "release_after_entry": true,
+    "mean_ring_support_n": 3.11559347355104,
+    "mean_chain_support_n": 0.0
+  }
+]

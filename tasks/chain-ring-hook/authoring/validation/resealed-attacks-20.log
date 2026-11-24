@@ -1,0 +1,8 @@
+{"attack": "unknown_layout", "reward": 0, "error": "ValueError: unknown layout hash"}
+{"attack": "known_wrong_layout", "reward": 0, "success": false, "problems": ["state mismatch at 0", "action count mismatch"], "stable_seconds": 0.0}
+{"attack": "forged_state", "reward": 0, "success": true, "problems": ["state mismatch at 467"], "stable_seconds": 18.306}
+{"attack": "forged_result", "reward": 0, "success": false, "problems": ["result mismatch at 0", "action count mismatch"], "stable_seconds": 0.0}
+{"attack": "request_list", "reward": 0, "success": false, "problems": ["invalid request at 0: request must be a JSON object", "action count mismatch"], "stable_seconds": 0.0}
+{"attack": "request_target", "reward": 0, "success": false, "problems": ["result mismatch at 0", "action count mismatch"], "stable_seconds": 0.0}
+{"attack": "truncated", "reward": 0, "success": true, "problems": ["the episode did not end with finish"], "stable_seconds": 18.306}
+{"attack": "collector_finish", "reward": 0, "success": true, "problems": ["the agent did not call finish; the collector sealed the episode", "invalid request at 467: finish request must be empty"], "stable_seconds": 18.306}

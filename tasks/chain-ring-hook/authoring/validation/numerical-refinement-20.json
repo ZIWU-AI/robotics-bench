@@ -1,0 +1,84 @@
+{
+  "rgb-dt001-20": [
+    {
+      "layout": {
+        "length": 0.5,
+        "mass": 0.16,
+        "hook_y": -0.03,
+        "hook_z": 0.86
+      },
+      "success": true,
+      "final_hold_s": 10.585,
+      "entry_normal_speed": 0.9370821502707091,
+      "release_time": 4.039999999999684,
+      "max_penetration_m": 0.00282824373277322
+    },
+    {
+      "layout": {
+        "length": 0.62,
+        "mass": 0.09,
+        "hook_y": -0.03,
+        "hook_z": 0.86
+      },
+      "success": true,
+      "final_hold_s": 25.642,
+      "entry_normal_speed": 0.9640734453841389,
+      "release_time": 4.0599999999996905,
+      "max_penetration_m": 0.0028140228887080943
+    },
+    {
+      "layout": {
+        "length": 0.6038356744253928,
+        "mass": 0.1258411668191487,
+        "hook_y": -0.028458082552660722,
+        "hook_z": 0.8920133308041626
+      },
+      "success": true,
+      "final_hold_s": 18.459,
+      "entry_normal_speed": 0.9428034736563459,
+      "release_time": 4.069999999999694,
+      "max_penetration_m": 0.0021537834911379925
+    }
+  ],
+  "rgb-segments64-20": [
+    {
+      "layout": {
+        "length": 0.5,
+        "mass": 0.16,
+        "hook_y": -0.03,
+        "hook_z": 0.86
+      },
+      "success": true,
+      "final_hold_s": 19.914,
+      "entry_normal_speed": 0.9372872941036474,
+      "release_time": 4.039999999999777,
+      "max_penetration_m": 0.0013261813143390453
+    },
+    {
+      "layout": {
+        "length": 0.62,
+        "mass": 0.09,
+        "hook_y": -0.03,
+        "hook_z": 0.86
+      },
+      "success": true,
+      "final_hold_s": 23.338,
+      "entry_normal_speed": 0.9646837292386873,
+      "release_time": 4.059999999999775,
+      "max_penetration_m": 0.002298951826264514
+    },
+    {
+      "layout": {
+        "length": 0.6038356744253928,
+        "mass": 0.1258411668191487,
+        "hook_y": -0.028458082552660722,
+        "hook_z": 0.8920133308041626
+      },
+      "success": true,
+      "final_hold_s": 15.51,
+      "entry_normal_speed": 0.9428895838588616,
+      "release_time": 4.069999999999774,
+      "max_penetration_m": 0.002641290283525515
+    }
+  ]
+}

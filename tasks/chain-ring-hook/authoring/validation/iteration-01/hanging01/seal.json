@@ -1,0 +1,21 @@
+{
+  "task": "chain-ring-hook",
+  "tier": "cpu",
+  "scene_sha256": "cbdb798e928bc83b96575e229338781fab3d80176534510a4a7bad3cd635b852",
+  "layout_sha256": "9445e54e1b1944655c14cdf441acb39065979dde207e27954d8b4a3e92666149",
+  "api": "chain-ring-api-v1",
+  "backend": "mujoco",
+  "budgets": {
+    "actions": 800,
+    "observations": 800
+  },
+  "started": "2026-11-22T13:00:53+0000",
+  "finished": "2026-11-22T13:02:21+0000",
+  "entries": 801,
+  "last_hash": "1e925ec0eda432490e914df74333bffc808d16c10a4f9070f8f09da67ea5f90b",
+  "recording_sha256": "e8771bf69d05be15c87e31d36186a2d3d5dd82a6970ce0e56b2aaed43ff17e9f",
+  "used": {
+    "actions": 800,
+    "observations": 183
+  }
+}
