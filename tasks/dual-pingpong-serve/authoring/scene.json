@@ -39,6 +39,7 @@
     "wood_mass": 0.065,
     "rubber_mass_each": 0.04,
     "handle_mass": 0.03,
+    "handle_friction": [0.8, 0.008, 0.005],
     "handle_halfsize": [
       0.014,
       0.055,
@@ -96,14 +97,13 @@
     0.15,
     0.16
   ],
+  "ball_surface_contact": {
+    "solref": [0.008, 0.08],
+    "solimp": [0.99, 0.999, 0.001],
+    "table_friction": [0.2, 0.2, 0.001, 0.00002, 0.00002],
+    "rubber_friction": [0.8, 0.8, 0.001, 0.00002, 0.00002]
+  },
   "layouts": {
-    "development": {
-      "target": [
-        0,
-        -0.58
-      ],
-      "net": false
-    },
     "near": {
       "target": [
         0.3,

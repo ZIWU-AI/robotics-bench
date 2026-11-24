@@ -1,0 +1,36 @@
+[
+  {
+    "surface": "tabletop",
+    "incoming_vz_m_s": -2.5064549999999852,
+    "outgoing_vz_m_s": 1.9064191029758606,
+    "restitution": 0.7606037622761517,
+    "peak_penetration_m": 0.0014191547293615214,
+    "warnings": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "surface": "rubber_1",
+    "incoming_vz_m_s": -2.2562999999999884,
+    "outgoing_vz_m_s": 1.7110625554127168,
+    "restitution": 0.7583488700140609,
+    "peak_penetration_m": 0.0011431792602331105,
+    "warnings": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+]

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+authoring/assets/** -text
+*.png binary
+*.mp4 binary
+*.gz binary

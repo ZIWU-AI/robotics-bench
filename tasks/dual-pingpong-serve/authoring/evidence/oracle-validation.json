@@ -1,0 +1,255 @@
+{
+  "date": "2026-11-24",
+  "mujoco": "3.3.7",
+  "attempt_budget": 3,
+  "source_sha256": {
+    "solution/oracle.py": "491a1b38b75dd9ade7284b1c5dd26e9d5155040f8575fd1425281dfdb20274ff",
+    "solution/grasp.py": "4f3bb605fb8accfb10e67d0f5ab521ed2874eff0d8c5d6f6be25bbefc2f1c7fe",
+    "solution/shot_feedback.py": "59027eef9712c8003cd47ac13859be9d7bb3cd3825b820b99328ed5199bd7a06",
+    "environment/service/sim.py": "9e55482f6f2df127aca9dbd82ec2f193ce801a3aaaa2ff33c03d61a4a2af9aff",
+    "environment/runtime.tar.gz": "842555ac8de68098a52db41ff6857f861133197e9905116cb1b7bb9803fbdffa"
+  },
+  "layouts": {
+    "near": {
+      "run": ".cache/final-oracle-near",
+      "target_m": [
+        0.3,
+        -0.5
+      ],
+      "landing_m": [
+        0.301615021146938,
+        -0.4942744810178723
+      ],
+      "attempt": 1,
+      "success": true,
+      "used": {
+        "trajectory": 37,
+        "observations": 1,
+        "retry": 0
+      },
+      "grasp_lifted": {
+        "ball": true,
+        "paddle": true
+      },
+      "paddle_events": 1,
+      "net_crossings": [],
+      "replay": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "entries": 39
+      },
+      "no_op_replay": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "entries": 1
+      },
+      "grasp_observations": [
+        {
+          "attempt": 1,
+          "stage": "paddle-held",
+          "rise_m": 0.22548793265599731,
+          "hold_slip_m": 0.00014240770073051782
+        },
+        {
+          "attempt": 1,
+          "stage": "ball-held",
+          "rise_m": 0.14944883394208686,
+          "hold_slip_m": 2.2882020497207774e-05
+        }
+      ],
+      "feedback_updates": []
+    },
+    "opponent": {
+      "run": ".cache/final-oracle-opponent",
+      "target_m": [
+        0,
+        0.85
+      ],
+      "landing_m": [
+        -0.05183551830812239,
+        0.8281711059384552
+      ],
+      "attempt": 1,
+      "success": true,
+      "used": {
+        "trajectory": 41,
+        "observations": 1,
+        "retry": 0
+      },
+      "grasp_lifted": {
+        "ball": true,
+        "paddle": true
+      },
+      "paddle_events": 1,
+      "net_crossings": [
+        {
+          "time_s": 27.508831936889113,
+          "position_m": [
+            0.018872027678504443,
+            0.0,
+            1.1174413152052427
+          ],
+          "cleared": true
+        }
+      ],
+      "replay": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "entries": 43
+      },
+      "no_op_replay": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "entries": 1
+      },
+      "grasp_observations": [
+        {
+          "attempt": 1,
+          "stage": "paddle-held",
+          "rise_m": 0.22548793265599731,
+          "hold_slip_m": 0.00014240770073051782
+        },
+        {
+          "attempt": 1,
+          "stage": "ball-held",
+          "rise_m": 0.14944883394208686,
+          "hold_slip_m": 2.2882020497207774e-05
+        }
+      ],
+      "feedback_updates": []
+    },
+    "opponent-net": {
+      "run": ".cache/final-oracle-net",
+      "target_m": [
+        0.25,
+        0.6
+      ],
+      "landing_m": [
+        0.25768697437665494,
+        0.5321261729322327
+      ],
+      "attempt": 3,
+      "success": true,
+      "used": {
+        "trajectory": 120,
+        "observations": 3,
+        "retry": 2
+      },
+      "grasp_lifted": {
+        "ball": true,
+        "paddle": true
+      },
+      "paddle_events": 1,
+      "net_crossings": [
+        {
+          "time_s": 27.372124525718508,
+          "position_m": [
+            0.1822359602108197,
+            0.0,
+            1.086369812740223
+          ],
+          "cleared": true
+        }
+      ],
+      "replay": {
+        "reward": 1,
+        "success": true,
+        "problems": [],
+        "entries": 126
+      },
+      "no_op_replay": {
+        "reward": 0,
+        "success": false,
+        "problems": [],
+        "entries": 1
+      },
+      "grasp_observations": [
+        {
+          "attempt": 1,
+          "stage": "paddle-held",
+          "rise_m": 0.22545451306802589,
+          "hold_slip_m": 0.00014237564302006407
+        },
+        {
+          "attempt": 1,
+          "stage": "ball-held",
+          "rise_m": 0.14944965330411897,
+          "hold_slip_m": 2.3083626141628762e-05
+        },
+        {
+          "attempt": 2,
+          "stage": "paddle-held",
+          "rise_m": 0.22545451306802589,
+          "hold_slip_m": 0.00014237564302006407
+        },
+        {
+          "attempt": 2,
+          "stage": "ball-held",
+          "rise_m": 0.14944965330411897,
+          "hold_slip_m": 2.3083626141628762e-05
+        },
+        {
+          "attempt": 3,
+          "stage": "paddle-held",
+          "rise_m": 0.22545451306802589,
+          "hold_slip_m": 0.00014237564302006407
+        },
+        {
+          "attempt": 3,
+          "stage": "ball-held",
+          "rise_m": 0.14944965330411897,
+          "hold_slip_m": 2.3083626141628762e-05
+        }
+      ],
+      "feedback_updates": [
+        {
+          "attempt": 1,
+          "parameters": {
+            "yaw": 0.16325657525301418,
+            "pitch": 0.8241962402771101,
+            "drop_speed": 1.5350308752168897,
+            "swing_yaw": 0.13131353132846302,
+            "swing_speed": 2.14923651658837
+          }
+        },
+        {
+          "attempt": 2,
+          "parameters": {
+            "yaw": 0.1510813349905571,
+            "pitch": 0.8420420110692609,
+            "drop_speed": 1.4393273764538832,
+            "swing_yaw": 0.1287198669795364,
+            "swing_speed": 1.9767469246798417
+          }
+        }
+      ]
+    }
+  },
+  "videos": {
+    "near": {
+      "frames": 548,
+      "fps": 20,
+      "duration_s": 27.4,
+      "success": true,
+      "output": "robotics-bench\\tasks\\dual-pingpong-serve\\authoring\\evidence\\oracle-near.mp4"
+    },
+    "opponent": {
+      "frames": 555,
+      "fps": 20,
+      "duration_s": 27.75,
+      "success": true,
+      "output": "robotics-bench\\tasks\\dual-pingpong-serve\\authoring\\evidence\\oracle-opponent.mp4"
+    },
+    "opponent-net": {
+      "frames": 1656,
+      "fps": 20,
+      "duration_s": 82.8,
+      "success": true,
+      "output": "robotics-bench\\tasks\\dual-pingpong-serve\\authoring\\evidence\\oracle-opponent-net.mp4"
+    }
+  }
+}

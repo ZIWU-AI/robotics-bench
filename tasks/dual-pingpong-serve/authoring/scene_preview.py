@@ -65,7 +65,7 @@ def build(layout):
     root = ET.Element('mujoco', model='dual-pingpong-serve-'+layout)
     root.append(ET.Comment(CANARY))
     element(root, 'compiler', angle='radian')
-    element(root, 'option', timestep=p['timestep'], integrator='implicitfast', solver='Newton', jacobian='sparse', cone='elliptic', iterations=40)
+    element(root, 'option', timestep=p['timestep'], integrator='implicitfast', solver='Newton', jacobian='sparse', cone='elliptic', iterations=40, noslip_iterations=5)
     visual = element(root, 'visual')
     element(visual, 'global', offwidth=1280, offheight=960)
     element(visual, 'headlight', ambient=[0.3]*3, diffuse=[0.6]*3)
@@ -108,7 +108,7 @@ def build(layout):
             pos=[p['ball']['position'][0], p['ball']['position'][1], table['height']+p['ball']['pad_height']/2],
             size=p['ball']['pad_halfsize'], rgba=[0.36,0.39,0.42,1])
     element(ball, 'freejoint', name='ball_free')
-    element(ball, 'geom', name='ball_geom', type='sphere', size=[p['ball']['radius']], mass=p['ball']['mass'], rgba=[1,.95,.8,1], friction=p['ball']['friction'], condim=6, contype=5)
+    element(ball, 'geom', name='ball_geom', type='sphere', size=[p['ball']['radius']], mass=p['ball']['mass'], rgba=[1,.95,.8,1], friction=p['ball']['friction'], condim=6, contype=5, priority=1, solref=[.002,1], solimp=[.99,.999,.001])
     paddle = element(world, 'body', name='paddle', pos=p['paddle']['position'], euler=[0,0,p['paddle']['yaw']])
     element(world, 'geom', name='paddle_support_pad', type='box',
             pos=[p['paddle']['position'][0], p['paddle']['position'][1], table['height']+p['paddle']['pad_height']/2],
@@ -118,7 +118,11 @@ def build(layout):
     element(paddle, 'geom', name='blade', type='cylinder', size=[pp['radius'],pp['wood_thickness']/2], mass=pp['wood_mass'], rgba=[.65,.43,.2,1])
     for sign,color in [(1,[.85,.045,.065,1]),(-1,[.045,.045,.05,1])]:
         element(paddle, 'geom', name='rubber_'+str(sign), type='cylinder', pos=[0,0,sign*(pp['wood_thickness']+pp['rubber_thickness'])/2], size=[pp['radius'],pp['rubber_thickness']/2], mass=pp['rubber_mass_each'], rgba=color, friction=pp['friction'], condim=6)
-    element(paddle, 'geom', name='handle', type='box', pos=[0,-.125,0], size=pp['handle_halfsize'], mass=pp['handle_mass'], rgba=[.48,.28,.1,1])
+    element(paddle, 'geom', name='handle', type='box', pos=[0,-.125,0], size=pp['handle_halfsize'], mass=pp['handle_mass'], rgba=[.48,.28,.1,1], friction=pp['handle_friction'], condim=6)
+    surface = p['ball_surface_contact']
+    for name, material in [('tabletop', 'table'), ('rubber_1', 'rubber'), ('rubber_-1', 'rubber')]:
+        element(contacts, 'pair', geom1='ball_geom', geom2=name, condim=6,
+                solref=surface['solref'], solimp=surface['solimp'], friction=surface[material + '_friction'])
     if p['layouts'][layout]['net']: add_net(root, world)
     ET.indent(root)
     path = HERE / (layout + '.xml')
@@ -183,10 +187,6 @@ def render(model,data,output,cam,contacts=False):
     with mujoco.Renderer(model, height=960,width=1280) as renderer:
         renderer.update_scene(data,camera=cam,scene_option=opt)
         imageio.imwrite(output,renderer.render())
-
-def pose_previews(model, data, out, layout):
-    from grasp_preview import simulate_grasp
-    return simulate_grasp(model, data, out, layout)
 
 def net_probe(model, data, out):
     """Independent scene calibration: launch a test ball into the net."""

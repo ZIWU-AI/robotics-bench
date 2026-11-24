@@ -5,12 +5,12 @@ artifacts = ["/app/output", "/var/lib/pingpong/export"]
 [task]
 name = "robotics-bench/dual-pingpong-serve"
 description = "Online-control MuJoCo task for serving a table-tennis ball into a target rectangle."
-authors = [{ name = "Hary Ralh", email = "you@example.org" }]
+authors = [{ name = "Hary Ralh", email = "ralhhary@gmail.com" }]
 keywords = ["bimanual", "manipulation", "mujoco", "pingpong", "online-control"]
 
 [metadata]
 author_name = "Hary Ralh"
-author_email = "you@example.org"
+author_email = "ralhhary@gmail.com"
 author_organization = "Nanjing University"
 author_profile = "https://github.com/smilllllle"
 tags = ["bimanual", "manipulation", "mujoco", "pingpong", "online-control"]
@@ -37,7 +37,7 @@ gpus = 0
 workdir = "/tests"
 
 [agent]
-timeout_sec = 1800.0
+timeout_sec = 18000.0
 user = "agent"
 
 [environment]

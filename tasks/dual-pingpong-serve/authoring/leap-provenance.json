@@ -14,6 +14,7 @@
     "assets/menagerie/leap_reference/assets/left/visual/thumb_dip.obj": "94e8eec3fbe66fe0943dca375ac3391d4375fc75973c710e9b93c73c6b874e35",
     "assets/menagerie/leap_reference/assets/left/visual/thumb_fingertip.obj": "45bb6eab1a65d98acc9dd8a67b0b63dbb2b28606a10aa78f5e5b4e76b6211675",
     "assets/menagerie/leap_reference/assets/left/collision/white_tip_thumb.obj": "95933f968c431f60fc8e0a31ac206960dbea84f09a12fe6ba2117f4cdacc4dcb",
+    "assets/menagerie/leap_reference/left_hand.xml": "a613a2a04e8b775eec14b4be5aa4a534030df4e939334a2d19b308b3f99a723a",
     "assets/menagerie/leap_reference/assets/right/visual/palm_lower.obj": "b9c590a7fb237610a10ff69602c077042314ab21baacd5de73dbb3929818d171",
     "assets/menagerie/leap_reference/assets/right/visual/mcp_joint.obj": "ced48acb00872d78108e6111ac5ca9ba81f216765bf5d4f929b4824a0b759b6f",
     "assets/menagerie/leap_reference/assets/right/visual/pip.obj": "0ff42ce0c0fceef19ab597f52c972652bdc8170708addac1f25c6a7d94aa82d7",
@@ -23,6 +24,7 @@
     "assets/menagerie/leap_reference/assets/right/visual/thumb_pip.obj": "8185f060990c31610a9c14055b5e25fcf54e454a6e6fe2d3d71aeb1a1b2bd894",
     "assets/menagerie/leap_reference/assets/right/visual/thumb_dip.obj": "94e8eec3fbe66fe0943dca375ac3391d4375fc75973c710e9b93c73c6b874e35",
     "assets/menagerie/leap_reference/assets/right/visual/thumb_fingertip.obj": "45bb6eab1a65d98acc9dd8a67b0b63dbb2b28606a10aa78f5e5b4e76b6211675",
-    "assets/menagerie/leap_reference/assets/right/collision/white_tip_thumb.obj": "95933f968c431f60fc8e0a31ac206960dbea84f09a12fe6ba2117f4cdacc4dcb"
+    "assets/menagerie/leap_reference/assets/right/collision/white_tip_thumb.obj": "95933f968c431f60fc8e0a31ac206960dbea84f09a12fe6ba2117f4cdacc4dcb",
+    "assets/menagerie/leap_reference/right_hand.xml": "74d5d81f63c08b36925373743ec0e15a2925087b69ee9daae45d28593ab5dec2"
   }
 }

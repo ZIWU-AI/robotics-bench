@@ -1,8 +1,1 @@
-{
-  "task": "gantry-push-example",
-  "puck_start": [-0.05, -0.02],
-  "pusher_home": [0.0, -0.2, 0.05],
-  "goal": [0.15, 0.12],
-  "goal_radius_m": 0.02,
-  "budgets": {"actions": 300, "observations": 100}
-}
+{"task":"dual-pingpong-serve","layout":"opponent-net","target_size":[0.15,0.16],"budgets":{"trajectory":600,"observations":300,"retry":2}}
