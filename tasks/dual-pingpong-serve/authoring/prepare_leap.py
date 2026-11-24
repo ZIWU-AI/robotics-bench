@@ -69,7 +69,7 @@ def main(source):
         "source_id": "maniladder-leap-hands",
         "source": "https://github.com/HeegerGao/ManiLadder-Benchmark",
         "license": "MIT",
-        "registry_status": "pending",
+        "registry_status": "registration_requested",
         "commit": subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip(),
         "conversion": "prepare_leap.py; hand subtree with original visual/collision geometry and joint transforms",
         "files": manifest}, indent=2))

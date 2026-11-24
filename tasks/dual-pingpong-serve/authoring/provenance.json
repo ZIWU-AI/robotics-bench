@@ -8,7 +8,7 @@
       "panda_nohand.xml"
     ]
   },
-  "registry_status": "pending",
+  "registry_status": "registration_requested",
   "credits": [
     "Google DeepMind MuJoCo Menagerie contributors",
     "Franka Robotics"

@@ -48,7 +48,7 @@ def main():
         'source_id': 'mujoco-menagerie-franka-panda',
         'source': 'https://github.com/google-deepmind/mujoco_menagerie',
         'commit': COMMIT, 'license': 'Apache-2.0',
-        'models': models, 'registry_status': 'pending',
+        'models': models, 'registry_status': 'registration_requested',
         'credits': ['Google DeepMind MuJoCo Menagerie contributors', 'Franka Robotics'],
         'files': manifest,
         'generated_geometry': {'author': 'Hary Ralh (AI-assisted)', 'source': 'scene_preview.py and scene.json',

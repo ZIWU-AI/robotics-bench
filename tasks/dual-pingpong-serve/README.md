@@ -60,8 +60,9 @@ before the landing.
 
 ## Assets
 
-Robot sources are registered as `pending` in `docs/asset-sources.yml`: `mujoco-menagerie-franka-panda`
-(Apache-2.0) and `maniladder-leap-hands` (MIT). Upstream URLs, pinned commits and file hashes are recorded in
+Source registration requests are in `authoring/asset-source-requests.yml`: `mujoco-menagerie-franka-panda`
+(Apache-2.0) and `maniladder-leap-hands` (MIT). Maintainer registration and clearance are required before merge.
+Upstream URLs, pinned commits and file hashes are recorded in
 `authoring/provenance.json` and `authoring/leap-provenance.json`. Licence texts are in `authoring/licenses/`.
 
 ## Files
