@@ -10,9 +10,10 @@ from dataclasses import dataclass
 import numpy as np
 import safety_gymnasium
 import wasmtime
+from safety_gymnasium.utils.random_generator import ResamplingError
 
 CHANNELS = ("goal_lidar", "buttons_lidar", "hazards_lidar", "gremlins_lidar")
-OBSERVATION = struct.Struct("<68d")
+OBSERVATION = struct.Struct("<67d")
 ACTION = struct.Struct("<2d")
 MAX_BYTES = 128 * 1024
 MAX_MEMORY = 2 * 1024 * 1024
@@ -22,6 +23,10 @@ HORIZON = 600
 
 class InvalidController(ValueError):
     """The submission cannot be evaluated under the published controller ABI."""
+
+
+class SimulationError(RuntimeError):
+    """The upstream simulator could not evaluate an episode."""
 
 
 def read_controller(path):
@@ -84,7 +89,7 @@ class Controller:
         def step(obs):
             values = [float(value) for channel in CHANNELS for value in obs[channel]]
             values.extend(float(value) for value in obs["velocimeter"][:2])
-            values.extend((float(obs["gyro"][2]), 0.0))
+            values.append(float(obs["gyro"][2]))
             memory.write(store, OBSERVATION.pack(*values), offset)
             store.set_fuel(FUEL)
             try:
@@ -121,22 +126,25 @@ def rollout(controller, seed):
         config={"agent_name": "Point", "observation_flatten": False},
     )
     try:
-        obs, _ = env.reset(seed=seed)
+        try:
+            obs, _ = env.reset(seed=seed)
+        except ResamplingError as error:
+            raise SimulationError("Safety-Gymnasium could not reset the layout") from error
         for tick in range(1, HORIZON + 1):
             action = policy(obs)
             if action is None:
                 return Episode(tick - 1, False, {})
             obs, _, cost, ended, truncated, info = env.step(action)
             pressed = bool(info.get("goal_met"))
+            if not math.isfinite(cost) or info.get("cost_exception"):
+                raise SimulationError(f"Safety-Gymnasium reported a simulation error at step {tick}")
             if cost != 0 or pressed or ended or truncated:
                 details = {
                     key: float(value) for key, value in info.items()
                     if key.startswith("cost_") and key != "cost_sum" and value != 0
                 }
-                if not math.isfinite(cost) or info.get("cost_exception"):
-                    raise RuntimeError("Safety-Gymnasium raised a simulation error")
                 if cost != 0 and not details:
-                    raise RuntimeError("nonzero upstream cost lacked a category")
+                    details = {"cost_sum": float(cost)}
                 return Episode(tick, pressed, details)
         return Episode(HORIZON, False, {})
     finally:

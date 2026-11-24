@@ -5,7 +5,7 @@
 #define PI 3.141592653589793
 #define BINS 16
 
-static double sensors[68], action[2];
+static double sensors[67], action[2];
 #ifdef NEAR_ONLY
 static int started;
 #endif
