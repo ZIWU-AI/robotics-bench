@@ -1,0 +1,1 @@
+{"task":"dual-pingpong-serve","layout":"development","target_size":[0.15,0.16],"budgets":{"trajectory":600,"observations":300,"retry":4}}

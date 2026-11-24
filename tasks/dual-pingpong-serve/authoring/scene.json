@@ -1,0 +1,129 @@
+{
+  "timestep": 0.0005,
+  "table": {
+    "width": 1.525,
+    "length": 2.74,
+    "height": 0.76,
+    "thickness": 0.025,
+    "rgba": [
+      0.055,
+      0.23,
+      0.32,
+      1
+    ]
+  },
+  "ball": {
+    "radius": 0.02,
+    "mass": 0.0027,
+    "position": [
+      -0.25,
+      -1.0,
+      0.81
+    ],
+    "pad_height": 0.03,
+    "pad_halfsize": [
+      0.035,
+      0.035,
+      0.015
+    ],
+    "friction": [
+      0.8,
+      0.005,
+      0.0001
+    ]
+  },
+  "paddle": {
+    "radius": 0.08,
+    "wood_thickness": 0.006,
+    "rubber_thickness": 0.00215,
+    "wood_mass": 0.065,
+    "rubber_mass_each": 0.04,
+    "handle_mass": 0.03,
+    "handle_halfsize": [
+      0.014,
+      0.055,
+      0.009
+    ],
+    "position": [
+      0.15,
+      -1.0,
+      0.81515
+    ],
+    "pad_height": 0.05,
+    "pad_halfsize": [
+      0.04,
+      0.04,
+      0.025
+    ],
+    "friction": [
+      0.8,
+      0.005,
+      0.0001
+    ],
+    "yaw": 1.5707963267948966
+  },
+  "robot": {
+    "model": "franka_emika_panda",
+    "left": {
+      "position": [
+        0.65,
+        -1.15,
+        0.76
+      ],
+      "yaw": 3.141592653589793
+    },
+    "right": {
+      "position": [
+        -0.65,
+        -1.15,
+        0.76
+      ],
+      "yaw": 0.0
+    }
+  },
+  "net": {
+    "height": 0.1525,
+    "half_width": 0.8,
+    "columns": 135,
+    "rows": 14,
+    "radius": 0.001,
+    "node_mass": 6e-05,
+    "edge_stiffness": 120,
+    "edge_damping": 0.002,
+    "rest_length_scale": 0.99
+  },
+  "target_size": [
+    0.15,
+    0.16
+  ],
+  "layouts": {
+    "development": {
+      "target": [
+        0,
+        -0.58
+      ],
+      "net": false
+    },
+    "near": {
+      "target": [
+        0.3,
+        -0.5
+      ],
+      "net": false
+    },
+    "opponent": {
+      "target": [
+        0,
+        0.85
+      ],
+      "net": false
+    },
+    "opponent-net": {
+      "target": [
+        0.25,
+        0.60
+      ],
+      "net": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "mujoco": "3.3.7",
+  "layouts": {
+    "opponent-net": {
+      "nq": 4848,
+      "nv": 4846,
+      "actuators": 46,
+      "initial_ik_error_m": {
+        "left": 2.3915472722185758e-08,
+        "right": 1.4329702834966211e-08
+      },
+      "initial_contacts": 0,
+      "elapsed_s": 11.306222800049
+    }
+  }
+}

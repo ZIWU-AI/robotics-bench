@@ -1,0 +1,341 @@
+{
+  "source": "https://github.com/google-deepmind/mujoco_menagerie",
+  "commit": "370c43965323c0944b433b202aac5058b5f907a9",
+  "license": "Apache-2.0",
+  "models": {
+    "franka_emika_panda": [
+      "panda_nohand.xml"
+    ]
+  },
+  "registry_status": "maintainer clearance required before merge",
+  "credits": [
+    "Google DeepMind MuJoCo Menagerie contributors",
+    "Franka Robotics"
+  ],
+  "files": [
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0.stl",
+      "sha256": "dfc6d94330de8ddb005b311bfdba9f3b8e1aa7c256b71592ee7ff32cb9a9a5aa",
+      "bytes": 10084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_0.obj",
+      "sha256": "b27078c9e1feb6eaea65df4210e63cec26055407f438fb6c651cd2a26ecc944b",
+      "bytes": 304687
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_1.obj",
+      "sha256": "cd41413866654b119cd940bd7e53d6bd1b600bce57cbb2b3a66cf50cf01d5e3e",
+      "bytes": 106898
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_10.obj",
+      "sha256": "7a55588817ce6381a9e7f7dd67a1a6a80f453ebfb9047afed34062dc6ee05b92",
+      "bytes": 352663
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_11.obj",
+      "sha256": "05699cd6c858814fe0509ef723f588e01126128a5809e44f8bea04341e6f7320",
+      "bytes": 22941
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_2.obj",
+      "sha256": "1546699b6ae8ba13bc3a881f455d9b6967b7d66b61a17c91e502067e8dbcb3f0",
+      "bytes": 606944
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_3.obj",
+      "sha256": "a7d5778cf2e5c4b2e6d947a7cafc538d211365469457138f41535ca67531f54d",
+      "bytes": 48906
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_4.obj",
+      "sha256": "a5c22dd5ca62ca2347c9dead46fd0a2083cec1ca6b014d4f45b6a2bf72662c14",
+      "bytes": 217010
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_5.obj",
+      "sha256": "85b08f6c19abf49b894e3e5c9cd646acd29cef723019cbd885f1b397af9243fa",
+      "bytes": 17508
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_7.obj",
+      "sha256": "c4bb67ddf29f5510789e1c9e21b8dc41280ad00858d1a5d13ccba5519ef14aec",
+      "bytes": 31569
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_8.obj",
+      "sha256": "658bd4effeb44b10c62e8f74eb1a71bb5d3d42dc72d7f64215dca4401a834cbc",
+      "bytes": 3351185
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link0_9.obj",
+      "sha256": "546794c9e0fbdfff309ddbe94bbdf92186370935de7cf9ba62c5f0ba4e897500",
+      "bytes": 108535
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link1.obj",
+      "sha256": "e471edf2075a419213365285144b8759e6b6f7178b1bd556cc0afdc2ebb72153",
+      "bytes": 3362025
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link1.stl",
+      "sha256": "e41a39a94108fcf56aacff603fc91ec80541f4c1af17b51a0de5617f5566e6d2",
+      "bytes": 15084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link2.obj",
+      "sha256": "61d778ec01a499a5ab08e3cd81bfa7d05614120474921f4e484aa8eac062b554",
+      "bytes": 3383842
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link2.stl",
+      "sha256": "370f7605a0fae3529db169ded50f52f171024aa792d4d773bc84197301f6a039",
+      "bytes": 15084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link3.stl",
+      "sha256": "0a8d638b9349c6c0eefc4e888636ac4838c4b27170f18a51699321118af709c1",
+      "bytes": 15084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link3_0.obj",
+      "sha256": "bf3ee138bed84e9df7820ab7346ea2673bef7b081d49393574f778e5b05e668f",
+      "bytes": 3129111
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link3_1.obj",
+      "sha256": "d58142af5e93ed0960f0c170b10b29dc30a8869bccaca7575dbb284bb8c24e64",
+      "bytes": 67075
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link3_2.obj",
+      "sha256": "06a3150f719582233cfbc1741072597081c701e30defcb62b244fb7c3efb1ee6",
+      "bytes": 85917
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link3_3.obj",
+      "sha256": "8d2a7b47309d0375d9ffa116a90d9ff92d7cf90c94ce4db3f24f62bb6ef49c76",
+      "bytes": 470331
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link4.stl",
+      "sha256": "0180ebb5772ec9840cb049750cffb29a9ddc90311752a16ea34757782ef9e48d",
+      "bytes": 15084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link4_0.obj",
+      "sha256": "fbddcbda74b9fb5052a0591fcf377cef2acee8fa2ff8638982309284aea34c88",
+      "bytes": 85819
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link4_1.obj",
+      "sha256": "ed6edd7072e74d6b3b1ba7508256aa01950066d74d945836f20f4afe990a76b3",
+      "bytes": 3232698
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link4_2.obj",
+      "sha256": "1e09136da7bb325651bba4e0951af946eb650233654583c3ec194a63ce30bf97",
+      "bytes": 468074
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link4_3.obj",
+      "sha256": "ff7084c63cbf3240a382f33dc6f2284a11652e670bc22a07f11448eb56fd0dc3",
+      "bytes": 69354
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link5_0.obj",
+      "sha256": "4fb4ea24fc8c83e2a0aaa30cf0336b5e66935892e8b10e48b9118fbc38c4f85c",
+      "bytes": 846795
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link5_1.obj",
+      "sha256": "961b25796b301896979a946c90a301ff3d871e4b005e1d061c3280b929e60f1d",
+      "bytes": 64922
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link5_2.obj",
+      "sha256": "ed5e8dc11b90a72904d5d5aeedf2c230b2970b9556184799dc9d30b1ef5aa1af",
+      "bytes": 3959847
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link5_collision_0.obj",
+      "sha256": "9f05f0c305b8445ff9857dc7370bc8bcd435ebdbafb090f9d43789b4fd6b3988",
+      "bytes": 4049
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link5_collision_1.obj",
+      "sha256": "c9b2e0b36a0614126b0067551be4f903c1cf0465d47ad689a392222eaeb1b6cb",
+      "bytes": 2531
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link5_collision_2.obj",
+      "sha256": "7ff733d0babd8651eda633dfbb3323c2e3b1e536e63f5a6bf664653b4d0b2d19",
+      "bytes": 3974
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6.stl",
+      "sha256": "20b768e99a0e0440b5754dcca108016434e57937cc356acd9c352ccd3cb27f77",
+      "bytes": 10084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_0.obj",
+      "sha256": "902cf514cd7f601de754d60aef8bf03abfb6cc2de2ea87ae21f716a24b0bec93",
+      "bytes": 161909
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_1.obj",
+      "sha256": "57f55c5a1ecd4290de49e629ff65f58247a5adeeefbff167954dbde4daea7045",
+      "bytes": 27879
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_10.obj",
+      "sha256": "a002320736e73707e998d61e9fa8cd85a2f350b06e57a36d72b2f73b5a7026d9",
+      "bytes": 378804
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_11.obj",
+      "sha256": "9ce6c90aa16a0f6a7c93870e0e7768af2d8a16ef46758b4547e855f9f6d9cf3f",
+      "bytes": 33593
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_12.obj",
+      "sha256": "619f03b4c218c2d3c12fa0a69a632038da3ee0a94770c31d2067a86e15565ae2",
+      "bytes": 4008
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_13.obj",
+      "sha256": "23bb4d531b4f0564a49cd639b8421218d4bfdb6fca25f49747d6456cf8efbbb8",
+      "bytes": 3912
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_14.obj",
+      "sha256": "ebdd009a84f1d8a29efa22703811bab0db78a911f978a52708cf948d7c9f8f5b",
+      "bytes": 456755
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_15.obj",
+      "sha256": "b18583b353d7c565d6ce8b972ba76afda8b5849dc79c7489e3ab9870e9b2e452",
+      "bytes": 687184
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_16.obj",
+      "sha256": "94aa55fe21b990c76d294ad48683b96838822808392d82f4cad9ab11d9bc4c6d",
+      "bytes": 3774517
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_2.obj",
+      "sha256": "ad4aa11e1b824ddd58b5ebb5bd60d5391fe2f6c566f5e7250e106df1b81e8447",
+      "bytes": 10205
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_3.obj",
+      "sha256": "93d42375fd8b9e307de87fc93985c466d5e7d41fff2ffb3bef8e405fcd845888",
+      "bytes": 12288
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_4.obj",
+      "sha256": "7c5593a873b4faded71ffd218853f0ede03878be3af0cea993d8dc8f79736e4b",
+      "bytes": 14247
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_5.obj",
+      "sha256": "fb8860a3ed1840f563b1ecf06de31daa1941a2cecaad348f893c7c183beb0096",
+      "bytes": 12186
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_6.obj",
+      "sha256": "7842cd39a2ab542e2af46d21b9c2b4a6e13060b716b6c6a3ce9079cce8acd0af",
+      "bytes": 12963
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_7.obj",
+      "sha256": "bb49ae82f8ea91ad854b5409379a5773f7c9b63baf3ceac229a569d7ccd1dba4",
+      "bytes": 4510
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_8.obj",
+      "sha256": "95e21cf52f75de64a112111cc72026a88a2ad28127b0e8249264c13212ad0c21",
+      "bytes": 9399
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link6_9.obj",
+      "sha256": "a6e914bfbe305dc26995e54043b70a70ef41654903d23efb9eb395da5dbe5540",
+      "bytes": 18118
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7.stl",
+      "sha256": "92ac6afcf7574c034d3170d8a68e95ac9048ab9d0dd5bbd8311b86e551b9ab1c",
+      "bytes": 10084
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_0.obj",
+      "sha256": "6c45c2d72bee4b9f76a7cb8ce495095f66837522362381ef7dd8332fd6504d37",
+      "bytes": 1399813
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_1.obj",
+      "sha256": "09bac69cc6ebf22cf0b7b41e5d5e5c94be1ab986b59e59dc01fa0891cfa4c70a",
+      "bytes": 124785
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_2.obj",
+      "sha256": "8a49b056e21f69b8e3ef512d4106d9c76e81357473c718bec29bc0e27595a3b8",
+      "bytes": 214613
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_3.obj",
+      "sha256": "ef63541f12b2b440f0ad6b11dc0fbec1447a0da030fad827cb18e8ca8cd2043e",
+      "bytes": 127095
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_4.obj",
+      "sha256": "c7b273306967759cf197247486197ab12ded1b92d13112b185fb25e4202503c5",
+      "bytes": 88107
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_5.obj",
+      "sha256": "83733d3b94caf2a61f752942ca9dc7cf6cf403bb4f4ab953c24157c240dae92c",
+      "bytes": 232742
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_6.obj",
+      "sha256": "6c4f4d7528eb4b5dbd4be1e0c7dbd5b83e44ef14c9991d4e67bd6d8e1e23cf04",
+      "bytes": 102723
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/assets/link7_7.obj",
+      "sha256": "69f1a8efeaf8c4f8ef7c3265981ac5b1d03faa8d9e07c5b22d9628afae16bf41",
+      "bytes": 814020
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/LICENSE",
+      "sha256": "6d1d968fb225eca367cb7f0b8831ab012a35d92b547e945e17ef8e7b05c3e5cc",
+      "bytes": 10349
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/panda_nohand.xml",
+      "sha256": "0173102058a72843c19a3947814975868c8f46ed3b1b46c38ede237e5866a968",
+      "bytes": 11414
+    },
+    {
+      "path": "assets/menagerie/franka_emika_panda/README.md",
+      "sha256": "85cdebf8f4dd52e29b77984e934b815b488b24717a350521b44827680dbbf085",
+      "bytes": 2970
+    }
+  ],
+  "generated_geometry": {
+    "author": "Hary Ralh (AI-assisted)",
+    "source": "scene_preview.py and scene.json",
+    "objects": [
+      "table",
+      "ball",
+      "paddle",
+      "target",
+      "net",
+      "posts",
+      "robot support"
+    ],
+    "paddle": "160 mm circular blade, 6 mm wood, 2.15 mm equivalent H3 39-degree rubber per face; 175 g total including handle; simulation approximation"
+  }
+}

@@ -1,0 +1,9 @@
+# Superseded models remain available locally for comparison.
+authoring/assets/menagerie/franka_fr3_duo/
+authoring/assets/menagerie/sharpa_wave/
+# Retain only current initial-scene evidence in version control.
+authoring/evidence/*
+!authoring/evidence/*-initial.png
+!authoring/evidence/*-overview.png
+!authoring/evidence/panda-leap-static.json
+!authoring/evidence/preview-metrics.json
