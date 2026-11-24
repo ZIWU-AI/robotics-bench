@@ -14,7 +14,7 @@ HOME = np.array([-math.pi / 2, -math.pi / 2, math.pi / 2, -math.pi / 2, -math.pi
 JOINT_SPEED = math.pi
 
 
-def robot_model(scene_xml, tool_xml, visuals=True):
+def robot_model(scene_xml, tool_xml):
     scene = ET.fromstring(scene_xml)
     robot = ET.parse(UR5E_XML).getroot()
     base = robot.find("./worldbody/body")
@@ -24,21 +24,11 @@ def robot_model(scene_xml, tool_xml, visuals=True):
     world = scene.find("./worldbody")
     world.insert(0, base)
     scene.find("./default").append(robot.find("./default/default"))
-    files = {}
-    if visuals:
-        scene.append(robot.find("./asset"))
-        files = {mesh.get("file"): (ASSETS / "assets" / mesh.get("file")).read_bytes()
-                 for mesh in robot.findall("./asset/mesh")}
-    else:
-        for body in base.iter("body"):
-            for geom in list(body.findall("geom")):
-                if geom.get("class") == "visual":
-                    body.remove(geom)
     for index, name in enumerate(JOINTS):
         torque = 150 if index < 3 else 28
         ET.SubElement(scene.find("./actuator"), "motor", name=f"drive_{name}",
                       joint=f"{name}_joint", forcerange=f"{-torque} {torque}")
-    return mj.MjModel.from_xml_string(ET.tostring(scene, encoding="unicode"), assets=files)
+    return mj.MjModel.from_xml_string(ET.tostring(scene, encoding="unicode"))
 
 
 def ease(time):

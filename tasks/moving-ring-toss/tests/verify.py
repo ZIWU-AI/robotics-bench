@@ -24,7 +24,7 @@ def grade(export=EXPORT):
         for budget, count in sealed_counts.items()
     ):
         return {"reward": 0, "problems": problems + ["invalid sealed operation counts"]}
-    world = World(seed, visuals=False)
+    world = World(seed)
     used = dict.fromkeys({budget for budget, _ in COMMANDS.values()}, 0)
     for index, entry in enumerate(entries):
         name, request, result = entry["op"], entry["request"], entry["result"]

@@ -40,7 +40,7 @@ The verifier reconstructs the episode from the sealed seed and replays the accep
 
 ## Assets and provenance
 
-The UR5e joint geometry, inertias, collision primitives and visual meshes come from the BSD-3-Clause MuJoCo Menagerie UR5e description. The case adds its own gripper, joint controller, rings, rail and carriage. Both containers use the same physical arm description, and the service loads the visual meshes for camera observations. [UR5e source and revision](https://github.com/google-deepmind/mujoco_menagerie/tree/fb36886b3023db08c198264e1e9956ab202c3e3b/universal_robots_ur5e) · [Asset provenance](authoring/provenance.json)
+The UR5e joints, inertias and collision primitives come from the BSD-3-Clause MuJoCo Menagerie UR5e description. The rendered arm uses colored primitives. Both containers use the same source model, and the case adds its own gripper, joint controller, rings, rail and carriage. [UR5e source and revision](https://github.com/google-deepmind/mujoco_menagerie/tree/fb36886b3023db08c198264e1e9956ab202c3e3b/universal_robots_ur5e) · [Asset provenance](authoring/provenance.json)
 
 The ring-on-carriage scene, near-rim grasp, short throw sequence and consecutive hold criterion draw on ManiLadder's RingTossing-v1. The CPU implementation uses the Robotics-Bench case kit. [Upstream implementation](https://github.com/HeegerGao/ManiLadder-Benchmark/blob/main/maniladder/envs/rigid_body/single_arm_gripper/level_4/ring_tossing.py) · [Upstream demonstrations](https://huggingface.co/datasets/Linslab/ManiLadder_Dataset/tree/main/RingTossing-v1/videos)
 

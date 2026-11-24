@@ -62,7 +62,7 @@ def scene_hash():
                           + UR5E_XML.read_bytes()).hexdigest()
 
 
-def make_model(starts, masses, post_y, visuals):
+def make_model(starts, masses, post_y):
     ring_bodies = []
     for index, ((x, y), mass, color) in enumerate(zip(starts, masses, RING_COLORS)):
         angles = np.linspace(0, math.tau, 25)
@@ -130,11 +130,11 @@ def make_model(starts, masses, post_y, visuals):
       </actuator>
     </mujoco>
     """
-    return robot_model(scene, tool, visuals)
+    return robot_model(scene, tool)
 
 
 class World:
-    def __init__(self, seed, visuals=True):
+    def __init__(self, seed):
         rng = np.random.default_rng(seed)
         starts = [(rng.uniform(-.305, -.278), y + rng.uniform(-.014, .014)) for y in STOCK_Y]
         mass = rng.uniform(0.05, 0.115)
@@ -142,7 +142,7 @@ class World:
         self.stroke_time = 2 * POST_AMPLITUDE / self.post_speed + POST_RAMP_S
         self.phase = rng.uniform(0, 2 * self.stroke_time)
         post_y, post_velocity = self.post_motion(0)
-        self.model = make_model(starts, [mass] * 3, post_y, visuals)
+        self.model = make_model(starts, [mass] * 3, post_y)
         self.data = mj.MjData(self.model)
         self.renderer = None
         self.wrist = self.data.body("tool")

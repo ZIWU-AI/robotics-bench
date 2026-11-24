@@ -9,28 +9,9 @@
       "license_file": "authoring/licenses/ur5e.txt",
       "files": [
         "environment/service/ur5e/ur5e.xml",
-        "environment/service/ur5e/assets/base_0.obj",
-        "environment/service/ur5e/assets/base_1.obj",
-        "environment/service/ur5e/assets/forearm_0.obj",
-        "environment/service/ur5e/assets/forearm_1.obj",
-        "environment/service/ur5e/assets/forearm_2.obj",
-        "environment/service/ur5e/assets/forearm_3.obj",
-        "environment/service/ur5e/assets/shoulder_0.obj",
-        "environment/service/ur5e/assets/shoulder_1.obj",
-        "environment/service/ur5e/assets/shoulder_2.obj",
-        "environment/service/ur5e/assets/upperarm_0.obj",
-        "environment/service/ur5e/assets/upperarm_1.obj",
-        "environment/service/ur5e/assets/upperarm_2.obj",
-        "environment/service/ur5e/assets/upperarm_3.obj",
-        "environment/service/ur5e/assets/wrist1_0.obj",
-        "environment/service/ur5e/assets/wrist1_1.obj",
-        "environment/service/ur5e/assets/wrist1_2.obj",
-        "environment/service/ur5e/assets/wrist2_0.obj",
-        "environment/service/ur5e/assets/wrist2_1.obj",
-        "environment/service/ur5e/assets/wrist2_2.obj",
-        "environment/service/ur5e/assets/wrist3.obj",
         "tests/ur5e/ur5e.xml"
-      ]
+      ],
+      "adaptation": "Keeps the upstream UR5e joint, inertial and collision descriptions. The task renders the collision primitives and a procedural base."
     }
   ]
 }
