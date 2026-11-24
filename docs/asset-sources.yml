@@ -25,4 +25,20 @@
 #     cleared_on: 2026-01-01
 #     used_by: ["<slug>"]
 
-sources: []
+sources:
+  - id: mujoco-menagerie-franka-panda
+    name: MuJoCo Menagerie Franka Panda
+    url: https://github.com/google-deepmind/mujoco_menagerie
+    license: Apache-2.0
+    status: pending
+    obligations: Retain the Apache-2.0 licence, copyright notices and attribution; identify model modifications.
+    notes: Scope is franka_emika_panda at commit 370c43965323c0944b433b202aac5058b5f907a9.
+    used_by: ["dual-pingpong-serve"]
+  - id: maniladder-leap-hands
+    name: ManiLadder-Benchmark left and right LEAP hands
+    url: https://github.com/HeegerGao/ManiLadder-Benchmark
+    license: MIT
+    status: pending
+    obligations: Retain the ManiLadder and LEAP Hand copyright notices and MIT licence texts.
+    notes: Scope is the LEAP hand assets at commit 936c50effd7ab2e312bcb8cf98d142f6d9a20ef4.
+    used_by: ["dual-pingpong-serve"]

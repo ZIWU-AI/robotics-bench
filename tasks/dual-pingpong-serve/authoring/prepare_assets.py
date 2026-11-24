@@ -45,9 +45,10 @@ def main():
         (licenses / (package + '-Apache-2.0.txt')).write_text(
             f'# {CANARY}\n' + (source / 'LICENSE').read_text(encoding='utf-8'), encoding='utf-8', newline='\n')
     provenance = {
+        'source_id': 'mujoco-menagerie-franka-panda',
         'source': 'https://github.com/google-deepmind/mujoco_menagerie',
         'commit': COMMIT, 'license': 'Apache-2.0',
-        'models': models, 'registry_status': 'maintainer clearance required before merge',
+        'models': models, 'registry_status': 'pending',
         'credits': ['Google DeepMind MuJoCo Menagerie contributors', 'Franka Robotics'],
         'files': manifest,
         'generated_geometry': {'author': 'Hary Ralh (AI-assisted)', 'source': 'scene_preview.py and scene.json',

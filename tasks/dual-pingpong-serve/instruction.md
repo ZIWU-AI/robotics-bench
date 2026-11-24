@@ -67,6 +67,8 @@ case results pass; any failed case makes the final reward 0. Each passing case r
   `grasp_lifted` reports these accumulated conditions;
 - the latest attempt has exactly one merged paddle-ball contact event; contacts separated by at most 0.01 s merge;
 - the ball's first post-strike table contact has its centre strictly inside the target rectangle:
-  `abs(x - target_x) < target_width / 2` and `abs(y - target_y) < target_length / 2`.
+  `abs(x - target_x) < target_width / 2` and `abs(y - target_y) < target_length / 2`;
+- in net layouts, before that landing, the ball centre crosses y = 0 from negative y between the posts,
+  at least one ball radius above the net top.
 
 You have 18000 seconds to complete this task. Do not cheat by using online solutions or hints specific to this task.

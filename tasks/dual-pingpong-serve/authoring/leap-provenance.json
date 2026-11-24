@@ -1,5 +1,8 @@
 {
+  "source_id": "maniladder-leap-hands",
   "source": "https://github.com/HeegerGao/ManiLadder-Benchmark",
+  "license": "MIT",
+  "registry_status": "pending",
   "commit": "936c50effd7ab2e312bcb8cf98d142f6d9a20ef4",
   "conversion": "prepare_leap.py; hand subtree with original visual/collision geometry and joint transforms",
   "files": {

@@ -66,7 +66,10 @@ def main(source):
                       (source/"maniladder/assets/hands/leap_hand/LICENSE.txt", "LEAP-MIT.txt")]:
         (HERE/"licenses"/name).write_text(f'# {CANARY}\n' + src.read_text(encoding='utf-8'), encoding='utf-8', newline='\n')
     (HERE/"leap-provenance.json").write_text(json.dumps({
+        "source_id": "maniladder-leap-hands",
         "source": "https://github.com/HeegerGao/ManiLadder-Benchmark",
+        "license": "MIT",
+        "registry_status": "pending",
         "commit": subprocess.check_output(["git", "-C", str(source), "rev-parse", "HEAD"], text=True).strip(),
         "conversion": "prepare_leap.py; hand subtree with original visual/collision geometry and joint transforms",
         "files": manifest}, indent=2))

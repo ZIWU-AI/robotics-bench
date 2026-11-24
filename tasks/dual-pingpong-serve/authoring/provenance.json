@@ -1,4 +1,5 @@
 {
+  "source_id": "mujoco-menagerie-franka-panda",
   "source": "https://github.com/google-deepmind/mujoco_menagerie",
   "commit": "370c43965323c0944b433b202aac5058b5f907a9",
   "license": "Apache-2.0",
@@ -7,7 +8,7 @@
       "panda_nohand.xml"
     ]
   },
-  "registry_status": "maintainer clearance required before merge",
+  "registry_status": "pending",
   "credits": [
     "Google DeepMind MuJoCo Menagerie contributors",
     "Franka Robotics"

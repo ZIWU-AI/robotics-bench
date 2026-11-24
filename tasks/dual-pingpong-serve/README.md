@@ -39,8 +39,8 @@ The left hand holds the paddle and the right hand holds the ball. The controller
 both objects, measures slip, plans a ballistic arc with net clearance, and coordinates release with the paddle strike.
 
 `solution/shot_feedback.py` fits normal restitution and tangential response from measured contact velocities.
-After a missed landing, `update_shot()` uses a regularized five-variable Jacobian to adjust face yaw/pitch,
-ball downward speed, swing yaw, and swing speed. Release height realizes the planned downward speed under gravity.
+After a missed landing, `update_shot()` uses a regularized six-variable Jacobian to adjust face yaw/pitch,
+ball downward speed, swing yaw/elevation, and swing speed. Release height realizes the planned downward speed under gravity.
 The flight model includes net clearance, while measured face normals compensate orientation error.
 
 ## Verification
@@ -57,6 +57,12 @@ and failure reasons are recomputed during replay and included in verifier detail
 0.01 seconds merge. Each net layout
 also requires a crossing of y = 0 between the posts, with the ball centre at least one radius above the net top,
 before the landing.
+
+## Assets
+
+Robot sources are registered as `pending` in `docs/asset-sources.yml`: `mujoco-menagerie-franka-panda`
+(Apache-2.0) and `maniladder-leap-hands` (MIT). Upstream URLs, pinned commits and file hashes are recorded in
+`authoring/provenance.json` and `authoring/leap-provenance.json`. Licence texts are in `authoring/licenses/`.
 
 ## Files
 
