@@ -1,0 +1,46 @@
+{
+  "freeze_raw_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "pinned_image": "sha256:7bf44d668a0f3e7b92470b6625e7892f8fba2f5c34dd897d03d6c0384624d85a",
+  "execution": "protected public HTTP service; policy owns finish; fresh verifier processes; no harness fallback finish",
+  "resources": {
+    "cpu_per_container": 1,
+    "memory_bytes": 2147483648,
+    "network": "none",
+    "agent_seconds": 18000,
+    "verifier_seconds": 3600
+  },
+  "production_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "nop_indices": [
+    0,
+    8
+  ],
+  "ablation": {
+    "index": 8,
+    "mode": "frame-blind",
+    "bounded_terminal_moves": 701
+  },
+  "diagnostics": "fixed independent draw, separate from production17; outcomes pending",
+  "observations": "actual initial stereo RGB; subsequent default oracle proprioception via images=false; observations not replay-audited independently",
+  "resource": "fresh 800 public moves at .2 seconds from historical target DATA; 1000 actual image observations, not historical state replay; no model run",
+  "scripts": "existing helpers copied into reproduce with disclosed canary-only AST-identical prefixes; raw original hashes in evidence-hashes.json",
+  "large_recordings": "excluded; sealed recording SHA256 in per-case outcomes; resource request DATA included",
+  "scheduling": "initial four completed jobs recovered after host loss; remaining sixteen jobs used three workers; no repeat of completed jobs"
+}

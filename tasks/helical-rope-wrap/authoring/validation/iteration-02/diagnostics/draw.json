@@ -1,0 +1,159 @@
+{
+  "schema": "pr29-independent8-draw-v1",
+  "status": "drawn after frozen source; input only, no execution or outcome claim",
+  "preregistered_utc": "2026-11-23T10:26:31.903901+00:00",
+  "freeze_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "seed": 20261123,
+  "label": "pr29-candidate05-independent8-v1",
+  "count": 8,
+  "algorithm": "For i=1..8 and each field pitch,excess,stiffness,cx,cy,yaw,handedness: SHA256 UTF-8 label|seed|freeze_sha256|i|field (decimal integers, no spaces/newline); u=int(first 13 hex digits,16)/2**52. Independent domain-separated fields; ordinary binary64 math, full JSON float precision.",
+  "mapping": {
+    "pitch": ".036+.008*u_pitch",
+    "excess": ".021+.008*u_excess",
+    "length": "math.hypot(.084,pitch/(2*math.pi))*4*math.pi+excess",
+    "stiffness": ".00003+.00005*u_stiffness (linear)",
+    "center_xy": [
+      "-.04+.08*u_cx",
+      "-.04+.08*u_cy"
+    ],
+    "yaw": "(2*u_yaw-1)*math.pi/6",
+    "handedness": "+1 if u_handedness<.5 else -1; no post-draw rebalancing",
+    "seed_label": "295001..295008, diagnostic identifiers only"
+  },
+  "fixed": {
+    "task": "helical-rope-wrap",
+    "kind": "independent-diagnostic",
+    "radius": 0.08,
+    "segments": 60,
+    "rail_segments": 120,
+    "timestep": 0.002,
+    "budgets": {
+      "actions": 800,
+      "observations": 1000
+    }
+  },
+  "scope": "Fresh within-family continuous numeric diagnostics, not samples from or additions to the 17-row production whitelist. Pose and handedness streams do not depend on material values.",
+  "replacement": "None. Preserve all eight rows and all outcomes. On collision/out-of-support report without redrawing.",
+  "execution": "Not performed by reviewer. Executor uses byte-identical diagnostic scene for service/verifier and the frozen release payload/image, preserving original records and exact replay. No model pass-rate target.",
+  "preregistered_rule_sha256": "f611ff39c995257232de05dfc5cb16abf6793fab7fce67ac8cddd479defc50ea",
+  "drawn_utc": "2026-11-23T10:27:13.339205+00:00",
+  "uniform_draws": [
+    {
+      "i": 1,
+      "u": {
+        "pitch": 0.7817524259012245,
+        "excess": 0.7885811039983366,
+        "stiffness": 0.215108244801117,
+        "cx": 0.3296965155772049,
+        "cy": 0.8646969874459558,
+        "yaw": 0.31824106834588295,
+        "handedness": 0.9540701246056669
+      },
+      "excess_m": 0.027308648831986693
+    },
+    {
+      "i": 2,
+      "u": {
+        "pitch": 0.36106369177247344,
+        "excess": 0.626936465131342,
+        "stiffness": 0.7077144728214906,
+        "cx": 0.28735043449955633,
+        "cy": 0.8912876115250146,
+        "yaw": 0.48687948213332577,
+        "handedness": 0.6228432271892752
+      },
+      "excess_m": 0.026015491721050738
+    },
+    {
+      "i": 3,
+      "u": {
+        "pitch": 0.47086341718215086,
+        "excess": 0.008072735990503954,
+        "stiffness": 0.5829838343908205,
+        "cx": 0.6315181263446197,
+        "cy": 0.40891184863250096,
+        "yaw": 0.2028286707957585,
+        "handedness": 0.32056665955964614
+      },
+      "excess_m": 0.021064581887924032
+    },
+    {
+      "i": 4,
+      "u": {
+        "pitch": 0.1608171769706459,
+        "excess": 0.15781316747592733,
+        "stiffness": 0.3232531147160398,
+        "cx": 0.20149349606068556,
+        "cy": 0.7698710191589222,
+        "yaw": 0.7739981963885232,
+        "handedness": 0.6258352094657835
+      },
+      "excess_m": 0.02226250533980742
+    },
+    {
+      "i": 5,
+      "u": {
+        "pitch": 0.8270279815469805,
+        "excess": 0.11344567323947774,
+        "stiffness": 0.8564392550956401,
+        "cx": 0.859260479907779,
+        "cy": 0.1344504617111526,
+        "yaw": 0.22232082368870776,
+        "handedness": 0.2982307496983281
+      },
+      "excess_m": 0.021907565385915824
+    },
+    {
+      "i": 6,
+      "u": {
+        "pitch": 0.8333597931715202,
+        "excess": 0.8016614499054857,
+        "stiffness": 0.18446212672816786,
+        "cx": 0.7407927166428601,
+        "cy": 0.6088209551721158,
+        "yaw": 0.7621410522070275,
+        "handedness": 0.9278849374068356
+      },
+      "excess_m": 0.027413291599243887
+    },
+    {
+      "i": 7,
+      "u": {
+        "pitch": 0.7363375645944907,
+        "excess": 0.9863021706477391,
+        "stiffness": 0.684322664530516,
+        "cx": 0.8227287683305549,
+        "cy": 0.7522783652727894,
+        "yaw": 0.10809917103345512,
+        "handedness": 0.16141794508917418
+      },
+      "excess_m": 0.028890417365181914
+    },
+    {
+      "i": 8,
+      "u": {
+        "pitch": 0.921921366997583,
+        "excess": 0.42145222701983065,
+        "stiffness": 0.1928275343812791,
+        "cx": 0.010741812261091166,
+        "cy": 0.7626512387578426,
+        "yaw": 0.4300334978935474,
+        "handedness": 0.5781877137741098
+      },
+      "excess_m": 0.024371617816158646
+    }
+  ],
+  "checks": {
+    "eight_unique_material_triples": true,
+    "no_production_material_triple_collision": true,
+    "all_within_support": true
+  },
+  "scene_file": "independent8-scene.json",
+  "scene_sha256": "72d744242333ef01721740a15178e894d6d6d738a4ae9a0f64bbc248af04bec0",
+  "scene_canonical_sha256": "0a17e62db55613226a355d58ffbf7da683524c3ff995c694e3a30198e748698c",
+  "handedness_counts": {
+    "1": 3,
+    "-1": 5
+  },
+  "replacement_performed": false
+}

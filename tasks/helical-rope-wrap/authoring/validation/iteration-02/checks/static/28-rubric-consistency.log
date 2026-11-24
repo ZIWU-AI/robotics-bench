@@ -1,0 +1,1 @@
+PASS task-implementation.toml is consistent with task-template.toml (allowed fields cover every template key; stated defaults match)

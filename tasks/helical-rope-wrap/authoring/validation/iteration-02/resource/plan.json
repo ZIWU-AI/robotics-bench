@@ -1,0 +1,14 @@
+{
+  "task": "candidate05-release/helical-rope-wrap",
+  "freeze": "release-freeze.json",
+  "scene": "candidate05-release/helical-rope-wrap/environment/service/scene.json",
+  "positive_recording": "trials05/A-117-oracle/oracle/protected/recording/recording.jsonl",
+  "index": 0,
+  "slot": 4,
+  "freeze_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe",
+  "positive_recording_sha256": "f2ee225afe8cc9d41ed3bce95b46589a4e0286a5d014deba66e358984f6c8476",
+  "host_sha256": "e1e667d51733ddf86fd96ac8bfd8153762a3554286fcb50b44adbfe934ae2d3e",
+  "resource_sha256": "96da8ce49bcd027025e673ec21a6d845cee43e55bd4acdd322e05a9e6cd8a927",
+  "validation_runner_sha256": "4350c8d5444c407fbe1b243ad3d98a2fa20cea0a1b1b30653bd8830768bc0c80"
+}

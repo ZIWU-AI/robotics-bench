@@ -1,0 +1,21 @@
+{
+  "task": "helical-rope-wrap",
+  "tier": "cpu",
+  "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe",
+  "layout_sha256": "c5fd76edf51d051d2c963dbbe277a43b65fce5f2eedaba9aa289e363a75616e0",
+  "api": "rope-api-v1",
+  "backend": "mujoco",
+  "budgets": {
+    "actions": 800,
+    "observations": 1000
+  },
+  "started": "2026-11-23T10:41:46+0000",
+  "finished": "2026-11-23T11:13:34+0000",
+  "entries": 801,
+  "last_hash": "35e203bf3fdcec2aec1663de3af9b320416d3e748013bbea3e0309d9750ec7c1",
+  "recording_sha256": "61f9b5ab48b4fe6273dafd9da8585f4ca4fd3f26e39a8c344e16168926d5a0a3",
+  "used": {
+    "actions": 800,
+    "observations": 1000
+  }
+}

@@ -1,0 +1,948 @@
+{
+  "runtime_version": "damping-v3-terminal-fault",
+  "configuration_count": 17,
+  "successes": 17,
+  "transport": "public Episode.handle adapter; HTTP covered separately by gate/Harbor",
+  "new_matrix_elapsed_seconds": 2265.469,
+  "rows": [
+    {
+      "index": 0,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 117,
+        "kind": "nominal",
+        "radius": 0.08,
+        "pitch": 0.04,
+        "length": 1.0836023136501185,
+        "stiffness": 5e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "controller_success": true,
+      "controller_seconds": 274.40599999999995,
+      "replay_seconds": 320.8599999999997,
+      "exact_all_states": true,
+      "success": true,
+      "calls": 523,
+      "recording_local_raw_sha256": "9b54b2c7a37be6de96d3e8c2fb5ed1a4b74d26d915cdda463dbce8ae02e30da5",
+      "source": "Same damping physics public trajectory reused; final terminal-fault runtime fresh exact replay."
+    },
+    {
+      "index": 1,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 800,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.036,
+        "length": 1.079027815544272,
+        "stiffness": 3e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 384.375,
+      "replay_seconds": 254.07799999999952,
+      "recording_local_raw_sha256": "8d36fbc0cb41ad25118f778282e3bbfa97edf8ddc77a3047537f5591de96d662",
+      "raw_result_hashes": {
+        "local_raw_sha256": "da3640789757bc2096d6df6efb38207c732e9c8da6191f440031c0b085e29918",
+        "lf_normalized_content_sha256": "b8186342d5144cce91f37aa8015f5d624e055cfe0c3329c2b4c35efcfe78fcaf",
+        "bytes": 1286
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.764463943433318,
+          "groove_fraction": 0.991666666654939,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.00899189846286895,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.66028776929377
+          ]
+        }
+      }
+    },
+    {
+      "index": 2,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 801,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.036,
+        "length": 1.079027815544272,
+        "stiffness": 8e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 384.0619999999999,
+      "replay_seconds": 254.11000000000058,
+      "recording_local_raw_sha256": "2f9a5052f35de0df1544406014333d921fbe1741b505a4e3f305204b4b8fdc0d",
+      "raw_result_hashes": {
+        "local_raw_sha256": "2bc37ba39332d2487d6d5f452ec18f557148e6d72102985d8a069f4f934d4b2f",
+        "lf_normalized_content_sha256": "4f8c85d2c47dfbaec2d073f0decee96fc615e9809b9183816a02c7611a80ea9a",
+        "bytes": 1296
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.764460722480132,
+          "groove_fraction": 0.991666666654939,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.00899189846286894,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.66028321921686
+          ]
+        }
+      }
+    },
+    {
+      "index": 3,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 802,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.036,
+        "length": 1.087027815544272,
+        "stiffness": 3e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 383.09400000000005,
+      "replay_seconds": 253.09400000000005,
+      "recording_local_raw_sha256": "22e242d0dae68c7a712221667180e33509132ce450ec399c897b30bf5f999f53",
+      "raw_result_hashes": {
+        "local_raw_sha256": "9c3c9e768ab3828aef49405ed60dba5c5955caa46502384dba95069e731d11b3",
+        "lf_normalized_content_sha256": "e2b47bb246cbb2be6978017ce1e629d1f3c1319fbfd0d878cb3b20ab2a3dea68",
+        "bytes": 1303
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.853425816895824,
+          "groove_fraction": 0.9833333333703578,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.018117130259071187,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.646846401544046
+          ]
+        }
+      }
+    },
+    {
+      "index": 4,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 803,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.036,
+        "length": 1.087027815544272,
+        "stiffness": 8e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 382.8909999999996,
+      "replay_seconds": 252.85900000000038,
+      "recording_local_raw_sha256": "26b412fc3bc579f8a8c4d866446a1f510d879d8ff021a127ef83e255249afb65",
+      "raw_result_hashes": {
+        "local_raw_sha256": "529cc4933ce8fca9ac419b2e96440dac8ef02d742c5c308a84798c0194440000",
+        "lf_normalized_content_sha256": "1b767c9353b415bc4b935dd9497bd3433355fcaeaa6f69eb51c87bde783136bd",
+        "bytes": 1291
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.853420618357251,
+          "groove_fraction": 0.9833333333703578,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.018117130259071218,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.646836814074229
+          ]
+        }
+      }
+    },
+    {
+      "index": 5,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 804,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.044,
+        "length": 1.0802369227256874,
+        "stiffness": 3e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 286.9220000000005,
+      "replay_seconds": 242.92199999999957,
+      "recording_local_raw_sha256": "9e24877b398a1c25be4c9c260330df20dd36b85661e548af1e6dc90d1e15f14d",
+      "raw_result_hashes": {
+        "local_raw_sha256": "ea1cc51e13f405f99caf8d35f48448cac069035cdaf7dfde4e1114bcbb17e05a",
+        "lf_normalized_content_sha256": "f3898219a06cd498d388dc85b8745317747b406782170cb4c9af5a578ea003b3",
+        "bytes": 1288
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.764083960471424,
+          "groove_fraction": 0.9916666666611618,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.0090019743560474,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.659965026501368
+          ]
+        }
+      }
+    },
+    {
+      "index": 6,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 805,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.044,
+        "length": 1.0802369227256874,
+        "stiffness": 8e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 286.28099999999995,
+      "replay_seconds": 242.71900000000005,
+      "recording_local_raw_sha256": "cda941f3179fecd7731e05b8314b743b3e043ec77911f0e95af7449310781e99",
+      "raw_result_hashes": {
+        "local_raw_sha256": "663de9c78e8400490822161aed6fdc4763701375d4a820d3a73aab3a14e31afd",
+        "lf_normalized_content_sha256": "e8504dd806ba19ed17c0bc5108d5dc29749197c6ee99312cfe7f38cb989a68f6",
+        "bytes": 1291
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.764076667699138,
+          "groove_fraction": 0.9916666666611619,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.009001974356047396,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.659957816166902
+          ]
+        }
+      }
+    },
+    {
+      "index": 7,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 806,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.044,
+        "length": 1.0882369227256874,
+        "stiffness": 3e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 284.28099999999995,
+      "replay_seconds": 239.85999999999967,
+      "recording_local_raw_sha256": "f9e8fc03b7431389082d9cefba48311e9110aa0a6b6fcfcedc94871e073db969",
+      "raw_result_hashes": {
+        "local_raw_sha256": "68ba2ff647359c4f8711d775609e53e070d1fad9ae0d31ffcdba2e39bc32cf56",
+        "lf_normalized_content_sha256": "a65578657dfa200973a698321bc6f4ea61759264d8bd88843c7548c1d2d368f6",
+        "bytes": 1303
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.852955209037138,
+          "groove_fraction": 0.9833333332922843,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.018137282045428138,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.646481979170222
+          ]
+        }
+      }
+    },
+    {
+      "index": 8,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 807,
+        "kind": "corner",
+        "radius": 0.08,
+        "pitch": 0.044,
+        "length": 1.0882369227256874,
+        "stiffness": 8e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 285.0619999999999,
+      "replay_seconds": 239.8130000000001,
+      "recording_local_raw_sha256": "2ea12e85d63f20f38595a7c2e5443a0ede5783a5cd36893b77eed873d461f56a",
+      "raw_result_hashes": {
+        "local_raw_sha256": "8f8b868ade378176b22cebf8ef5b807e36e9bedebadaa152b650fc15beca955c",
+        "lf_normalized_content_sha256": "75f0f9622b0ff4c880c72d6cf1215066291314d73452a74451026a170daf3f9f",
+        "bytes": 1292
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.852957075178212,
+          "groove_fraction": 0.9833333332922843,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.018137282045428138,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.646485088299782
+          ]
+        }
+      }
+    },
+    {
+      "index": 9,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 711,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.04015199203854177,
+        "length": 1.0820761816079771,
+        "stiffness": 7.667644168911368e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 350.0,
+      "replay_seconds": 252.15700000000015,
+      "recording_local_raw_sha256": "cc913af1c5e6d20cbd05f22a142ff4ef97e344e6989a5451870fa07d3c6e7a2c",
+      "raw_result_hashes": {
+        "local_raw_sha256": "328429b52750cf97b7d8e01022c7d6df744ab596d417f888fa633ea42b7504be",
+        "lf_normalized_content_sha256": "c0868fcbbb6ad39aadda85211182bd1769387b39b0e7b886e586065ea94f3ab2",
+        "bytes": 1288
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.79187744825665,
+          "groove_fraction": 0.9874999999817344,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.013525952270099707,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.635638814377726
+          ]
+        }
+      }
+    },
+    {
+      "index": 10,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 127,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.03649973254186698,
+        "length": 1.0807733624597446,
+        "stiffness": 4.4966624002229916e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 350.1090000000004,
+      "replay_seconds": 251.15700000000015,
+      "recording_local_raw_sha256": "2c2ec9a660997307696a4fa21a7909cee2f2c3912e752883f77333d04f575f23",
+      "raw_result_hashes": {
+        "local_raw_sha256": "3144336975d521de47b995e89c2cc55c17c5acc267185e610b9b19e29ff829ad",
+        "lf_normalized_content_sha256": "3f918656e882ca95d67f6ba86171b4fb71ec1273c3265e06d8a6529e7b38ae6e",
+        "bytes": 1302
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.783321427834766,
+          "groove_fraction": 0.9875000000175175,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.013509667030746832,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.626790918192299
+          ]
+        }
+      }
+    },
+    {
+      "index": 11,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 903,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.03702055028972094,
+        "length": 1.0846834905649065,
+        "stiffness": 5.9169833375262966e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 349.09400000000005,
+      "replay_seconds": 249.48400000000038,
+      "recording_local_raw_sha256": "7617fd58e9a2699c5830c6e0a57441fcdec5354ee289fb81ea38461f6b58af22",
+      "raw_result_hashes": {
+        "local_raw_sha256": "4246a1c7517e0719494bf178d3913fec04e5ee13ecf3dee52c58dd3e1ee1d161",
+        "lf_normalized_content_sha256": "9f10079f71ce42e4274d0e320fe7aa0e321b4be09dad06e1f20b75f9042fc5b0",
+        "bytes": 1303
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.825987180200487,
+          "groove_fraction": 0.9833333333550167,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.018078058176081796,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.618000205221215
+          ]
+        }
+      }
+    },
+    {
+      "index": 12,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 2026,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.03743147850940349,
+        "length": 1.0843458031979791,
+        "stiffness": 5.336342005717426e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 347.25,
+      "replay_seconds": 249.40599999999995,
+      "recording_local_raw_sha256": "89d086e273523a29993f33d05ae7989fe5400a917d233cc15674364f796b49bc",
+      "raw_result_hashes": {
+        "local_raw_sha256": "e9a7ff759412e70baf936cbf8ab3ead554c6b70294d25ed52b17dbb9c6335ba3",
+        "lf_normalized_content_sha256": "8332c9cfdb6320eecf36a436c1a9be8a5e1f6cddfe81e3191cb1e7ebd8dab00a",
+        "bytes": 1281
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.821626301767493,
+          "groove_fraction": 0.9833333333756832,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.018072430053299636,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.613446758693074
+          ]
+        }
+      }
+    },
+    {
+      "index": 13,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 81,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.03947290632884505,
+        "length": 1.0812161958160045,
+        "stiffness": 7.560186595946545e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 279.875,
+      "replay_seconds": 218.14099999999962,
+      "recording_local_raw_sha256": "bf2270ef9b0fefd2aca2a5a6f3730ac97c6a804ca84e81df708b3d154a00ed34",
+      "raw_result_hashes": {
+        "local_raw_sha256": "a20a9935ee57e2ae63c7756f8a460ad09c6fe681e6dcd08c6979416fa45af2ba",
+        "lf_normalized_content_sha256": "87ad233170bdff56c7ad727080f48fda432478e270b5f2d783d3236f3ff6b03b",
+        "bytes": 1290
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.783357359773085,
+          "groove_fraction": 0.9874999999793551,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.013515202447700037,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.62686224217371
+          ]
+        }
+      }
+    },
+    {
+      "index": 14,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 421,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.037458073705700784,
+        "length": 1.0808596711510299,
+        "stiffness": 4.3512113340239286e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 279.07800000000043,
+      "replay_seconds": 217.375,
+      "recording_local_raw_sha256": "00a548d7f5d88b7ccd887068a775a51762e7069ac0b34ce0a55af3d95efb4b0d",
+      "raw_result_hashes": {
+        "local_raw_sha256": "acb7db77a855061bb152bf47ee65dde9396f5dd96f13e86cfefa8ce74cec8b90",
+        "lf_normalized_content_sha256": "04aad763f6e30412256cc7d0f04fc6f1503348bbe97338087615ec913aa882a6",
+        "bytes": 1304
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.782638284281461,
+          "groove_fraction": 0.9875000000323988,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.013510745889387868,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.626112569861752
+          ]
+        }
+      }
+    },
+    {
+      "index": 15,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 1999,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.04065500112360721,
+        "length": 1.0834625507329545,
+        "stiffness": 5.126092764876037e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 277.65599999999995,
+      "replay_seconds": 215.8119999999999,
+      "recording_local_raw_sha256": "1391d4af9b054b774de8c534c4e7c7e31a7f398a7b9a32678e5697d4f73aa2f5",
+      "raw_result_hashes": {
+        "local_raw_sha256": "e7ebc36224642031c8663a0fbc40f2dce213c206c2f8621647c7cc3b204579c1",
+        "lf_normalized_content_sha256": "0d088255fca0268282678cbecd0b699111bd73fa307f2ceaec23ffd4837a8865",
+        "bytes": 1302
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.806342095686919,
+          "groove_fraction": 0.9875000000143744,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.013543281884161953,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.65061247112183
+          ]
+        }
+      }
+    },
+    {
+      "index": 16,
+      "config": {
+        "task": "helical-rope-wrap",
+        "seed": 31,
+        "kind": "random",
+        "radius": 0.08,
+        "pitch": 0.043225374487318884,
+        "length": 1.080650764393887,
+        "stiffness": 6.363654070501822e-05,
+        "segments": 60,
+        "rail_segments": 120,
+        "timestep": 0.002,
+        "budgets": {
+          "actions": 800,
+          "observations": 1000
+        }
+      },
+      "exit_code": 0,
+      "controller_success": true,
+      "success": true,
+      "exact_all_states": true,
+      "exactness_evidence": "wrap-validate.py asserts every replay snapshot equals recorded state; process exit 0.",
+      "calls": 523,
+      "controller_seconds": 279.6090000000004,
+      "replay_seconds": 218.1880000000001,
+      "recording_local_raw_sha256": "34ba0fdad3734c64c3417a28d215e81a47cc8d743f3051c1af6c33d1e94cb578",
+      "raw_result_hashes": {
+        "local_raw_sha256": "7ffaa67d733c21f0b8d8c45e0bf0a94a09b30b464ad34c12251d789000c907b9",
+        "lf_normalized_content_sha256": "c45ff91785afe1c01919a6a14b72066e53af0745931ecfc52aa3e57f091a854c",
+        "bytes": 1300
+      },
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.77027091930993,
+          "groove_fraction": 0.9916666666788457,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.009005423036615723,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            0.0,
+            12.666271498724349
+          ]
+        }
+      }
+    }
+  ]
+}

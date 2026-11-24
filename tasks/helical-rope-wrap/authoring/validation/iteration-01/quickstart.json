@@ -1,0 +1,83 @@
+{
+  "index": 0,
+  "scene_sha256": "9011b47957ee33c4e089fef8d914676801ad13b022c45a3ad144a4408e4b5f91",
+  "elapsed": 3.121613843999512,
+  "cases": {
+    "quickstart": {
+      "ok": true,
+      "result": {
+        "snippet": "from client import Client\nc = Client()\ninfo = c.info()\nobservation = c.observe()\n# Optional initial hold; this does not solve the task.\nresult = c.call('move', {'target': observation['hand'], 'duration': 0.1})\nif not result['ok']:\n    raise RuntimeError(result)\n",
+        "snippet_sha256": "e7c74cb3f68eb0497690691616b4d98face083ab87d7c6e02859d87c2f864c88",
+        "move_response": {
+          "executed": true,
+          "ok": true,
+          "left": {
+            "actions": 799,
+            "observations": 999
+          }
+        },
+        "after_info": {
+          "limits": {
+            "x": [
+              -1.3,
+              1.3
+            ],
+            "y": [
+              -1.3,
+              1.3
+            ],
+            "z": [
+              0.055,
+              0.45
+            ]
+          },
+          "max_step_m": 0.06,
+          "camera": {
+            "width": 640,
+            "height": 480,
+            "fovy_deg": 35,
+            "position": [
+              0,
+              -0.7,
+              0.17
+            ],
+            "right": [
+              1,
+              0,
+              0
+            ],
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "marker_y": -0.03
+          },
+          "core_radius_m": 0.08,
+          "rope_radius_m": 0.004,
+          "turns": 2,
+          "ok": true,
+          "api": "rope-api-v1",
+          "backend": "mujoco",
+          "budgets": {
+            "actions": 800,
+            "observations": 1000
+          },
+          "left": {
+            "actions": 799,
+            "observations": 999
+          },
+          "ops": [
+            "move",
+            "observe",
+            "finish"
+          ],
+          "finished": false
+        },
+        "subsequent_observe_ok": true,
+        "seconds": 1.5219262270002218,
+        "episode_left_open": true
+      }
+    }
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "plan_sha256": "7027915293d0207581c970dcf8772ab1d3db57ad8999c176617f8648853012c7",
+  "freeze_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "runner_sha256": "4350c8d5444c407fbe1b243ad3d98a2fa20cea0a1b1b30653bd8830768bc0c80",
+  "harness_sha256": "0b0ff5bf81ed465a23a7760c10f6fc8c51a417619800c38124d9d81a257950c9",
+  "files": {
+    "authoring/frozen-configs.json": "eaeb74b940970736f9dfcd856e331653299cfc0eef3b6821416f0a85ddf12658",
+    "authoring/provenance.json": "3b49367cb7e5f88a0d328a46bc8e40a081fb27129f9ce4045be7bf478aa74b26",
+    "authoring/test_contract.py": "e345e3d2723a1bead18927b799903e619da04a5f6647402073e43dd533a1fe97",
+    "authoring/test_fault.py": "bd20e96ac0a5dcfdbf880ac961436f237dd351cf36ba216f24ed5bd31c8997be",
+    "authoring/test_geometry.py": "fa744104b348a8b8bb042b37a75c4668c212f87c1157693d7b59a0990daa2a2c",
+    "authoring/validation/attack-container.json": "a6f4c1c759f9540d3acec73074c2dc1f8d75155b253c530be7bbe564dbb95bb7",
+    "authoring/validation/attacks.json": "dcb8fc9a838a480c33676062d65d2dbdbc9598e5f66cd8517f6640251ed05cd0",
+    "authoring/validation/attacks.log": "d124c203c924de12a55208fa7ffa964f09239331590e0971d0c27e6614bccf91",
+    "authoring/validation/boundary-replay.json": "f58f689a3a91b90d116d4600f100141a258efc84005229f136daff71b9dcfaa2",
+    "authoring/validation/container-runtime.json": "7776ae7c3a70234dc039ad34bff3574e8bc039017245fe95e0399830f2602336",
+    "authoring/validation/contract.json": "fb37963dafe327f359addfb16eaa5e785468ccd122318dd381dd16094e638eae",
+    "authoring/validation/evidence-hashes.json": "1fbc8dd2a870f10fc78522eb8900e7483d8ed4e6863d540e09c42431bfbc978a",
+    "authoring/validation/fault-nonfinite-seal.json": "f2a1297c7eeecc10202d004e4c571918e7cd8ad82ebc3aa52492ddc25370f244",
+    "authoring/validation/fault-results.json": "5f50b25b55c69be7a52a6854e89e68f8cb22de26279421031f61a25e293f848b",
+    "authoring/validation/fault-time_rollback-seal.json": "514cfb43b7c9e4acae4001d8f3af5a82569daf26db598c5fbd8f13a3f72e470c",
+    "authoring/validation/fault-warning-seal.json": "a1a1e1c465a3a9f7f3edd1b4dddcad88d7728be93046c5e26298222f02916e2b",
+    "authoring/validation/gate.log": "d840afef04385dd3d075d1ac480dacaf0f1ff0bbe1321b9ac7fac94470a65b39",
+    "authoring/validation/geometry.json": "84d1fc3449523acc206026ee11c39a92cb5353f20e4ba9b4254cb656701b485a",
+    "authoring/validation/harbor.json": "9b4c65fa1aacded0b855b8a919ab1c270711c87d3567632f6f2bd216e228304c",
+    "authoring/validation/iteration-01/draw.md": "637033a96aeec7a2466a1b481660b42d79868a59fe6e6a0a55a563a7533a185d",
+    "authoring/validation/iteration-01/evidence-hashes.json": "307b185fe5a83bbf824c510c714390169b9be363d6a948f1400aaa17ea1b9600",
+    "authoring/validation/iteration-01/iteration-rope-run.py": "ca9acff9aa855ad2d4a70a0ce3d5999725765d7b0a03d801cd3e6547b044bb3f",
+    "authoring/validation/iteration-01/protocol.json": "9373a1a24f518ed7d7a2124bee62acc5a9e1389795aad9bcb92058608ab54e3e",
+    "authoring/validation/iteration-01/quickstart.json": "d66874f4ce7dbc78755c72234a80f6d3cf625500168d6e0d29d3ef2dccf0952b",
+    "authoring/validation/iteration-01/README.md": "9b38cdee545776078958a3c2361cea5d47c0a855409eecf1ad75797f4d02dae6",
+    "authoring/validation/iteration-01/runtime-reuse-binding.json": "e279bcc1d85b166f55945a24854f75debc088bac2a77d78ab8f3475994038331",
+    "authoring/validation/iteration-01/scene.json": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+    "authoring/validation/iteration-01/summary.json": "0c0a6dc24fcb4d64aa4c84994dbf255b8dae9cb81abf2ede74de9794e2db1379",
+    "authoring/validation/LIMITATIONS.md": "6d99b0095a506830e4b2a700b8e858e75daa24d09bf8e42b784e008da2cf1db0",
+    "authoring/validation/local-runtime.json": "8566b378290d873dc5764e4f59c55a12f4f8c307c02e98b623b7eee0e1de6e58",
+    "authoring/validation/matrix-results-raw.json": "5c375d55d946d970a68fb4bf3eadb3c7129ecd04ccb50bc4ad842c05b6f938a1",
+    "authoring/validation/matrix-source-local-raw-hashes.json": "e9180b795bc2ca5819190490c74126d01faacbd15c2a6c9515463ee8f066bc83",
+    "authoring/validation/matrix.json": "5f6ee8ff79dea19160a81055c3e7e38677fef59c13b3537d5ec1b2c2e5976dc3",
+    "authoring/validation/maxload-container.json": "4a41ec66625c3f668be37512d23014e43d78164a5bf3b4b49f14d02645d85396",
+    "authoring/validation/maxload-image-source-hashes.json": "84014b3576f2ff50da3537e947fe2a16f8de92a59f2ed3438f78b0af61e1e483",
+    "authoring/validation/maxload.json": "b60c9aab3a1a6c525b54a0b4d54ee57f4dac4a804718df4494b76715236846fb",
+    "authoring/validation/maxload.log": "1258ae6a616d433230be5d997167a7b48b9acc753d3093d7f75d43e74e9a0254",
+    "authoring/validation/nominal-replay.json": "7641dd4ff2e04c2880e2b4d8ce53cc6f9dd80415e6664039d2512773ebb687e0",
+    "authoring/validation/nop/reward.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "authoring/validation/nop-details.json": "a4cc8e29aff592e754204153282c5adeb7aa87038093d71ae96f01f841744735",
+    "authoring/validation/oracle/reward.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "authoring/validation/oracle-details.json": "1d7417e7781cf7ce6d2c84870d78133c5db713999815e417b7af7c84bfa84310",
+    "authoring/validation/README.md": "7cad78ab32f3a0e8dd31d9ab3f689aac4d404eb91b544901d3ea8851e69bd750",
+    "authoring/validation/runtime-freeze.json": "3b604dbb5ed8c85667932fbfd03422ac71095e14cdad2fa61bdf0501af909d32",
+    "authoring/validation/source-byte-hashes.json": "00607206829dae243c81fb6d534815393def3461e94a255d454db786ef6d8625",
+    "authoring/validation/summary.json": "4d7ad84c7c1d4b8f8003ec43f6af7f7eb3a83ed634d62dcfde1140ec27b0ae2c",
+    "authoring/validation/wrap-attack-replay.py": "592958e7fce0ff2681315635b1651986ff8ee7e46422d56dbdc17779149ab44f",
+    "authoring/validation/wrap-boundary.py": "19c61387274ad7df7bc5cdb22a5c4c90bbd7f75810dfa8b37dc9a03f4d1fdf61",
+    "authoring/validation/wrap-matrix.py": "3e3928283833c3256f2a64871c45421a15b56d689eaff938010944bd9d8030aa",
+    "authoring/validation/wrap-maxload.py": "6e0bf6c5dddaec7ce50181fd4071714133f83977d9aa4f1a58e80f2d30bddfff",
+    "authoring/validation/wrap-negative.py": "87891b9494b7ffd8524c159317333f265ca1e95fd91cafb60ae7453666f3f0ca",
+    "authoring/validation/wrap-replay-candidate.py": "afd67abd914087afa3c877add03a6a3b1a47389818774810f5026136f2385a6d",
+    "authoring/validation/wrap-validate.py": "9aea602743852096ec67d4a8dd5b530834efa12273690c2346c504bf2716d975",
+    "authoring/validation/wrong-height-replay.json": "974e3153288d9901e7af69bc20d431785386af27571bcb36a5fe895df630f414",
+    "environment/app/client.py": "3a5b7dc8ca72c69a7ec326a078113c9a661d5da62601a3510fa2c832fd3b665c",
+    "environment/Dockerfile": "84489464c392a1a58bc435433ec50507b43a69b76d6a761392517f583dd66c6b",
+    "environment/requirements.txt": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371",
+    "environment/service/casekit/__init__.py": "bfac748343b61d01e55ac8d8608619e53b5be4d17fba095458850aa64593080b",
+    "environment/service/casekit/episode.py": "db101f1fdce4ce627e63afed2c9c574e0993a6dd63470558bc2c62d907617902",
+    "environment/service/casekit/launch.py": "33a387ac4e5b897f80645cde37a422e4516cb5551c782d891dac1208c46f3b89",
+    "environment/service/casekit/recording.py": "2263a4caebf3039cd1bf3c0d98b3f6fb9e83e5c1cc38036e136a05a8551a243c",
+    "environment/service/casekit/verify.py": "4c5786c3bcaa0cfa01e0158890ba63b320d327a252c74c766474a23ac02655f0",
+    "environment/service/collect.py": "c6005c86d71c05608005a6452dd4bd2b779185a08d8b0a949dbec4b3dc363dc0",
+    "environment/service/launch.py": "0ce84bcacf780298a58cae36a636f294cc2db14b2db3d36e38ef76aa55420abc",
+    "environment/service/scene.json": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe",
+    "environment/service/serve.py": "a9799cf61d1ac00c3d1091f66752f0b14394537b8d8e20e3924aa9e2bf84f937",
+    "environment/service/sim.py": "00adaeed3a45259134a037c35510bd87f26648f8daa45f26a325819fdaa002ef",
+    "environment/start-rope-service": "988b9482831eebf2a4a4e26e42afa8d7ad7e2d5bd7c125a90cc2c308021e8260",
+    "instruction.md": "0a0bc9a2c2b74554a1be29dfc69ea0a63080c8e73a25b489b56d2d961ff35e8b",
+    "README.md": "7c15f3bc291d8b1024d7ae169a1281391f1240c2502f4382905bc6e19d24ba95",
+    "solution/oracle.py": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+    "solution/solve.sh": "08f2bf5446483c0dc37ddd59bd30bfe7556d61b2d9c337957c6f1847b94d63b2",
+    "task.toml": "0567a28d773cabbae0ca99a82d3d99db8965e47be9f06523dcd07407e8c60f7b",
+    "tests/casekit/__init__.py": "bfac748343b61d01e55ac8d8608619e53b5be4d17fba095458850aa64593080b",
+    "tests/casekit/episode.py": "db101f1fdce4ce627e63afed2c9c574e0993a6dd63470558bc2c62d907617902",
+    "tests/casekit/launch.py": "33a387ac4e5b897f80645cde37a422e4516cb5551c782d891dac1208c46f3b89",
+    "tests/casekit/recording.py": "2263a4caebf3039cd1bf3c0d98b3f6fb9e83e5c1cc38036e136a05a8551a243c",
+    "tests/casekit/verify.py": "4c5786c3bcaa0cfa01e0158890ba63b320d327a252c74c766474a23ac02655f0",
+    "tests/Dockerfile": "3252e57ef91d0a0ccc9eefeee6271c6781e565c3cc21ea132af0d774692e18e8",
+    "tests/requirements.txt": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371",
+    "tests/scene.json": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe",
+    "tests/serve.py": "a9799cf61d1ac00c3d1091f66752f0b14394537b8d8e20e3924aa9e2bf84f937",
+    "tests/sim.py": "00adaeed3a45259134a037c35510bd87f26648f8daa45f26a325819fdaa002ef",
+    "tests/test.sh": "09a6960c84698b31a7a908961ff27a579c8636e1567c955f130fbe0028d995b0",
+    "tests/verify.py": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+  },
+  "controllers": {
+    "oracle": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+    "frame-blind": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+    "nop": "e058d3d828450d4bd5ba142e4b7ab3517e479446babee377d403e6575a6d8769"
+  },
+  "image": "sha256:7bf44d668a0f3e7b92470b6625e7892f8fba2f5c34dd897d03d6c0384624d85a",
+  "workers": 4,
+  "cpu_each": 1,
+  "memory_bytes_each": 2147483648,
+  "network": "none",
+  "normal_controller_finish_required": true,
+  "harness_fallback_finish": false,
+  "jobs": [
+    {
+      "id": "production-0",
+      "index": 0,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-1",
+      "index": 1,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-2",
+      "index": 2,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-3",
+      "index": 3,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-4",
+      "index": 4,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-5",
+      "index": 5,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-6",
+      "index": 6,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-7",
+      "index": 7,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-8",
+      "index": 8,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-9",
+      "index": 9,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-10",
+      "index": 10,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-11",
+      "index": 11,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-12",
+      "index": 12,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-13",
+      "index": 13,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-14",
+      "index": 14,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-15",
+      "index": 15,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-16",
+      "index": 16,
+      "cases": [
+        "oracle"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-nop-0",
+      "index": 0,
+      "cases": [
+        "nop"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "production-nop-8",
+      "index": 8,
+      "cases": [
+        "nop"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    },
+    {
+      "id": "bounded-frame-blind-8",
+      "index": 8,
+      "cases": [
+        "frame-blind"
+      ],
+      "scene": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\candidate05-release\\helical-rope-wrap\\tests\\scene.json",
+      "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe"
+    }
+  ]
+}

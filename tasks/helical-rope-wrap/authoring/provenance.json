@@ -1,0 +1,44 @@
+{
+  "asset_kind": "A: task-authored parametric primitives",
+  "authors": [
+    "Rick Ray",
+    "Maofei Li"
+  ],
+  "concept_reference": {
+    "name": "ManiLadder WrapRope-v1",
+    "repository": "https://github.com/HeegerGao/ManiLadder-Benchmark",
+    "commit": "936c50effd7ab2e312bcb8cf98d142f6d9a20ef4",
+    "video": "https://maniladder-benchmark.github.io/videos/tasks/WrapRope-v1.mp4",
+    "copied_physics_or_assets": false,
+    "source_path": "maniladder/envs/deformable/single_arm_gripper/level_4/wrap_rope.py",
+    "license": "MIT (concept reference only; no task code/assets copied)"
+  },
+  "infrastructure": {
+    "source": "tools/case-kit/example/gantry-push",
+    "vendored": "casekit via sync.py",
+    "reused": "launcher, collector, client transport, container layout"
+  },
+  "physical_model": {
+    "rope": "60 passive ball joints, 4 mm capsule radius, total mass 0.16 kg",
+    "stiffness": "80-segment-equivalent coefficient scaled by segments/80 to preserve distributed bending stiffness",
+    "core": "vertical radius 0.08 m, half-height 0.12 m at z=0.17 m",
+    "groove": "two contact capsule rails, each 120 pieces, radius 0.006 m, vertical offsets +/-0.011 m",
+    "grasp": "one initial point-connect equality between free endpoint and force-limited Cartesian hand",
+    "anchor": "first pivot fixed to world at groove start",
+    "hand": "0.08 kg, three slide joints, 1200 N/m position gains, 25 Ns/m servo damping, 12 N cap per axis",
+    "friction": "0.25 sliding, 0.001 torsional, 0.0001 rolling",
+    "gravity": "MuJoCo default -9.81 m/s^2; hand gravity compensated",
+    "timestep_s": 0.002,
+    "joint_damping": "0.0004 * segments / 80 N m s/rad; 0.0003 for 60 segments; passive viscous damping",
+    "integrator": "implicitfast"
+  },
+  "differences_from_concept": [
+    "anchored first endpoint",
+    "vertical cylinder",
+    "two complete turns",
+    "Cartesian end effector",
+    "new length/stiffness/pitch randomization",
+    "arc-length groove occupancy required for success"
+  ],
+  "authored_task_license": "Apache-2.0"
+}

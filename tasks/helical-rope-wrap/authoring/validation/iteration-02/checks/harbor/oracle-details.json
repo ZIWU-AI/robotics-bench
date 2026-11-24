@@ -1,0 +1,29 @@
+{
+  "reward": 1,
+  "problems": [],
+  "verdict": {
+    "success": true,
+    "checks": {
+      "pass": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true
+      },
+      "angle": 12.783735335023303,
+      "groove_fraction": 0.9874999999793548,
+      "start_tail_m": 0.0,
+      "end_tail_m": 0.01351520244770008,
+      "backward_rad": -0.0,
+      "continuous_groove_interval_rad": [
+        -1.664578160262813e-11,
+        12.62725440100797
+      ]
+    }
+  },
+  "entries": 524
+}

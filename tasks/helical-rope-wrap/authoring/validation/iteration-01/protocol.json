@@ -1,0 +1,15 @@
+{
+  "candidate_freeze_sha256": "f6f087496fe2c42993609825691dbdc3523cacbe3dd503298f32269828233768",
+  "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+  "runner_sha256": "bdd30dbfb33929b8caed4a9baf271dbc55c921c67c72ecbb11977e447029b390",
+  "dispatcher_sha256": "84785eb779475377879113078b1b5d3c35e71d3814aa1887fa8d880e91ffb42f",
+  "layouts": 8,
+  "workers": 4,
+  "cpu_per_container": 1,
+  "memory_bytes": 2147483648,
+  "image": "sha256:7bf44d668a0f3e7b92470b6625e7892f8fba2f5c34dd897d03d6c0384624d85a",
+  "retry_count": 0,
+  "public_http": true,
+  "verifier_process_separate": true,
+  "note": "Diagnostic whitelist only, not published17. No oracle hints/configuration injection. All attempts preserved."
+}

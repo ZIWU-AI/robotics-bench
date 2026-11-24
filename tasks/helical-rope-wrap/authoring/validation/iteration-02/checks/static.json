@@ -1,0 +1,505 @@
+{
+  "checks": [
+    {
+      "name": "Canary strings",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-canary.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "01-canary-strings.log",
+      "log_sha256": "588082d89728170417c6bdae6512f2a4154066dee6720cf31958e67644d18fab",
+      "seconds": 11.171999999998661
+    },
+    {
+      "name": "Dockerfile refs",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-dockerfile-references.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "02-dockerfile-refs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.18800000000192085
+    },
+    {
+      "name": "Dockerfile sanity",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-dockerfile-sanity.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "03-dockerfile-sanity.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.3429999999971187
+    },
+    {
+      "name": "Dockerfile platform",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-dockerfile-platform.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "04-dockerfile-platform.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.21900000000096043
+    },
+    {
+      "name": "Absolute paths",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-absolute-path.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "05-absolute-paths.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.8130000000019209
+    },
+    {
+      "name": "Author host paths",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-author-host-paths.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "06-author-host-paths.log",
+      "log_sha256": "d423f19972bc0f228cd2056d47c220c4aed62a71f40024498f8df957e48f2d52",
+      "seconds": 0.5149999999994179
+    },
+    {
+      "name": "Test refs",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-test-file-references.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "07-test-refs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.2029999999977008
+    },
+    {
+      "name": "test.sh sanity",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-test-sh-sanity.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "08-test-sh-sanity.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.31300000000192085
+    },
+    {
+      "name": "Task fields",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-fields.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "09-task-fields.log",
+      "log_sha256": "10fddda94e50e99bb18602a21f37c352ad72a2528535dd5ab7b01cc6215203ed",
+      "seconds": 1.2030000000013388
+    },
+    {
+      "name": "Task path",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-path.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "10-task-path.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.26599999999962165
+    },
+    {
+      "name": "Task structure",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-structure.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "11-task-structure.log",
+      "log_sha256": "cc5e26e931cf74d285925f4b3b8c9d53bf9461fa3b44ddd229408c36cbb47b9f",
+      "seconds": 0.2969999999986612
+    },
+    {
+      "name": "Task timeout cap",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-timeout.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "12-task-timeout-cap.log",
+      "log_sha256": "f3beacbe74de7f7323d568f9f3b04e0dfcb722455e4ce5ff963943765a20d7bf",
+      "seconds": 0.375
+    },
+    {
+      "name": "Case single clock",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-case-single-clock.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "13-case-single-clock.log",
+      "log_sha256": "e3f4c00b82c0c1086a83df0530e19ca8b061208d618c5be2224b04df6cf64093",
+      "seconds": 0.4530000000013388
+    },
+    {
+      "name": "Instruction suffix",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-instruction-suffix.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "14-instruction-suffix.log",
+      "log_sha256": "8d6367ccf73919f3f328d98747421bd90c3babbaf9fc1d1b71d134fdbac3b0f9",
+      "seconds": 0.31199999999807915
+    },
+    {
+      "name": "GPU types",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-gpu-types.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "15-gpu-types.log",
+      "log_sha256": "c63fe7e9f1a853aabfe1e28661c61d8940a7f81ea25e1e3cff03a83495bedc7a",
+      "seconds": 0.2809999999990396
+    },
+    {
+      "name": "Network policy",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-allow-internet.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "16-network-policy.log",
+      "log_sha256": "887dd377319c482b9ea1ccee06ec5b7ec838ba2a330ed708e184cab929a99f16",
+      "seconds": 0.2970000000022992
+    },
+    {
+      "name": "Task slug length",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-slug.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "17-task-slug-length.log",
+      "log_sha256": "d814a781be28765c20e337e778fb49feeae92493c274c3a9381b68abfef18f18",
+      "seconds": 0.2029999999977008
+    },
+    {
+      "name": "Separate verifier",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-separate-verifier.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "18-separate-verifier.log",
+      "log_sha256": "2da427fd46096ff4a8c0b1dccf51e058557e7e1b674ec36ba6484ebecae92333",
+      "seconds": 0.5790000000015425
+    },
+    {
+      "name": "Verifier tooling baked",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-verifier-tooling-baked.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "19-verifier-tooling-baked.log",
+      "log_sha256": "90f6718a61c637a1fb10204e72bbb34b12eb5fc024619cc41f4db404c7c381fc",
+      "seconds": 0.4209999999984575
+    },
+    {
+      "name": "Trial network fetch",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-trial-network-fetch.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "20-trial-network-fetch.log",
+      "log_sha256": "54f801ef3e930c75e1840bc9508b4de64f81c05e115fcbaaa90311c91c39d115",
+      "seconds": 0.4540000000015425
+    },
+    {
+      "name": "Pip pinning",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-pip-pinning.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "21-pip-pinning.log",
+      "log_sha256": "21471e261314982be81386dd4ceb2c338f04d127ed0d513f48b01c0b61d42f06",
+      "seconds": 0.2649999999994179
+    },
+    {
+      "name": "Pytest version pin",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-pytest-version.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "22-pytest-version-pin.log",
+      "log_sha256": "d9b9b62052039d47934a38809907366bef9151332c2edeebaaf2a788e48f7de5",
+      "seconds": 0.375
+    },
+    {
+      "name": "Nproc usage",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-nproc.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "23-nproc-usage.log",
+      "log_sha256": "4cfbc7086c36c1acff282454dba853e44fc3e6abd50ec539b12e99c3b3680649",
+      "seconds": 0.7030000000013388
+    },
+    {
+      "name": "Runner resources",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-runner-resources.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "24-runner-resources.log",
+      "log_sha256": "e7fb4e7322bd3f0cab1525ce07e2af581f43c3ce74d35822c38a78d4961e0539",
+      "seconds": 0.23500000000058208
+    },
+    {
+      "name": "Compose host binds",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-compose-host-binds.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "25-compose-host-binds.log",
+      "log_sha256": "7177bbf95efe9f4a4dbef4a06add115c0b8fb6c6ee1a404921e1203097d90eb5",
+      "seconds": 0.21799999999711872
+    },
+    {
+      "name": "Binary reward",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-binary-reward.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "26-binary-reward.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.4690000000009604
+    },
+    {
+      "name": "Task README",
+      "argv": [
+        "<git-bash>",
+        "--noprofile",
+        "--norc",
+        "-c",
+        "export PATH=\"$(cygpath -u \"$CI05_TOOLS_BIN\"):$PATH\"; bash \"$1\" \"$2\"",
+        "--",
+        "ci_checks/check-task-readme.sh",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "27-task-readme.log",
+      "log_sha256": "49588ccc1f5d4eff3fca210865550b1d8d364e59b66ab5f59a1a6de3e25491b3",
+      "seconds": 0.5940000000009604
+    },
+    {
+      "name": "Rubric consistency",
+      "argv": [
+        "<python>",
+        "-B",
+        "ci_checks/check-rubric-consistency.py",
+        "task-template.toml",
+        "rubrics/task-implementation.toml"
+      ],
+      "exit_code": 0,
+      "log": "28-rubric-consistency.log",
+      "log_sha256": "00a542e81edc20aeac18768e0ce6d27a0a046b29c4b01794cc52ba3f27d830cd",
+      "seconds": 0.06199999999807915
+    },
+    {
+      "name": "Casekit sync",
+      "argv": [
+        "<python>",
+        "-B",
+        "tools/case-kit/sync.py",
+        "--check",
+        "tasks/helical-rope-wrap"
+      ],
+      "exit_code": 0,
+      "log": "29-casekit-sync.log",
+      "log_sha256": "6936dda83639378e9b9f8aa4069a01d31125ec2ca94da093c6b90cf65cd5429a",
+      "seconds": 0.0790000000015425
+    }
+  ],
+  "passed": 29,
+  "total": 29,
+  "seconds": 22.29699999999866,
+  "task_unchanged": true,
+  "release_payload_unchanged": true,
+  "platform_unchanged": true,
+  "production_unchanged": true,
+  "upstream_static_tools_unchanged_at": "30bb69d5fc8d9eaa4266bf72f2662e9850b2d00d",
+  "not_run": [
+    "Docker gate",
+    "Harbor",
+    "matrix",
+    "remote PR metadata checks"
+  ]
+}

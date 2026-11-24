@@ -1,0 +1,43 @@
+{
+  "recording_sha256": "9b54b2c7a37be6de96d3e8c2fb5ed1a4b74d26d915cdda463dbce8ae02e30da5",
+  "source_recording": "recording",
+  "replay_version": "damping-v3-terminal-fault",
+  "exact_all_states": true,
+  "entries": 524,
+  "verdict": {
+    "success": true,
+    "checks": {
+      "pass": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true
+      },
+      "angle": 12.809233491621333,
+      "groove_fraction": 0.9875000000266555,
+      "start_tail_m": 0.0,
+      "end_tail_m": 0.013545028920626487,
+      "backward_rad": -0.0,
+      "continuous_groove_interval_rad": [
+        0.0,
+        12.653579064122432
+      ]
+    }
+  },
+  "deepest_contact": {
+    "time": 2.801999999999913,
+    "distance": -0.0005397848682819773,
+    "geom1": "rail-1_7",
+    "geom2": "link3",
+    "position": [
+      0.05821118416864485,
+      0.059359471932240074,
+      0.11880255370632295
+    ]
+  },
+  "seconds": 320.8599999999997
+}

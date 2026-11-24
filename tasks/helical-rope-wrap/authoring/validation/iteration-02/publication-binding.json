@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-11-23T11:49:34.562194+00:00",
+  "freeze_original_raw_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "frozen_payload_files": 85,
+  "frozen_release_changed": [],
+  "publication_changed_original_files": [
+    "README.md"
+  ],
+  "publication_readme_sha256": "89a22e5f43da3feca11d3181721eeb9bbf7a2f16e13657f033aaf8954b639f99",
+  "new_paths_prefix": "authoring/validation/iteration-02/",
+  "runtime_tests_solution_metadata_exact": true,
+  "historical49_exact_git_blobs": {
+    "head": "336b155f34c411c7a653a666e6e2d148ed1b3ec0",
+    "count": 49
+  },
+  "new_static_or_dynamics_tests_run": "publication-only static checks; no dynamics",
+  "no_commit_or_stage": true,
+  "reference_section_words": 239,
+  "scope": "Publication binding and completed local checks only; external final AI audit and published-head CI not asserted",
+  "publication_static_passed": 29,
+  "publication_static_receipt": "checks/publication-static/result.json"
+}

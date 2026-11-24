@@ -1,0 +1,37 @@
+{
+  "convention": "SHA256 of local packaged bytes and CRLF-to-LF payload, not Git object ID; manifest excludes itself.",
+  "files": {
+    "draw.md": {
+      "local_raw_sha256": "ad94ba79e554ecda28ead3762af9568efb35b4cfd6f3046ca70d4d4cf3b1b9d7",
+      "lf_payload_sha256": "637033a96aeec7a2466a1b481660b42d79868a59fe6e6a0a55a563a7533a185d"
+    },
+    "iteration-rope-run.py": {
+      "local_raw_sha256": "ca9acff9aa855ad2d4a70a0ce3d5999725765d7b0a03d801cd3e6547b044bb3f",
+      "lf_payload_sha256": "ca9acff9aa855ad2d4a70a0ce3d5999725765d7b0a03d801cd3e6547b044bb3f"
+    },
+    "protocol.json": {
+      "local_raw_sha256": "b99c33befb235bf33589c2617a36a9f39c7c5606b8bfa0374c0c00fd2f25110a",
+      "lf_payload_sha256": "9373a1a24f518ed7d7a2124bee62acc5a9e1389795aad9bcb92058608ab54e3e"
+    },
+    "quickstart.json": {
+      "local_raw_sha256": "d66874f4ce7dbc78755c72234a80f6d3cf625500168d6e0d29d3ef2dccf0952b",
+      "lf_payload_sha256": "d66874f4ce7dbc78755c72234a80f6d3cf625500168d6e0d29d3ef2dccf0952b"
+    },
+    "README.md": {
+      "local_raw_sha256": "912ad3ed0e75fd06fe46ab867d8cead28f01d85ebab5090f22d8b06fa5e84e36",
+      "lf_payload_sha256": "9b38cdee545776078958a3c2361cea5d47c0a855409eecf1ad75797f4d02dae6"
+    },
+    "runtime-reuse-binding.json": {
+      "local_raw_sha256": "ea069bad5f5f88afb83c200da280f54ee9b86bbf67d3f4f7c0b28b072b791e22",
+      "lf_payload_sha256": "e279bcc1d85b166f55945a24854f75debc088bac2a77d78ab8f3475994038331"
+    },
+    "scene.json": {
+      "local_raw_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+      "lf_payload_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325"
+    },
+    "summary.json": {
+      "local_raw_sha256": "48645c31b168d15930459a48642c466425364ab4b4901efaac24d831e12d3a40",
+      "lf_payload_sha256": "0c0a6dc24fcb4d64aa4c84994dbf255b8dae9cb81abf2ede74de9794e2db1379"
+    }
+  }
+}

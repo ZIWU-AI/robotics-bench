@@ -1,0 +1,568 @@
+{
+  "wrong_pitch": {
+    "pass": false,
+    "checks": {
+      "winding": true,
+      "groove": false,
+      "continuous_groove_coverage": false,
+      "ends": false,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 12.566370614359172,
+    "groove_fraction": 0.11562499999999999,
+    "start_tail_m": 0.0,
+    "end_tail_m": 0.9407479276635665,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      1.4529259496556988
+    ]
+  },
+  "off_core": {
+    "pass": false,
+    "checks": {
+      "winding": true,
+      "groove": false,
+      "continuous_groove_coverage": false,
+      "ends": false,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 12.566370614359172,
+    "groove_fraction": 0.0,
+    "start_tail_m": 1.084,
+    "end_tail_m": 1.084,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      0.0
+    ]
+  },
+  "half_turn": {
+    "pass": false,
+    "checks": {
+      "winding": false,
+      "groove": true,
+      "continuous_groove_coverage": false,
+      "ends": true,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 3.141592653589793,
+    "groove_fraction": 1.0,
+    "start_tail_m": 0.0,
+    "end_tail_m": 0.0,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      3.141592653589793
+    ]
+  },
+  "reverse": {
+    "pass": false,
+    "checks": {
+      "winding": false,
+      "groove": false,
+      "continuous_groove_coverage": false,
+      "ends": false,
+      "no_core_crossing": true,
+      "no_backtracking": false
+    },
+    "angle": -12.566370614359172,
+    "groove_fraction": 0.0062499999999999995,
+    "start_tail_m": 0.0,
+    "end_tail_m": 1.0509110308060012,
+    "backward_rad": 12.566370614359172,
+    "continuous_groove_interval_rad": [
+      0.0,
+      -0.07853981633974483
+    ]
+  },
+  "buried": {
+    "pass": false,
+    "checks": {
+      "winding": true,
+      "groove": false,
+      "continuous_groove_coverage": false,
+      "ends": false,
+      "no_core_crossing": false,
+      "no_backtracking": true
+    },
+    "angle": 12.566370614359172,
+    "groove_fraction": 0.0,
+    "start_tail_m": 1.084,
+    "end_tail_m": 1.084,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      0.0
+    ]
+  },
+  "straight": {
+    "pass": false,
+    "checks": {
+      "winding": false,
+      "groove": false,
+      "continuous_groove_coverage": false,
+      "ends": false,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 1.493174818057503,
+    "groove_fraction": 0.03125,
+    "start_tail_m": 0.0,
+    "end_tail_m": 1.0462500000000001,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      0.3820448374370518
+    ]
+  },
+  "long_tail": {
+    "pass": false,
+    "checks": {
+      "winding": false,
+      "groove": false,
+      "continuous_groove_coverage": true,
+      "ends": false,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 13.52644097676486,
+    "groove_fraction": 0.8980909491423917,
+    "start_tail_m": 0.0,
+    "end_tail_m": 0.12000000000000004,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      12.566370614359172
+    ]
+  },
+  "middle_gap_with_seated_ends": {
+    "pass": false,
+    "checks": {
+      "winding": true,
+      "groove": true,
+      "continuous_groove_coverage": false,
+      "ends": true,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 12.566370614359172,
+    "groove_fraction": 0.9367084157518183,
+    "start_tail_m": 0.0,
+    "end_tail_m": 0.0,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      6.558135316998273,
+      12.566370614359172
+    ]
+  },
+  "tail_supplies_missing_21_degrees": {
+    "pass": false,
+    "checks": {
+      "winding": true,
+      "groove": true,
+      "continuous_groove_coverage": false,
+      "ends": true,
+      "no_core_crossing": true,
+      "no_backtracking": true
+    },
+    "angle": 12.471075271658773,
+    "groove_fraction": 0.9750000000000001,
+    "start_tail_m": 0.0,
+    "end_tail_m": 0.027090057841252953,
+    "backward_rad": -0.0,
+    "continuous_groove_interval_rad": [
+      0.0,
+      12.19863895280324
+    ]
+  },
+  "frame_regressions": {
+    "0": {
+      "frame": {
+        "center_xy": [
+          0.0,
+          0.0
+        ],
+        "yaw": 0.0,
+        "handedness": 1
+      },
+      "positive": true,
+      "short_hold_rejected": true,
+      "wrong_chirality_rejected": true,
+      "negative_checks": {
+        "wrong_pitch": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "off_core": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "half_turn": {
+          "winding": false,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "reverse": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": true
+        },
+        "buried": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "straight": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "long_tail": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": true,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "middle_gap_with_seated_ends": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "tail_supplies_missing_21_degrees": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        }
+      }
+    },
+    "1": {
+      "frame": {
+        "center_xy": [
+          0.04,
+          -0.04
+        ],
+        "yaw": 0.5235987755982988,
+        "handedness": 1
+      },
+      "positive": true,
+      "short_hold_rejected": true,
+      "wrong_chirality_rejected": true,
+      "negative_checks": {
+        "wrong_pitch": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "off_core": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "half_turn": {
+          "winding": false,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "reverse": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": true
+        },
+        "buried": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "straight": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "long_tail": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": true,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "middle_gap_with_seated_ends": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "tail_supplies_missing_21_degrees": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        }
+      }
+    },
+    "2": {
+      "frame": {
+        "center_xy": [
+          -0.04,
+          0.04
+        ],
+        "yaw": -0.5235987755982988,
+        "handedness": -1
+      },
+      "positive": true,
+      "short_hold_rejected": true,
+      "wrong_chirality_rejected": true,
+      "negative_checks": {
+        "wrong_pitch": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "off_core": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "half_turn": {
+          "winding": false,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "reverse": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": true
+        },
+        "buried": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "straight": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "long_tail": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": true,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "middle_gap_with_seated_ends": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "tail_supplies_missing_21_degrees": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        }
+      }
+    },
+    "3": {
+      "frame": {
+        "center_xy": [
+          0.04,
+          0.04
+        ],
+        "yaw": 0.5235987755982988,
+        "handedness": -1
+      },
+      "positive": true,
+      "short_hold_rejected": true,
+      "wrong_chirality_rejected": true,
+      "negative_checks": {
+        "wrong_pitch": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "off_core": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "half_turn": {
+          "winding": false,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "reverse": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": true
+        },
+        "buried": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "straight": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "long_tail": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": true,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "middle_gap_with_seated_ends": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "tail_supplies_missing_21_degrees": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        }
+      }
+    }
+  }
+}

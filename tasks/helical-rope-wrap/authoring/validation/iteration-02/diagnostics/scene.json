@@ -1,0 +1,180 @@
+{
+  "layouts": [
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295001,
+      "pitch": 0.04225401940720979,
+      "length": 1.0862611818048504,
+      "stiffness": 4.075541224005585e-05,
+      "center_xy": [
+        -0.013624278753823608,
+        0.02917575899567646
+      ],
+      "yaw": -0.19033750813630113,
+      "handedness": -1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295002,
+      "pitch": 0.038888509534179785,
+      "length": 1.084452132791523,
+      "stiffness": 6.538572364107454e-05,
+      "center_xy": [
+        -0.017011965240035495,
+        0.03130300892200117
+      ],
+      "yaw": -0.013739774180412464,
+      "handedness": -1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295003,
+      "pitch": 0.039766907337457205,
+      "length": 1.0796317673523743,
+      "stiffness": 5.9149191719541026e-05,
+      "center_xy": [
+        0.010521450107569573,
+        -0.007287052109399922
+      ],
+      "yaw": -0.31119708822851966,
+      "handedness": 1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295004,
+      "pitch": 0.03728653741576517,
+      "length": 1.080468535352495,
+      "stiffness": 4.616265573580199e-05,
+      "center_xy": [
+        -0.023880520315145155,
+        0.021589681532713775
+      ],
+      "yaw": 0.2869302402903459,
+      "handedness": -1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295005,
+      "pitch": 0.042616223852375845,
+      "length": 1.0809181548547497,
+      "stiffness": 7.282196275478201e-05,
+      "center_xy": [
+        0.02874083839262232,
+        -0.029243963063107795
+      ],
+      "yaw": -0.29078495345147354,
+      "handedness": 1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295006,
+      "pitch": 0.04266687834537216,
+      "length": 1.0864320395429898,
+      "stiffness": 3.9223106336408395e-05,
+      "center_xy": [
+        0.019263417331428806,
+        0.008705676413769264
+      ],
+      "yaw": 0.2745134679392987,
+      "handedness": -1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295007,
+      "pitch": 0.041890700516755926,
+      "length": 1.0877852098844965,
+      "stiffness": 6.421613322652581e-05,
+      "center_xy": [
+        0.025818301466444392,
+        0.020182269221823146
+      ],
+      "yaw": -0.41039758840568247,
+      "handedness": 1
+    },
+    {
+      "task": "helical-rope-wrap",
+      "kind": "independent-diagnostic",
+      "radius": 0.08,
+      "segments": 60,
+      "rail_segments": 120,
+      "timestep": 0.002,
+      "budgets": {
+        "actions": 800,
+        "observations": 1000
+      },
+      "seed": 295008,
+      "pitch": 0.043375370935980664,
+      "length": 1.0835054855027322,
+      "stiffness": 3.964137671906395e-05,
+      "center_xy": [
+        -0.03914065501911271,
+        0.02101209910062741
+      ],
+      "yaw": -0.07326874967166877,
+      "handedness": -1
+    }
+  ]
+}

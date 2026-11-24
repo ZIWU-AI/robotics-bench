@@ -1,0 +1,257 @@
+{
+  "kind": "selected terminal fields from both actual dispatcher summaries; full original hashes retained",
+  "cohorts": [
+    {
+      "source": "prototype/independent-validation05-first2/summary.json",
+      "original_raw_sha256": "03f86158a6f76cebe846e924f455a97047a3790f621f536cfd2019adee7e2b99",
+      "ok": true,
+      "stop_reason": null,
+      "rows": [
+        {
+          "id": "independent-0",
+          "index": 0,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 339.7970000000023
+        },
+        {
+          "id": "independent-1",
+          "index": 1,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 315.29699999999866
+        }
+      ]
+    },
+    {
+      "source": "prototype/independent-validation05-remaining6/summary.json",
+      "original_raw_sha256": "0167c218b3f35cadef0e380655ab1d3d94e1e076b9f42df2989a3569a05f2d31",
+      "ok": true,
+      "stop_reason": null,
+      "rows": [
+        {
+          "id": "independent-2",
+          "index": 2,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 382.04699999999866
+        },
+        {
+          "id": "independent-3",
+          "index": 3,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 382.0
+        },
+        {
+          "id": "independent-4",
+          "index": 4,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 381.5619999999981
+        },
+        {
+          "id": "independent-5",
+          "index": 5,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 376.45300000000134
+        },
+        {
+          "id": "independent-6",
+          "index": 6,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 377.1399999999994
+        },
+        {
+          "id": "independent-7",
+          "index": 7,
+          "exit_code": 0,
+          "cleanup_confirmed": true,
+          "source_binding_after_matches": true,
+          "timed_out": false,
+          "seconds": 376.1869999999981
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 173.74265256399667,
+      "replay_seconds": 159.47862132200316,
+      "recording_sha256": "53d545fab319698840b0dab7d57ecfb6e49c7b9881c11e7d920e53dd7be65188"
+    },
+    {
+      "index": 0,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.3168914069974562,
+      "replay_seconds": 0.038960687998041976,
+      "recording_sha256": "2253d0a7e6faf30405bd5e8efe651775ea1f49ebf7f1cbb16711a08b8a662a10"
+    },
+    {
+      "index": 1,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 161.08428901200023,
+      "replay_seconds": 147.7913580860004,
+      "recording_sha256": "60bca858727906b14801d5b208a379bcf395abe722607312d6e77a8290b7da28"
+    },
+    {
+      "index": 1,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.3166055799993046,
+      "replay_seconds": 0.04012497800067649,
+      "recording_sha256": "41d32a795dc7f68cb9b3a83eec8facbaec63f9d7c88852100bf675d1bd7686ba"
+    },
+    {
+      "index": 2,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 186.01904047000062,
+      "replay_seconds": 188.020800014001,
+      "recording_sha256": "f1fde8f6190878ff8e5a42182c7982836559d96e231932d393d46fd08210b5f1"
+    },
+    {
+      "index": 2,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.41731768699901295,
+      "replay_seconds": 0.05784672699883231,
+      "recording_sha256": "990fd5ee2f5706becc6c576e9d4f2aef4f4a37e8f0323378cce1633b6fa3e661"
+    },
+    {
+      "index": 3,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 185.86475790400073,
+      "replay_seconds": 187.98468845800016,
+      "recording_sha256": "175c6f8e02321c7351dd0740054ff1f4a81308767bff96a9bee7a2dcd4f04b71"
+    },
+    {
+      "index": 3,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.47241996199954883,
+      "replay_seconds": 0.05875327899775584,
+      "recording_sha256": "28897ca6172ff572552432986ba0b502d34d3525d35a024e579ba02d0a5c84cb"
+    },
+    {
+      "index": 4,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 185.39618829000028,
+      "replay_seconds": 187.98830122099753,
+      "recording_sha256": "141041cb0086848484fbea3e2ba09cf46f9313ff7247071295a0cb7f8b7c7e28"
+    },
+    {
+      "index": 4,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.4674298829995678,
+      "replay_seconds": 0.047151031001703814,
+      "recording_sha256": "0ebc0bf9e2d04476574afd704ae3b8598dbbadde477f79cd3dcad28c95e80405"
+    },
+    {
+      "index": 5,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 184.40928530999736,
+      "replay_seconds": 183.78790204800316,
+      "recording_sha256": "d79d9580008501cccb26efbb82dcf1901af16857ae4ac4f4620d316f0cda77da"
+    },
+    {
+      "index": 5,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.4167539609989035,
+      "replay_seconds": 0.0501433099998394,
+      "recording_sha256": "4f207797a4c58f10db4d98f942642a25d9a351ffd6361a6832b625f2cfe8d0d4"
+    },
+    {
+      "index": 6,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 184.42385989899776,
+      "replay_seconds": 184.14585313899806,
+      "recording_sha256": "38fadc90281ccf8a0592a76281494a302c5a2be15b0835ae01800ba73f02fb12"
+    },
+    {
+      "index": 6,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.5179757350015279,
+      "replay_seconds": 0.04594257500139065,
+      "recording_sha256": "e30ffac35175f060c9e6fbbd93b0b2e290d8c8ea83f420984db2960c27bfc44e"
+    },
+    {
+      "index": 7,
+      "case": "oracle",
+      "reward": 1,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 184.62035396599822,
+      "replay_seconds": 183.33070899800077,
+      "recording_sha256": "ae3ec90b7c2469861554e16738a8767c2d739ae04a0d7c9847c69ae0b2d9770a"
+    },
+    {
+      "index": 7,
+      "case": "nop",
+      "reward": 0,
+      "normal_finish": true,
+      "exact_all_states": true,
+      "controller_seconds": 0.41681486499874154,
+      "replay_seconds": 0.04888644099992234,
+      "recording_sha256": "030592ccb5872d3dad3c4a052c053f2f473a5d4b4ac38388b1572cdc3ae3f86f"
+    }
+  ],
+  "all8_fixed_draws_included": true,
+  "production17_unchanged": true
+}

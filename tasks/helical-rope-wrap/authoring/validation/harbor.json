@@ -1,0 +1,45 @@
+[
+  {
+    "agent": "oracle",
+    "reward": 1.0,
+    "exception": null,
+    "started_at": "2026-11-22T11:15:58.201976Z",
+    "finished_at": "2026-11-22T11:34:19.735266Z",
+    "agent_execution": {
+      "started_at": "2026-11-22T11:16:08.087867Z",
+      "finished_at": "2026-11-22T11:29:32.733936Z"
+    },
+    "verifier": {
+      "started_at": "2026-11-22T11:29:37.262809Z",
+      "finished_at": "2026-11-22T11:34:19.735229Z"
+    },
+    "raw_trial_result_sha256": "45969442a8afe7b63062add104c42aa812089109db7b3122c84984437cd2b67b",
+    "source_changes_during_run": [
+      "README.md",
+      "instruction.md"
+    ],
+    "runtime_source_unchanged": true,
+    "declared_cpus": 1,
+    "declared_memory_mb": 2048
+  },
+  {
+    "agent": "nop",
+    "reward": 0.0,
+    "exception": null,
+    "started_at": "2026-11-22T11:18:17.481031Z",
+    "finished_at": "2026-11-22T11:18:57.828447Z",
+    "agent_execution": {
+      "started_at": "2026-11-22T11:18:27.746557Z",
+      "finished_at": "2026-11-22T11:18:27.746745Z"
+    },
+    "verifier": {
+      "started_at": "2026-11-22T11:18:34.996853Z",
+      "finished_at": "2026-11-22T11:18:57.828425Z"
+    },
+    "raw_trial_result_sha256": "8f7479f2ecbfe3177f9f932a09cde9f2f1637beb5941cf9be7d5f21924ceb5d3",
+    "source_changes_during_run": [],
+    "runtime_source_unchanged": true,
+    "declared_cpus": 1,
+    "declared_memory_mb": 2048
+  }
+]

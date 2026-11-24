@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "scope": "mock-only boundary test, no dynamics or physical outcome",
+  "before_sha256": "e592a4503d7b98a0a0b3c5fc0d8336bf4cf81ba098a9c7068a94d2946d078e8f",
+  "current_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+  "old_default": {
+    "frame_blind": false,
+    "moves": 701,
+    "tracking_observations": 701,
+    "finish_at_move_counts": [],
+    "error": "tracking did not converge",
+    "returned": null,
+    "initial_registration_calls": 1
+  },
+  "new_default": {
+    "frame_blind": false,
+    "moves": 701,
+    "tracking_observations": 701,
+    "finish_at_move_counts": [],
+    "error": "tracking did not converge",
+    "returned": null,
+    "initial_registration_calls": 1
+  },
+  "new_frame_blind": {
+    "frame_blind": true,
+    "moves": 701,
+    "tracking_observations": 701,
+    "finish_at_move_counts": [
+      701
+    ],
+    "error": null,
+    "returned": {
+      "ok": true,
+      "mock_terminal": true
+    },
+    "initial_registration_calls": 1
+  },
+  "default_command_sequence_and_pacing_exact": true
+}

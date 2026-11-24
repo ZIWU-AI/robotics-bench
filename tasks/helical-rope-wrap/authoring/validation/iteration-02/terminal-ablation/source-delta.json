@@ -1,0 +1,76 @@
+{
+  "scope": "unique release-only bounded frame-blind terminal ablation; no physical trial or historical D rerun",
+  "source_changes_since_images_preflight": [
+    "README.md",
+    "solution/oracle.py"
+  ],
+  "oracle_before_sha256": "e592a4503d7b98a0a0b3c5fc0d8336bf4cf81ba098a9c7068a94d2946d078e8f",
+  "oracle_current_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+  "oracle_unchanged_function_AST": [
+    "marker_pixels",
+    "ray",
+    "register",
+    "planned_target",
+    "ramp",
+    "checked"
+  ],
+  "solve_AST_equal_after_removing_only_frame_blind_finish_branch": true,
+  "same_actions_gt_700_boundary": true,
+  "sim_and_serve_and_camera_source_byte_unchanged_since_preflight": true,
+  "prior_preflight": {
+    "directory": "release-preflight05-20261123-180004-6c5b46e5",
+    "report_sha256": "1f6050231ffa89ed91816656780efb94ad9dec2bc1a71a9e5a3af720876d5d58",
+    "binding_before_sha256": "fbadd57acd4865cc73fa2d4cbc08310a9edb271b284358cf8b9bd0160079e5f6",
+    "scope_reused": "unchanged optical/registration/geometry code and inputs only; no new 17-layout controller outcome",
+    "not_rerun": true
+  },
+  "mock": {
+    "script": "test_terminal_ablation.py",
+    "sha256": "8daf963a56b748fcfdc2e2de93a8729f1f1b874e5c09834ea6de250550e4c960",
+    "stdout_sha256": "0a5274310e4d521be4169dc91ade0aca08d4665fadba3c0e7ef7f498eb5cc19a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "process_sha256": "81211f512a2f5b8da2600b57adba72fe21da048df8e7455dff067364a9e5c285",
+    "result": {
+      "ok": true,
+      "scope": "mock-only boundary test, no dynamics or physical outcome",
+      "before_sha256": "e592a4503d7b98a0a0b3c5fc0d8336bf4cf81ba098a9c7068a94d2946d078e8f",
+      "current_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+      "old_default": {
+        "frame_blind": false,
+        "moves": 701,
+        "tracking_observations": 701,
+        "finish_at_move_counts": [],
+        "error": "tracking did not converge",
+        "returned": null,
+        "initial_registration_calls": 1
+      },
+      "new_default": {
+        "frame_blind": false,
+        "moves": 701,
+        "tracking_observations": 701,
+        "finish_at_move_counts": [],
+        "error": "tracking did not converge",
+        "returned": null,
+        "initial_registration_calls": 1
+      },
+      "new_frame_blind": {
+        "frame_blind": true,
+        "moves": 701,
+        "tracking_observations": 701,
+        "finish_at_move_counts": [
+          701
+        ],
+        "error": null,
+        "returned": {
+          "ok": true,
+          "mock_terminal": true
+        },
+        "initial_registration_calls": 1
+      },
+      "default_command_sequence_and_pacing_exact": true
+    }
+  },
+  "historical_pilot_D": "exit 1 / unsealed remains historical; not replaced or reclassified",
+  "pending": "fresh normal-oracle production 17 validation; this packet did not run it",
+  "frozen": false
+}

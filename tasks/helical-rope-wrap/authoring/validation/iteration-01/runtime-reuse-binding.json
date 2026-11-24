@@ -1,0 +1,206 @@
+{
+  "baseline_head": "8cde7b6c214c992e1a128421dbc4395199d88719",
+  "frozen_runtime_files": {
+    "authoring/frozen-configs.json": {
+      "baseline_local_raw_sha256": "ad8f09ac5f1a4ddc183cec3cc410df3279f10ae96260dd19b96691750dcce862",
+      "candidate_local_raw_sha256": "ad8f09ac5f1a4ddc183cec3cc410df3279f10ae96260dd19b96691750dcce862",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "8ef207d79da70a2db151674c2b95018c19474e0740279e0e95943cc768c0a7c2"
+    },
+    "authoring/test_contract.py": {
+      "baseline_local_raw_sha256": "ae92ab1af759570e3a2649b6d946f3e1eb510a41463c9fc5b6c344d01be6f78f",
+      "candidate_local_raw_sha256": "ae92ab1af759570e3a2649b6d946f3e1eb510a41463c9fc5b6c344d01be6f78f",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "ae92ab1af759570e3a2649b6d946f3e1eb510a41463c9fc5b6c344d01be6f78f"
+    },
+    "authoring/test_fault.py": {
+      "baseline_local_raw_sha256": "bd20e96ac0a5dcfdbf880ac961436f237dd351cf36ba216f24ed5bd31c8997be",
+      "candidate_local_raw_sha256": "bd20e96ac0a5dcfdbf880ac961436f237dd351cf36ba216f24ed5bd31c8997be",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "bd20e96ac0a5dcfdbf880ac961436f237dd351cf36ba216f24ed5bd31c8997be"
+    },
+    "authoring/test_geometry.py": {
+      "baseline_local_raw_sha256": "a00753bf164dbe7e03f236791f58dcc10a8ab3d0cff1f321267d1da662c97ba0",
+      "candidate_local_raw_sha256": "a00753bf164dbe7e03f236791f58dcc10a8ab3d0cff1f321267d1da662c97ba0",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "a00753bf164dbe7e03f236791f58dcc10a8ab3d0cff1f321267d1da662c97ba0"
+    },
+    "environment/Dockerfile": {
+      "baseline_local_raw_sha256": "84489464c392a1a58bc435433ec50507b43a69b76d6a761392517f583dd66c6b",
+      "candidate_local_raw_sha256": "84489464c392a1a58bc435433ec50507b43a69b76d6a761392517f583dd66c6b",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "84489464c392a1a58bc435433ec50507b43a69b76d6a761392517f583dd66c6b"
+    },
+    "environment/requirements.txt": {
+      "baseline_local_raw_sha256": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371",
+      "candidate_local_raw_sha256": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371"
+    },
+    "environment/start-rope-service": {
+      "baseline_local_raw_sha256": "988b9482831eebf2a4a4e26e42afa8d7ad7e2d5bd7c125a90cc2c308021e8260",
+      "candidate_local_raw_sha256": "988b9482831eebf2a4a4e26e42afa8d7ad7e2d5bd7c125a90cc2c308021e8260",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "988b9482831eebf2a4a4e26e42afa8d7ad7e2d5bd7c125a90cc2c308021e8260"
+    },
+    "environment/app/client.py": {
+      "baseline_local_raw_sha256": "be6c7e93403df8b0d1c4ed339ec9edcd61ff5c2cf6712b3f579b91df7ab81cce",
+      "candidate_local_raw_sha256": "be6c7e93403df8b0d1c4ed339ec9edcd61ff5c2cf6712b3f579b91df7ab81cce",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "be6c7e93403df8b0d1c4ed339ec9edcd61ff5c2cf6712b3f579b91df7ab81cce"
+    },
+    "environment/service/collect.py": {
+      "baseline_local_raw_sha256": "c6005c86d71c05608005a6452dd4bd2b779185a08d8b0a949dbec4b3dc363dc0",
+      "candidate_local_raw_sha256": "c6005c86d71c05608005a6452dd4bd2b779185a08d8b0a949dbec4b3dc363dc0",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "c6005c86d71c05608005a6452dd4bd2b779185a08d8b0a949dbec4b3dc363dc0"
+    },
+    "environment/service/launch.py": {
+      "baseline_local_raw_sha256": "0ce84bcacf780298a58cae36a636f294cc2db14b2db3d36e38ef76aa55420abc",
+      "candidate_local_raw_sha256": "0ce84bcacf780298a58cae36a636f294cc2db14b2db3d36e38ef76aa55420abc",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "0ce84bcacf780298a58cae36a636f294cc2db14b2db3d36e38ef76aa55420abc"
+    },
+    "environment/service/scene.json": {
+      "baseline_local_raw_sha256": "9011b47957ee33c4e089fef8d914676801ad13b022c45a3ad144a4408e4b5f91",
+      "candidate_local_raw_sha256": "9011b47957ee33c4e089fef8d914676801ad13b022c45a3ad144a4408e4b5f91",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "e4ef4b8e8b67c29f1aba90035f94c923f1d389ad2c7c2b3f7fb082eca4b63b49"
+    },
+    "environment/service/serve.py": {
+      "baseline_local_raw_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2",
+      "candidate_local_raw_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2"
+    },
+    "environment/service/sim.py": {
+      "baseline_local_raw_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658",
+      "candidate_local_raw_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658"
+    },
+    "environment/service/casekit/episode.py": {
+      "baseline_local_raw_sha256": "f5ff528b733f36795e9e932be77a0bb189d201324d04e076e988c84994b85e46",
+      "candidate_local_raw_sha256": "f5ff528b733f36795e9e932be77a0bb189d201324d04e076e988c84994b85e46",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "db101f1fdce4ce627e63afed2c9c574e0993a6dd63470558bc2c62d907617902"
+    },
+    "environment/service/casekit/launch.py": {
+      "baseline_local_raw_sha256": "62497c80e9ab4fe7144780951cde6dc04c019fee238b3de6f8985c2f87e86799",
+      "candidate_local_raw_sha256": "62497c80e9ab4fe7144780951cde6dc04c019fee238b3de6f8985c2f87e86799",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "33a387ac4e5b897f80645cde37a422e4516cb5551c782d891dac1208c46f3b89"
+    },
+    "environment/service/casekit/recording.py": {
+      "baseline_local_raw_sha256": "8b13ceb6ff53ba76e8dddd9d922f1ebcaf0808559dbc859e68c5ba59742db15a",
+      "candidate_local_raw_sha256": "8b13ceb6ff53ba76e8dddd9d922f1ebcaf0808559dbc859e68c5ba59742db15a",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "2263a4caebf3039cd1bf3c0d98b3f6fb9e83e5c1cc38036e136a05a8551a243c"
+    },
+    "environment/service/casekit/verify.py": {
+      "baseline_local_raw_sha256": "195708db75bded28283988417ad04150126808e89f37450bee96701a334f014b",
+      "candidate_local_raw_sha256": "195708db75bded28283988417ad04150126808e89f37450bee96701a334f014b",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "4c5786c3bcaa0cfa01e0158890ba63b320d327a252c74c766474a23ac02655f0"
+    },
+    "environment/service/casekit/__init__.py": {
+      "baseline_local_raw_sha256": "a67287c8e0ea06c733aa963330ccd6eb6fbb7fd467fb0566247f7c40c5ecc211",
+      "candidate_local_raw_sha256": "a67287c8e0ea06c733aa963330ccd6eb6fbb7fd467fb0566247f7c40c5ecc211",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "bfac748343b61d01e55ac8d8608619e53b5be4d17fba095458850aa64593080b"
+    },
+    "solution/oracle.py": {
+      "baseline_local_raw_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52",
+      "candidate_local_raw_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+    },
+    "solution/solve.sh": {
+      "baseline_local_raw_sha256": "08f2bf5446483c0dc37ddd59bd30bfe7556d61b2d9c337957c6f1847b94d63b2",
+      "candidate_local_raw_sha256": "08f2bf5446483c0dc37ddd59bd30bfe7556d61b2d9c337957c6f1847b94d63b2",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "08f2bf5446483c0dc37ddd59bd30bfe7556d61b2d9c337957c6f1847b94d63b2"
+    },
+    "tests/Dockerfile": {
+      "baseline_local_raw_sha256": "3252e57ef91d0a0ccc9eefeee6271c6781e565c3cc21ea132af0d774692e18e8",
+      "candidate_local_raw_sha256": "3252e57ef91d0a0ccc9eefeee6271c6781e565c3cc21ea132af0d774692e18e8",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "3252e57ef91d0a0ccc9eefeee6271c6781e565c3cc21ea132af0d774692e18e8"
+    },
+    "tests/requirements.txt": {
+      "baseline_local_raw_sha256": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371",
+      "candidate_local_raw_sha256": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "6e5cc780d45db2d7172f9d9b12238954c37da6ae2c6af268bdbe055495802371"
+    },
+    "tests/scene.json": {
+      "baseline_local_raw_sha256": "9011b47957ee33c4e089fef8d914676801ad13b022c45a3ad144a4408e4b5f91",
+      "candidate_local_raw_sha256": "9011b47957ee33c4e089fef8d914676801ad13b022c45a3ad144a4408e4b5f91",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "e4ef4b8e8b67c29f1aba90035f94c923f1d389ad2c7c2b3f7fb082eca4b63b49"
+    },
+    "tests/serve.py": {
+      "baseline_local_raw_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2",
+      "candidate_local_raw_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2"
+    },
+    "tests/sim.py": {
+      "baseline_local_raw_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658",
+      "candidate_local_raw_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658"
+    },
+    "tests/test.sh": {
+      "baseline_local_raw_sha256": "09a6960c84698b31a7a908961ff27a579c8636e1567c955f130fbe0028d995b0",
+      "candidate_local_raw_sha256": "09a6960c84698b31a7a908961ff27a579c8636e1567c955f130fbe0028d995b0",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "09a6960c84698b31a7a908961ff27a579c8636e1567c955f130fbe0028d995b0"
+    },
+    "tests/verify.py": {
+      "baseline_local_raw_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb",
+      "candidate_local_raw_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+    },
+    "tests/casekit/episode.py": {
+      "baseline_local_raw_sha256": "f5ff528b733f36795e9e932be77a0bb189d201324d04e076e988c84994b85e46",
+      "candidate_local_raw_sha256": "f5ff528b733f36795e9e932be77a0bb189d201324d04e076e988c84994b85e46",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "db101f1fdce4ce627e63afed2c9c574e0993a6dd63470558bc2c62d907617902"
+    },
+    "tests/casekit/launch.py": {
+      "baseline_local_raw_sha256": "62497c80e9ab4fe7144780951cde6dc04c019fee238b3de6f8985c2f87e86799",
+      "candidate_local_raw_sha256": "62497c80e9ab4fe7144780951cde6dc04c019fee238b3de6f8985c2f87e86799",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "33a387ac4e5b897f80645cde37a422e4516cb5551c782d891dac1208c46f3b89"
+    },
+    "tests/casekit/recording.py": {
+      "baseline_local_raw_sha256": "8b13ceb6ff53ba76e8dddd9d922f1ebcaf0808559dbc859e68c5ba59742db15a",
+      "candidate_local_raw_sha256": "8b13ceb6ff53ba76e8dddd9d922f1ebcaf0808559dbc859e68c5ba59742db15a",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "2263a4caebf3039cd1bf3c0d98b3f6fb9e83e5c1cc38036e136a05a8551a243c"
+    },
+    "tests/casekit/verify.py": {
+      "baseline_local_raw_sha256": "195708db75bded28283988417ad04150126808e89f37450bee96701a334f014b",
+      "candidate_local_raw_sha256": "195708db75bded28283988417ad04150126808e89f37450bee96701a334f014b",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "4c5786c3bcaa0cfa01e0158890ba63b320d327a252c74c766474a23ac02655f0"
+    },
+    "tests/casekit/__init__.py": {
+      "baseline_local_raw_sha256": "a67287c8e0ea06c733aa963330ccd6eb6fbb7fd467fb0566247f7c40c5ecc211",
+      "candidate_local_raw_sha256": "a67287c8e0ea06c733aa963330ccd6eb6fbb7fd467fb0566247f7c40c5ecc211",
+      "unchanged": true,
+      "candidate_lf_payload_sha256": "bfac748343b61d01e55ac8d8608619e53b5be4d17fba095458850aa64593080b"
+    }
+  },
+  "task_metadata_matches_head_LF": true,
+  "production17_unchanged": true,
+  "maxload_reuse": {
+    "reward": 1,
+    "replay_seconds": 929.1055652469995,
+    "original_result_local_raw_sha256": "b60c9aab3a1a6c525b54a0b4d54ee57f4dac4a804718df4494b76715236846fb"
+  },
+  "old_evidence_policy": "Preserved historical artifacts and labels; new instruction diagnostics are a separate cohort. No old physical tests rerun for text-only change.",
+  "byte_convention": "local_raw hashes are captured host bytes; candidate_lf_payload_sha256 is CRLF-to-LF content for Git publication, not a Git object ID."
+}

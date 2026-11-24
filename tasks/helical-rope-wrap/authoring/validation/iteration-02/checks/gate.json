@@ -1,0 +1,61 @@
+{
+  "task": "<workspace>\\evidence\\pr29-review-repair-20261123\\prototype\\ci05-worktree\\tasks\\helical-rope-wrap",
+  "pass": true,
+  "checks": [
+    {
+      "check": "layout",
+      "pass": true,
+      "detail": "collect /opt/rope-service/collect.py, export /var/lib/rope/export, agent agent"
+    },
+    {
+      "check": "isolation",
+      "pass": true,
+      "detail": "launcher /usr/local/bin/start-rope-service; service, state and collector closed"
+    },
+    {
+      "check": "api",
+      "pass": true,
+      "detail": "/run/rope/endpoint.json; info api=rope-api-v1 backend=mujoco budgets={'actions': 800, 'observations': 1000}"
+    },
+    {
+      "check": "envelope",
+      "pass": true,
+      "detail": "noauth -> 401, unknown -> 404, badjson -> 400"
+    },
+    {
+      "check": "finish",
+      "pass": true,
+      "detail": "finish ok; second finish refused: True; ops after finish accepted: none (of ['move', 'observe'])"
+    },
+    {
+      "check": "nop",
+      "pass": true,
+      "detail": "reward 0; "
+    },
+    {
+      "check": "oracle",
+      "pass": true,
+      "detail": "solve.sh rc 0 in 171 s; reward 1; used None"
+    },
+    {
+      "check": "recording",
+      "pass": true,
+      "detail": "524 entries, ends with finish; edited line: reward 0"
+    },
+    {
+      "check": "replay",
+      "pass": true,
+      "detail": "entry 522 state ctrl.0 +0.01: reward 0; ValueError: recording.jsonl does not match its seal"
+    },
+    {
+      "check": "truncated",
+      "pass": true,
+      "detail": "finish entry removed: reward 0; ValueError: recording.jsonl does not match its seal"
+    },
+    {
+      "check": "unfinished",
+      "pass": true,
+      "detail": "collected without a finish from the agent: last entry finish {'by': 'collector'}; oracle with the collector's finish: reward 0; ValueError: recording.jsonl does not match its seal"
+    }
+  ]
+}

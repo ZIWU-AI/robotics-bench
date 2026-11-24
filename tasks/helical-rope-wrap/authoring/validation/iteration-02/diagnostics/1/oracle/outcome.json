@@ -1,0 +1,83 @@
+{
+  "case": "oracle",
+  "index": 1,
+  "ok": true,
+  "harness_finish": false,
+  "normal_finish": true,
+  "controller_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+  "scene_sha256": "72d744242333ef01721740a15178e894d6d6d738a4ae9a0f64bbc248af04bec0",
+  "freeze_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "harness_sha256": "0b0ff5bf81ed465a23a7760c10f6fc8c51a417619800c38124d9d81a257950c9",
+  "controller": {
+    "command": [
+      "/opt/venv/bin/python",
+      "/task/solution/oracle.py"
+    ],
+    "exit_code": 0,
+    "timed_out": false,
+    "harness_finish": false,
+    "controller_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+    "seconds": 161.08428901200023
+  },
+  "sealed": true,
+  "seal": {
+    "task": "helical-rope-wrap",
+    "tier": "cpu",
+    "scene_sha256": "72d744242333ef01721740a15178e894d6d6d738a4ae9a0f64bbc248af04bec0",
+    "layout_sha256": "9434a92a521700f71644990018dae4533507a5a14eda2a737bf3f20262c4c169",
+    "api": "rope-api-v1",
+    "backend": "mujoco",
+    "budgets": {
+      "actions": 800,
+      "observations": 1000
+    },
+    "started": "2026-11-23T11:21:06+0000",
+    "finished": "2026-11-23T11:23:47+0000",
+    "entries": 524,
+    "last_hash": "5aa62befad48c335bae389f5029302eb9669c559e4f385434564c03dfec3db79",
+    "recording_sha256": "60bca858727906b14801d5b208a379bcf395abe722607312d6e77a8290b7da28",
+    "used": {
+      "actions": 523,
+      "observations": 524
+    }
+  },
+  "verifier_exit_code": 0,
+  "replay": {
+    "ok": true,
+    "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb",
+    "scene_sha256": "72d744242333ef01721740a15178e894d6d6d738a4ae9a0f64bbc248af04bec0",
+    "grade": {
+      "reward": 1,
+      "problems": [],
+      "verdict": {
+        "success": true,
+        "checks": {
+          "pass": true,
+          "checks": {
+            "winding": true,
+            "groove": true,
+            "continuous_groove_coverage": true,
+            "ends": true,
+            "no_core_crossing": true,
+            "no_backtracking": true,
+            "hold": true
+          },
+          "angle": 12.820668489023872,
+          "groove_fraction": 0.9874999999910283,
+          "start_tail_m": 0.0,
+          "end_tail_m": 0.013555651659894023,
+          "backward_rad": -0.0,
+          "continuous_groove_interval_rad": [
+            4.0836153270086044e-11,
+            12.665577938328983
+          ]
+        }
+      },
+      "entries": 524
+    },
+    "exact_all_states": true,
+    "seconds": 147.7913580860004
+  },
+  "seconds": 311.5984886109982,
+  "service_stopped": true
+}

@@ -1,0 +1,277 @@
+[
+  {
+    "reward": 0,
+    "problems": [
+      "malformed request cannot occur in a service recording",
+      "sealed action count does not match requests"
+    ],
+    "verdict": {
+      "success": false,
+      "checks": {
+        "pass": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false
+        },
+        "angle": 1.4929236489521667,
+        "groove_fraction": 0.02916666666634014,
+        "start_tail_m": 0.0,
+        "end_tail_m": 1.0487300117870937,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          0.35770556771059236
+        ]
+      }
+    },
+    "entries": 525,
+    "case": "malformed_record",
+    "elapsed": 0.835702121000395,
+    "expected": 0
+  },
+  {
+    "reward": 0,
+    "problems": [
+      "incorrect refusal result",
+      "sealed action count does not match requests"
+    ],
+    "verdict": {
+      "success": false,
+      "checks": {
+        "pass": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false
+        },
+        "angle": 1.4929236489521667,
+        "groove_fraction": 0.02916666666634014,
+        "start_tail_m": 0.0,
+        "end_tail_m": 1.0487300117870937,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          0.35770556771059236
+        ]
+      }
+    },
+    "entries": 525,
+    "case": "forged_refusal",
+    "elapsed": 0.7091706470000645,
+    "expected": 0
+  },
+  {
+    "reward": 1,
+    "problems": [],
+    "verdict": {
+      "success": true,
+      "checks": {
+        "pass": true,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "angle": 12.764083960468495,
+        "groove_fraction": 0.9916666666611618,
+        "start_tail_m": 0.0,
+        "end_tail_m": 0.00900197435604739,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          12.659965026499881
+        ]
+      }
+    },
+    "entries": 525,
+    "case": "valid_refusal_control",
+    "elapsed": 261.4696388250004,
+    "expected": 1
+  },
+  {
+    "reward": 0,
+    "problems": [
+      "incorrect executed result",
+      "sealed action count does not match requests"
+    ],
+    "verdict": {
+      "success": false,
+      "checks": {
+        "pass": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false
+        },
+        "angle": 1.4929236489521667,
+        "groove_fraction": 0.02916666666634014,
+        "start_tail_m": 0.0,
+        "end_tail_m": 1.0487300117870937,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          0.35770556771059236
+        ]
+      }
+    },
+    "entries": 524,
+    "case": "result_changed",
+    "elapsed": 0.8473675870000079,
+    "expected": 0
+  },
+  {
+    "reward": 0,
+    "problems": [
+      "state mismatch at 0",
+      "sealed action count does not match requests"
+    ],
+    "verdict": {
+      "success": false,
+      "checks": {
+        "pass": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false
+        },
+        "angle": 1.5075104074265357,
+        "groove_fraction": 0.029166666666340105,
+        "start_tail_m": 0.0,
+        "end_tail_m": 1.0487300117870948,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          0.3579533927505933
+        ]
+      }
+    },
+    "entries": 524,
+    "case": "request_changed",
+    "elapsed": 0.9537688150003305,
+    "expected": 0
+  },
+  {
+    "reward": 0,
+    "problems": [
+      "incorrect finish envelope"
+    ],
+    "verdict": {
+      "success": true,
+      "checks": {
+        "pass": true,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "angle": 12.764083960468495,
+        "groove_fraction": 0.9916666666611618,
+        "start_tail_m": 0.0,
+        "end_tail_m": 0.00900197435604739,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          12.659965026499881
+        ]
+      }
+    },
+    "entries": 524,
+    "case": "finish_forged",
+    "elapsed": 247.55837701400014,
+    "expected": 0
+  },
+  {
+    "reward": 0,
+    "problems": [
+      "sealed action count does not match requests"
+    ],
+    "verdict": {
+      "success": true,
+      "checks": {
+        "pass": true,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "angle": 12.764083960468495,
+        "groove_fraction": 0.9916666666611618,
+        "start_tail_m": 0.0,
+        "end_tail_m": 0.00900197435604739,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          12.659965026499881
+        ]
+      }
+    },
+    "entries": 524,
+    "case": "counter_forged",
+    "elapsed": 197.9785490940003,
+    "expected": 0
+  },
+  {
+    "reward": 0,
+    "problems": [
+      "recording exceeds action budget",
+      "sealed action count does not match requests"
+    ],
+    "verdict": {
+      "success": false,
+      "checks": {
+        "pass": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false
+        },
+        "angle": 1.4929236489521667,
+        "groove_fraction": 0.02916666666634014,
+        "start_tail_m": 0.0,
+        "end_tail_m": 1.0487300117870937,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          0.35770556771059236
+        ]
+      }
+    },
+    "entries": 1325,
+    "case": "over_budget",
+    "elapsed": 0.9172029020000991,
+    "expected": 0
+  }
+]

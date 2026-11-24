@@ -1,0 +1,6686 @@
+{
+  "predicate_version": "continuous-groove-v4",
+  "frozen_layouts": 17,
+  "unseen_seed": 20261123,
+  "bands": {
+    "pylon_z_top": [
+      0.156,
+      0.17
+    ],
+    "baffle_z_bot": [
+      0.222,
+      0.24
+    ],
+    "gate_period_s": [
+      7.0,
+      11.5
+    ],
+    "gate_z_low_m": 0.045,
+    "gate_z_high_m": 0.3,
+    "gate_height_m": 0.44,
+    "gate_radius_m": 0.015
+  },
+  "worker": {
+    "model": "deepseek-v4.1-flash",
+    "reasoning_effort": "high",
+    "role": "implementation worker (Orca dispatch)"
+  },
+  "optical_preflight": [
+    {
+      "tag": "frozen",
+      "index": 0,
+      "seed": 117,
+      "marker_residual_m": 0.00040869227110969155,
+      "max_ray_gap_m": 0.00014496249603506402,
+      "center_err_m": 2.4641296516336678e-05,
+      "yaw_err_rad": 0.0007250160677239585,
+      "pitch_err_m": 6.332675305538438e-06,
+      "length_err_m": 2.6878839422872502e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.00021014747368601036,
+          "z_err_m": 0.00039196901947799456
+        },
+        "baffle": {
+          "xy_err_m": 0.0002409220429754682,
+          "z_err_m": 0.0003161822222155497
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0001297956163301858,
+          "r_err_m": 0.0018031078620256158,
+          "z_waveform_err_m": 0.009570087064147297,
+          "period_fit_s": 9.956690452434078,
+          "period_true_s": 9.9474,
+          "rms_m": 0.001262945237272904
+        },
+        "gate2": {
+          "phi_err_m": 0.0001407362214294295,
+          "r_err_m": 0.0009259183797569459,
+          "z_waveform_err_m": 0.004064739731744128,
+          "period_fit_s": 10.835348121617523,
+          "period_true_s": 10.8391,
+          "rms_m": 0.0024221283732373004
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 1,
+      "seed": 800,
+      "marker_residual_m": 0.001150036569137264,
+      "max_ray_gap_m": 0.0012877245357833724,
+      "center_err_m": 0.00029961501103964954,
+      "yaw_err_rad": 0.0016315425212442003,
+      "pitch_err_m": 4.1661072028111035e-05,
+      "length_err_m": 0.0004318611559495089,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0006515459607205577,
+          "z_err_m": 0.0002370098905994933
+        },
+        "baffle": {
+          "xy_err_m": 0.000292623314868307,
+          "z_err_m": 0.0006937336991341414
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0008648233544017476,
+          "r_err_m": 0.002131423832198248,
+          "z_waveform_err_m": 0.01649659659825528,
+          "period_fit_s": 7.337464935402421,
+          "period_true_s": 7.3323,
+          "rms_m": 0.0024827782603353906
+        },
+        "gate2": {
+          "phi_err_m": 0.00046068894200813974,
+          "r_err_m": 0.0008682977582365192,
+          "z_waveform_err_m": 0.0020791488444912853,
+          "period_fit_s": 10.622538348748884,
+          "period_true_s": 10.6173,
+          "rms_m": 0.001425036559291495
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 2,
+      "seed": 801,
+      "marker_residual_m": 0.00020747135312909281,
+      "max_ray_gap_m": 0.0002190579669658683,
+      "center_err_m": 0.0001367410090854749,
+      "yaw_err_rad": 0.0005146505678967905,
+      "pitch_err_m": 9.1977621936086e-05,
+      "length_err_m": 5.0409291817654633e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0001619282276901893,
+          "z_err_m": 0.0005942258954564628
+        },
+        "baffle": {
+          "xy_err_m": 0.00028687547647349875,
+          "z_err_m": 0.0002068541443495664
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 1.099467734153592e-06,
+          "r_err_m": 0.0027738952360486235,
+          "z_waveform_err_m": 0.018668749735578676,
+          "period_fit_s": 11.296707119686802,
+          "period_true_s": 11.2699,
+          "rms_m": 0.00251963109218828
+        },
+        "gate2": {
+          "phi_err_m": 0.0004764162484657933,
+          "r_err_m": 0.0018312464697535502,
+          "z_waveform_err_m": 0.006960834367478741,
+          "period_fit_s": 10.411993584028897,
+          "period_true_s": 10.4066,
+          "rms_m": 0.0019404461335785419
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 3,
+      "seed": 802,
+      "marker_residual_m": 0.0011185085471760062,
+      "max_ray_gap_m": 0.00024644615801441155,
+      "center_err_m": 2.5573864129903257e-05,
+      "yaw_err_rad": 0.0044802291107644,
+      "pitch_err_m": 0.00018074582931406485,
+      "length_err_m": 0.000383252962867342,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0012031720587650711,
+          "z_err_m": 0.0003003015573594392
+        },
+        "baffle": {
+          "xy_err_m": 0.0009357678011919763,
+          "z_err_m": 0.0005085594776483571
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0010333701854563393,
+          "r_err_m": 0.002414869752566079,
+          "z_waveform_err_m": 0.008936928331437846,
+          "period_fit_s": 9.146085429629347,
+          "period_true_s": 9.1474,
+          "rms_m": 0.0019661723072199534
+        },
+        "gate2": {
+          "phi_err_m": 0.0010452705720339229,
+          "r_err_m": 0.0002531509597584747,
+          "z_waveform_err_m": 0.0014846850193081518,
+          "period_fit_s": 8.823044884653475,
+          "period_true_s": 8.8197,
+          "rms_m": 0.0015437052191656986
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 4,
+      "seed": 803,
+      "marker_residual_m": 0.0012877899136111374,
+      "max_ray_gap_m": 0.0006353717147342514,
+      "center_err_m": 0.0004547522188009231,
+      "yaw_err_rad": 0.004803749896764575,
+      "pitch_err_m": 6.760857851987462e-05,
+      "length_err_m": 1.317227086872208e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.001538240608276551,
+          "z_err_m": 0.0004817123472203033
+        },
+        "baffle": {
+          "xy_err_m": 0.0016945282559695507,
+          "z_err_m": 0.00010242281707359413
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0004725470068899114,
+          "r_err_m": 0.003202572835138473,
+          "z_waveform_err_m": 0.008988662316973511,
+          "period_fit_s": 8.881375530622362,
+          "period_true_s": 8.886,
+          "rms_m": 0.0015359321211590054
+        },
+        "gate2": {
+          "phi_err_m": 0.000909279848220111,
+          "r_err_m": 9.0696423176162e-06,
+          "z_waveform_err_m": 0.0023880461889895788,
+          "period_fit_s": 9.326037229033656,
+          "period_true_s": 9.3317,
+          "rms_m": 0.0015986717376252264
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 5,
+      "seed": 804,
+      "marker_residual_m": 0.0005452897785200003,
+      "max_ray_gap_m": 0.0002690462669999853,
+      "center_err_m": 0.00037792101731679153,
+      "yaw_err_rad": 0.003120563722486036,
+      "pitch_err_m": 4.297084044420363e-05,
+      "length_err_m": 0.0001257683528332887,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0010187365135784566,
+          "z_err_m": 0.00033176428767547894
+        },
+        "baffle": {
+          "xy_err_m": 0.0007042256318156471,
+          "z_err_m": 0.0011687250829509332
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.00012401944534392583,
+          "r_err_m": 0.0024425082112845276,
+          "z_waveform_err_m": 0.010761326464005183,
+          "period_fit_s": 8.772949500373237,
+          "period_true_s": 8.7772,
+          "rms_m": 0.002379254376812357
+        },
+        "gate2": {
+          "phi_err_m": 0.000493649656502543,
+          "r_err_m": 0.0011492282287821898,
+          "z_waveform_err_m": 0.003481297997433186,
+          "period_fit_s": 10.596115023137296,
+          "period_true_s": 10.5952,
+          "rms_m": 0.003047221442663733
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 6,
+      "seed": 805,
+      "marker_residual_m": 0.0007005167456342481,
+      "max_ray_gap_m": 0.00042416871363469024,
+      "center_err_m": 0.0004637117176140878,
+      "yaw_err_rad": 0.0037048407100921388,
+      "pitch_err_m": 0.0009432027911600166,
+      "length_err_m": 0.0002274938440729457,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0009424454174105755,
+          "z_err_m": 0.0005066543575995008
+        },
+        "baffle": {
+          "xy_err_m": 0.0012339498730560303,
+          "z_err_m": 0.0014127727490940989
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.001102828481857606,
+          "r_err_m": 0.002317141842005932,
+          "z_waveform_err_m": 0.010494150518608705,
+          "period_fit_s": 9.463707970200531,
+          "period_true_s": 9.453,
+          "rms_m": 0.001581452538865907
+        },
+        "gate2": {
+          "phi_err_m": 0.0006372251841317031,
+          "r_err_m": 0.001466133168238376,
+          "z_waveform_err_m": 0.00712002735188761,
+          "period_fit_s": 11.08343216522026,
+          "period_true_s": 11.0821,
+          "rms_m": 0.0024603287673024008
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 7,
+      "seed": 806,
+      "marker_residual_m": 0.0007599587441843088,
+      "max_ray_gap_m": 0.0001265862607745118,
+      "center_err_m": 0.0006022196740376502,
+      "yaw_err_rad": 0.00329014842687525,
+      "pitch_err_m": 6.800707580201237e-05,
+      "length_err_m": 0.000299326559006996,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0009295483730097798,
+          "z_err_m": 0.0007124678055443479
+        },
+        "baffle": {
+          "xy_err_m": 0.0013008989296169192,
+          "z_err_m": 0.0012934066566140379
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 4.3423479083405956e-05,
+          "r_err_m": 0.0014139334404561776,
+          "z_waveform_err_m": 0.0072607672161741355,
+          "period_fit_s": 7.781545855124661,
+          "period_true_s": 7.7722,
+          "rms_m": 0.001412075501869578
+        },
+        "gate2": {
+          "phi_err_m": 0.0004356549278533439,
+          "r_err_m": 0.0009687207394708519,
+          "z_waveform_err_m": 0.002257275265239833,
+          "period_fit_s": 8.169192972848181,
+          "period_true_s": 8.1683,
+          "rms_m": 0.001619923303310027
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 8,
+      "seed": 807,
+      "marker_residual_m": 0.0008687229615271044,
+      "max_ray_gap_m": 0.00017084464277577542,
+      "center_err_m": 0.00022668047447934572,
+      "yaw_err_rad": 0.005370934965364227,
+      "pitch_err_m": 1.354694935067069e-05,
+      "length_err_m": 0.0002799807969566803,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.001645406567136177,
+          "z_err_m": 0.0003096084223034312
+        },
+        "baffle": {
+          "xy_err_m": 0.0015348924747142047,
+          "z_err_m": 0.001301746006740323
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0005301565415505224,
+          "r_err_m": 0.002149507252589361,
+          "z_waveform_err_m": 0.00987104810641018,
+          "period_fit_s": 8.540343637333931,
+          "period_true_s": 8.5276,
+          "rms_m": 0.0020781661610872132
+        },
+        "gate2": {
+          "phi_err_m": 0.001082105676136765,
+          "r_err_m": 5.203013722038241e-05,
+          "z_waveform_err_m": 0.002275013286484273,
+          "period_fit_s": 10.956013770355355,
+          "period_true_s": 10.9358,
+          "rms_m": 0.0014051229073091744
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 9,
+      "seed": 711,
+      "marker_residual_m": 0.00030507253101949263,
+      "max_ray_gap_m": 0.00042186078655894377,
+      "center_err_m": 0.0001679703146625637,
+      "yaw_err_rad": 0.0004090681734391921,
+      "pitch_err_m": 5.4937137426498694e-05,
+      "length_err_m": 0.00021121303383142553,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.00014428320410679918,
+          "z_err_m": 0.0007142029954084195
+        },
+        "baffle": {
+          "xy_err_m": 0.00020890424065438958,
+          "z_err_m": 0.0013841467804723007
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0005048680271450621,
+          "r_err_m": 0.002203001638738794,
+          "z_waveform_err_m": 0.011459162880649874,
+          "period_fit_s": 8.390818537950924,
+          "period_true_s": 8.3874,
+          "rms_m": 0.001303906149855813
+        },
+        "gate2": {
+          "phi_err_m": 0.00021234308192806956,
+          "r_err_m": 4.896021840888887e-05,
+          "z_waveform_err_m": 0.001325260976623055,
+          "period_fit_s": 7.205112521454903,
+          "period_true_s": 7.2021,
+          "rms_m": 0.0014884750383282765
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 10,
+      "seed": 127,
+      "marker_residual_m": 0.00034495674388456375,
+      "max_ray_gap_m": 0.0002638499479976674,
+      "center_err_m": 0.00028386744635504856,
+      "yaw_err_rad": 0.0023602982358744695,
+      "pitch_err_m": 5.168111315186075e-06,
+      "length_err_m": 5.628688440717511e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0009466000240457279,
+          "z_err_m": 4.719276137571393e-06
+        },
+        "baffle": {
+          "xy_err_m": 0.0007811257089470786,
+          "z_err_m": 0.001227566121664525
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.00023996643241981896,
+          "r_err_m": 0.0017758541972448805,
+          "z_waveform_err_m": 0.006359254968616952,
+          "period_fit_s": 8.497886604000051,
+          "period_true_s": 8.4944,
+          "rms_m": 0.0013729882315777144
+        },
+        "gate2": {
+          "phi_err_m": 0.0004132825487971867,
+          "r_err_m": 0.0002259057173557566,
+          "z_waveform_err_m": 0.0036398013358824866,
+          "period_fit_s": 7.895079921715963,
+          "period_true_s": 7.8941,
+          "rms_m": 0.0029916271336959373
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 11,
+      "seed": 903,
+      "marker_residual_m": 0.0012749852864779435,
+      "max_ray_gap_m": 0.001682294769385535,
+      "center_err_m": 0.00012051794514137467,
+      "yaw_err_rad": 0.006398830458506977,
+      "pitch_err_m": 6.667708811892992e-05,
+      "length_err_m": 0.0005971210040340846,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0015319494556216562,
+          "z_err_m": 0.0002756011108249745
+        },
+        "baffle": {
+          "xy_err_m": 0.0015943487861664533,
+          "z_err_m": 0.00047605848220882985
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0020044374615298837,
+          "r_err_m": 0.0026859192344333704,
+          "z_waveform_err_m": 0.010431861522555264,
+          "period_fit_s": 9.733632918911052,
+          "period_true_s": 9.7273,
+          "rms_m": 0.002606205893486054
+        },
+        "gate2": {
+          "phi_err_m": 0.0013291373623339642,
+          "r_err_m": 5.7957444751399745e-05,
+          "z_waveform_err_m": 0.0009936565805297587,
+          "period_fit_s": 8.593843593984026,
+          "period_true_s": 8.5945,
+          "rms_m": 0.0010288797233381
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 12,
+      "seed": 2026,
+      "marker_residual_m": 0.0001662671710114322,
+      "max_ray_gap_m": 0.00014189745128290852,
+      "center_err_m": 0.0001757178162866826,
+      "yaw_err_rad": 0.00040750854976452644,
+      "pitch_err_m": 4.89541973643301e-05,
+      "length_err_m": 5.1161196305216095e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.000264260965725742,
+          "z_err_m": 0.000543019225046043
+        },
+        "baffle": {
+          "xy_err_m": 0.00024004840533124286,
+          "z_err_m": 4.28422337991341e-05
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 7.145147936863694e-05,
+          "r_err_m": 0.0016855930239118577,
+          "z_waveform_err_m": 0.008352695264179706,
+          "period_fit_s": 9.498686456687485,
+          "period_true_s": 9.4879,
+          "rms_m": 0.0015283027263241727
+        },
+        "gate2": {
+          "phi_err_m": 0.00013894571794565832,
+          "r_err_m": 0.0002058300801139057,
+          "z_waveform_err_m": 0.0014487612304743408,
+          "period_fit_s": 7.432463099724375,
+          "period_true_s": 7.4302,
+          "rms_m": 0.0011878245029972056
+        }
+      },
+      "false_positives": {
+        "markers_front": 2,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 13,
+      "seed": 81,
+      "marker_residual_m": 0.0008458540960262167,
+      "max_ray_gap_m": 0.00037049521946677015,
+      "center_err_m": 0.0007830176132959643,
+      "yaw_err_rad": 0.0047918291550320125,
+      "pitch_err_m": 6.034093978031507e-05,
+      "length_err_m": 0.00032828752030300556,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.001791878162646131,
+          "z_err_m": 0.00041472462909228347
+        },
+        "baffle": {
+          "xy_err_m": 0.0018879310137060242,
+          "z_err_m": 0.0007209094523914494
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.000861987407001436,
+          "r_err_m": 0.0021835559876125787,
+          "z_waveform_err_m": 0.010139908586177263,
+          "period_fit_s": 8.415881286744098,
+          "period_true_s": 8.4132,
+          "rms_m": 0.001326084567601527
+        },
+        "gate2": {
+          "phi_err_m": 0.0007462742481905614,
+          "r_err_m": 0.0014413790441075158,
+          "z_waveform_err_m": 0.001937347725888272,
+          "period_fit_s": 9.705513023048567,
+          "period_true_s": 9.6966,
+          "rms_m": 0.0011601494072539542
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "frozen",
+      "index": 14,
+      "seed": 421,
+      "marker_residual_m": 0.001963009130055355,
+      "max_ray_gap_m": 0.0019651007478230305,
+      "center_err_m": 0.0005479342758801172,
+      "yaw_err_rad": 0.00882616366772454,
+      "pitch_err_m": 0.00020759064731962207,
+      "length_err_m": 0.000368103128609798,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0025677218598416348,
+          "z_err_m": 0.000611101116719498
+        },
+        "baffle": {
+          "xy_err_m": 0.001646725142972335,
+          "z_err_m": 0.0011811561797312464
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.002369616240667459,
+          "r_err_m": 0.0008084818324369525,
+          "z_waveform_err_m": 0.0066352496554058366,
+          "period_fit_s": 11.469997082082628,
+          "period_true_s": 11.4398,
+          "rms_m": 0.0016052380162454025
+        },
+        "gate2": {
+          "phi_err_m": 0.001426576888449408,
+          "r_err_m": 2.6654957388017042e-05,
+          "z_waveform_err_m": 0.0011921900810444308,
+          "period_fit_s": 10.039192534342353,
+          "period_true_s": 10.0426,
+          "rms_m": 0.0016224016767555339
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 15,
+      "seed": 1999,
+      "marker_residual_m": 0.0009002422623980407,
+      "max_ray_gap_m": 0.0003414719190302204,
+      "center_err_m": 0.00022829742008422524,
+      "yaw_err_rad": 0.0035796078946857546,
+      "pitch_err_m": 0.00017262778554543584,
+      "length_err_m": 6.65614350960908e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.001135201779498497,
+          "z_err_m": 0.0007107543377460335
+        },
+        "baffle": {
+          "xy_err_m": 0.000818324274208486,
+          "z_err_m": 0.0008051825499842957
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0004346122740738314,
+          "r_err_m": 0.0018676004264172597,
+          "z_waveform_err_m": 0.012147885445154383,
+          "period_fit_s": 10.475676337406796,
+          "period_true_s": 10.4459,
+          "rms_m": 0.0027195743747486733
+        },
+        "gate2": {
+          "phi_err_m": 0.0005609746521928965,
+          "r_err_m": 7.086681574564047e-05,
+          "z_waveform_err_m": 0.0012491845933205736,
+          "period_fit_s": 10.01105184653739,
+          "period_true_s": 10.0039,
+          "rms_m": 0.0011753617069262068
+        }
+      },
+      "false_positives": {
+        "markers_front": 3,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "frozen",
+      "index": 16,
+      "seed": 31,
+      "marker_residual_m": 0.0021542183467486683,
+      "max_ray_gap_m": 0.0002765123942466102,
+      "center_err_m": 0.0016708849438874438,
+      "yaw_err_rad": 0.0151549514939886,
+      "pitch_err_m": 0.0001176163914931791,
+      "length_err_m": 0.0003662945378513083,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.005594223896429821,
+          "z_err_m": 0.00028649213965034614
+        },
+        "baffle": {
+          "xy_err_m": 0.004043864092302492,
+          "z_err_m": 0.0006689975715034879
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.003087042379666812,
+          "r_err_m": 0.004374541866017684,
+          "z_waveform_err_m": 0.008910461795037683,
+          "period_fit_s": 11.077415507660477,
+          "period_true_s": 11.1205,
+          "rms_m": 0.001714687699223371
+        },
+        "gate2": {
+          "phi_err_m": 0.002504364663884395,
+          "r_err_m": 0.000802513531356186,
+          "z_waveform_err_m": 0.0018071611036000745,
+          "period_fit_s": 10.494077314637442,
+          "period_true_s": 10.4936,
+          "rms_m": 0.0009248019737429028
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": false
+    },
+    {
+      "tag": "unseen",
+      "index": 0,
+      "seed": 9004,
+      "marker_residual_m": 0.0006363908185515492,
+      "max_ray_gap_m": 0.00017664417225910154,
+      "center_err_m": 0.0006485591908210214,
+      "yaw_err_rad": 0.0032785593665107526,
+      "pitch_err_m": 0.00024261332001147135,
+      "length_err_m": 0.00035255694583380404,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0012965695336656655,
+          "z_err_m": 0.0003871563363053443
+        },
+        "baffle": {
+          "xy_err_m": 0.001237357824340668,
+          "z_err_m": 0.0005069480727252218
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0006500994337486656,
+          "r_err_m": 0.0032974500376171667,
+          "z_waveform_err_m": 0.012537052425221254,
+          "period_fit_s": 8.819947449201605,
+          "period_true_s": 8.8174,
+          "rms_m": 0.004245651363052637
+        },
+        "gate2": {
+          "phi_err_m": 0.00028438760408528997,
+          "r_err_m": 0.00021520139256703263,
+          "z_waveform_err_m": 0.001678693721070157,
+          "period_fit_s": 7.428556989224921,
+          "period_true_s": 7.4255,
+          "rms_m": 0.0014951740435678656
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 1,
+      "seed": 9009,
+      "marker_residual_m": 0.00024789450591382106,
+      "max_ray_gap_m": 0.00016581748254092013,
+      "center_err_m": 0.00015673063321719325,
+      "yaw_err_rad": 0.0003587231044642203,
+      "pitch_err_m": 7.607500271018114e-05,
+      "length_err_m": 0.0002197393778096135,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.00011028340579034032,
+          "z_err_m": 0.000493065867183784
+        },
+        "baffle": {
+          "xy_err_m": 0.00015560582149686447,
+          "z_err_m": 0.0008841304001006023
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.00015423561150434235,
+          "r_err_m": 0.0022884536334117356,
+          "z_waveform_err_m": 0.008550922231389847,
+          "period_fit_s": 7.149730788678718,
+          "period_true_s": 7.1476,
+          "rms_m": 0.001613887806021465
+        },
+        "gate2": {
+          "phi_err_m": 0.0001706381484266501,
+          "r_err_m": 0.0007377110939133791,
+          "z_waveform_err_m": 0.00243374974647545,
+          "period_fit_s": 10.43182717074994,
+          "period_true_s": 10.4692,
+          "rms_m": 0.0013906467668499175
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 2,
+      "seed": 9011,
+      "marker_residual_m": 0.00048377552567296396,
+      "max_ray_gap_m": 0.00038963391842151355,
+      "center_err_m": 0.00020278470789924144,
+      "yaw_err_rad": 0.0016734393647786783,
+      "pitch_err_m": 5.947298286582137e-06,
+      "length_err_m": 1.596687945859543e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.000670131700921675,
+          "z_err_m": 0.0011569206265886756
+        },
+        "baffle": {
+          "xy_err_m": 0.0005961781687502355,
+          "z_err_m": 0.000431622760543815
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0002791105240560112,
+          "r_err_m": 0.0016691938140654394,
+          "z_waveform_err_m": 0.00876981078836818,
+          "period_fit_s": 7.469555866285695,
+          "period_true_s": 7.4739,
+          "rms_m": 0.0013138171245506288
+        },
+        "gate2": {
+          "phi_err_m": 0.0003606020782154489,
+          "r_err_m": 0.0003504673676239245,
+          "z_waveform_err_m": 0.0013117057849796887,
+          "period_fit_s": 10.393755725237463,
+          "period_true_s": 10.3926,
+          "rms_m": 0.0011032021244244267
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 3,
+      "seed": 9018,
+      "marker_residual_m": 0.0008298272092784038,
+      "max_ray_gap_m": 0.0004201639983517922,
+      "center_err_m": 5.0577879292000045e-05,
+      "yaw_err_rad": 0.0010687560736964974,
+      "pitch_err_m": 8.586561036846851e-07,
+      "length_err_m": 1.8431461881185385e-05,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.00028412598935435325,
+          "z_err_m": 0.00047942622920910116
+        },
+        "baffle": {
+          "xy_err_m": 0.00031519199691587986,
+          "z_err_m": 0.0014946342609506724
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0003435637037589623,
+          "r_err_m": 0.002287288612856625,
+          "z_waveform_err_m": 0.010399328059631334,
+          "period_fit_s": 10.904646124811906,
+          "period_true_s": 10.9119,
+          "rms_m": 0.0014760217420353502
+        },
+        "gate2": {
+          "phi_err_m": 0.00022162641523166898,
+          "r_err_m": 0.0006323799142774755,
+          "z_waveform_err_m": 0.003513131587386309,
+          "period_fit_s": 10.293723748099739,
+          "period_true_s": 10.2837,
+          "rms_m": 0.0017687124155731434
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 4,
+      "seed": 9022,
+      "marker_residual_m": 0.0010525499780774923,
+      "max_ray_gap_m": 0.0002638071141586426,
+      "center_err_m": 0.0002492890850030709,
+      "yaw_err_rad": 0.002491352690371887,
+      "pitch_err_m": 0.00024745853782336125,
+      "length_err_m": 0.00042437079708901315,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0005061938249356504,
+          "z_err_m": 0.0005628086504637642
+        },
+        "baffle": {
+          "xy_err_m": 0.0008318017148363964,
+          "z_err_m": 0.0007921148889002971
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0009600962474848908,
+          "r_err_m": 0.002502556834025005,
+          "z_waveform_err_m": 0.011685277505117816,
+          "period_fit_s": 10.646801866675023,
+          "period_true_s": 10.6725,
+          "rms_m": 0.0029003247119537977
+        },
+        "gate2": {
+          "phi_err_m": 0.0007181798023288711,
+          "r_err_m": 2.256925083266026e-05,
+          "z_waveform_err_m": 0.00130198159159009,
+          "period_fit_s": 8.937569312652238,
+          "period_true_s": 8.9408,
+          "rms_m": 0.000963967543871903
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 5,
+      "seed": 9028,
+      "marker_residual_m": 0.00041945603269819286,
+      "max_ray_gap_m": 0.00019280909252958195,
+      "center_err_m": 9.750405983591237e-05,
+      "yaw_err_rad": 0.0011714675812783404,
+      "pitch_err_m": 7.276582087886035e-05,
+      "length_err_m": 0.0001490877787837519,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.000234101983615735,
+          "z_err_m": 0.0004698329073700158
+        },
+        "baffle": {
+          "xy_err_m": 0.00043723890542274487,
+          "z_err_m": 0.0011903380983627754
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 3.0031206621304784e-05,
+          "r_err_m": 0.00132768038783726,
+          "z_waveform_err_m": 0.005890577490710966,
+          "period_fit_s": 7.900660355255508,
+          "period_true_s": 7.8838,
+          "rms_m": 0.0015905423021750264
+        },
+        "gate2": {
+          "phi_err_m": 0.00038150096987153904,
+          "r_err_m": 6.528466275684819e-05,
+          "z_waveform_err_m": 0.0008359571500853036,
+          "period_fit_s": 11.14027820561568,
+          "period_true_s": 11.1319,
+          "rms_m": 0.0010170706819949643
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 6,
+      "seed": 9031,
+      "marker_residual_m": 0.0006695766612306952,
+      "max_ray_gap_m": 0.00036877624833636744,
+      "center_err_m": 0.0003871094341316113,
+      "yaw_err_rad": 0.0016320468679193456,
+      "pitch_err_m": 0.00013344052515846389,
+      "length_err_m": 0.00024540437347031485,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.00031236268361640746,
+          "z_err_m": 0.00025726626384847684
+        },
+        "baffle": {
+          "xy_err_m": 0.0005493609104208383,
+          "z_err_m": 0.0010169664207473617
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.00022176848526507135,
+          "r_err_m": 0.001233886370061582,
+          "z_waveform_err_m": 0.008839892331120168,
+          "period_fit_s": 11.617748413460907,
+          "period_true_s": 11.3448,
+          "rms_m": 0.0016023447206822093
+        },
+        "gate2": {
+          "phi_err_m": 0.00010088757851390823,
+          "r_err_m": 0.0007170718465649428,
+          "z_waveform_err_m": 0.002653166321841538,
+          "period_fit_s": 10.833447516790015,
+          "period_true_s": 10.8371,
+          "rms_m": 0.0015115520735325691
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "tag": "unseen",
+      "index": 7,
+      "seed": 9033,
+      "marker_residual_m": 0.001139373343381623,
+      "max_ray_gap_m": 0.0004356005017630522,
+      "center_err_m": 8.08758654085381e-05,
+      "yaw_err_rad": 0.003958911431454326,
+      "pitch_err_m": 0.00011064137223576465,
+      "length_err_m": 0.0002454217299123762,
+      "obstacles": {
+        "pylon": {
+          "xy_err_m": 0.0009900595000838222,
+          "z_err_m": 0.000489849899362127
+        },
+        "baffle": {
+          "xy_err_m": 0.0009822490507193594,
+          "z_err_m": 0.0002009837980789242
+        }
+      },
+      "gates": {
+        "gate1": {
+          "phi_err_m": 0.0009486237382113995,
+          "r_err_m": 0.0029523590682992706,
+          "z_waveform_err_m": 0.012179464020840011,
+          "period_fit_s": 8.809124885239141,
+          "period_true_s": 8.8118,
+          "rms_m": 0.0021341167557403016
+        },
+        "gate2": {
+          "phi_err_m": 0.0007701021469611883,
+          "r_err_m": 0.0009015345368914018,
+          "z_waveform_err_m": 0.004811985572797883,
+          "period_fit_s": 9.753382961854578,
+          "period_true_s": 9.7325,
+          "rms_m": 0.0013824720422877211
+        }
+      },
+      "false_positives": {
+        "markers_front": 4,
+        "markers_top": 4,
+        "gate_bars": {
+          "gate1": true,
+          "gate2": true
+        }
+      },
+      "pass": true
+    }
+  ],
+  "oracle": [
+    {
+      "kind": "oracle",
+      "index": 0,
+      "seed": 117,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000266555,
+      "angle_rad": 12.789865467019839,
+      "hold_s": 3.958,
+      "actions": 661,
+      "observations": 663,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 155,
+      "min_contact_m": -0.00029974339836335694,
+      "deepest_contact": {
+        "time": 16.424000000001776,
+        "distance": -0.00029974339836335694,
+        "geom1": "link15",
+        "geom2": "pylon",
+        "position": [
+          -0.11267583529454539,
+          0.19432060855556482,
+          0.15352078903653182
+        ]
+      },
+      "seconds": 579.2
+    },
+    {
+      "kind": "oracle",
+      "index": 1,
+      "seed": 800,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.991666666654939,
+      "angle_rad": 12.74334780891636,
+      "hold_s": 3.94,
+      "actions": 663,
+      "observations": 665,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.00043629494220838927,
+      "deepest_contact": {
+        "time": 16.140000000001933,
+        "distance": -0.00043629494220838927,
+        "geom1": "link18",
+        "geom2": "pylon",
+        "position": [
+          -0.18879114309363595,
+          0.11045069511047398,
+          0.14551487294245297
+        ]
+      },
+      "seconds": 568.1
+    },
+    {
+      "kind": "oracle",
+      "index": 2,
+      "seed": 801,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.991666666654939,
+      "angle_rad": 12.743221981758701,
+      "hold_s": 3.914,
+      "actions": 674,
+      "observations": 676,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0002310744279955851,
+      "deepest_contact": {
+        "time": 22.31399999999851,
+        "distance": -0.0002310744279955851,
+        "geom1": "link19",
+        "geom2": "pylon",
+        "position": [
+          -0.16636154304989095,
+          0.17470662673822934,
+          0.15991784750811688
+        ]
+      },
+      "seconds": 534.2
+    },
+    {
+      "kind": "oracle",
+      "index": 3,
+      "seed": 802,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9833333333703578,
+      "angle_rad": 12.836343134399387,
+      "hold_s": 3.974,
+      "actions": 691,
+      "observations": 693,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0007488362413880859,
+      "deepest_contact": {
+        "time": 25.081999999996977,
+        "distance": -0.0007488362413880859,
+        "geom1": "link19",
+        "geom2": "pylon",
+        "position": [
+          -0.08102999669618986,
+          0.26435367707667273,
+          0.1557040138257771
+        ]
+      },
+      "seconds": 596.1
+    },
+    {
+      "kind": "oracle",
+      "index": 4,
+      "seed": 803,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9833333333703578,
+      "angle_rad": 12.836476310209061,
+      "hold_s": 3.992,
+      "actions": 621,
+      "observations": 623,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.000508834232409302,
+      "deepest_contact": {
+        "time": 17.026000000001442,
+        "distance": -0.000508834232409302,
+        "geom1": "link18",
+        "geom2": "pylon",
+        "position": [
+          -0.28746394965388555,
+          0.15700418276068911,
+          0.1503656801612588
+        ]
+      },
+      "seconds": 488.0
+    },
+    {
+      "kind": "oracle",
+      "index": 5,
+      "seed": 804,
+      "error": "RuntimeError: gate waveforms did not identify during calibration",
+      "success": false,
+      "checks": {
+        "winding": false,
+        "groove": false,
+        "continuous_groove_coverage": false,
+        "ends": false,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": false,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.0291666666663401,
+      "angle_rad": 1.4924956791603567,
+      "hold_s": 0.0,
+      "actions": 101,
+      "observations": 102,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": null,
+      "contacts": 2,
+      "min_contact_m": -7.284210487491262e-05,
+      "deepest_contact": {
+        "time": 0.09600000000000007,
+        "distance": -7.284210487491262e-05,
+        "geom1": "rail-1_1",
+        "geom2": "link0",
+        "position": [
+          0.102253193187535,
+          -0.09562109369251297,
+          0.11529827891628486
+        ]
+      },
+      "seconds": 73.7
+    },
+    {
+      "kind": "oracle",
+      "index": 6,
+      "seed": 805,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9916666666611618,
+      "angle_rad": 12.743205391312193,
+      "hold_s": 3.932,
+      "actions": 670,
+      "observations": 672,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 155,
+      "min_contact_m": -0.00030962566811735094,
+      "deepest_contact": {
+        "time": 22.45799999999843,
+        "distance": -0.00030962566811735094,
+        "geom1": "link16",
+        "geom2": "pylon",
+        "position": [
+          -0.07176744969904468,
+          -0.2623704251412483,
+          0.15067185485571885
+        ]
+      },
+      "seconds": 552.2
+    },
+    {
+      "kind": "oracle",
+      "index": 7,
+      "seed": 806,
+      "error": "RuntimeError: {'ok': False, 'refused': ['actions budget used up'], 'left': {'actions': 0, 'observations': 197}}",
+      "success": false,
+      "checks": {
+        "winding": false,
+        "groove": false,
+        "continuous_groove_coverage": false,
+        "ends": false,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": false,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.8249999999655605,
+      "angle_rad": 11.431477314425305,
+      "hold_s": 0.0,
+      "actions": 800,
+      "observations": 803,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": null,
+      "contacts": 132,
+      "min_contact_m": -0.0004647215595724426,
+      "deepest_contact": {
+        "time": 19.12400000000028,
+        "distance": -0.0004647215595724426,
+        "geom1": "link19",
+        "geom2": "pylon",
+        "position": [
+          -0.042826416423456734,
+          -0.2114514201396805,
+          0.1615558768464343
+        ]
+      },
+      "seconds": 507.7
+    },
+    {
+      "kind": "oracle",
+      "index": 8,
+      "seed": 807,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9833333332922843,
+      "angle_rad": 12.83642841208673,
+      "hold_s": 4.0040000000000004,
+      "actions": 615,
+      "observations": 617,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 155,
+      "min_contact_m": -0.0005135183173601964,
+      "deepest_contact": {
+        "time": 17.998000000000903,
+        "distance": -0.0005135183173601964,
+        "geom1": "link18",
+        "geom2": "pylon",
+        "position": [
+          -0.275626098574888,
+          0.00029364235077294464,
+          0.16992966832205575
+        ]
+      },
+      "seconds": 460.1
+    },
+    {
+      "kind": "oracle",
+      "index": 9,
+      "seed": 711,
+      "error": "RuntimeError: {'ok': False, 'refused': ['actions budget used up'], 'left': {'actions': 0, 'observations': 197}}",
+      "success": false,
+      "checks": {
+        "winding": false,
+        "groove": false,
+        "continuous_groove_coverage": false,
+        "ends": false,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": false,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.8249999999795674,
+      "angle_rad": 11.382682401507072,
+      "hold_s": 0.0,
+      "actions": 800,
+      "observations": 803,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": null,
+      "contacts": 135,
+      "min_contact_m": -0.00027929088030768197,
+      "deepest_contact": {
+        "time": 21.74199999999883,
+        "distance": -0.00027929088030768197,
+        "geom1": "link17",
+        "geom2": "pylon",
+        "position": [
+          -0.11434861769744692,
+          -0.14797083493525837,
+          0.15442965245531493
+        ]
+      },
+      "seconds": 528.5
+    },
+    {
+      "kind": "oracle",
+      "index": 10,
+      "seed": 127,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000175176,
+      "angle_rad": 12.762995186340024,
+      "hold_s": 3.986,
+      "actions": 699,
+      "observations": 701,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0005147547746228438,
+      "deepest_contact": {
+        "time": 29.815999999994354,
+        "distance": -0.0005147547746228438,
+        "geom1": "link20",
+        "geom2": "pylon",
+        "position": [
+          -0.1737859413750455,
+          0.24568915292542515,
+          0.16201722495327453
+        ]
+      },
+      "seconds": 608.2
+    },
+    {
+      "kind": "oracle",
+      "index": 11,
+      "seed": 903,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000162625,
+      "angle_rad": 12.807792764750934,
+      "hold_s": 3.922,
+      "actions": 662,
+      "observations": 664,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0004040772033450592,
+      "deepest_contact": {
+        "time": 24.845999999997108,
+        "distance": -0.0004040772033450592,
+        "geom1": "link19",
+        "geom2": "pylon",
+        "position": [
+          -0.2044439793931428,
+          -0.06145959794713647,
+          0.1699228972057129
+        ]
+      },
+      "seconds": 511.6
+    },
+    {
+      "kind": "oracle",
+      "index": 12,
+      "seed": 2026,
+      "error": "RuntimeError: {'ok': False, 'refused': ['actions budget used up'], 'left': {'actions': 0, 'observations': 197}}",
+      "success": false,
+      "checks": {
+        "winding": false,
+        "groove": false,
+        "continuous_groove_coverage": false,
+        "ends": false,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": false,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.8208333333686846,
+      "angle_rad": 11.364311921678095,
+      "hold_s": 0.0,
+      "actions": 800,
+      "observations": 803,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": null,
+      "contacts": 131,
+      "min_contact_m": -0.000163532282016432,
+      "deepest_contact": {
+        "time": 22.78599999999825,
+        "distance": -0.000163532282016432,
+        "geom1": "link17",
+        "geom2": "pylon",
+        "position": [
+          -0.15874862644520682,
+          0.11141649387975466,
+          0.15127555049456348
+        ]
+      },
+      "seconds": 507.8
+    },
+    {
+      "kind": "oracle",
+      "index": 13,
+      "seed": 81,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9874999999793549,
+      "angle_rad": 12.763004223836214,
+      "hold_s": 4.01,
+      "actions": 670,
+      "observations": 672,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.00040458662218875686,
+      "deepest_contact": {
+        "time": 22.953999999998157,
+        "distance": -0.00040458662218875686,
+        "geom1": "link20",
+        "geom2": "pylon",
+        "position": [
+          -0.1888049893033714,
+          -0.2453918604790391,
+          0.15213590231367907
+        ]
+      },
+      "seconds": 569.7
+    },
+    {
+      "kind": "oracle",
+      "index": 14,
+      "seed": 421,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000323988,
+      "angle_rad": 12.761899361795425,
+      "hold_s": 3.92,
+      "actions": 653,
+      "observations": 655,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0004249250764243183,
+      "deepest_contact": {
+        "time": 20.235999999999663,
+        "distance": -0.0004249250764243183,
+        "geom1": "link19",
+        "geom2": "pylon",
+        "position": [
+          -0.2163348324743476,
+          0.13075952428427945,
+          0.16999589185652025
+        ]
+      },
+      "seconds": 565.1
+    },
+    {
+      "kind": "oracle",
+      "index": 15,
+      "seed": 1999,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000143747,
+      "angle_rad": 12.786950633237058,
+      "hold_s": 3.964,
+      "actions": 687,
+      "observations": 689,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -9.559510069996049e-05,
+      "deepest_contact": {
+        "time": 17.29800000000129,
+        "distance": -9.559510069996049e-05,
+        "geom1": "link2",
+        "geom2": "core",
+        "position": [
+          0.08419816938799274,
+          -0.043080788862437956,
+          0.12138900249354057
+        ]
+      },
+      "seconds": 581.1
+    },
+    {
+      "kind": "oracle",
+      "index": 16,
+      "seed": 31,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9916666666788455,
+      "angle_rad": 12.74935025870697,
+      "hold_s": 3.894,
+      "actions": 647,
+      "observations": 649,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0003851847515598697,
+      "deepest_contact": {
+        "time": 20.577999999999474,
+        "distance": -0.0003851847515598697,
+        "geom1": "link21",
+        "geom2": "pylon",
+        "position": [
+          -0.23327351620817433,
+          -0.01992810595065897,
+          0.16284999073112005
+        ]
+      },
+      "seconds": 563.5
+    },
+    {
+      "kind": "oracle",
+      "index": 17,
+      "seed": 9004,
+      "error": "RuntimeError: gate waveforms did not identify during calibration",
+      "success": false,
+      "checks": {
+        "winding": false,
+        "groove": false,
+        "continuous_groove_coverage": false,
+        "ends": false,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": false,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.029166666666544126,
+      "angle_rad": 1.4926227853359468,
+      "hold_s": 0.0,
+      "actions": 101,
+      "observations": 102,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": null,
+      "contacts": 3,
+      "min_contact_m": -7.278186067271111e-05,
+      "deepest_contact": {
+        "time": 0.09600000000000007,
+        "distance": -7.278186067271111e-05,
+        "geom1": "rail-1_1",
+        "geom2": "link0",
+        "position": [
+          0.07804447653541627,
+          0.02219772078131667,
+          0.11510344606435946
+        ]
+      },
+      "seconds": 70.3
+    },
+    {
+      "kind": "oracle",
+      "index": 18,
+      "seed": 9009,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000295876,
+      "angle_rad": 12.807226862777505,
+      "hold_s": 3.898,
+      "actions": 687,
+      "observations": 689,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 155,
+      "min_contact_m": -0.0005156021634614579,
+      "deepest_contact": {
+        "time": 19.781999999999915,
+        "distance": -0.0005156021634614579,
+        "geom1": "link17",
+        "geom2": "pylon",
+        "position": [
+          -0.0629245116137453,
+          -0.24624487928897693,
+          0.1560452225396901
+        ]
+      },
+      "seconds": 622.1
+    },
+    {
+      "kind": "oracle",
+      "index": 19,
+      "seed": 9011,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000326821,
+      "angle_rad": 12.801957170291987,
+      "hold_s": 3.906,
+      "actions": 661,
+      "observations": 663,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 152,
+      "min_contact_m": -0.0006446352962209672,
+      "deepest_contact": {
+        "time": 19.452000000000098,
+        "distance": -0.0006446352962209672,
+        "geom1": "link15",
+        "geom2": "pylon",
+        "position": [
+          -0.08587029594703513,
+          0.19569991415507537,
+          0.1552374555242668
+        ]
+      },
+      "seconds": 569.5
+    },
+    {
+      "kind": "oracle",
+      "index": 20,
+      "seed": 9018,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.987500000030943,
+      "angle_rad": 12.785419088783534,
+      "hold_s": 3.974,
+      "actions": 694,
+      "observations": 696,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.00021238362270314904,
+      "deepest_contact": {
+        "time": 24.261999999997432,
+        "distance": -0.00021238362270314904,
+        "geom1": "link17",
+        "geom2": "pylon",
+        "position": [
+          -0.09242235922066765,
+          -0.22725489923081474,
+          0.15281051694339787
+        ]
+      },
+      "seconds": 584.1
+    },
+    {
+      "kind": "oracle",
+      "index": 21,
+      "seed": 9022,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9833333333329926,
+      "angle_rad": 12.823295484023783,
+      "hold_s": 4.034,
+      "actions": 649,
+      "observations": 651,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 155,
+      "min_contact_m": -0.0006451977434392396,
+      "deepest_contact": {
+        "time": 18.280000000000747,
+        "distance": -0.0006451977434392396,
+        "geom1": "link18",
+        "geom2": "pylon",
+        "position": [
+          -0.23326277872188522,
+          0.1411233708105863,
+          0.1566261405822567
+        ]
+      },
+      "seconds": 536.3
+    },
+    {
+      "kind": "oracle",
+      "index": 22,
+      "seed": 9028,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9833333333070428,
+      "angle_rad": 12.822615068166682,
+      "hold_s": 4.048,
+      "actions": 678,
+      "observations": 680,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 156,
+      "min_contact_m": -0.00020185591955908548,
+      "deepest_contact": {
+        "time": 18.0020000000009,
+        "distance": -0.00020185591955908548,
+        "geom1": "link17",
+        "geom2": "pylon",
+        "position": [
+          -0.24457991754049352,
+          -0.06214574122286806,
+          0.1536006077236875
+        ]
+      },
+      "seconds": 593.3
+    },
+    {
+      "kind": "oracle",
+      "index": 23,
+      "seed": 9031,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.987500000009028,
+      "angle_rad": 12.784883639811575,
+      "hold_s": 3.986,
+      "actions": 652,
+      "observations": 654,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0004912541376499218,
+      "deepest_contact": {
+        "time": 19.835999999999885,
+        "distance": -0.0004912541376499218,
+        "geom1": "link18",
+        "geom2": "pylon",
+        "position": [
+          -0.14888881082291464,
+          0.1979203343152801,
+          0.1629842348635589
+        ]
+      },
+      "seconds": 570.7
+    },
+    {
+      "kind": "oracle",
+      "index": 24,
+      "seed": 9033,
+      "error": null,
+      "success": true,
+      "checks": {
+        "winding": true,
+        "groove": true,
+        "continuous_groove_coverage": true,
+        "ends": true,
+        "no_core_crossing": true,
+        "no_backtracking": true,
+        "hold": true,
+        "no_gate_contact": true
+      },
+      "groove_fraction": 0.9875000000098553,
+      "angle_rad": 12.798418514012848,
+      "hold_s": 3.914,
+      "actions": 659,
+      "observations": 661,
+      "gate_contacts": 0,
+      "first_gate_contact": null,
+      "fault": null,
+      "replay_ok": true,
+      "contacts": 154,
+      "min_contact_m": -0.0005770121847895131,
+      "deepest_contact": {
+        "time": 17.890000000000963,
+        "distance": -0.0005770121847895131,
+        "geom1": "link18",
+        "geom2": "pylon",
+        "position": [
+          -0.07003970796411019,
+          -0.26814178957382284,
+          0.1520178412299129
+        ]
+      },
+      "seconds": 554.2
+    }
+  ],
+  "ablations": {
+    "ablation_static_v3": [
+      {
+        "kind": "ablation_static_v3",
+        "index": 0,
+        "seed": 117,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000266555,
+        "angle_rad": 12.789864820512928,
+        "hold_s": 3.958,
+        "actions": 591,
+        "observations": 592,
+        "gate_contacts": 7350,
+        "first_gate_contact": {
+          "time": 0.22200000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -7.871727583541772e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 155,
+        "min_contact_m": -0.0007199077543984141,
+        "deepest_contact": {
+          "time": 51.7660000000173,
+          "distance": -0.0007199077543984141,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.13776333096292165,
+            -0.15134891350597895,
+            0.20448450908939825
+          ]
+        },
+        "seconds": 547.8
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 1,
+        "seed": 800,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.991666666654939,
+        "angle_rad": 12.743347269724506,
+        "hold_s": 3.94,
+        "actions": 542,
+        "observations": 543,
+        "gate_contacts": 2414,
+        "first_gate_contact": {
+          "time": 16.584000000001687,
+          "geom1": "link29",
+          "geom2": "gate2",
+          "distance": -4.298540800262707e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0002987115230737021,
+        "deepest_contact": {
+          "time": 2.9879999999998925,
+          "distance": -0.0002987115230737021,
+          "geom1": "link18",
+          "geom2": "pylon",
+          "position": [
+            -0.1885819739078325,
+            0.11046145277452957,
+            0.14415615434174178
+          ]
+        },
+        "seconds": 312.2
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 2,
+        "seed": 801,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.991666666654939,
+        "angle_rad": 12.743230844559038,
+        "hold_s": 3.914,
+        "actions": 561,
+        "observations": 562,
+        "gate_contacts": 4722,
+        "first_gate_contact": {
+          "time": 0.21800000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00038242314649673164
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0006526022499583925,
+        "deepest_contact": {
+          "time": 0.22000000000000017,
+          "distance": -0.0006526022499583925,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.12420419496981083,
+            0.11378168792536396,
+            0.10435966156350003
+          ]
+        },
+        "seconds": 315.9
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 3,
+        "seed": 802,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333333703578,
+        "angle_rad": 12.836346565159431,
+        "hold_s": 3.974,
+        "actions": 538,
+        "observations": 539,
+        "gate_contacts": 2469,
+        "first_gate_contact": {
+          "time": 0.22200000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00038392979491159
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0006839556608952651,
+        "deepest_contact": {
+          "time": 0.22400000000000017,
+          "distance": -0.0006839556608952651,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.20740703444512187,
+            0.1951564295857351,
+            0.10551033883862126
+          ]
+        },
+        "seconds": 304.0
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 4,
+        "seed": 803,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.983333333370358,
+        "angle_rad": 12.836487731724318,
+        "hold_s": 3.992,
+        "actions": 551,
+        "observations": 552,
+        "gate_contacts": 3945,
+        "first_gate_contact": {
+          "time": 0.22600000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0007609467455559579
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0013476242157994594,
+        "deepest_contact": {
+          "time": 0.23000000000000018,
+          "distance": -0.0013476242157994594,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.09891368192034442,
+            0.2653482168961417,
+            0.11039903696828918
+          ]
+        },
+        "seconds": 313.2
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 5,
+        "seed": 804,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9916666666611618,
+        "angle_rad": 12.743035944953364,
+        "hold_s": 3.912,
+        "actions": 556,
+        "observations": 557,
+        "gate_contacts": 2889,
+        "first_gate_contact": {
+          "time": 0.6560000000000005,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00021702810670338937
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 155,
+        "min_contact_m": -0.0006412322616737957,
+        "deepest_contact": {
+          "time": 45.314000000009415,
+          "distance": -0.0006412322616737957,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.2344393207495366,
+            0.03152728694721104,
+            0.2121174510081586
+          ]
+        },
+        "seconds": 349.0
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 6,
+        "seed": 805,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9916666666611618,
+        "angle_rad": 12.743204184053495,
+        "hold_s": 3.932,
+        "actions": 540,
+        "observations": 541,
+        "gate_contacts": 2143,
+        "first_gate_contact": {
+          "time": 16.36200000000181,
+          "geom1": "link30",
+          "geom2": "gate2",
+          "distance": -7.111204543228632e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 155,
+        "min_contact_m": -0.0003779563437915916,
+        "deepest_contact": {
+          "time": 20.63999999999944,
+          "distance": -0.0003779563437915916,
+          "geom1": "link31",
+          "geom2": "gate2",
+          "position": [
+            -0.025892647290014142,
+            0.19074958225132443,
+            0.16378611725486444
+          ]
+        },
+        "seconds": 309.9
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 7,
+        "seed": 806,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333332922846,
+        "angle_rad": 12.836253350047798,
+        "hold_s": 4.008,
+        "actions": 575,
+        "observations": 576,
+        "gate_contacts": 5187,
+        "first_gate_contact": {
+          "time": 17.056000000001426,
+          "geom1": "link30",
+          "geom2": "gate2",
+          "distance": -7.997544168403953e-06
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 153,
+        "min_contact_m": -0.0008649214866660246,
+        "deepest_contact": {
+          "time": 46.754000000011175,
+          "distance": -0.0008649214866660246,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.0838328267363002,
+            0.24449516041196975,
+            0.20616847922522946
+          ]
+        },
+        "seconds": 358.5
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 8,
+        "seed": 807,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333332922846,
+        "angle_rad": 12.83643983863198,
+        "hold_s": 4.0040000000000004,
+        "actions": 543,
+        "observations": 544,
+        "gate_contacts": 3962,
+        "first_gate_contact": {
+          "time": 0.22800000000000017,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -8.303329197183532e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 155,
+        "min_contact_m": -0.0006876547287820492,
+        "deepest_contact": {
+          "time": 0.23200000000000018,
+          "distance": -0.0006876547287820492,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.10026416208355368,
+            -0.18506694351463343,
+            0.11482305093576277
+          ]
+        },
+        "seconds": 309.9
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 9,
+        "seed": 711,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9874999999817344,
+        "angle_rad": 12.771881331422133,
+        "hold_s": 4.034,
+        "actions": 554,
+        "observations": 555,
+        "gate_contacts": 3176,
+        "first_gate_contact": {
+          "time": 0.21400000000000016,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0004154512790865944
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0008801250220534969,
+        "deepest_contact": {
+          "time": 41.98200000000534,
+          "distance": -0.0008801250220534969,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.12456318242159871,
+            0.21741566945726254,
+            0.1994694775700586
+          ]
+        },
+        "seconds": 345.6
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 10,
+        "seed": 127,
+        "error": null,
+        "success": true,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.9875000000175174,
+        "angle_rad": 12.762994770378397,
+        "hold_s": 3.986,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0003799308476569738,
+        "deepest_contact": {
+          "time": 5.659999999999599,
+          "distance": -0.0003799308476569738,
+          "geom1": "link20",
+          "geom2": "pylon",
+          "position": [
+            -0.17378956636342227,
+            0.2456085102543623,
+            0.16198793493049593
+          ]
+        },
+        "seconds": 296.3
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 11,
+        "seed": 903,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000162625,
+        "angle_rad": 12.807792082943978,
+        "hold_s": 3.922,
+        "actions": 554,
+        "observations": 555,
+        "gate_contacts": 3937,
+        "first_gate_contact": {
+          "time": 17.060000000001423,
+          "geom1": "link30",
+          "geom2": "gate2",
+          "distance": -2.6578217995763126e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0006775403914812718,
+        "deepest_contact": {
+          "time": 45.95000000001019,
+          "distance": -0.0006775403914812718,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.211645524020302,
+            0.09417675853082602,
+            0.1982514146834689
+          ]
+        },
+        "seconds": 334.5
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 12,
+        "seed": 2026,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000317626,
+        "angle_rad": 12.802785897827,
+        "hold_s": 3.9,
+        "actions": 534,
+        "observations": 535,
+        "gate_contacts": 1956,
+        "first_gate_contact": {
+          "time": 17.13600000000138,
+          "geom1": "link31",
+          "geom2": "gate2",
+          "distance": -2.866103603575785e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0006633434044663209,
+        "deepest_contact": {
+          "time": 17.676000000001082,
+          "distance": -0.0006633434044663209,
+          "geom1": "link31",
+          "geom2": "gate2",
+          "position": [
+            0.15157554847162838,
+            -0.19402655101381971,
+            0.1401873065801832
+          ]
+        },
+        "seconds": 313.4
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 13,
+        "seed": 81,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9874999999793549,
+        "angle_rad": 12.76300774915819,
+        "hold_s": 4.01,
+        "actions": 550,
+        "observations": 551,
+        "gate_contacts": 3402,
+        "first_gate_contact": {
+          "time": 0.23200000000000018,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0002525223230848473
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0008006245073263821,
+        "deepest_contact": {
+          "time": 44.546000000008476,
+          "distance": -0.0008006245073263821,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.043640758940619424,
+            0.17352550002348022,
+            0.20357431905180337
+          ]
+        },
+        "seconds": 343.8
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 14,
+        "seed": 421,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000323988,
+        "angle_rad": 12.76190351777714,
+        "hold_s": 3.92,
+        "actions": 585,
+        "observations": 586,
+        "gate_contacts": 6654,
+        "first_gate_contact": {
+          "time": 0.2460000000000002,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -1.4952129900791013e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0006107561333628291,
+        "deepest_contact": {
+          "time": 6.683999999999486,
+          "distance": -0.0006107561333628291,
+          "geom1": "link19",
+          "geom2": "pylon",
+          "position": [
+            -0.2085296909930202,
+            0.15701235610763736,
+            0.15631836488308676
+          ]
+        },
+        "seconds": 368.6
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 15,
+        "seed": 1999,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000143744,
+        "angle_rad": 12.786955562611109,
+        "hold_s": 3.964,
+        "actions": 565,
+        "observations": 566,
+        "gate_contacts": 4354,
+        "first_gate_contact": {
+          "time": 0.23400000000000018,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0002943557939174145
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0006347243421495376,
+        "deepest_contact": {
+          "time": 47.62600000001224,
+          "distance": -0.0006347243421495376,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.22730828095609823,
+            0.08890761113014746,
+            0.20558608947470533
+          ]
+        },
+        "seconds": 342.4
+      },
+      {
+        "kind": "ablation_static_v3",
+        "index": 16,
+        "seed": 31,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.6000000000148626,
+        "angle_rad": 12.638606817391775,
+        "hold_s": 0.0,
+        "actions": 576,
+        "observations": 577,
+        "gate_contacts": 5109,
+        "first_gate_contact": {
+          "time": 0.20200000000000015,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -0.000674218078998476
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 106,
+        "min_contact_m": -0.001191309784171611,
+        "deepest_contact": {
+          "time": 0.20600000000000016,
+          "distance": -0.001191309784171611,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.023989444507273396,
+            0.24385510693375517,
+            0.1025869749616867
+          ]
+        },
+        "seconds": 379.8
+      }
+    ],
+    "ablation_open_loop": [
+      {
+        "kind": "ablation_open_loop",
+        "index": 0,
+        "seed": 117,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.7958333333620972,
+        "angle_rad": 12.674592179438966,
+        "hold_s": 0.0,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 3111,
+        "first_gate_contact": {
+          "time": 0.25600000000000017,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -0.00011619528128582399
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 144,
+        "min_contact_m": -0.0017832318127494022,
+        "deepest_contact": {
+          "time": 69.14400000002026,
+          "distance": -0.0017832318127494022,
+          "geom1": "rail-1_104",
+          "geom2": "link51",
+          "position": [
+            -0.0002606927067423863,
+            -0.08387199227125838,
+            0.1756624505896389
+          ]
+        },
+        "seconds": 463.4
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 1,
+        "seed": 800,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.991666666654939,
+        "angle_rad": 12.743346501876575,
+        "hold_s": 5.124,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 4276,
+        "first_gate_contact": {
+          "time": 26.52199999999618,
+          "geom1": "link29",
+          "geom2": "gate2",
+          "distance": -1.9391321223697494e-06
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.001495030710009039,
+        "deepest_contact": {
+          "time": 32.33399999999355,
+          "distance": -0.001495030710009039,
+          "geom1": "rail-1_47",
+          "geom2": "link23",
+          "position": [
+            0.09916142268399242,
+            -0.09914456612103492,
+            0.14117307828067144
+          ]
+        },
+        "seconds": 465.0
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 2,
+        "seed": 801,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.991666666654939,
+        "angle_rad": 12.743210746124971,
+        "hold_s": 5.08,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 2813,
+        "first_gate_contact": {
+          "time": 0.2480000000000002,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00014756422080410524
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0013795644333753614,
+        "deepest_contact": {
+          "time": 6.10599999999955,
+          "distance": -0.0013795644333753614,
+          "geom1": "rail1_13",
+          "geom2": "link6",
+          "position": [
+            0.016406837431473534,
+            0.02266802307402367,
+            0.13570495037681962
+          ]
+        },
+        "seconds": 459.6
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 3,
+        "seed": 802,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333333703578,
+        "angle_rad": 12.836342730796547,
+        "hold_s": 5.174,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 927,
+        "first_gate_contact": {
+          "time": 0.25400000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00012784094578947944
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.000664634355624119,
+        "deepest_contact": {
+          "time": 8.86599999999963,
+          "distance": -0.000664634355624119,
+          "geom1": "link19",
+          "geom2": "pylon",
+          "position": [
+            -0.08072293489118176,
+            0.26401778404268106,
+            0.15589777784711434
+          ]
+        },
+        "seconds": 451.4
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 4,
+        "seed": 803,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333333703578,
+        "angle_rad": 12.8364864244179,
+        "hold_s": 5.2,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 2836,
+        "first_gate_contact": {
+          "time": 0.2420000000000002,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -9.387484089028869e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0043979602879190205,
+        "deepest_contact": {
+          "time": 5.437999999999623,
+          "distance": -0.0043979602879190205,
+          "geom1": "link18",
+          "geom2": "pylon",
+          "position": [
+            -0.28780855115198445,
+            0.15508894018193214,
+            0.12001092627809061
+          ]
+        },
+        "seconds": 450.8
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 5,
+        "seed": 804,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9916666666611618,
+        "angle_rad": 12.743038229808947,
+        "hold_s": 5.08,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 1244,
+        "first_gate_contact": {
+          "time": 0.6600000000000005,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00012924721917529974
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 155,
+        "min_contact_m": -0.0015673765445791267,
+        "deepest_contact": {
+          "time": 1.6900000000000013,
+          "distance": -0.0015673765445791267,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.03240036892955272,
+            -0.24201508965469076,
+            0.13268439928411993
+          ]
+        },
+        "seconds": 456.6
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 6,
+        "seed": 805,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9916666666611618,
+        "angle_rad": 12.743203259910992,
+        "hold_s": 5.114,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 2970,
+        "first_gate_contact": {
+          "time": 26.155999999996382,
+          "geom1": "link30",
+          "geom2": "gate2",
+          "distance": -3.4126098896435086e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 155,
+        "min_contact_m": -0.0011023981395677038,
+        "deepest_contact": {
+          "time": 32.017999999993165,
+          "distance": -0.0011023981395677038,
+          "geom1": "rail1_52",
+          "geom2": "link25",
+          "position": [
+            -0.021437991276034105,
+            0.04147091281640153,
+            0.16512543441050706
+          ]
+        },
+        "seconds": 457.0
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 7,
+        "seed": 806,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333332922843,
+        "angle_rad": 12.836252645939975,
+        "hold_s": 5.226,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 362,
+        "first_gate_contact": {
+          "time": 41.034000000004184,
+          "geom1": "link42",
+          "geom2": "gate1",
+          "distance": -6.698021078923797e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0019048761827461097,
+        "deepest_contact": {
+          "time": 41.80600000000513,
+          "distance": -0.0019048761827461097,
+          "geom1": "rail1_64",
+          "geom2": "link31",
+          "position": [
+            0.12334727805574565,
+            0.04833143303283753,
+            0.1745946622545965
+          ]
+        },
+        "seconds": 448.5
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 8,
+        "seed": 807,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9833333332922846,
+        "angle_rad": 12.836429377434552,
+        "hold_s": 5.218,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 4868,
+        "first_gate_contact": {
+          "time": 0.2440000000000002,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00024835148280442443
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.002196650931533077,
+        "deepest_contact": {
+          "time": 6.289999999999529,
+          "distance": -0.002196650931533077,
+          "geom1": "link18",
+          "geom2": "pylon",
+          "position": [
+            -0.27953411815624324,
+            -0.02588388698758275,
+            0.12432011928621726
+          ]
+        },
+        "seconds": 479.1
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 9,
+        "seed": 711,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.7458333333148615,
+        "angle_rad": 12.65857539210788,
+        "hold_s": 0.0,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 2010,
+        "first_gate_contact": {
+          "time": 0.23800000000000018,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -4.79632494327668e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 149,
+        "min_contact_m": -0.0008100928230871159,
+        "deepest_contact": {
+          "time": 68.21600000002242,
+          "distance": -0.0008100928230871159,
+          "geom1": "rail-1_103",
+          "geom2": "link51",
+          "position": [
+            -0.001343136414293063,
+            0.11232546923513771,
+            0.1741680937329853
+          ]
+        },
+        "seconds": 482.7
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 10,
+        "seed": 127,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000175174,
+        "angle_rad": 12.762993320696044,
+        "hold_s": 5.192,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 3244,
+        "first_gate_contact": {
+          "time": 27.359999999995715,
+          "geom1": "link29",
+          "geom2": "gate2",
+          "distance": -3.896177054627057e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0008780443835452179,
+        "deepest_contact": {
+          "time": 67.84200000002329,
+          "distance": -0.0008780443835452179,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.01282017119454597,
+            -0.18470030378317148,
+            0.189651806397432
+          ]
+        },
+        "seconds": 471.5
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 11,
+        "seed": 903,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000162625,
+        "angle_rad": 12.807790791316002,
+        "hold_s": 5.096,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 2137,
+        "first_gate_contact": {
+          "time": 27.285999999995756,
+          "geom1": "link30",
+          "geom2": "gate2",
+          "distance": -5.1689584274447996e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0011383848611160492,
+        "deepest_contact": {
+          "time": 68.30400000002221,
+          "distance": -0.0011383848611160492,
+          "geom1": "",
+          "geom2": "gate2",
+          "position": [
+            0.2044618926736444,
+            0.075794646517781,
+            0.11762418632555341
+          ]
+        },
+        "seconds": 477.9
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 12,
+        "seed": 2026,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000317624,
+        "angle_rad": 12.802785017434507,
+        "hold_s": 5.0600000000000005,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 1478,
+        "first_gate_contact": {
+          "time": 26.785999999996033,
+          "geom1": "link31",
+          "geom2": "gate2",
+          "distance": -1.0170423329933058e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.002193757080865169,
+        "deepest_contact": {
+          "time": 41.79400000000511,
+          "distance": -0.002193757080865169,
+          "geom1": "link41",
+          "geom2": "gate1",
+          "position": [
+            0.06645055208184436,
+            0.1764492555761868,
+            0.16905039156252843
+          ]
+        },
+        "seconds": 480.0
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 13,
+        "seed": 81,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9874999999793551,
+        "angle_rad": 12.76300227934472,
+        "hold_s": 5.23,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 1755,
+        "first_gate_contact": {
+          "time": 0.6060000000000004,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00023744734561336606
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.000947112268367559,
+        "deepest_contact": {
+          "time": 44.062000000007885,
+          "distance": -0.000947112268367559,
+          "geom1": "rail-1_66",
+          "geom2": "link32",
+          "position": [
+            0.060925961045804104,
+            -0.05792472881331416,
+            0.15666945942061586
+          ]
+        },
+        "seconds": 490.7
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 14,
+        "seed": 421,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.987500000032399,
+        "angle_rad": 12.76190537169532,
+        "hold_s": 5.078,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 4424,
+        "first_gate_contact": {
+          "time": 0.6000000000000004,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -5.151580575782702e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.00246623330626331,
+        "deepest_contact": {
+          "time": 32.55399999999382,
+          "distance": -0.00246623330626331,
+          "geom1": "rail1_52",
+          "geom2": "link25",
+          "position": [
+            0.031132406149733817,
+            -0.07088851086478518,
+            0.1610505802978795
+          ]
+        },
+        "seconds": 486.5
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 15,
+        "seed": 1999,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9875000000143742,
+        "angle_rad": 12.786954467367314,
+        "hold_s": 5.164,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 7296,
+        "first_gate_contact": {
+          "time": 0.6120000000000004,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -6.599981772845674e-05
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.002861930358785728,
+        "deepest_contact": {
+          "time": 47.76200000001241,
+          "distance": -0.002861930358785728,
+          "geom1": "rail1_69",
+          "geom2": "link34",
+          "position": [
+            0.04003710611548036,
+            -0.06238201010233205,
+            0.17510866064171463
+          ]
+        },
+        "seconds": 493.9
+      },
+      {
+        "kind": "ablation_open_loop",
+        "index": 16,
+        "seed": 31,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.9916666666788457,
+        "angle_rad": 12.74935886579602,
+        "hold_s": 5.048,
+        "actions": 523,
+        "observations": 524,
+        "gate_contacts": 3723,
+        "first_gate_contact": {
+          "time": 0.22000000000000017,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -0.00020325306840919674
+        },
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 154,
+        "min_contact_m": -0.0011112910398545584,
+        "deepest_contact": {
+          "time": 41.79200000000511,
+          "distance": -0.0011112910398545584,
+          "geom1": "link41",
+          "geom2": "gate1",
+          "position": [
+            -0.046951645306705175,
+            0.22641748274833004,
+            0.17517563472199743
+          ]
+        },
+        "seconds": 490.8
+      }
+    ],
+    "ablation_involute": [
+      {
+        "kind": "ablation_involute",
+        "index": 0,
+        "seed": 117,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.10000000000361439,
+        "angle_rad": 2.75489817649108,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 303,
+        "first_gate_contact": {
+          "time": 0.22200000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -7.87172758354316e-05
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.0007070998142773453,
+        "deepest_contact": {
+          "time": 0.22600000000000017,
+          "distance": -0.0007070998142773453,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.06470034716389934,
+            0.21890079665241036,
+            0.10790971443449926
+          ]
+        },
+        "seconds": 91.2
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 1,
+        "seed": 800,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.08749999999791287,
+        "angle_rad": 2.5834958089847966,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 6,
+        "min_contact_m": -0.00014826642496653481,
+        "deepest_contact": {
+          "time": 3.0039999999998908,
+          "distance": -0.00014826642496653481,
+          "geom1": "link18",
+          "geom2": "pylon",
+          "position": [
+            -0.1886565613224085,
+            0.11056187897996164,
+            0.10630359238087804
+          ]
+        },
+        "seconds": 89.7
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 2,
+        "seed": 801,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.13749999999672036,
+        "angle_rad": 3.2257212306152914,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 2701,
+        "first_gate_contact": {
+          "time": 0.21800000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0003128588386744299
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.0005895576694137134,
+        "deepest_contact": {
+          "time": 0.22200000000000017,
+          "distance": -0.0005895576694137134,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.12425054607603028,
+            0.11380610891164714,
+            0.10491570184008961
+          ]
+        },
+        "seconds": 96.2
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 3,
+        "seed": 802,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.12500000000470657,
+        "angle_rad": 3.048327911796143,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 540,
+        "first_gate_contact": {
+          "time": 0.22200000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00038392979491112464
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.0006839556608951021,
+        "deepest_contact": {
+          "time": 0.22400000000000017,
+          "distance": -0.0006839556608951021,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.20740703444512193,
+            0.1951564295857351,
+            0.10551033883862124
+          ]
+        },
+        "seconds": 97.1
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 4,
+        "seed": 803,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.10000000000376517,
+        "angle_rad": 2.712265136504868,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 2240,
+        "first_gate_contact": {
+          "time": 0.22600000000000017,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.000758504612974924
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 6,
+        "min_contact_m": -0.0013449938549367183,
+        "deepest_contact": {
+          "time": 0.23000000000000018,
+          "distance": -0.0013449938549367183,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.09891467892195294,
+            0.26534887221097786,
+            0.11039772354897043
+          ]
+        },
+        "seconds": 94.4
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 5,
+        "seed": 804,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.10416666666550034,
+        "angle_rad": 2.8021913210871,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 162,
+        "first_gate_contact": {
+          "time": 0.6560000000000005,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00021702810670820886
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.0003281103516556091,
+        "deepest_contact": {
+          "time": 0.9560000000000007,
+          "distance": -0.0003281103516556091,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.03606363619786898,
+            -0.25500474619192126,
+            0.08718816941816535
+          ]
+        },
+        "seconds": 95.4
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 6,
+        "seed": 805,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.10833333333212034,
+        "angle_rad": 2.9002643197747537,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.00016276131120080556,
+        "deepest_contact": {
+          "time": 4.139999999999766,
+          "distance": -0.00016276131120080556,
+          "geom1": "link16",
+          "geom2": "pylon",
+          "position": [
+            -0.07172608022716605,
+            -0.2624465483506661,
+            0.11445281780337385
+          ]
+        },
+        "seconds": 94.9
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 7,
+        "seed": 806,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.10833333332881087,
+        "angle_rad": 2.8743129384184116,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.00010784864338266205,
+        "deepest_contact": {
+          "time": 0.33200000000000024,
+          "distance": -0.00010784864338266205,
+          "geom1": "rail-1_2",
+          "geom2": "link1",
+          "position": [
+            0.12225338525593017,
+            0.05796648735179848,
+            0.11539104215704642
+          ]
+        },
+        "seconds": 96.1
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 8,
+        "seed": 807,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.11249999999530368,
+        "angle_rad": 2.9610388931882885,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 2177,
+        "first_gate_contact": {
+          "time": 0.22800000000000017,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -7.632936267061054e-05
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.000930084953437224,
+        "deepest_contact": {
+          "time": 7.399999999999407,
+          "distance": -0.000930084953437224,
+          "geom1": "link18",
+          "geom2": "pylon",
+          "position": [
+            -0.28013258809027636,
+            -0.02648940165699924,
+            0.11872165939163035
+          ]
+        },
+        "seconds": 95.7
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 9,
+        "seed": 711,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.12083333333034073,
+        "angle_rad": 3.028693377156464,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 29,
+        "first_gate_contact": {
+          "time": 0.21400000000000016,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0004154512790865944
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.0007644415307626849,
+        "deepest_contact": {
+          "time": 0.21800000000000017,
+          "distance": -0.0007644415307626849,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.12130046684063527,
+            -0.17068697891619794,
+            0.10492946289095888
+          ]
+        },
+        "seconds": 94.3
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 10,
+        "seed": 127,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.12500000000296904,
+        "angle_rad": 3.029510814077604,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.00016072352331916078,
+        "deepest_contact": {
+          "time": 4.865999999999686,
+          "distance": -0.00016072352331916078,
+          "geom1": "link20",
+          "geom2": "pylon",
+          "position": [
+            -0.15593898701882986,
+            0.26672476602269396,
+            0.11042779917351372
+          ]
+        },
+        "seconds": 96.5
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 11,
+        "seed": 903,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.12500000000275632,
+        "angle_rad": 3.0853314534888745,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.00010697249388866119,
+        "deepest_contact": {
+          "time": 2.5959999999999357,
+          "distance": -0.00010697249388866119,
+          "geom1": "rail-1_7",
+          "geom2": "link3",
+          "position": [
+            0.06904619277277121,
+            -0.08154110449200672,
+            0.11825731193214205
+          ]
+        },
+        "seconds": 93.9
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 12,
+        "seed": 2026,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.12916666667222954,
+        "angle_rad": 3.1785438067534457,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 9,
+        "min_contact_m": -0.00015480150063113722,
+        "deepest_contact": {
+          "time": 5.249999999999644,
+          "distance": -0.00015480150063113722,
+          "geom1": "link17",
+          "geom2": "pylon",
+          "position": [
+            -0.15880162669612963,
+            0.11143959897029973,
+            0.11285984020890041
+          ]
+        },
+        "seconds": 94.5
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 13,
+        "seed": 81,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.12916666666305068,
+        "angle_rad": 3.096534103448149,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 413,
+        "first_gate_contact": {
+          "time": 0.23200000000000018,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00025252232308485946
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.00045019679127174467,
+        "deepest_contact": {
+          "time": 0.23600000000000018,
+          "distance": -0.00045019679127174467,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "position": [
+            0.11024117966156682,
+            -0.21381110357831962,
+            0.11089943519453205
+          ]
+        },
+        "seconds": 95.1
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 14,
+        "seed": 421,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.1375000000060403,
+        "angle_rad": 3.217800499436456,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 1236,
+        "first_gate_contact": {
+          "time": 0.2460000000000002,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -2.9368521105781024e-05
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.0006010212357719178,
+        "deepest_contact": {
+          "time": 3.0699999999998835,
+          "distance": -0.0006010212357719178,
+          "geom1": "rail1_8",
+          "geom2": "link4",
+          "position": [
+            0.04365026731830565,
+            0.055386003317469235,
+            0.13285132276681028
+          ]
+        },
+        "seconds": 94.4
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 15,
+        "seed": 1999,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.14166666666942782,
+        "angle_rad": 3.322073867273815,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 2322,
+        "first_gate_contact": {
+          "time": 0.23400000000000018,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.00029435586831891205
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 9,
+        "min_contact_m": -0.0006990247695527942,
+        "deepest_contact": {
+          "time": 5.423999999999625,
+          "distance": -0.0006990247695527942,
+          "geom1": "rail-1_7",
+          "geom2": "link3",
+          "position": [
+            0.059947317328688014,
+            -0.05957480386247912,
+            0.11841130960727968
+          ]
+        },
+        "seconds": 95.4
+      },
+      {
+        "kind": "ablation_involute",
+        "index": 16,
+        "seed": 31,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.141666666670176,
+        "angle_rad": 3.218527599927348,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 1465,
+        "first_gate_contact": {
+          "time": 0.20200000000000015,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -0.0006628011400176526
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 9,
+        "min_contact_m": -0.0011822846867956885,
+        "deepest_contact": {
+          "time": 0.20600000000000016,
+          "distance": -0.0011822846867956885,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.02398505132964071,
+            0.24385671166136413,
+            0.10256955025749463
+          ]
+        },
+        "seconds": 94.2
+      }
+    ],
+    "ablation_involute_blind": [
+      {
+        "kind": "ablation_involute_blind",
+        "index": 0,
+        "seed": 117,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.10000000000361428,
+        "angle_rad": 2.755596440589004,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 303,
+        "first_gate_contact": {
+          "time": 0.22000000000000017,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -0.00026198787424025006
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.0005655105554655546,
+        "deepest_contact": {
+          "time": 0.22400000000000017,
+          "distance": -0.0005655105554655546,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.06476915458010804,
+            0.21892783600679117,
+            0.10706650645718235
+          ]
+        },
+        "seconds": 93.9
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 1,
+        "seed": 800,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.08749999999791279,
+        "angle_rad": 2.611805301360936,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 1462,
+        "first_gate_contact": {
+          "time": 3.263999999999862,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -3.243725441188453e-05
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 6,
+        "min_contact_m": -0.00044918265928929526,
+        "deepest_contact": {
+          "time": 4.085999999999772,
+          "distance": -0.00044918265928929526,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            -0.010822628560476303,
+            0.1821753967576705,
+            0.12620670282760135
+          ]
+        },
+        "seconds": 91.4
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 2,
+        "seed": 801,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.07083333333164375,
+        "angle_rad": 2.000751429907231,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 2780,
+        "first_gate_contact": {
+          "time": 0.21000000000000016,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0006895325029609798
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 3,
+        "min_contact_m": -0.0017840789771819627,
+        "deepest_contact": {
+          "time": 0.21400000000000016,
+          "distance": -0.0017840789771819627,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.12403883576838604,
+            0.11480135457308721,
+            0.08957030953543049
+          ]
+        },
+        "seconds": 91.8
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 3,
+        "seed": 802,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.10416666667058874,
+        "angle_rad": 2.4373091123522035,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 71,
+        "first_gate_contact": {
+          "time": 0.25600000000000017,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -0.00015572194553209158
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 5,
+        "min_contact_m": -0.0009350437451138894,
+        "deepest_contact": {
+          "time": 0.2620000000000002,
+          "distance": -0.0009350437451138894,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "position": [
+            0.20787332400062888,
+            0.19656238913660623,
+            0.057333875753346544
+          ]
+        },
+        "seconds": 94.4
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 4,
+        "seed": 803,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.10000000000376515,
+        "angle_rad": 3.10647177156897,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 7,
+        "min_contact_m": -0.0017881346341226175,
+        "deepest_contact": {
+          "time": 9.207999999999744,
+          "distance": -0.0017881346341226175,
+          "geom1": "link19",
+          "geom2": "pylon",
+          "position": [
+            -0.2943581500282613,
+            0.1555368609694125,
+            0.11016710035204827
+          ]
+        },
+        "seconds": 97.6
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 5,
+        "seed": 804,
+        "error": "RuntimeError: move refused",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.029166666666340133,
+        "angle_rad": -0.02520333529684657,
+        "hold_s": 0.0,
+        "actions": 38,
+        "observations": 39,
+        "gate_contacts": 1,
+        "first_gate_contact": {
+          "time": 3.7939999999998038,
+          "geom1": "link35",
+          "geom2": "gate1",
+          "distance": -0.002294463380373365
+        },
+        "fault": {
+          "error": "MuJoCo warning: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 3.7940.",
+          "substep": 48,
+          "requested_substeps": 50,
+          "last_good_time": 3.7939999999998038,
+          "fault_time": 3.7939999999998038,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "qpos": [
+            -172.25533956617593,
+            280.6544810957227,
+            175.23985079540023,
+            0.2677413809652164,
+            0.3143223555881722,
+            -0.3861969890180561,
+            -0.3004220156230267,
+            -0.14398185708136307,
+            -0.8601556388432203,
+            -0.2995879986190136,
+            0.46891482600743895,
+            0.052192506596824895,
+            -0.8292417375464212,
+            -0.666489694518484,
+            0.7117138370109074,
+            -0.1996228825208109,
+            -0.0969825039991822,
+            -0.7713728437584197,
+            -0.20576448551275975,
+            -0.6012076839527526,
+            -0.03455767888450042,
+            0.0381302499619234,
+            -0.07605541042884484,
+            -0.5678974484601128,
+            -0.8186905072216463,
+            0.8626467256118316,
+            0.379490993404297,
+            -0.10600188394825884,
+            -0.3171605481702039,
+            0.9150348593137323,
+            0.39970758292995007,
+            -0.05346776512467197,
+            -0.009287221412599283,
+            0.928989281025077,
+            0.3214538857690524,
+            -0.05514926833273697,
+            0.1749424855969837,
+            0.9036922098041796,
+            0.2410282980763442,
+            -0.04844567435146871,
+            0.3505692030145974,
+            0.9315219273942253,
+            0.1309495262901636,
+            0.14904335019282275,
+            0.30480354346928085,
+            0.3287017079212018,
+            0.024778042594873578,
+            0.3608864557973693,
+            -0.8724117157838183,
+            0.08238784872834382,
+            -0.32082254727509496,
+            -0.008617253823951829,
+            0.9435098719559688,
+            -0.39520361190936426,
+            -0.7078961587213954,
+            -0.07321185835105164,
+            0.5808073324245062,
+            0.2230941581441785,
+            -0.9278429439512809,
+            0.2836037631117222,
+            0.09436828657250057,
+            -0.8650993201577839,
+            -0.33063699675442154,
+            -0.1777601777138823,
+            -0.3326915416100707,
+            0.8030149579079019,
+            0.15622419193235418,
+            -0.21257627290805345,
+            0.5343896587956894,
+            0.5024375119660827,
+            0.34225009720674904,
+            -0.7651938428289005,
+            0.21189573008449578,
+            -0.8780579521430759,
+            -0.08973330538165775,
+            -0.4365554491693106,
+            0.17430291559285577,
+            0.07214110821562071,
+            0.10363754344126509,
+            -0.9919337202056455,
+            0.01106412282426561,
+            -0.056933455362468646,
+            0.18561457508392395,
+            0.5259652250559663,
+            0.8280497528583248,
+            -0.5618620822507229,
+            0.2581547213738526,
+            0.4564604921447951,
+            -0.6397741472365089,
+            0.8703199241347952,
+            -0.27189339872449836,
+            0.3042734932273703,
+            0.275744176191009,
+            0.839324194226323,
+            0.40542548962858627,
+            0.21695330464985102,
+            -0.28999367742635984,
+            0.15282054126354916,
+            0.1456301380066792,
+            -0.9024531833272171,
+            -0.3755209674234499,
+            0.7101057573173661,
+            0.5624166439545335,
+            -0.34443412180747623,
+            -0.2465815641169544,
+            -0.24409431760210654,
+            -0.1479566893577714,
+            0.879338682584057,
+            -0.38116959939111617,
+            0.25866430164005383,
+            0.5399521575226706,
+            -0.7560710298741735,
+            0.26438805651671216,
+            -0.13650839177652058,
+            0.4627776938967491,
+            -0.851010020044433,
+            -0.20732633887224197,
+            -0.21497336666317807,
+            -0.9405896191799636,
+            0.255106192577471,
+            0.06323330155081669,
+            -0.2413512957604174,
+            -0.6409055801939139,
+            -0.7272305340726923,
+            -0.046101405872469664,
+            0.47007935006594176,
+            -0.024824910103922595,
+            0.31478652002596436,
+            -0.8242078471416396,
+            -0.4373747214188828,
+            0.31594993161092794,
+            -0.6949061102307267,
+            -0.47537826174827086,
+            0.36247437145838035,
+            -0.24490479968236564,
+            -0.8991827562554964,
+            -0.010214694374352795,
+            -0.30673107448762416,
+            -0.7100341361570968,
+            -0.5027322587806716,
+            0.3860412535165067,
+            0.7034995373529268,
+            -0.06753206912163137,
+            -0.414007999512516,
+            0.5736943410249169,
+            0.6067777780820715,
+            0.00239806725531019,
+            -0.736736524930008,
+            0.29838610914933383,
+            -0.37046107885470014,
+            0.10753341015206354,
+            0.7079139503384624,
+            -0.5916527644413326,
+            0.6198858920535503,
+            -0.28389565184348103,
+            -0.5806521701019522,
+            -0.4449581969727415,
+            -0.15863389888545743,
+            0.7532465221968186,
+            0.18586275089114293,
+            -0.610663574117511,
+            0.7135100067060265,
+            0.5543377639436831,
+            0.21162503620917789,
+            -0.37259623970961986,
+            -0.5377260255905376,
+            -0.5249705627592528,
+            -0.24862807999373174,
+            -0.6110979524409061,
+            0.5926682029076218,
+            -0.49567491558733084,
+            0.3953152809491802,
+            -0.4967661501831746,
+            0.18653503232590865,
+            0.5932450328746536,
+            0.4793673933007377,
+            0.6192510919851323,
+            -0.10085422361205922,
+            -0.13957927115867141,
+            -0.4911679963157936,
+            -0.8538735574062194,
+            0.026007601870448843,
+            0.2711531977868047,
+            0.6951640330376044,
+            -0.6652416967883416,
+            -0.10412385494398295,
+            -0.4389549527810576,
+            -0.30745881147710236,
+            0.8378220882178217,
+            0.4833092427852661,
+            0.7205923596867635,
+            -0.31922751686394,
+            -0.3811202165672617,
+            0.10409987428359305,
+            0.5822594977884761,
+            -0.2502702427082141,
+            -0.7664867246234741,
+            -0.2243635998080713,
+            -0.48779365650667567,
+            0.7458308907773629,
+            0.3942773213301213,
+            0.6293134609353139,
+            0.09636041634593209,
+            0.7711311330823526,
+            -0.006001136424286013,
+            0.5256987809631704,
+            -0.445644116330504,
+            0.60806244508172,
+            -0.3940839709441146,
+            -0.5506092198662662,
+            -0.4754106793921444,
+            -0.5403987508011445,
+            0.4228278172622094,
+            0.5161840401429313,
+            -0.29606214432225403,
+            0.7991166766609283,
+            -0.085520643609733,
+            -0.3497089679330404,
+            0.4024668352860525,
+            -0.845007653743576,
+            -0.0410627490167587,
+            0.30821467156925497,
+            0.09659966900365753,
+            0.5572612292543607,
+            -0.7649393064470926,
+            -0.06790141010780434,
+            -0.5453078323562446,
+            -0.8353840138446497,
+            -0.012740325314105865,
+            -0.24199125792466367,
+            0.2312772770535031,
+            0.44115092222037855,
+            0.8326685511239538,
+            0.13489783378216474,
+            0.22822761103644051,
+            -0.7969343721741822,
+            -0.5427801934934808,
+            -0.9865619024880109,
+            -0.13479669885778114,
+            0.07318625982776249,
+            -0.05629594930992392,
+            0.23075807205127408,
+            0.271830239142165,
+            0.6328563403929673,
+            0.6872786084955014
+          ],
+          "qvel": [
+            -86647.21706725749,
+            139189.2315220553,
+            87377.71235958376,
+            0.011502799764056899,
+            0.06597107422726187,
+            338.4356380204742,
+            144.8096398041631,
+            -1928.4363322492618,
+            1541.390439300712,
+            746.5666942251928,
+            -402.6431500143292,
+            1624.9991687123934,
+            1049.4713397829414,
+            1045.1414270930304,
+            673.0602267113567,
+            1732.717366332562,
+            2667.7714953546974,
+            -1190.172663261413,
+            3144.512703665306,
+            3065.3003243911635,
+            -2931.8148644555686,
+            4604.886918226529,
+            1777.142072921677,
+            -2902.484442947253,
+            4807.837464297257,
+            -1524.5867607604082,
+            -1680.3518136560558,
+            4066.3726030525527,
+            -3768.5860370447663,
+            -251.68536753243706,
+            3135.1517728646713,
+            -4740.559050669448,
+            842.4678359895064,
+            2328.7156621884424,
+            -5319.150293489821,
+            2513.3858287767134,
+            1285.304468386937,
+            -6819.993377247987,
+            7275.852657754859,
+            -434.2752449636994,
+            -8367.804431026962,
+            15939.825924487048,
+            -2816.203902973367,
+            -5168.894231035038,
+            22133.968892589146,
+            -5853.485066020984,
+            7642.6009115655115,
+            15425.941506021769,
+            -12061.304673648052,
+            21600.307757005037,
+            4558.473864693125,
+            -18459.238975626005,
+            18160.46563649186,
+            8950.006867258833,
+            -17436.207686845097,
+            5882.285263214301,
+            20922.966910362986,
+            -7760.8132191924,
+            17920.15888898298,
+            -31606.884509178082,
+            -15377.143619061564,
+            -21395.70441863639,
+            23295.914872032663,
+            -20014.76289954238,
+            -29818.92029896649,
+            -29226.47269363709,
+            12803.522034826556,
+            -24489.21789317018,
+            -20962.946248115935,
+            32194.60041760849,
+            -4903.387317521867,
+            -19146.812164202554,
+            30702.69027181911,
+            -13433.061864058147,
+            -8813.674203888422,
+            19927.597024846807,
+            22033.34390056601,
+            11902.019047155365,
+            23514.725708907405,
+            -36556.28130237469,
+            -52045.08696763462,
+            78185.1835026101,
+            43506.08918206436,
+            43997.83738000107,
+            107142.37356444418,
+            -115659.05472676561,
+            -70760.60507339789,
+            -50297.11660835862,
+            167056.55324495566,
+            -22098.979391429897,
+            158618.7113633249,
+            -166280.13297880258,
+            218096.1150379866,
+            -61402.486515023156,
+            158929.0006191994,
+            -113549.35388535114,
+            130442.34058551908,
+            210202.04375901437,
+            -99660.73152160938,
+            176039.38491981695,
+            71709.09697025837,
+            74445.4263289568,
+            151442.33417729026,
+            56879.634169173754,
+            195131.2272011897,
+            103497.87913640395,
+            -109911.12604738245,
+            -35459.364698449,
+            65924.9113384856,
+            -295297.9102827577,
+            12556.160261938609,
+            123283.32165121521,
+            91625.45464175173,
+            -193432.73872079936,
+            -202874.4282679461,
+            -386585.4654687461,
+            -561562.0882018579,
+            -324733.0230147041,
+            -211590.5267272949,
+            167469.18960413235,
+            471022.1621238772,
+            888875.8968405934,
+            -192811.45011358126,
+            677358.1773221206,
+            -359224.4929314003,
+            751679.5215654153,
+            340166.2026226834,
+            -340973.10687229596,
+            -179163.92898617167,
+            41894.71619216325,
+            841638.6244038431,
+            565296.0345288031,
+            598335.1084708561,
+            -344605.16948102834,
+            218769.00017331043,
+            235876.1465240302,
+            761020.7636875929,
+            68625.35888590929,
+            391154.7384079628,
+            -238041.56469382122,
+            1073578.2621319883,
+            718561.8003013876,
+            -1409324.7420717005,
+            -479740.5215573813,
+            -480508.53676959913,
+            -110590.92083105858,
+            -598872.3150773051,
+            513967.4775819462,
+            -1194152.5997339915,
+            32754.46810337168,
+            535392.7358042323,
+            1161814.293985592,
+            -1672559.9780697848,
+            673304.8004925937,
+            -944675.6029543984,
+            -169007.83521373366,
+            1702738.353818846,
+            -1495944.0112525928,
+            -775529.2203292588,
+            627400.0573248395,
+            -1655787.5689554624,
+            -415918.1023976868,
+            356643.8651526342,
+            442428.30192388495,
+            -1262893.8116440235,
+            855880.3848396657,
+            -2968816.6584589947,
+            1021850.3571272013,
+            391036.8345573348,
+            -1430576.9369892215,
+            -183591.77140945982,
+            1457435.6294308377,
+            524582.6905809402,
+            -1098949.588015492,
+            -2361498.942676155,
+            87232.96013595069,
+            869256.2786977561,
+            -1971587.1469973307,
+            -1634887.0981305782,
+            2613271.624855988,
+            -2322760.994068376,
+            -42109.71792438814,
+            -6369344.734935649,
+            -3155.852863963616,
+            2533719.3639641856
+          ],
+          "ctrl": [
+            0.46870976859681357,
+            2.0344930023718426,
+            -0.007630514302721908,
+            0.26814915317497096,
+            0.31663857349899377
+          ]
+        },
+        "replay_ok": null,
+        "contacts": 94,
+        "min_contact_m": -0.03877377640470499,
+        "deepest_contact": {
+          "time": 3.7759999999998057,
+          "distance": -0.03877377640470499,
+          "geom1": "",
+          "geom2": "link54",
+          "position": [
+            -0.035756849865194056,
+            0.001098225922309775,
+            -0.01938688820235249
+          ]
+        },
+        "seconds": 6.9
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 6,
+        "seed": 805,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.03333333333296013,
+        "angle_rad": 0.8183422964410807,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 2227,
+        "first_gate_contact": {
+          "time": 4.563999999999719,
+          "geom1": "link10",
+          "geom2": "gate2",
+          "distance": -0.0004846938180653195
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 11,
+        "min_contact_m": -0.0033896050472062822,
+        "deepest_contact": {
+          "time": 0.18800000000000014,
+          "distance": -0.0033896050472062822,
+          "geom1": "",
+          "geom2": "link32",
+          "position": [
+            0.3152515291667457,
+            -0.4917054117828251,
+            -0.001694802523603141
+          ]
+        },
+        "seconds": 106.8
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 7,
+        "seed": 806,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.004166666666492736,
+        "angle_rad": -4.634396679739417,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 14,
+        "min_contact_m": -0.0038123791048420563,
+        "deepest_contact": {
+          "time": 0.17800000000000013,
+          "distance": -0.0038123791048420563,
+          "geom1": "",
+          "geom2": "link19",
+          "position": [
+            0.2819769642067918,
+            -0.20972937793355476,
+            -0.001906189552421028
+          ]
+        },
+        "seconds": 101.3
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 8,
+        "seed": 807,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.004166666666492737,
+        "angle_rad": -4.007287285103969,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 13,
+        "min_contact_m": -0.0033765758161173544,
+        "deepest_contact": {
+          "time": 0.17800000000000013,
+          "distance": -0.0033765758161173544,
+          "geom1": "",
+          "geom2": "link20",
+          "position": [
+            -0.14531059172854613,
+            -0.31014529265227586,
+            -0.0016882879080586774
+          ]
+        },
+        "seconds": 99.5
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 9,
+        "seed": 711,
+        "error": "RuntimeError: move refused",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.004166666666563473,
+        "angle_rad": 0.49556544070640896,
+        "hold_s": 0.0,
+        "actions": 35,
+        "observations": 36,
+        "gate_contacts": 301,
+        "first_gate_contact": {
+          "time": 2.229999999999976,
+          "geom1": "",
+          "geom2": "gate2",
+          "distance": -0.0008240903220282612
+        },
+        "fault": {
+          "error": "MuJoCo warning: Nan, Inf or huge value in QACC at DOF 89. The simulation is unstable. Time = 3.4080.",
+          "substep": 5,
+          "requested_substeps": 50,
+          "last_good_time": 3.4079999999998463,
+          "fault_time": 3.4079999999998463,
+          "warnings": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "qpos": [
+            -11.147704943091497,
+            1.4621441497968493,
+            14.695148721913004,
+            0.45919013908958056,
+            0.37578122086871846,
+            -0.05263560904537707,
+            0.3798151252772606,
+            0.5068987017243014,
+            -0.7720256922287363,
+            0.7844671074959089,
+            0.0677162715938698,
+            0.5637978447145906,
+            -0.24931476914457032,
+            0.9334319077881578,
+            -0.12859596131435072,
+            0.3347968215243723,
+            -0.008890475452674226,
+            0.917735856719256,
+            -0.36864477630711334,
+            0.14308482493296418,
+            0.037264716115312665,
+            0.9125799677911896,
+            -0.2667806206328484,
+            0.2575482267103177,
+            -0.1723218319289677,
+            0.8848063516809475,
+            0.15365908348300952,
+            0.37847607305396186,
+            -0.2241929263243285,
+            0.9285730650398113,
+            0.18994504414019425,
+            0.2831589148984005,
+            0.14660822624501885,
+            0.9806304428661987,
+            -0.1290929294284175,
+            -0.05646320648583579,
+            0.13605460818719578,
+            0.8759213861257035,
+            -0.148673064218405,
+            -0.45896835288824545,
+            0.0024690788944153642,
+            0.7991640772351135,
+            -0.15757718158315698,
+            -0.5767626297247637,
+            0.06205705805331915,
+            0.7244750428926158,
+            -0.08625071034558386,
+            -0.5685309153799274,
+            0.380091206748969,
+            0.5253906364949057,
+            0.5815329021533167,
+            -0.3141558039004295,
+            -0.5358080754078773,
+            0.28106080158157526,
+            -0.38046008454469227,
+            0.12071536682472427,
+            -0.8727443784378908,
+            0.3383373005595554,
+            -0.8499455849273465,
+            0.20065041058979624,
+            -0.35051360379124963,
+            0.8946715954253879,
+            -0.12410801663082346,
+            0.3370887340991605,
+            -0.2655769603907305,
+            -0.6844078632502001,
+            0.34219427571577077,
+            0.20403671907743753,
+            0.6106209721724023,
+            0.7105641522777091,
+            0.0336854678340921,
+            -0.40474398736272554,
+            -0.5745834834455152,
+            -0.07604849980904746,
+            0.24066209266215202,
+            0.7381595075425998,
+            0.6256348170112762,
+            -0.9454092746809456,
+            -0.26023903166259876,
+            0.12161148503201372,
+            -0.15390775306939108,
+            0.3778683839533184,
+            -0.490209591272945,
+            -0.7844051440125699,
+            0.040231965887088106,
+            0.561832355319545,
+            -0.012865170418512206,
+            0.2691048832378028,
+            -0.782151809896112,
+            -0.5657014726469908,
+            0.43175141157535407,
+            -0.5598944045728625,
+            -0.42437108546143426,
+            0.8013682100693553,
+            0.2775022632442148,
+            0.36093877520968004,
+            -0.38797511045776006,
+            -0.7559110212777687,
+            0.08745839410232717,
+            0.4977989197708602,
+            -0.41610790990656027,
+            0.8314494232451836,
+            -0.0442274845742872,
+            -0.46572521347548,
+            -0.2997262279592844,
+            0.7049347955959248,
+            -0.00011663654265006707,
+            0.7082597669986305,
+            -0.03788169485509014,
+            0.499374824201501,
+            0.08989038515174805,
+            0.8610973275748862,
+            0.03249455422650071,
+            0.8394546153084083,
+            -0.007240094986783,
+            0.5417043581055672,
+            0.042660500131043694,
+            -0.23713770901291065,
+            -0.20962678358465803,
+            0.9380904304685561,
+            -0.14074325145945157,
+            -0.8930751203215868,
+            0.23595269289812615,
+            0.024377955604052558,
+            -0.3822942210618317,
+            -0.26458248674172735,
+            0.8519727580820623,
+            0.4099581515830183,
+            0.18992851588490847,
+            -0.4059880063658514,
+            -0.014033302273204505,
+            -0.5163954712070431,
+            -0.753865055849684,
+            0.460033584015887,
+            0.7813500671008798,
+            0.1948477584912282,
+            -0.37402610233764666,
+            0.10263603499921173,
+            0.7900690863081549,
+            0.1186937681648774,
+            0.5925946950308126,
+            0.9119786635148763,
+            -0.040686574129747966,
+            -0.22801460402911994,
+            -0.3385983761459108,
+            -0.7601405344404008,
+            -0.46872138085136933,
+            -0.402875050939508,
+            -0.20044532512367594,
+            -0.43740820065583363,
+            -0.007707834248733891,
+            0.14819289786340406,
+            0.8869349019590262,
+            -0.01574376361890656,
+            0.290716985259873,
+            -0.3119311457564588,
+            -0.9043974395671334,
+            -0.17829313618619863,
+            0.4282714599578871,
+            -0.039380640315640696,
+            0.8850108922170165,
+            -0.6178525811963074,
+            0.24581002318395262,
+            0.2540762893617338,
+            0.7023395614626418,
+            -0.6440783255793976,
+            0.3306550160529955,
+            0.6858616402760233,
+            -0.07364904124098534,
+            0.011004437570315495,
+            -0.747403319135424,
+            -0.49370848270805123,
+            -0.44443122640204524,
+            0.5274648897167497,
+            -0.2111254330394437,
+            0.8221369667527183,
+            -0.036022902973601056,
+            -0.3497346191566157,
+            0.557509596766985,
+            -0.5208069854371083,
+            0.5437176009621189,
+            -0.9726812575025886,
+            -0.11935341170600416,
+            0.19728375200004877,
+            0.026926856743856142,
+            -0.28239477411081904,
+            -0.8157306791157783,
+            0.35811947550017925,
+            0.3557907980424556,
+            0.05047603812614543,
+            -0.1040053889099965,
+            0.5824162503694514,
+            0.8046280879750323,
+            0.6179742046046631,
+            0.3469143581654861,
+            0.36581423347887104,
+            0.6032729540814243,
+            0.09860594271016859,
+            -0.7751462249262989,
+            -0.1974904060455263,
+            0.5919651489443629,
+            -0.025930565625290683,
+            0.4643126349820835,
+            -0.41845979216747364,
+            -0.7801492069479409,
+            -0.2406379565271986,
+            -0.5720268518866821,
+            0.0885192550366959,
+            0.7791296401028364,
+            -0.3429708203575652,
+            -0.6251108437000136,
+            -0.6835725803072779,
+            -0.15599992603834145,
+            -0.8226025714337347,
+            -0.26188108331278814,
+            0.5046565330374168,
+            -0.00806792018940948,
+            -0.944177804734057,
+            -0.002411808938346305,
+            -0.27847723439235594,
+            -0.17599115361405843,
+            -0.8411432007515984,
+            -0.31381387208323325,
+            0.3681711132561344,
+            -0.24176228175880318,
+            -0.6711808904094254,
+            -0.6938148892529026,
+            0.07125916243164873,
+            0.2511159962442321,
+            -0.39721372474927796,
+            -0.22058666261055287,
+            0.8867618725010386,
+            0.08494799955028542,
+            -0.5109602822520833,
+            -0.27520762046925024,
+            0.3745391329166506,
+            -0.7231187962641883,
+            -0.25183805036128043,
+            -0.9041294889684799,
+            -0.07245818464775303,
+            -0.3374570714111284,
+            -0.7693038021609029,
+            0.38215803130943077,
+            0.3976499689568638,
+            0.32249248250941365
+          ],
+          "qvel": [
+            -5318.482300578856,
+            -14.569789047437382,
+            7425.636198583948,
+            -0.11107121783581017,
+            -0.6765341996889976,
+            -114.80065694461665,
+            -75.12036255684434,
+            -119.03141053073944,
+            67.10337425067979,
+            -65.8310817701634,
+            -45.53389498503756,
+            -36.20125416593321,
+            -79.12090322330464,
+            29.651836766566376,
+            -142.29771014000556,
+            -70.0372932600013,
+            -48.97215760078265,
+            -61.90072110682364,
+            -36.052010968360406,
+            -174.5277629461745,
+            131.00207731771684,
+            -47.282144906934086,
+            -92.34163990636033,
+            75.11267027692872,
+            -64.99806607243126,
+            68.14632010426995,
+            -31.737686073288494,
+            -69.28495934843048,
+            34.659719125061706,
+            -114.32242377748454,
+            -59.68131435464487,
+            14.113282088344867,
+            -143.72227558181987,
+            -56.99984581346513,
+            189.39426909182487,
+            210.75553081429328,
+            -61.4215444787322,
+            418.7891900325881,
+            270.3664946297549,
+            320.3965449051253,
+            -978.6354011148932,
+            -1128.8267983999017,
+            410.72738799788465,
+            -643.2932025098011,
+            -1154.3994821824351,
+            361.71267495537285,
+            -15.29147448746213,
+            -125.5370592578884,
+            354.5635677076228,
+            -45.42753244095674,
+            1047.6374372012774,
+            1582.2917774046412,
+            1465.6562175803426,
+            1338.4045912364952,
+            4494.073160475623,
+            2863.3824589711835,
+            3573.589655774332,
+            6497.608259449796,
+            3028.1841418572294,
+            6546.517943850375,
+            7148.313875465978,
+            1566.9073221218207,
+            6138.735900434593,
+            8081.697324407139,
+            -6255.453833101523,
+            -8719.089597457525,
+            9594.584884061362,
+            -6194.748129944948,
+            9117.642910540062,
+            14305.941687591943,
+            6041.616234699768,
+            -8109.056287919664,
+            19522.65156812136,
+            -377.72021203001077,
+            10592.700016740619,
+            20437.846043062957,
+            3823.75070156295,
+            234.2536837678581,
+            25877.20960589388,
+            -1546.155180371638,
+            3417.227763851215,
+            25944.747052988878,
+            -4380.228524229523,
+            7286.530204742952,
+            25069.931776643163,
+            -389.23450966641303,
+            442.2802471585744,
+            24953.12556987087,
+            3931.6585127670046,
+            -1192.1921026129207,
+            25611.779314746087,
+            -6252.507363421905,
+            19141.960615127387,
+            26479.510919327233,
+            -8460.9821273756,
+            30719.33322722929,
+            23790.2040289319,
+            34030.84089517425,
+            -40152.86195754869,
+            14783.821058112053,
+            66547.77742666226,
+            -97915.76462664692,
+            3420.2534672811717,
+            -14654.389653961065,
+            -33443.62864549999,
+            -12846.347871681888,
+            -71294.64589083327,
+            -597.6551644359911,
+            -17610.496241133576,
+            8266.887420793379,
+            -38016.94825894897,
+            28031.951196890208,
+            5845.965009535881,
+            -11913.156701038457,
+            -56701.488842236926,
+            -46446.37644177038,
+            4316.4603692185465,
+            -5075.63600677379,
+            -102894.54891205707,
+            -17373.403151551593,
+            8823.86973322734,
+            -50728.001484185064,
+            -19482.602945728417,
+            -8835.151121196386,
+            -10051.298556838537,
+            -11228.776977444873,
+            -16605.371011681407,
+            30759.324977179385,
+            -11718.678665340272,
+            4177.131772879809,
+            -13015.389559313404,
+            -9999.69788845511,
+            -3089.7248520143457,
+            19885.39246974574,
+            13083.236902065537,
+            -18454.870961758807,
+            -31907.34173539751,
+            512.7799100099724,
+            -22328.756082445077,
+            -14061.09772113133,
+            12429.802693169298,
+            19568.12355531162,
+            4887.004465434972,
+            2876.2681934289776,
+            -31825.097612503352,
+            10257.647020960509,
+            -33667.87072417466,
+            6653.030073467018,
+            -66937.45298721195,
+            19117.542863354443,
+            -7003.887783541417,
+            87602.0260212197,
+            73236.51341269081,
+            -60651.86176646636,
+            -30699.41606041436,
+            -47454.594592651716,
+            99027.1205419177,
+            -21368.467132963135,
+            49838.82197927369,
+            88896.43825460054,
+            -166659.43288739256,
+            -51952.23442144085,
+            78952.36228396205,
+            -17916.221946094545,
+            -87816.97401168614,
+            127530.36776562501,
+            -120916.87640866781,
+            -32091.388943201342,
+            88548.6347365205,
+            -102467.2558671065,
+            3182.207661241121,
+            -184715.25486095718,
+            -82511.30369448381,
+            -20983.41836362352,
+            -218218.16183847873,
+            22831.463802960527,
+            -104893.83797424303,
+            163229.05524628726,
+            159131.30004790428,
+            -112970.71852120622,
+            -67772.76982382851,
+            -344716.5337074829,
+            -370326.8481007538,
+            445.07580180105236,
+            -164097.87956005285
+          ],
+          "ctrl": [
+            -0.19598781613023586,
+            1.8652316247266287,
+            -0.00017199878372092803,
+            0.4552935934992527,
+            0.3821651909113495
+          ]
+        },
+        "replay_ok": null,
+        "contacts": 22,
+        "min_contact_m": -0.016419006116819977,
+        "deepest_contact": {
+          "time": 3.4079999999998463,
+          "distance": -0.016419006116819977,
+          "geom1": "link10",
+          "geom2": "gate2",
+          "position": [
+            0.14098652800425637,
+            0.20368210733850595,
+            0.18072415200312408
+          ]
+        },
+        "seconds": 6.8
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 10,
+        "seed": 127,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.12500000000296893,
+        "angle_rad": 2.9933365324476338,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 8,
+        "min_contact_m": -0.00026077002060950934,
+        "deepest_contact": {
+          "time": 0.9420000000000007,
+          "distance": -0.00026077002060950934,
+          "geom1": "rail-1_5",
+          "geom2": "link2",
+          "position": [
+            0.05515085050512376,
+            0.032433148352817,
+            0.11725150155164349
+          ]
+        },
+        "seconds": 94.8
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 11,
+        "seed": 903,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.004166666666758547,
+        "angle_rad": -1.8715614822793964,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 1,
+        "min_contact_m": -0.003566551771688019,
+        "deepest_contact": {
+          "time": 0.18400000000000014,
+          "distance": -0.003566551771688019,
+          "geom1": "",
+          "geom2": "link33",
+          "position": [
+            -0.07548939108687679,
+            -0.5757615951691595,
+            -0.0017832758858440097
+          ]
+        },
+        "seconds": 92.0
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 12,
+        "seed": 2026,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.03333333333476893,
+        "angle_rad": 1.60766493357682,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 19440,
+        "first_gate_contact": {
+          "time": 3.3059999999998575,
+          "geom1": "link12",
+          "geom2": "gate1",
+          "distance": -9.156656650689387e-05
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 1,
+        "min_contact_m": -0.0006056436696145195,
+        "deepest_contact": {
+          "time": 41.72600000000503,
+          "distance": -0.0006056436696145195,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "position": [
+            0.09387774471914967,
+            0.1705714176514197,
+            0.08840348290166794
+          ]
+        },
+        "seconds": 93.1
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 13,
+        "seed": 81,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": false,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.00833333333310005,
+        "angle_rad": -4.36349121291373,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 1431,
+        "first_gate_contact": {
+          "time": 3.729999999999811,
+          "geom1": "link9",
+          "geom2": "gate2",
+          "distance": -0.0006908935647586927
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 9,
+        "min_contact_m": -0.003449568962347167,
+        "deepest_contact": {
+          "time": 0.18600000000000014,
+          "distance": -0.003449568962347167,
+          "geom1": "",
+          "geom2": "link34",
+          "position": [
+            0.24880655655139547,
+            -0.5791583287332422,
+            -0.0017247844811735832
+          ]
+        },
+        "seconds": 91.4
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 14,
+        "seed": 421,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": false
+        },
+        "groove_fraction": 0.04166666666849716,
+        "angle_rad": 1.6822828961022616,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 19472,
+        "first_gate_contact": {
+          "time": 0.18600000000000014,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "distance": -0.0011155299180171819
+        },
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 1,
+        "min_contact_m": -0.0017340229834734637,
+        "deepest_contact": {
+          "time": 0.19000000000000014,
+          "distance": -0.0017340229834734637,
+          "geom1": "link11",
+          "geom2": "gate1",
+          "position": [
+            0.08524504526113938,
+            0.19612488951573182,
+            0.10331696332656257
+          ]
+        },
+        "seconds": 84.6
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 15,
+        "seed": 1999,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": false,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.004166666666747875,
+        "angle_rad": -2.0202847722817747,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 2,
+        "min_contact_m": -0.003385897692184076,
+        "deepest_contact": {
+          "time": 0.18600000000000014,
+          "distance": -0.003385897692184076,
+          "geom1": "",
+          "geom2": "link33",
+          "position": [
+            -0.1463826924085474,
+            -0.5262779016264422,
+            -0.0016929488460920377
+          ]
+        },
+        "seconds": 67.5
+      },
+      {
+        "kind": "ablation_involute_blind",
+        "index": 16,
+        "seed": 31,
+        "error": "RuntimeError: analytical tracking did not converge",
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.037500000000928894,
+        "angle_rad": 3.2453890906062735,
+        "hold_s": 0.0,
+        "actions": 761,
+        "observations": 762,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": null,
+        "contacts": 13,
+        "min_contact_m": -0.0006183946111459021,
+        "deepest_contact": {
+          "time": 8.513999999999513,
+          "distance": -0.0006183946111459021,
+          "geom1": "link21",
+          "geom2": "pylon",
+          "position": [
+            -0.24748681204688017,
+            0.003177646117590337,
+            0.09711816514297848
+          ]
+        },
+        "seconds": 67.1
+      }
+    ],
+    "nop": [
+      {
+        "kind": "nop",
+        "index": 0,
+        "seed": 117,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666667720834,
+        "angle_rad": 1.493210853905106,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 1,
+        "seed": 800,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666665970953,
+        "angle_rad": 1.4929253718052942,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 2,
+        "seed": 801,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666665970953,
+        "angle_rad": 1.4929253725311242,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 3,
+        "seed": 802,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.02916666666776486,
+        "angle_rad": 1.4934961761674166,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 4,
+        "seed": 803,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.02916666666776485,
+        "angle_rad": 1.493496175600869,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 5,
+        "seed": 804,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666666340123,
+        "angle_rad": 1.4929236484027861,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 6,
+        "seed": 805,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666666340123,
+        "angle_rad": 1.4929236500416898,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 7,
+        "seed": 806,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666665449082,
+        "angle_rad": 1.4934938315429969,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 8,
+        "seed": 807,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666665449075,
+        "angle_rad": 1.493493830063295,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 9,
+        "seed": 711,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.02916666666594429,
+        "angle_rad": 1.4931001856701207,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 10,
+        "seed": 127,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666667359408,
+        "angle_rad": 1.4930456209634553,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 11,
+        "seed": 903,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666667309785,
+        "angle_rad": 1.4933195010785614,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 1,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 12,
+        "seed": 2026,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666667922815,
+        "angle_rad": 1.493291253317885,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 13,
+        "seed": 81,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666665850223,
+        "angle_rad": 1.4930461109123032,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 14,
+        "seed": 421,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666667947993,
+        "angle_rad": 1.4930420028531408,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 0,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.4
+      },
+      {
+        "kind": "nop",
+        "index": 15,
+        "seed": 1999,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.02916666666723515,
+        "angle_rad": 1.493193597475258,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 1,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      },
+      {
+        "kind": "nop",
+        "index": 16,
+        "seed": 31,
+        "error": null,
+        "success": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false,
+          "no_gate_contact": true
+        },
+        "groove_fraction": 0.029166666667389114,
+        "angle_rad": 1.492962689839708,
+        "hold_s": 0.0,
+        "actions": 0,
+        "observations": 1,
+        "gate_contacts": 0,
+        "first_gate_contact": null,
+        "fault": null,
+        "replay_ok": true,
+        "contacts": 1,
+        "min_contact_m": 0.0,
+        "deepest_contact": null,
+        "seconds": 0.5
+      }
+    ]
+  },
+  "unseen_layouts": 8,
+  "totals": {
+    "optical_preflight_pass": 15,
+    "optical_preflight_total": 25,
+    "oracle_frozen_pass": 13,
+    "oracle_frozen_total": 17,
+    "oracle_unseen_pass": 7,
+    "oracle_unseen_total": 8,
+    "worst_groove_fraction": 0.0291666666663401,
+    "worst_hold_s": 0.0,
+    "max_actions": 800,
+    "max_observations": 803,
+    "mujoco_faults": 0,
+    "replay_failures": 0,
+    "oracle_gate_contacts": 0,
+    "elapsed_s": 5349.4,
+    "ablation_static_v3_pass": 1,
+    "ablation_static_v3_total": 17,
+    "ablation_open_loop_pass": 0,
+    "ablation_open_loop_total": 17,
+    "ablation_involute_pass": 0,
+    "ablation_involute_total": 17,
+    "ablation_involute_blind_pass": 0,
+    "ablation_involute_blind_total": 17,
+    "nop_pass": 0,
+    "nop_total": 17
+  },
+  "all_checks_pass": false
+}

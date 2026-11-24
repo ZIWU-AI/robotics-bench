@@ -1,0 +1,933 @@
+{
+  "elapsed": 2265.469,
+  "rows": [
+    {
+      "index": 1,
+      "seed": 800,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764463943433318,
+            "groove_fraction": 0.991666666654939,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.00899189846286895,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.66028776929377
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 384.375,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764463943433318,
+            "groove_fraction": 0.991666666654939,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.00899189846286895,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.66028776929377
+            ]
+          }
+        },
+        "total_seconds": 638.4529999999995
+      }
+    },
+    {
+      "index": 2,
+      "seed": 801,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764460722480132,
+            "groove_fraction": 0.991666666654939,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.00899189846286894,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.66028321921686
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 384.0619999999999,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764460722480132,
+            "groove_fraction": 0.991666666654939,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.00899189846286894,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.66028321921686
+            ]
+          }
+        },
+        "total_seconds": 638.1720000000005
+      }
+    },
+    {
+      "index": 3,
+      "seed": 802,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.853425816895824,
+            "groove_fraction": 0.9833333333703578,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018117130259071187,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646846401544046
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 383.09400000000005,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.853425816895824,
+            "groove_fraction": 0.9833333333703578,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018117130259071187,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646846401544046
+            ]
+          }
+        },
+        "total_seconds": 636.1880000000001
+      }
+    },
+    {
+      "index": 4,
+      "seed": 803,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.853420618357251,
+            "groove_fraction": 0.9833333333703578,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018117130259071218,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646836814074229
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 382.8909999999996,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.853420618357251,
+            "groove_fraction": 0.9833333333703578,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018117130259071218,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646836814074229
+            ]
+          }
+        },
+        "total_seconds": 635.75
+      }
+    },
+    {
+      "index": 5,
+      "seed": 804,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764083960471424,
+            "groove_fraction": 0.9916666666611618,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.0090019743560474,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.659965026501368
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 286.9220000000005,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764083960471424,
+            "groove_fraction": 0.9916666666611618,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.0090019743560474,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.659965026501368
+            ]
+          }
+        },
+        "total_seconds": 529.844
+      }
+    },
+    {
+      "index": 6,
+      "seed": 805,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764076667699138,
+            "groove_fraction": 0.9916666666611619,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.009001974356047396,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.659957816166902
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 286.28099999999995,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.764076667699138,
+            "groove_fraction": 0.9916666666611619,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.009001974356047396,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.659957816166902
+            ]
+          }
+        },
+        "total_seconds": 529.0
+      }
+    },
+    {
+      "index": 7,
+      "seed": 806,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.852955209037138,
+            "groove_fraction": 0.9833333332922843,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018137282045428138,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646481979170222
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 284.28099999999995,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.852955209037138,
+            "groove_fraction": 0.9833333332922843,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018137282045428138,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646481979170222
+            ]
+          }
+        },
+        "total_seconds": 524.1409999999996
+      }
+    },
+    {
+      "index": 8,
+      "seed": 807,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.852957075178212,
+            "groove_fraction": 0.9833333332922843,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018137282045428138,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646485088299782
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 285.0619999999999,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.852957075178212,
+            "groove_fraction": 0.9833333332922843,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018137282045428138,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.646485088299782
+            ]
+          }
+        },
+        "total_seconds": 524.875
+      }
+    },
+    {
+      "index": 9,
+      "seed": 711,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.79187744825665,
+            "groove_fraction": 0.9874999999817344,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013525952270099707,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.635638814377726
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 350.0,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.79187744825665,
+            "groove_fraction": 0.9874999999817344,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013525952270099707,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.635638814377726
+            ]
+          }
+        },
+        "total_seconds": 602.1570000000002
+      }
+    },
+    {
+      "index": 10,
+      "seed": 127,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.783321427834766,
+            "groove_fraction": 0.9875000000175175,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013509667030746832,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.626790918192299
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 350.1090000000004,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.783321427834766,
+            "groove_fraction": 0.9875000000175175,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013509667030746832,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.626790918192299
+            ]
+          }
+        },
+        "total_seconds": 601.2660000000005
+      }
+    },
+    {
+      "index": 11,
+      "seed": 903,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.825987180200487,
+            "groove_fraction": 0.9833333333550167,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018078058176081796,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.618000205221215
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 349.09400000000005,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.825987180200487,
+            "groove_fraction": 0.9833333333550167,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018078058176081796,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.618000205221215
+            ]
+          }
+        },
+        "total_seconds": 598.5780000000004
+      }
+    },
+    {
+      "index": 12,
+      "seed": 2026,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.821626301767493,
+            "groove_fraction": 0.9833333333756832,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018072430053299636,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.613446758693074
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 347.25,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.821626301767493,
+            "groove_fraction": 0.9833333333756832,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.018072430053299636,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.613446758693074
+            ]
+          }
+        },
+        "total_seconds": 596.656
+      }
+    },
+    {
+      "index": 13,
+      "seed": 81,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.783357359773085,
+            "groove_fraction": 0.9874999999793551,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013515202447700037,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.62686224217371
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 279.875,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.783357359773085,
+            "groove_fraction": 0.9874999999793551,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013515202447700037,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.62686224217371
+            ]
+          }
+        },
+        "total_seconds": 498.0159999999996
+      }
+    },
+    {
+      "index": 14,
+      "seed": 421,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.782638284281461,
+            "groove_fraction": 0.9875000000323988,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013510745889387868,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.626112569861752
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 279.07800000000043,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.782638284281461,
+            "groove_fraction": 0.9875000000323988,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013510745889387868,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.626112569861752
+            ]
+          }
+        },
+        "total_seconds": 496.45300000000043
+      }
+    },
+    {
+      "index": 15,
+      "seed": 1999,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.806342095686919,
+            "groove_fraction": 0.9875000000143744,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013543281884161953,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.65061247112183
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 277.65599999999995,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.806342095686919,
+            "groove_fraction": 0.9875000000143744,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.013543281884161953,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.65061247112183
+            ]
+          }
+        },
+        "total_seconds": 493.46799999999985
+      }
+    },
+    {
+      "index": 16,
+      "seed": 31,
+      "exit_code": 0,
+      "result": {
+        "controller": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.77027091930993,
+            "groove_fraction": 0.9916666666788457,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.009005423036615723,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.666271498724349
+            ]
+          }
+        },
+        "calls": 523,
+        "seconds": 279.6090000000004,
+        "replay": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.77027091930993,
+            "groove_fraction": 0.9916666666788457,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.009005423036615723,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              0.0,
+              12.666271498724349
+            ]
+          }
+        },
+        "total_seconds": 497.7970000000005
+      }
+    }
+  ]
+}

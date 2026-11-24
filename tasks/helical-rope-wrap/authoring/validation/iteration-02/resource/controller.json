@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "normal_finish": true,
+  "moves": 800,
+  "observations": 1000,
+  "move_seconds": 771.1005596790037,
+  "observation_seconds": 1133.218312446039,
+  "rgb_png_bytes": 71792433,
+  "harness_fallback_finish": false,
+  "seconds": 1907.6867594580017,
+  "memory": {
+    "self_peak_rss_kib": 32324,
+    "children_peak_rss_kib": 0,
+    "memory.peak": "329027584",
+    "memory.current": "327868416",
+    "memory.max": "2147483648",
+    "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "cpu.max": "100000 100000"
+  }
+}

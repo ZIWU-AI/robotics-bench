@@ -1,0 +1,275 @@
+{
+  "ok": true,
+  "utc": "2026-11-23T11:42:31.183912+00:00",
+  "fixed_layouts": 8,
+  "policy_cases": 16,
+  "rewards": {
+    "oracle": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "nop": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "results": [
+    {
+      "index": 0,
+      "container": "rope-validation05-396973db88da4ae595255638706a96bd",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "container": "rope-validation05-8f44f7d728984102809bf519e277d5fe",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "container": "rope-validation05-15d52e0165f748c0bd1bb7b09138d9da",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "container": "rope-validation05-14957599ac94415fa3471550bac6bc0d",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "container": "rope-validation05-f3d5e8be546c49f3882b3e827c8ded22",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "container": "rope-validation05-138ac75333504767b48c511a2b110acb",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "container": "rope-validation05-79dd60141df84ff3b5e1a148ad3c427a",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "container": "rope-validation05-07a31bfd9e364c7cbf16e6ee794ef21f",
+      "cleanup_confirmed": true,
+      "cases": [
+        {
+          "case": "oracle",
+          "reward": 1,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        },
+        {
+          "case": "nop",
+          "reward": 0,
+          "normal_finish": true,
+          "exact_all_states": true,
+          "controller_exit_code": 0,
+          "verifier_exit_code": 0
+        }
+      ]
+    }
+  ],
+  "source_binding": {
+    "freeze_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+    "source_manifest_sha256": "3567b88b275bc7ccccff68a48f4622a139c3d7cabc0b961b66e6d5f65aab4387",
+    "task_manifest_verified": true,
+    "support_verified": {
+      "run_validation05.py": "4350c8d5444c407fbe1b243ad3d98a2fa20cea0a1b1b30653bd8830768bc0c80",
+      "validation05_harness.py": "0b0ff5bf81ed465a23a7760c10f6fc8c51a417619800c38124d9d81a257950c9",
+      "resource05.py": "96da8ce49bcd027025e673ec21a6d845cee43e55bd4acdd322e05a9e6cd8a927",
+      "hostrun_resource05.py": "e1e667d51733ddf86fd96ac8bfd8153762a3554286fcb50b44adbfe934ae2d3e"
+    },
+    "image": "sha256:7bf44d668a0f3e7b92470b6625e7892f8fba2f5c34dd897d03d6c0384624d85a",
+    "scene_sha256": "72d744242333ef01721740a15178e894d6d6d738a4ae9a0f64bbc248af04bec0",
+    "original_plan_sha256": "a6ddf1ec1a902ec983f1ff95a3999ab9a115981a417734690206a186e95c5b24",
+    "oracle_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4"
+  },
+  "split_execution_provenance": {
+    "reason": "main-authorized slot-aware split; indices0/1 workers1 then indices2..7 workers3 after resource cleanup; no layout/policy substitutions or retries",
+    "parts": [
+      {
+        "output": "independent-validation05-first2",
+        "summary_sha256": "03f86158a6f76cebe846e924f455a97047a3790f621f536cfd2019adee7e2b99",
+        "plan": "independent-validation05-scheduling\\first2-plan.json",
+        "plan_sha256": "c30fc43d3cff07ae39efc3968ec03e9d7e561db7eef5121ece5e21d228c75eec",
+        "indices": [
+          0,
+          1
+        ],
+        "workers": 1
+      },
+      {
+        "output": "independent-validation05-remaining6",
+        "summary_sha256": "0167c218b3f35cadef0e380655ab1d3d94e1e076b9f42df2989a3569a05f2d31",
+        "plan": "independent-validation05-scheduling\\remaining6-plan.json",
+        "plan_sha256": "b1939b03583f7cee82c665018f15ff7248ba1576ca91217dbb91000beb554f97",
+        "indices": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "workers": 3
+      }
+    ],
+    "split_receipt": "../independent-validation05-scheduling/split-receipt.json",
+    "split_receipt_sha256": "2a7b9ec55c920ea44a54adc2b8c0d7943fca06323d72be845430fee98bd67fb5",
+    "launch_evidence": {
+      "first2-launch-command.json": "e3e5fc59b7f17a165926c101026b89c0166c95471f94b491c17b304c48ab6e09",
+      "first2-launch-pid.json": "a6fabf197109268050dda4f8eff4a128108ebe755ae983ad0336006cf77c6304",
+      "remaining6-launch-command.json": "9cce8969944a006a5c59183c0039e667caa3ab85ba8547b839bb2f6dd7da0066",
+      "remaining6-launch-pid.json": "61c3db1b312eeb3f9f688c04b4aaea7961a62d1cb5e805c402895dffba95d0b1"
+    },
+    "duplicate_cases": 0,
+    "new_jobs_during_collection": 0
+  },
+  "all_normal_finish": true,
+  "all_exact_replay": true,
+  "all_cleanup_confirmed": true,
+  "frozen_source_and_support_unchanged": true,
+  "publication_note": "Selected unified summary fields; repeated full rows omitted because all16 small raw case outcomes are packaged separately."
+}

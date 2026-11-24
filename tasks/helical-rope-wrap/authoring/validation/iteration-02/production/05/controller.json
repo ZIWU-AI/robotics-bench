@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/opt/venv/bin/python",
+    "/task/solution/oracle.py"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "harness_finish": false,
+  "controller_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+  "seconds": 193.59870326500095
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "case": "warning",
+    "terminal": true,
+    "failure_preserved": true,
+    "verifier_infrastructure_failure": true
+  },
+  {
+    "case": "time_rollback",
+    "terminal": true,
+    "failure_preserved": true,
+    "verifier_infrastructure_failure": true
+  },
+  {
+    "case": "nonfinite",
+    "terminal": true,
+    "failure_preserved": true,
+    "verifier_infrastructure_failure": true
+  }
+]

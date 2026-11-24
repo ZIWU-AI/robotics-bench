@@ -1,0 +1,170 @@
+{
+  "sim_sha256": "1273125c3c98a385c63ea80f0558a84e4d5982f05cb13a1959172eac1ab9a027",
+  "scene_sha256": "9b1bb47d34ed980280a158aa1048e0e326034a2882cb3c8064289e66d152a572",
+  "armature": "5e-5",
+  "solref": ".010 1",
+  "policy": {
+    "hook_z_m": 0.12,
+    "lift_z_m": 0.4,
+    "pull_z_m": 0.42,
+    "pull_radius_m": 1.21,
+    "hold_moves": 40,
+    "duration_s": 0.12,
+    "step_m": 0.05
+  },
+  "rows": [
+    {
+      "index": 0,
+      "seed": 117,
+      "moves": 82,
+      "z_lift_m": 0.4,
+      "z_pull_m": 0.42,
+      "error": null,
+      "fault": null,
+      "finite": true,
+      "warnings": 0,
+      "max_force_N": 12.0,
+      "stall_m": 0.254126487968782,
+      "hold_drift_m": 4.8039542736789205e-05,
+      "success": false,
+      "reward": 0,
+      "seconds": 39.7,
+      "pass": true
+    },
+    {
+      "index": 2,
+      "seed": 801,
+      "moves": 84,
+      "z_lift_m": 0.4,
+      "z_pull_m": 0.42,
+      "error": null,
+      "fault": null,
+      "finite": true,
+      "warnings": 0,
+      "max_force_N": 12.0,
+      "stall_m": 0.2949696713825824,
+      "hold_drift_m": 6.393305524610162e-05,
+      "success": false,
+      "reward": 0,
+      "seconds": 11.7,
+      "pass": true
+    },
+    {
+      "index": 5,
+      "seed": 804,
+      "moves": 81,
+      "z_lift_m": 0.4,
+      "z_pull_m": 0.42,
+      "error": null,
+      "fault": null,
+      "finite": true,
+      "warnings": 0,
+      "max_force_N": 12.0,
+      "stall_m": 0.2371203443065183,
+      "hold_drift_m": 0.00021978371611381861,
+      "success": false,
+      "reward": 0,
+      "seconds": 10.2,
+      "pass": true
+    },
+    {
+      "index": 8,
+      "seed": 807,
+      "moves": 82,
+      "z_lift_m": 0.4,
+      "z_pull_m": 0.42,
+      "error": null,
+      "fault": null,
+      "finite": true,
+      "warnings": 0,
+      "max_force_N": 12.0,
+      "stall_m": 0.23330930033704,
+      "hold_drift_m": 0.00023011215297763298,
+      "success": false,
+      "reward": 0,
+      "seconds": 11.2,
+      "pass": true
+    },
+    {
+      "index": 12,
+      "seed": 2026,
+      "moves": 84,
+      "z_lift_m": 0.4,
+      "z_pull_m": 0.42,
+      "error": null,
+      "fault": null,
+      "finite": true,
+      "warnings": 0,
+      "max_force_N": 12.0,
+      "stall_m": 0.30359487775141225,
+      "hold_drift_m": 9.067674713639555e-05,
+      "success": false,
+      "reward": 0,
+      "seconds": 10.4,
+      "pass": true
+    },
+    {
+      "index": 16,
+      "seed": 31,
+      "moves": 84,
+      "z_lift_m": 0.4,
+      "z_pull_m": 0.42,
+      "error": null,
+      "fault": null,
+      "finite": true,
+      "warnings": 0,
+      "max_force_N": 12.0,
+      "stall_m": 0.27379832396650866,
+      "hold_drift_m": 0.00029418153490113784,
+      "success": false,
+      "reward": 0,
+      "seconds": 11.8,
+      "pass": true
+    }
+  ],
+  "pre_fix_baseline": [
+    {
+      "index": 0,
+      "faulted": false,
+      "reason": null
+    },
+    {
+      "index": 2,
+      "faulted": true,
+      "reason": "RuntimeError: MuJoCo warning: Nan, Inf or huge value in QACC at DOF 7. The simulation is unstable. Time = 4.6740."
+    },
+    {
+      "index": 5,
+      "faulted": false,
+      "reason": null
+    },
+    {
+      "index": 8,
+      "faulted": false,
+      "reason": null
+    },
+    {
+      "index": 12,
+      "faulted": false,
+      "reason": null
+    },
+    {
+      "index": 16,
+      "faulted": true,
+      "reason": "RuntimeError: MuJoCo warning: Nan, Inf or huge value in QACC at DOF 177. The simulation is unstable. Time = 5.6560."
+    }
+  ],
+  "totals": {
+    "layouts": 6,
+    "pass": 6,
+    "max_force_N": 12.0,
+    "min_stall_m": 0.23330930033704,
+    "max_hold_drift_m": 0.00029418153490113784,
+    "faults": 0,
+    "warnings": 0,
+    "successes": 0,
+    "pre_fix_faults": 2,
+    "elapsed_s": 194.4
+  },
+  "all_checks_pass": true
+}

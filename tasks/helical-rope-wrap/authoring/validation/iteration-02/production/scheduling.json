@@ -1,0 +1,41 @@
+{
+  "original_recovery_sha256": "4e289ea33b6533a31b293124c2c6a753d1e83ff86d8108a0f9754cad0e2a7eaf",
+  "original_plan_sha256": "7027915293d0207581c970dcf8772ab1d3db57ad8999c176617f8648853012c7",
+  "remaining_plan_sha256": "22d6d057b60b7278f2d1e1948fc3084043a5cffb5be5f6299cd684cc404bb4e9",
+  "first_four_recovered_after_host_loss": [
+    {
+      "id": "production-0",
+      "container": "rope-validation05-6edcec0ef70c44c6951556f707b0fa86",
+      "exit_code": 0,
+      "cleanup_confirmed": true,
+      "source_binding_after_matches": true,
+      "recovered_after_host_loss": true
+    },
+    {
+      "id": "production-1",
+      "container": "rope-validation05-cca9655925a340299df9f73536e642e4",
+      "exit_code": 0,
+      "cleanup_confirmed": true,
+      "source_binding_after_matches": true,
+      "recovered_after_host_loss": true
+    },
+    {
+      "id": "production-2",
+      "container": "rope-validation05-78fccdc7a5334f9eb05688a3677462c4",
+      "exit_code": 0,
+      "cleanup_confirmed": true,
+      "source_binding_after_matches": true,
+      "recovered_after_host_loss": true
+    },
+    {
+      "id": "production-3",
+      "container": "rope-validation05-e01d70bceaa24bb3b91cd6a75b02957e",
+      "exit_code": 0,
+      "cleanup_confirmed": true,
+      "source_binding_after_matches": true,
+      "recovered_after_host_loss": true
+    }
+  ],
+  "remaining_jobs": "13 oracle + 2 nop + 1 bounded ablation; resumed queue used three workers",
+  "no_completed_trials_repeated": true
+}

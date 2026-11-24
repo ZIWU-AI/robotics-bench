@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/venv/bin/python",
+    "-c",
+    "from client import Client; r=Client().finish(); print(r); assert r.get('ok'), r"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "harness_finish": false,
+  "controller_sha256": "e058d3d828450d4bd5ba142e4b7ab3517e479446babee377d403e6575a6d8769",
+  "seconds": 0.4180481900002633
+}

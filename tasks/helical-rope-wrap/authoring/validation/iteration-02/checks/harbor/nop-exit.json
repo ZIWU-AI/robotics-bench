@@ -1,0 +1,13 @@
+{
+  "phase": "nop",
+  "host_pid": 45848,
+  "started_utc": "2026-11-23T11:19:31.620518+00:00",
+  "child_exit_code": 0,
+  "host_exit_code": 0,
+  "reserved_slots": 2,
+  "child_pid": 26008,
+  "source_unchanged": true,
+  "finished_utc": "2026-11-23T11:20:05.931221+00:00",
+  "seconds": 34.312999999994645,
+  "meaning": "Process exit only; inspect gate checks or Harbor rewards. No automatic next phase or cleanup."
+}

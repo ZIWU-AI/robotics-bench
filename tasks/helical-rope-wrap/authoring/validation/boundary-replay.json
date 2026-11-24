@@ -1,0 +1,48 @@
+{
+  "actions": 34,
+  "command_speed_max_m_s": 3,
+  "exact_replay": true,
+  "grade": {
+    "reward": 0,
+    "problems": [],
+    "verdict": {
+      "success": false,
+      "checks": {
+        "pass": false,
+        "checks": {
+          "winding": false,
+          "groove": false,
+          "continuous_groove_coverage": false,
+          "ends": false,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": false
+        },
+        "angle": 1.5205575314108786,
+        "groove_fraction": 0.03333333333453805,
+        "start_tail_m": 0.0,
+        "end_tail_m": 1.0474822387608356,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          0.0,
+          0.410906429454445
+        ]
+      }
+    },
+    "entries": 35
+  },
+  "deepest_contact": {
+    "time": 0.6600000000000005,
+    "distance": -0.0005429613812446277,
+    "geom1": "rail-1_2",
+    "geom2": "link1",
+    "position": [
+      0.07968959426342634,
+      0.025505218327285042,
+      0.1153823450052652
+    ]
+  },
+  "seconds": 9.766000000000531,
+  "sim_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658",
+  "serve_sha256": "19f25023004ad40de5a2620d011135a68c70175fd06fcbef9ebd8e0214ef1ff2"
+}

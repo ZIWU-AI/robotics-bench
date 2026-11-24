@@ -1,0 +1,21 @@
+{
+  "attempts": [
+    {
+      "directory": "static-20261123-193821-f9d666",
+      "result_raw_sha256": "a98c6364315a74a21a1564f8f38e74510d7544cb6c160474b3d11d0dab7d88a7",
+      "outcome": "27/29; absolute path caused Task fields and Task path rejection; canonical metadata retry passed",
+      "copy_preparation_error": "Windows long-path error before retry; preserved locally"
+    },
+    {
+      "directory": "final-static-20261123-194420",
+      "result_raw_sha256": "289af6ed6643cf9edc23da6a3429a6c105779207fedd916d64f2054c87404ebe",
+      "outcome": "commands returned29/29 but invalid scan coverage: find did not traverse junction; not used as final pass"
+    },
+    {
+      "directory": "final-static-real-20261123-194758",
+      "result_raw_sha256": "378f1e1dbfde252bfa98ce0772276ccf7f363327cbbdba037cdfb6e1db30c1d9",
+      "outcome": "29/29 on actual byte-identical physical directory, scan284files; both source/copy unchanged"
+    }
+  ],
+  "no_runtime_tests_repeated": true
+}

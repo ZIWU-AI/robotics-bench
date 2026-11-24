@@ -1,0 +1,15 @@
+{
+  "state": {
+    "Status": "exited",
+    "ExitCode": 0,
+    "OOMKilled": false,
+    "StartedAt": "2026-11-22T11:15:51.363018215Z",
+    "FinishedAt": "2026-11-22T11:50:39.56675438Z"
+  },
+  "resources": {
+    "NanoCpus": 1000000000,
+    "Memory": 2147483648,
+    "NetworkMode": "none"
+  },
+  "image": "sha256:7bf44d668a0f3e7b92470b6625e7892f8fba2f5c34dd897d03d6c0384624d85a"
+}

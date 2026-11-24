@@ -1,0 +1,217 @@
+{
+  "scope": "final publication static suite on actual byte-identical canonical tasks/helical-rope-wrap copy; no junction, Docker or physics",
+  "scan_file_count": 284,
+  "passed": 29,
+  "total": 29,
+  "seconds": 17.6559999999954,
+  "task_unchanged": true,
+  "copy_unchanged": true,
+  "checks": [
+    {
+      "name": "Canary strings",
+      "exit_code": 0,
+      "log": "01-canary-strings.log",
+      "log_sha256": "588082d89728170417c6bdae6512f2a4154066dee6720cf31958e67644d18fab",
+      "seconds": 12.98399999999674
+    },
+    {
+      "name": "Dockerfile refs",
+      "exit_code": 0,
+      "log": "02-dockerfile-refs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.0940000000045984
+    },
+    {
+      "name": "Dockerfile sanity",
+      "exit_code": 0,
+      "log": "03-dockerfile-sanity.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.10899999999674037
+    },
+    {
+      "name": "Dockerfile platform",
+      "exit_code": 0,
+      "log": "04-dockerfile-platform.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.07800000000133878
+    },
+    {
+      "name": "Absolute paths",
+      "exit_code": 0,
+      "log": "05-absolute-paths.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.3600000000005821
+    },
+    {
+      "name": "Author host paths",
+      "exit_code": 0,
+      "log": "06-author-host-paths.log",
+      "log_sha256": "d423f19972bc0f228cd2056d47c220c4aed62a71f40024498f8df957e48f2d52",
+      "seconds": 0.20300000000133878
+    },
+    {
+      "name": "Test refs",
+      "exit_code": 0,
+      "log": "07-test-refs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.10899999999674037
+    },
+    {
+      "name": "test.sh sanity",
+      "exit_code": 0,
+      "log": "08-test-sh-sanity.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.14100000000325963
+    },
+    {
+      "name": "Task fields",
+      "exit_code": 0,
+      "log": "09-task-fields.log",
+      "log_sha256": "10fddda94e50e99bb18602a21f37c352ad72a2528535dd5ab7b01cc6215203ed",
+      "seconds": 0.4529999999940628
+    },
+    {
+      "name": "Task path",
+      "exit_code": 0,
+      "log": "10-task-path.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.10900000000401633
+    },
+    {
+      "name": "Task structure",
+      "exit_code": 0,
+      "log": "11-task-structure.log",
+      "log_sha256": "cc5e26e931cf74d285925f4b3b8c9d53bf9461fa3b44ddd229408c36cbb47b9f",
+      "seconds": 0.14099999999598367
+    },
+    {
+      "name": "Task timeout cap",
+      "exit_code": 0,
+      "log": "12-task-timeout-cap.log",
+      "log_sha256": "f3beacbe74de7f7323d568f9f3b04e0dfcb722455e4ce5ff963943765a20d7bf",
+      "seconds": 0.125
+    },
+    {
+      "name": "Case single clock",
+      "exit_code": 0,
+      "log": "13-case-single-clock.log",
+      "log_sha256": "e3f4c00b82c0c1086a83df0530e19ca8b061208d618c5be2224b04df6cf64093",
+      "seconds": 0.17200000000593718
+    },
+    {
+      "name": "Instruction suffix",
+      "exit_code": 0,
+      "log": "14-instruction-suffix.log",
+      "log_sha256": "8d6367ccf73919f3f328d98747421bd90c3babbaf9fc1d1b71d134fdbac3b0f9",
+      "seconds": 0.125
+    },
+    {
+      "name": "GPU types",
+      "exit_code": 0,
+      "log": "15-gpu-types.log",
+      "log_sha256": "c63fe7e9f1a853aabfe1e28661c61d8940a7f81ea25e1e3cff03a83495bedc7a",
+      "seconds": 0.10899999999674037
+    },
+    {
+      "name": "Network policy",
+      "exit_code": 0,
+      "log": "16-network-policy.log",
+      "log_sha256": "887dd377319c482b9ea1ccee06ec5b7ec838ba2a330ed708e184cab929a99f16",
+      "seconds": 0.11000000000058208
+    },
+    {
+      "name": "Task slug length",
+      "exit_code": 0,
+      "log": "17-task-slug-length.log",
+      "log_sha256": "d814a781be28765c20e337e778fb49feeae92493c274c3a9381b68abfef18f18",
+      "seconds": 0.0930000000007567
+    },
+    {
+      "name": "Separate verifier",
+      "exit_code": 0,
+      "log": "18-separate-verifier.log",
+      "log_sha256": "2da427fd46096ff4a8c0b1dccf51e058557e7e1b674ec36ba6484ebecae92333",
+      "seconds": 0.23500000000058208
+    },
+    {
+      "name": "Verifier tooling baked",
+      "exit_code": 0,
+      "log": "19-verifier-tooling-baked.log",
+      "log_sha256": "90f6718a61c637a1fb10204e72bbb34b12eb5fc024619cc41f4db404c7c381fc",
+      "seconds": 0.20300000000133878
+    },
+    {
+      "name": "Trial network fetch",
+      "exit_code": 0,
+      "log": "20-trial-network-fetch.log",
+      "log_sha256": "54f801ef3e930c75e1840bc9508b4de64f81c05e115fcbaaa90311c91c39d115",
+      "seconds": 0.17199999999866122
+    },
+    {
+      "name": "Pip pinning",
+      "exit_code": 0,
+      "log": "21-pip-pinning.log",
+      "log_sha256": "21471e261314982be81386dd4ceb2c338f04d127ed0d513f48b01c0b61d42f06",
+      "seconds": 0.10899999999674037
+    },
+    {
+      "name": "Pytest version pin",
+      "exit_code": 0,
+      "log": "22-pytest-version-pin.log",
+      "log_sha256": "d9b9b62052039d47934a38809907366bef9151332c2edeebaaf2a788e48f7de5",
+      "seconds": 0.15600000000267755
+    },
+    {
+      "name": "Nproc usage",
+      "exit_code": 0,
+      "log": "23-nproc-usage.log",
+      "log_sha256": "4cfbc7086c36c1acff282454dba853e44fc3e6abd50ec539b12e99c3b3680649",
+      "seconds": 0.2819999999992433
+    },
+    {
+      "name": "Runner resources",
+      "exit_code": 0,
+      "log": "24-runner-resources.log",
+      "log_sha256": "e7fb4e7322bd3f0cab1525ce07e2af581f43c3ce74d35822c38a78d4961e0539",
+      "seconds": 0.10899999999674037
+    },
+    {
+      "name": "Compose host binds",
+      "exit_code": 0,
+      "log": "25-compose-host-binds.log",
+      "log_sha256": "7177bbf95efe9f4a4dbef4a06add115c0b8fb6c6ee1a404921e1203097d90eb5",
+      "seconds": 0.07800000000133878
+    },
+    {
+      "name": "Binary reward",
+      "exit_code": 0,
+      "log": "26-binary-reward.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.17199999999866122
+    },
+    {
+      "name": "Task README",
+      "exit_code": 0,
+      "log": "27-task-readme.log",
+      "log_sha256": "423d2da6134dabf75525747ce9bfe5b299ecac11c2251374929e6bfd7d20af23",
+      "seconds": 0.3120000000053551
+    },
+    {
+      "name": "Rubric consistency",
+      "exit_code": 0,
+      "log": "28-rubric-consistency.log",
+      "log_sha256": "00a542e81edc20aeac18768e0ce6d27a0a046b29c4b01794cc52ba3f27d830cd",
+      "seconds": 0.046999999998661224
+    },
+    {
+      "name": "Casekit sync",
+      "exit_code": 0,
+      "log": "29-casekit-sync.log",
+      "log_sha256": "6936dda83639378e9b9f8aa4069a01d31125ec2ca94da093c6b90cf65cd5429a",
+      "seconds": 0.046999999998661224
+    }
+  ],
+  "original_result_sha256": "378f1e1dbfde252bfa98ce0772276ccf7f363327cbbdba037cdfb6e1db30c1d9",
+  "input_source_manifest": "input-source.json",
+  "publication_delta_after_check": "Only this result/log evidence, summary/hash bookkeeping and final freeze were added; README and runtime unchanged."
+}

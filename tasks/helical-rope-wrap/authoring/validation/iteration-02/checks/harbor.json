@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "trials": {
+    "oracle": {
+      "reward": 1,
+      "exception_info": null,
+      "source_before_sha256": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+      "source_after_sha256": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+      "task_and_release_match_frozen85": true,
+      "source_before_after_equal": true
+    },
+    "nop": {
+      "reward": 0,
+      "exception_info": null,
+      "source_before_sha256": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+      "source_after_sha256": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+      "task_and_release_match_frozen85": true,
+      "source_before_after_equal": true
+    }
+  },
+  "source_scope": "frozen85 before publication-only README/evidence additions; source map hashes retain original local raw binding"
+}

@@ -1,0 +1,14 @@
+[PASS] layout: collect /opt/rope-service/collect.py, export /var/lib/rope/export, agent agent
+(built both images in 5 s)
+[PASS] isolation: launcher /usr/local/bin/start-rope-service; service, state and collector closed
+[PASS] api: /run/rope/endpoint.json; info api=rope-api-v1 backend=mujoco budgets={'actions': 800, 'observations': 1000}
+[PASS] envelope: noauth -> 401, unknown -> 404, badjson -> 400
+[PASS] finish: finish ok; second finish refused: True; ops after finish accepted: none (of ['move', 'observe'])
+[PASS] nop: reward 0;
+[PASS] oracle: solve.sh rc 0 in 449 s; reward 1; used None
+[PASS] recording: 524 entries, ends with finish; edited line: reward 0
+[PASS] replay: entry 522 state ctrl.0 +0.01: reward 0; ValueError: recording.jsonl does not match its seal
+[PASS] truncated: finish entry removed: reward 0; ValueError: recording.jsonl does not match its seal
+[PASS] unfinished: collected without a finish from the agent: last entry finish {'by': 'collector'}; oracle with the collector's finish: reward 0; ValueError: recording.jsonl does not match its seal
+
+CASE GATE PASS (11/11)

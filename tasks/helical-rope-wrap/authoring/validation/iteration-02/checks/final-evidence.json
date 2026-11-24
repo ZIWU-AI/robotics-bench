@@ -1,0 +1,358 @@
+{
+  "recorded_utc": "2026-11-23T11:21:23.940783+00:00",
+  "output": "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-execution-20261123T110600Z-8eb80611",
+  "phases": {
+    "gate": {
+      "receipt": {
+        "phase": "gate",
+        "host_pid": 8616,
+        "started_utc": "2026-11-23T11:06:00.746117+00:00",
+        "child_exit_code": 0,
+        "host_exit_code": 0,
+        "reserved_slots": 2,
+        "child_pid": 40788,
+        "source_unchanged": true,
+        "finished_utc": "2026-11-23T11:12:09.367586+00:00",
+        "seconds": 368.625,
+        "meaning": "Process exit only; inspect gate checks or Harbor rewards. No automatic next phase or cleanup."
+      },
+      "command": {
+        "argv": [
+          "<host-python>",
+          "-B",
+          "tools/case-kit/gate.py",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree/tasks/helical-rope-wrap",
+          "--json",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-execution-20261123T110600Z-8eb80611/gate/gate.json",
+          "--keep",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-execution-20261123T110600Z-8eb80611/gate/gate-artifacts"
+        ],
+        "cwd": "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree",
+        "runner_sha256": "45c148f613153c7a1f382f4612582df7bfc6a7232a550e79d0d36aa6de772818",
+        "manifest_sha256": "3567b88b275bc7ccccff68a48f4622a139c3d7cabc0b961b66e6d5f65aab4387",
+        "reserved_slots": 2
+      },
+      "before_after_equal": true,
+      "verdict": {
+        "task": "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree/tasks/helical-rope-wrap",
+        "pass": true,
+        "checks": [
+          {
+            "check": "layout",
+            "pass": true,
+            "detail": "collect /opt/rope-service/collect.py, export /var/lib/rope/export, agent agent"
+          },
+          {
+            "check": "isolation",
+            "pass": true,
+            "detail": "launcher /usr/local/bin/start-rope-service; service, state and collector closed"
+          },
+          {
+            "check": "api",
+            "pass": true,
+            "detail": "/run/rope/endpoint.json; info api=rope-api-v1 backend=mujoco budgets={'actions': 800, 'observations': 1000}"
+          },
+          {
+            "check": "envelope",
+            "pass": true,
+            "detail": "noauth -> 401, unknown -> 404, badjson -> 400"
+          },
+          {
+            "check": "finish",
+            "pass": true,
+            "detail": "finish ok; second finish refused: True; ops after finish accepted: none (of ['move', 'observe'])"
+          },
+          {
+            "check": "nop",
+            "pass": true,
+            "detail": "reward 0; "
+          },
+          {
+            "check": "oracle",
+            "pass": true,
+            "detail": "solve.sh rc 0 in 171 s; reward 1; used None"
+          },
+          {
+            "check": "recording",
+            "pass": true,
+            "detail": "524 entries, ends with finish; edited line: reward 0"
+          },
+          {
+            "check": "replay",
+            "pass": true,
+            "detail": "entry 522 state ctrl.0 +0.01: reward 0; ValueError: recording.jsonl does not match its seal"
+          },
+          {
+            "check": "truncated",
+            "pass": true,
+            "detail": "finish entry removed: reward 0; ValueError: recording.jsonl does not match its seal"
+          },
+          {
+            "check": "unfinished",
+            "pass": true,
+            "detail": "collected without a finish from the agent: last entry finish {'by': 'collector'}; oracle with the collector's finish: reward 0; ValueError: recording.jsonl does not match its seal"
+          }
+        ]
+      }
+    },
+    "oracle": {
+      "receipt": {
+        "phase": "oracle",
+        "host_pid": 36840,
+        "started_utc": "2026-11-23T11:13:11.006277+00:00",
+        "child_exit_code": 0,
+        "host_exit_code": 0,
+        "reserved_slots": 2,
+        "child_pid": 43440,
+        "source_unchanged": true,
+        "finished_utc": "2026-11-23T11:19:07.093592+00:00",
+        "seconds": 356.0779999999977,
+        "meaning": "Process exit only; inspect gate checks or Harbor rewards. No automatic next phase or cleanup."
+      },
+      "command": {
+        "argv": [
+          "harbor",
+          "run",
+          "--path",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree/tasks/helical-rope-wrap",
+          "--agent",
+          "oracle",
+          "--env",
+          "docker",
+          "--n-concurrent",
+          "1",
+          "--n-attempts",
+          "1",
+          "--jobs-dir",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-execution-20261123T110600Z-8eb80611/oracle/jobs",
+          "--job-name",
+          "oracle"
+        ],
+        "cwd": "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree",
+        "runner_sha256": "45c148f613153c7a1f382f4612582df7bfc6a7232a550e79d0d36aa6de772818",
+        "manifest_sha256": "3567b88b275bc7ccccff68a48f4622a139c3d7cabc0b961b66e6d5f65aab4387",
+        "reserved_slots": 2
+      },
+      "before_after_equal": true,
+      "id": "18d86dce-47b2-4972-91a6-624b1b88e32d",
+      "trial_name": "helical-rope-wrap__rLZFqiM",
+      "task_checksum": "14d247c5cd0be8c3a6777e522a1e95a2e4ee8c78df94e51ac87f557d400e3278",
+      "verifier_result": {
+        "rewards": {
+          "reward": 1.0
+        }
+      },
+      "exception_info": null,
+      "details": {
+        "reward": 1,
+        "problems": [],
+        "verdict": {
+          "success": true,
+          "checks": {
+            "pass": true,
+            "checks": {
+              "winding": true,
+              "groove": true,
+              "continuous_groove_coverage": true,
+              "ends": true,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": true
+            },
+            "angle": 12.783735335023303,
+            "groove_fraction": 0.9874999999793548,
+            "start_tail_m": 0.0,
+            "end_tail_m": 0.01351520244770008,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              -1.664578160262813e-11,
+              12.62725440100797
+            ]
+          }
+        },
+        "entries": 524
+      },
+      "reward_txt": "1",
+      "job_stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+          "oracle__adhoc": {
+            "n_trials": 1,
+            "n_errors": 0,
+            "metrics": [
+              {
+                "mean": 1.0
+              }
+            ],
+            "pass_at_k": {},
+            "reward_stats": {
+              "reward": {
+                "1.0": [
+                  "helical-rope-wrap__rLZFqiM"
+                ]
+              }
+            },
+            "exception_stats": {}
+          }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+      }
+    },
+    "nop": {
+      "receipt": {
+        "phase": "nop",
+        "host_pid": 45848,
+        "started_utc": "2026-11-23T11:19:31.620518+00:00",
+        "child_exit_code": 0,
+        "host_exit_code": 0,
+        "reserved_slots": 2,
+        "child_pid": 26008,
+        "source_unchanged": true,
+        "finished_utc": "2026-11-23T11:20:05.931221+00:00",
+        "seconds": 34.312999999994645,
+        "meaning": "Process exit only; inspect gate checks or Harbor rewards. No automatic next phase or cleanup."
+      },
+      "command": {
+        "argv": [
+          "harbor",
+          "run",
+          "--path",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree/tasks/helical-rope-wrap",
+          "--agent",
+          "nop",
+          "--env",
+          "docker",
+          "--n-concurrent",
+          "1",
+          "--n-attempts",
+          "1",
+          "--jobs-dir",
+          "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-execution-20261123T110600Z-8eb80611/nop/jobs",
+          "--job-name",
+          "nop"
+        ],
+        "cwd": "<workspace>/evidence/pr29-review-repair-20261123/prototype/ci05-worktree",
+        "runner_sha256": "45c148f613153c7a1f382f4612582df7bfc6a7232a550e79d0d36aa6de772818",
+        "manifest_sha256": "3567b88b275bc7ccccff68a48f4622a139c3d7cabc0b961b66e6d5f65aab4387",
+        "reserved_slots": 2
+      },
+      "before_after_equal": true,
+      "id": "9a767989-cca1-49fe-b352-b5521b109cb6",
+      "trial_name": "helical-rope-wrap__JcwhdRt",
+      "task_checksum": "14d247c5cd0be8c3a6777e522a1e95a2e4ee8c78df94e51ac87f557d400e3278",
+      "verifier_result": {
+        "rewards": {
+          "reward": 0.0
+        }
+      },
+      "exception_info": null,
+      "details": {
+        "reward": 0,
+        "problems": [
+          "the agent did not call finish; the collector sealed the episode",
+          "collector finish"
+        ],
+        "verdict": {
+          "success": false,
+          "checks": {
+            "pass": false,
+            "checks": {
+              "winding": false,
+              "groove": false,
+              "continuous_groove_coverage": false,
+              "ends": false,
+              "no_core_crossing": true,
+              "no_backtracking": true,
+              "hold": false
+            },
+            "angle": 1.4931001856701207,
+            "groove_fraction": 0.02916666666594429,
+            "start_tail_m": 0.0,
+            "end_tail_m": 1.0505156247768,
+            "backward_rad": -0.0,
+            "continuous_groove_interval_rad": [
+              4.33268308306908e-10,
+              0.3584535588963132
+            ]
+          }
+        },
+        "entries": 1
+      },
+      "reward_txt": "0",
+      "job_stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+          "nop__adhoc": {
+            "n_trials": 1,
+            "n_errors": 0,
+            "metrics": [
+              {
+                "mean": 0.0
+              }
+            ],
+            "pass_at_k": {},
+            "reward_stats": {
+              "reward": {
+                "0.0": [
+                  "helical-rope-wrap__JcwhdRt"
+                ]
+              }
+            },
+            "exception_stats": {}
+          }
+        },
+        "n_input_tokens": null,
+        "n_cache_tokens": null,
+        "n_output_tokens": null,
+        "cost_usd": null
+      }
+    }
+  },
+  "artifacts_sha256": {
+    "gate/source-before.json": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+    "gate/source-after.json": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+    "gate/exit-receipt.json": "c73a34a1fc3903b8b35a93725ae56364caf726d0f7f2d6a7a66f3572f0a60fd7",
+    "gate/command.json": "b23d6cdb2a97e6d08517e77cebaf583d280e7a8298fc5fd995aeaed250f47cf2",
+    "gate/raw.log": "af09ae64528ebbd75727360c31c8956cd3bede23756dd355e50fbcc568391c43",
+    "gate/gate.json": "d9a0ec18b00b572d63527ac54237a0b3f372f296aa65552485ad98edbe2e6f34",
+    "oracle/source-before.json": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+    "oracle/source-after.json": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+    "oracle/exit-receipt.json": "a12a4b7641d035c8c5f219b191f5896bc212220b62cb557c8d3078e913b6c202",
+    "oracle/command.json": "fe38420f7e5e541b859f40b042938a28a9e2725d4d975cd392280a64faa1fe77",
+    "oracle/raw.log": "181ffa6a90e65cf90ce756522a9e75b48896dcd57abebbb3871f78dbb503d315",
+    "oracle/jobs/oracle/helical-rope-wrap__rLZFqiM/result.json": "1ba10641906559f33d7924b8f4f247ad63a0fdd24b60c8e748932e8d1a727241",
+    "oracle/jobs/oracle/helical-rope-wrap__rLZFqiM/verifier/reward.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "oracle/jobs/oracle/helical-rope-wrap__rLZFqiM/verifier/details.json": "9a9bcd4d537f4d85b39a3d83b9e52b489d6fae44d59b9e85862c4477dab228fd",
+    "nop/source-before.json": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+    "nop/source-after.json": "2f0c00399eceb80b1798f94cb33aa7df773fb1e505de28b140c7620c7a6038af",
+    "nop/exit-receipt.json": "fe3caf93bf831ed26216d0dcf5bbf2202ea605119941aa3f666df21f806530a5",
+    "nop/command.json": "75e5cfb55e1bc2cc91f3a8b20379e283376733cb54cd232b18618ab65aa68342",
+    "nop/raw.log": "f7a294f6544444da3c691bfdc6eeebb8291593804427289c062bf0d0d7b33980",
+    "nop/jobs/nop/helical-rope-wrap__JcwhdRt/result.json": "fc8b2207538b03f079a684459a6e441028a8476a3a91e09c265764d793960e13",
+    "nop/jobs/nop/helical-rope-wrap__JcwhdRt/verifier/reward.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "nop/jobs/nop/helical-rope-wrap__JcwhdRt/verifier/details.json": "46bc89a198ce89b0eb4c32b23395af883478cc03ce8904a8bcb5997157e95eb3"
+  },
+  "binding": {
+    "head": "336b155f34c411c7a653a666e6e2d148ed1b3ec0",
+    "task_files": 85,
+    "release_files": 85,
+    "platform_files": 489,
+    "all_six_snapshots_equal": true,
+    "manifest_sha256": "3567b88b275bc7ccccff68a48f4622a139c3d7cabc0b961b66e6d5f65aab4387"
+  },
+  "gate_limit": "Platform gate passes 11/11. Replay-tampered, truncated, and collector-finish negatives report seal mismatch, so these gate negatives do not establish deeper replay-predicate coverage.",
+  "remaining_harbor_containers": []
+}

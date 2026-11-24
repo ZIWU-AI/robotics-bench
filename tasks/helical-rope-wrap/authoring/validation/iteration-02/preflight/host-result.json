@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "timed_out": false,
+  "cleanup_confirmed": true,
+  "image": "sha256:7bf44d668a0f3e7b92470b6625e7892f8fba2f5c34dd897d03d6c0384624d85a",
+  "container": "rope-release05-preflight-901344483f9e",
+  "resource_binding": {
+    "image_exact": true,
+    "one_cpu": true,
+    "two_gib": true,
+    "network_none": true
+  },
+  "binding_unchanged": true,
+  "seconds": 57.21900000000096,
+  "report_sha256": "1f6050231ffa89ed91816656780efb94ad9dec2bc1a71a9e5a3af720876d5d58",
+  "raw_log_sha256": "3f25b024ae411aa80a3557fbd794870cef6e09a1f14a29f7d43b429c122c733a",
+  "passed": true
+}

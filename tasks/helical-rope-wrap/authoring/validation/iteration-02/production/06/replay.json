@@ -1,0 +1,36 @@
+{
+  "ok": true,
+  "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb",
+  "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe",
+  "grade": {
+    "reward": 1,
+    "problems": [],
+    "verdict": {
+      "success": true,
+      "checks": {
+        "pass": true,
+        "checks": {
+          "winding": true,
+          "groove": true,
+          "continuous_groove_coverage": true,
+          "ends": true,
+          "no_core_crossing": true,
+          "no_backtracking": true,
+          "hold": true
+        },
+        "angle": 12.76730431997781,
+        "groove_fraction": 0.9916666666611618,
+        "start_tail_m": 0.0,
+        "end_tail_m": 0.009001974356047387,
+        "backward_rad": -0.0,
+        "continuous_groove_interval_rad": [
+          -1.065051206837041e-10,
+          12.662800221227656
+        ]
+      }
+    },
+    "entries": 524
+  },
+  "exact_all_states": true,
+  "seconds": 198.22581633199843
+}

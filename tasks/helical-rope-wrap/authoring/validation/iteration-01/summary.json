@@ -1,0 +1,1479 @@
+{
+  "label": "independent diagnostic eight; not published17 or model confirmation cohort",
+  "candidate_freeze_sha256": "f6f087496fe2c42993609825691dbdc3523cacbe3dd503298f32269828233768",
+  "reviewer_scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+  "attempted": 8,
+  "passed_oracle_exact_replay_and_nop": 8,
+  "retries": 0,
+  "elapsed_seconds": 1641.3279999999995,
+  "rows": [
+    {
+      "index": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 861.2340000000004,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "e2d99aa30c58f85ca26dcfd0065631ca5cf8edc8668845eac804a9dc1059b577",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.776714356615255,
+                    "groove_fraction": 0.9874999999714663,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.013506838006354344,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.620040504459697
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 211.24217972399856,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 643.7736188790004,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "c36c076b4e9d8947b5588b5ffdfa7725b8b979bd17ee71f5f94f407e243ed0bd",
+          "seal_local_raw_sha256": "2283c647902e3cede74d5edafccd55b1fff3e40f760086f9d345e00990ca50e8",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.776714356615255,
+                  "groove_fraction": 0.9874999999714663,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.013506838006354344,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.620040504459697
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 211.24217972399856,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4930040695912072,
+                    "groove_fraction": 0.029166666665538233,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0490310827668052,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.35804594311843846
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.06448415700106125,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "1ba93ab16985286073967e6b540e2a5e0beb8a14fd2e96f46df4fc54eec89026"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "67d79caa9420836c378f11ef94b72759594bf32cf41b01aabf50659194c8270d",
+          "seal_local_raw_sha256": "ba44970cecef2d147a6354515d86e284537b02428042df0ea663bc817f5eca5c",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4930040695912072,
+                  "groove_fraction": 0.029166666665538233,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0490310827668052,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.35804594311843846
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.06448415700106125,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 1,
+      "exit_code": 0,
+      "elapsed_seconds": 870.3119999999999,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "bf2cff716112284562dd10331c6acd388fe81e2423f99b41360ec7ff79043957",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.830092441095362,
+                    "groove_fraction": 0.9833333333406148,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.0180951828919606,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.622352634110909
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 209.37391682799898,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 654.2179066009994,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "295f9c817f83d298c335816a36e83852714a693a6216a5acde6dc44d85816abe",
+          "seal_local_raw_sha256": "b6bb076399a74ffe2a583b0179606d1a95335ad27af06716194b86a4a1b5b394",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.830092441095362,
+                  "groove_fraction": 0.9833333333406148,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.0180951828919606,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.622352634110909
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 209.37391682799898,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4933457646777375,
+                    "groove_fraction": 0.029166666666882612,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0540444039169614,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.3594990360602007
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.05527899299886485,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "063173b5b4cd82cd0a1034e5460ac46560a296ca9e366744c03de6c9805318e8"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "5da0d1efd1d9226b4e6089f778ec6eda072c6ae27847b70fa2c7a2b33b48510d",
+          "seal_local_raw_sha256": "92c1550e7a9e384e9278eb222838eae8ef4a89a0d20ecdbed4e8932ab9d1ea13",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4933457646777375,
+                  "groove_fraction": 0.029166666666882612,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0540444039169614,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.3594990360602007
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.05527899299886485,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 2,
+      "exit_code": 0,
+      "elapsed_seconds": 869.2189999999991,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "107d6a26889ca05a43cd5cb054950b27022dacb248fcdc978b8705add4f100b9",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.769110445228886,
+                    "groove_fraction": 0.9916666666736678,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.008996936792313406,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.665042781298968
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 211.15810045699982,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 651.6754408509987,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "a4e9ddd4c18d6a51241a2c6f29b13384c88cd93a57c77378cfbeda5c528d1408",
+          "seal_local_raw_sha256": "a4d3913d161e800991a2ae554c043c2f7eee3f5b86f18ad3a6e96f3942e1417e",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.769110445228886,
+                  "groove_fraction": 0.9916666666736678,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.008996936792313406,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.665042781298968
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 211.15810045699982,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4929552019330736,
+                    "groove_fraction": 0.029166666667081963,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0481431371846273,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.35783904043141207
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.05101824000121269,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "5b17319e1d097364392a0d243ed7dfbe9c2cd12377a7d2e9988f66c163b940f2"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "40b0fd2136c29046a2766961a40b44030430941801712027d3232c7b4ef1f26d",
+          "seal_local_raw_sha256": "84f6fd83e5342f43e9c0ebb7504fbb1c5c2ce1cb7146f3f7ff1a81983f1e95db",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4929552019330736,
+                  "groove_fraction": 0.029166666667081963,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0481431371846273,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.35783904043141207
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.05101824000121269,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 3,
+      "exit_code": 0,
+      "elapsed_seconds": 860.7189999999991,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "eaa7916cc8c8e7160f3b7607495d4a37455707ef38e59f489d9c0a70636f50a8",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.764679211756837,
+                    "groove_fraction": 0.991666666670962,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.008997760095283497,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.660550969209753
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 210.64064207200136,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 643.6901594109986,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "55108440c934e41353162a0077526dc9e8dcec0ebc5ae9ea10587cb32c03543b",
+          "seal_local_raw_sha256": "6f326fa52deb4526a320431ce87db42ec675d457aa402e55d5481823ae39b889",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.764679211756837,
+                  "groove_fraction": 0.991666666670962,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.008997760095283497,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.660550969209753
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 210.64064207200136,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4929277159414278,
+                    "groove_fraction": 0.0291666666669215,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0482390516405664,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.3577227662334039
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.05202365700097289,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "70f96f6a0f506f9a03068b106a67414218ba41134c403cb8fe5db20f6a1cf917"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "69324447fff6e9bd1fedaf53285ff4a1cd025e0c7eb02caa0a07cb66812a4b99",
+          "seal_local_raw_sha256": "e9a9bcf3cf49b464d37f4eaf10166110ec5368a440719eb87ed7050f253f4af7",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4929277159414278,
+                  "groove_fraction": 0.0291666666669215,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0482390516405664,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.3577227662334039
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.05202365700097289,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 4,
+      "exit_code": 0,
+      "elapsed_seconds": 774.3900000000012,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "b5f6506d6869fe4ccb873fd2542ac557de44158fe2b45a8aecbfff9a901d8ea0",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.824793446683264,
+                    "groove_fraction": 0.9833333333673617,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.018091594862435986,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.616827182367773
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 188.76902877400062,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 580.3457258979997,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "78810904ae093adeda8020d11b8b11a25945658b32b2347e551da193349774f7",
+          "seal_local_raw_sha256": "baf666c6a1b3add1cfd815b75cbc4388eb2858de23046f825e22843a51925e0a",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.824793446683264,
+                  "groove_fraction": 0.9833333333673617,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.018091594862435986,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.616827182367773
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 188.76902877400062,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4933113654709664,
+                    "groove_fraction": 0.029166666667675988,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0538354028874362,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.3593522429363719
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.03738081499977852,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "0bc40ff10fba28b190a1fa0becec9138457951d6f795e43c07f0333767c89c19"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "29d0c5f44422d31723496cb8843c3423089c4dc169c87ed05b63282d985fddb9",
+          "seal_local_raw_sha256": "73c871de8aa5c9dd90e1e393b554e2fd28e5daa61d7faf58ec7e7fd8e83d4fac",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4933113654709664,
+                  "groove_fraction": 0.029166666667675988,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0538354028874362,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.3593522429363719
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.03738081499977852,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 5,
+      "exit_code": 0,
+      "elapsed_seconds": 771.2659999999996,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "65470df61c8f1ef7fb2fdcdfedd86485fbdd481f052a9e321ce9fc8686f673e2",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.843205408622476,
+                    "groove_fraction": 0.9833333333199084,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.01812073781484331,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.636154341385238
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 188.07292225400124,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 577.5020219460002,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "64b6c8aadbde0ec6b1a372bac1824e72980a11e322b3f04edf0a7f23a563efbb",
+          "seal_local_raw_sha256": "4e9781f369a5b43a17fc7731f747f0533fac15416b28584a5046772181fc2c28",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.843205408622476,
+                  "groove_fraction": 0.9833333333199084,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.01812073781484331,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.636154341385238
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 188.07292225400124,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4934300536558893,
+                    "groove_fraction": 0.029166666666268465,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0555329768648436,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.35985920788618736
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.050531874998341664,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "e926f8c9cbd791a5eb746364e45d07cb27fd7ded3e57d71105c8e100abb9912f"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "ac95bff66ca794a091e59a58b333a48845132152ba91d0b6e38e25a9e04c7804",
+          "seal_local_raw_sha256": "308c95066b6eb4c02403aabe69abc06571a2c148e3450ed6f14e29cadb58605a",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4934300536558893,
+                  "groove_fraction": 0.029166666666268465,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0555329768648436,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.35985920788618736
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.050531874998341664,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 6,
+      "exit_code": 0,
+      "elapsed_seconds": 771.8279999999995,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "d7882948a1b9fde16664ccac9f9ee6ab812296282b05068664b3471629c5a2a9",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.83305690871478,
+                    "groove_fraction": 0.9833333333543707,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.018090423576778536,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.625399129763249
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 188.05159396499948,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 578.7365113980013,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "6500d8cc85e891eb81586c52d10d08a6ea87bcecb6c847f9faed69c44339bf00",
+          "seal_local_raw_sha256": "618c2ee8bee1998cde566705457f3bbd0005313b29897dc55ee07b61f40912d4",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.83305690871478,
+                  "groove_fraction": 0.9833333333543707,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.018090423576778536,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.625399129763249
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 188.05159396499948,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4933643417186706,
+                    "groove_fraction": 0.029166666667290658,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0537671746767785,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.3595783580140892
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.0372978380000859,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "f91766250e5a22313630670b37e2872286686b92a5a31f84207cac85524f570b"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "4b5b4929c5edb46c91915e79a247a1c5d4a4aeffd66c8ab3d24e18f288d714d8",
+          "seal_local_raw_sha256": "37f057c420698f99eb29cb76adea873a89d11385b18025c37649b1d952b5c776",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4933643417186706,
+                  "groove_fraction": 0.029166666667290658,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0537671746767785,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.3595783580140892
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.0372978380000859,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    },
+    {
+      "index": 7,
+      "exit_code": 0,
+      "elapsed_seconds": 771.0159999999996,
+      "container_exit_code": 0,
+      "oom_killed": false,
+      "resources": {
+        "cpus": 1,
+        "memory_bytes": 2147483648,
+        "network": "none"
+      },
+      "result_local_raw_sha256": "76004603ddff058753c96f72361d6cb0e6f784c1f4c1dbb30885c2109f4b269d",
+      "cases": {
+        "oracle": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 1,
+                "problems": [],
+                "verdict": {
+                  "success": true,
+                  "checks": {
+                    "pass": true,
+                    "checks": {
+                      "winding": true,
+                      "groove": true,
+                      "continuous_groove_coverage": true,
+                      "ends": true,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": true
+                    },
+                    "angle": 12.819954892202878,
+                    "groove_fraction": 0.9875000000239803,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 0.013554783498555444,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      12.664719760985214
+                    ]
+                  }
+                },
+                "entries": 524
+              },
+              "seconds": 185.97517941200022,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "exit_code": 0,
+            "seconds": 580.0293807840008,
+            "transport": "original Client HTTP",
+            "controller_sha256": "2b3a843f458b6c055457822c7483e9ff9684e3208dca6d26137c0afd97f2bc52"
+          },
+          "recording_local_raw_sha256": "52d6ee325a8f079da0b5fb87280901ca3bf7107c4f19c1a99938e979d1dd382a",
+          "seal_local_raw_sha256": "2b4b48e314d96e52ea2079c9f1d8b0dc1777d9c024398e41da11663c7a6827ac",
+          "replay": {
+            "grade": {
+              "reward": 1,
+              "problems": [],
+              "verdict": {
+                "success": true,
+                "checks": {
+                  "pass": true,
+                  "checks": {
+                    "winding": true,
+                    "groove": true,
+                    "continuous_groove_coverage": true,
+                    "ends": true,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": true
+                  },
+                  "angle": 12.819954892202878,
+                  "groove_fraction": 0.9875000000239803,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 0.013554783498555444,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    12.664719760985214
+                  ]
+                }
+              },
+              "entries": 524
+            },
+            "seconds": 185.97517941200022,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        },
+        "nop": {
+          "outcome": {
+            "ok": true,
+            "result": {
+              "grade": {
+                "reward": 0,
+                "problems": [],
+                "verdict": {
+                  "success": false,
+                  "checks": {
+                    "pass": false,
+                    "checks": {
+                      "winding": false,
+                      "groove": false,
+                      "continuous_groove_coverage": false,
+                      "ends": false,
+                      "no_core_crossing": true,
+                      "no_backtracking": true,
+                      "hold": false
+                    },
+                    "angle": 1.4932802583456495,
+                    "groove_fraction": 0.029166666667615027,
+                    "start_tail_m": 0.0,
+                    "end_tail_m": 1.0527548537397409,
+                    "backward_rad": -0.0,
+                    "continuous_groove_interval_rad": [
+                      0.0,
+                      0.3592195962655191
+                    ]
+                  }
+                },
+                "entries": 1
+              },
+              "seconds": 0.03778187500029162,
+              "exact_all_states": true,
+              "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+              "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+            }
+          },
+          "controller": {
+            "finish": {
+              "ok": true,
+              "entries": 1,
+              "last_hash": "b2e5aa13e87734ea4fb54c8e2d230924958d6e59d881aabf98661d3f5c621b64"
+            },
+            "transport": "original Client HTTP"
+          },
+          "recording_local_raw_sha256": "f74e0336e8e0edd74e97485f755825cc9a392c4487f97acbdaed13f5bd46b468",
+          "seal_local_raw_sha256": "e15cb2f0a1dc56e2d582384f9a6bee310787a57c94f11f26946652fda270c519",
+          "replay": {
+            "grade": {
+              "reward": 0,
+              "problems": [],
+              "verdict": {
+                "success": false,
+                "checks": {
+                  "pass": false,
+                  "checks": {
+                    "winding": false,
+                    "groove": false,
+                    "continuous_groove_coverage": false,
+                    "ends": false,
+                    "no_core_crossing": true,
+                    "no_backtracking": true,
+                    "hold": false
+                  },
+                  "angle": 1.4932802583456495,
+                  "groove_fraction": 0.029166666667615027,
+                  "start_tail_m": 0.0,
+                  "end_tail_m": 1.0527548537397409,
+                  "backward_rad": -0.0,
+                  "continuous_groove_interval_rad": [
+                    0.0,
+                    0.3592195962655191
+                  ]
+                }
+              },
+              "entries": 1
+            },
+            "seconds": 0.03778187500029162,
+            "exact_all_states": true,
+            "scene_sha256": "f76fc55da9e0c132132c8d35ddf97cf9fd70215fd4bac57ab616b12d3f5e9325",
+            "verifier_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb"
+          }
+        }
+      }
+    }
+  ],
+  "interpretation": "Original public HTTP Client/controller; fresh verifier process exactly compares every recorded state. This bounded within-family diagnostic does not establish arbitrary tangled-rope or continuous-domain robustness.",
+  "isolation_scope": "Trusted harness in resource-limited networknone container; prior Docker gate/Harbor provide agent/service filesystem isolation evidence. This is not a new isolation audit.",
+  "rgb_replay_audit": false,
+  "model_confirmation": "Predetermined Qoder/Qwen4-Max2 + Codex/k3.1-pro2 remains main-coordinated; no results claimed here."
+}

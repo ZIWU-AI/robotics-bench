@@ -1,0 +1,50 @@
+{
+  "runtime_version": "damping-v3-terminal-fault",
+  "predicate": "continuous-groove-v2",
+  "matrix": {
+    "successes": 17,
+    "configurations": 17,
+    "exact_replay": 17,
+    "nominal_reused": true
+  },
+  "gate": {
+    "passed": 11,
+    "total": 11
+  },
+  "harbor": {
+    "oracle_reward": 1,
+    "nop_reward": 0,
+    "exceptions": 0
+  },
+  "semantic_attacks": {
+    "rejected": 7,
+    "valid_refusal_positive_control_reward": 1
+  },
+  "fault_injections": {
+    "cases": 3,
+    "terminal_and_evidence_checks": "passed; synthetic, not physical negatives"
+  },
+  "physical_negative": {
+    "wrong_height_reward": 0,
+    "exact_all_states": true,
+    "numerical_failure": false
+  },
+  "maximum_budget": {
+    "substeps": 80000,
+    "cpu_limit": 1,
+    "memory_bytes": 2147483648,
+    "reward": 1,
+    "generate_seconds": 1156.9072180269995,
+    "replay_seconds": 929.1055652469995,
+    "verifier_limit_seconds": 3600,
+    "within_limit": true
+  },
+  "limitations": "See LIMITATIONS.md: 7.99 mm self-contact overlap in wrong-height negative; no continuous self-crossing history.",
+  "acceptance": "AI-assisted final code and runtime evidence review accepted this task for PR submission; required independent non-author human domain/technical reviews remain pending.",
+  "model_trials": "Not run locally; main will request PR batch when both PRs are ready.",
+  "ai_review": {
+    "decision": "ACCEPT FOR PR SUBMISSION",
+    "report_local_raw_sha256": "6a3646373f05aa00434b81b38e2d1e85259ec67e3c2b59386dcefbcefac2bd21",
+    "scope": "Final code and existing frozen runtime evidence; not published-head CI or independent human review."
+  }
+}

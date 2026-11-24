@@ -1,0 +1,29 @@
+{
+  "kind": "selected raw trial fields; host locators omitted",
+  "id": "9a767989-cca1-49fe-b352-b5521b109cb6",
+  "task_name": "robotics-bench/helical-rope-wrap",
+  "trial_name": "helical-rope-wrap__JcwhdRt",
+  "task_checksum": "14d247c5cd0be8c3a6777e522a1e95a2e4ee8c78df94e51ac87f557d400e3278",
+  "agent_info": {
+    "name": "nop",
+    "version": "1.0.0",
+    "model_info": null
+  },
+  "verifier_result": {
+    "rewards": {
+      "reward": 0.0
+    }
+  },
+  "verifier_environment_mode": "separate",
+  "exception_info": null,
+  "started_at": "2026-11-23T11:19:33.038839Z",
+  "finished_at": "2026-11-23T11:19:59.743623Z",
+  "agent_execution": {
+    "started_at": "2026-11-23T11:19:41.236409Z",
+    "finished_at": "2026-11-23T11:19:41.236598Z"
+  },
+  "verifier": {
+    "started_at": "2026-11-23T11:19:45.501340Z",
+    "finished_at": "2026-11-23T11:19:59.743602Z"
+  }
+}

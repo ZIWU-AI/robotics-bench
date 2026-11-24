@@ -1,0 +1,301 @@
+{
+  "snapshot_utc": "2026-11-23T11:49:34.561154+00:00",
+  "status": "all local validation outcomes complete; external audit/PR checks not asserted",
+  "freeze_raw_sha256": "02105056094909be0e6cc41a7f3aee75564a35474860e97820025ad4519bf43f",
+  "scene_sha256": "5c68a601fab24a53abb8dab0d2106833e173c0c2d540cd47bdbaa091591f8bfe",
+  "oracle_sha256": "9dc7eda9bd420a8c93520ee41f2ec05d5a41110038494c6c7ef2eca4bafe44d4",
+  "production": {
+    "completed": 17,
+    "reward_1": 17,
+    "normal_finish": 17,
+    "exact_all_states": 17,
+    "rows": [
+      {
+        "index": 0,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 221.2630028599997,
+        "replay_seconds": 203.92576965099943,
+        "recording_sha256": "9f205b390f2f78c8279eb439483ebf3e608572a755deb967d706d1493c04a5cd"
+      },
+      {
+        "index": 1,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 222.96886380400065,
+        "replay_seconds": 206.09570589299983,
+        "recording_sha256": "fc5f3dba2256904fac7a12701adae4288b90552f4ff6ff8ebe76b184aff15b91"
+      },
+      {
+        "index": 2,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 223.9718815080014,
+        "replay_seconds": 206.84398192200024,
+        "recording_sha256": "e8a9496aecec8e8dfdf96241d50cf51889404bb8bf0e96063b70877dd79901b7"
+      },
+      {
+        "index": 3,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 220.560803761,
+        "replay_seconds": 203.47143635400062,
+        "recording_sha256": "cac132ff6787ccda92f46b9526abc0bc49e8fd966e78335b3b535623b692f139"
+      },
+      {
+        "index": 4,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 192.05030765299853,
+        "replay_seconds": 197.04298007500074,
+        "recording_sha256": "59e5e67a81ee3ed4bbf2d97fadb073cae04485bfe421175218c2c8951c23b062"
+      },
+      {
+        "index": 5,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 193.59870326500095,
+        "replay_seconds": 197.80876353500025,
+        "recording_sha256": "312e6abbe93972a5467f7d3e2b777c23c67b6525bf58fa336b4d05c2aca6968d"
+      },
+      {
+        "index": 6,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 194.4873229190016,
+        "replay_seconds": 198.22581633199843,
+        "recording_sha256": "1e4d36d835af57ec8a158d0085204c4966aa7f47e8cdf4831910b1d8dcac028d"
+      },
+      {
+        "index": 7,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 211.49673501100006,
+        "replay_seconds": 200.6329605309984,
+        "recording_sha256": "5d6dbb6001fd8bd3684485b8236687b0c9f41d30ee23ec006b72a96c93d689f7"
+      },
+      {
+        "index": 8,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 210.4390418870007,
+        "replay_seconds": 200.51656307800113,
+        "recording_sha256": "6115875512cd5bbb0f5a635bf21f48c287c0c3f4f433a8b3d2128de4d230fc19"
+      },
+      {
+        "index": 9,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 212.52107957899898,
+        "replay_seconds": 200.65563044200098,
+        "recording_sha256": "4933873ce3f0f35e5c5e1ae4d8873559b5f661adf1db106735255c72891367fb"
+      },
+      {
+        "index": 10,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 190.80966970699956,
+        "replay_seconds": 181.29111691100115,
+        "recording_sha256": "3d47ff886fba8735fd81f36756dfef6ff3e09b54e3d374e538b21c855c4504be"
+      },
+      {
+        "index": 11,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 189.21227371200075,
+        "replay_seconds": 180.55595727699983,
+        "recording_sha256": "b5a29f1d3422ce6c8d8ce690b7176a98667676f58ad3d97cf622be69b0fb9f13"
+      },
+      {
+        "index": 12,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 188.5020835849973,
+        "replay_seconds": 179.86776525599998,
+        "recording_sha256": "5530b5856733208f678eb6c13c237455fc2a146b3e32c90c9935c20cc31d1b0a"
+      },
+      {
+        "index": 13,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 188.8346777159968,
+        "replay_seconds": 183.36646825199932,
+        "recording_sha256": "8226b05157433914db3d64a437b4debd6fe6c9c644d65d9d5266804db20722ae"
+      },
+      {
+        "index": 14,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 189.60680581199995,
+        "replay_seconds": 183.8960444910008,
+        "recording_sha256": "ddf70169e8a343b1ad4f8a9fa9b794e358530dc22013b347b3e41f97f958a2bd"
+      },
+      {
+        "index": 15,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 187.85238073000073,
+        "replay_seconds": 182.52558323099947,
+        "recording_sha256": "42e34faf6256beba60026cd17e969422df127dbbf4156158262617effd369cc9"
+      },
+      {
+        "index": 16,
+        "reward": 1,
+        "normal_finish": true,
+        "exact_all_states": true,
+        "actions": 523,
+        "observations": 524,
+        "controller_seconds": 150.90369776300213,
+        "replay_seconds": 165.03768880499774,
+        "recording_sha256": "ca9063ac1c6fe6222de6909f4157e8a00dbe2c03b0098b58cfc4efbc38ed508a"
+      }
+    ]
+  },
+  "nop": {
+    "layouts": [
+      0,
+      8
+    ],
+    "normal_reward_0_exact": 2
+  },
+  "bounded_frame_blind": {
+    "layout": 8,
+    "actions": 701,
+    "normal_finish": true,
+    "reward": 0,
+    "exact_all_states": true,
+    "historical_pilot_D": false,
+    "fresh_model_run": false
+  },
+  "gate": {
+    "passed": 11,
+    "total": 11,
+    "seal_level_tampering_scope": true
+  },
+  "static": {
+    "passed": 29,
+    "total": 29,
+    "applies_to": "frozen release before publication documentation additions; not integrated-head CI"
+  },
+  "preflight": {
+    "static_render_cases": 49,
+    "short_checks": [
+      "geometry",
+      "contract",
+      "fault"
+    ],
+    "binding": "original revision, followed by terminal-only and LF-only recorded deltas"
+  },
+  "independent8": {
+    "draw_fixed": 8,
+    "completed_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "oracle_reward1_exact": 8,
+    "nop_reward0_exact": 8,
+    "pending_indices": [],
+    "status": "complete",
+    "cleanup_and_source_binding_all8": true
+  },
+  "resource": {
+    "status": "complete",
+    "normal_finish": true,
+    "reward": 1,
+    "moves": 800,
+    "observations": 1000,
+    "sim_seconds": 160.00000000003587,
+    "generation_controller_seconds": 1907.6867594580017,
+    "replay_seconds": 678.1396934839977,
+    "verification_phase_seconds": 679.1768912799998,
+    "dispatcher_seconds": 2590.8589999999967,
+    "cpu": 1,
+    "memory_limit_bytes": 2147483648,
+    "reported_cgroup_peak_bytes": 329027584,
+    "oom_events": 0,
+    "cleanup_confirmed": true,
+    "source_binding_after_matches": true,
+    "state_comparison": "fresh tests/verify.py grade uses exact Python snapshot equality; no state mismatch; standalone exact_all_states field is not emitted by resource harness",
+    "recording_sha256": "61f9b5ab48b4fe6273dafd9da8585f4ca4fd3f26e39a8c344e16168926d5a0a3",
+    "scope": "one full-budget workload; not universal worst-case proof"
+  },
+  "harbor": {
+    "status": "complete",
+    "oracle_reward": 1,
+    "nop_reward": 0,
+    "exceptions": 0,
+    "source_unchanged": true,
+    "final_evidence_raw_sha256": "bffe8bb6aadec931fa5c1d6c87c3c67f7e0809bd60f043231bd7436befe3edd4",
+    "all_six_source_snapshots_equal": true,
+    "remaining_harbor_containers": [],
+    "nop_finish_taxonomy": "Harbor nop does not call finish; collector seals it and verifier rejects with reward 0. Separate public nop diagnostics finish normally."
+  },
+  "final_integrated_head_CI": "Published-head CI and non-author human review are reported on the PR",
+  "final_review": "external final AI audit pending; integrator report authoritative",
+  "historical_payload_files_preserved": 49,
+  "published_model_outcomes": "none claimed",
+  "publication_static": {
+    "passed": 29,
+    "total": 29,
+    "input_files": 284,
+    "task_unchanged": true,
+    "copy_unchanged": true,
+    "actual_directory_not_junction": true,
+    "receipt": "checks/publication-static/result.json",
+    "scope": "local publication check; published-head CI reported separately on PR"
+  }
+}

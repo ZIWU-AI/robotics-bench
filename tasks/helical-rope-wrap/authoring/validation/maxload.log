@@ -1,0 +1,9 @@
+{"phase": "generate", "actions": 100, "sim_time": 19.999999999999794, "elapsed": 54.7126408160002, "ncon": 28}
+{"phase": "generate", "actions": 200, "sim_time": 40.00000000000292, "elapsed": 120.11640847499984, "ncon": 59}
+{"phase": "generate", "actions": 300, "sim_time": 60.00000000002736, "elapsed": 226.12918760199955, "ncon": 98}
+{"phase": "generate", "actions": 400, "sim_time": 79.99999999999496, "elapsed": 360.97891482700015, "ncon": 132}
+{"phase": "generate", "actions": 500, "sim_time": 99.99999999994834, "elapsed": 547.6596327500001, "ncon": 157}
+{"phase": "generate", "actions": 600, "sim_time": 119.99999999990173, "elapsed": 742.2410369399995, "ncon": 156}
+{"phase": "generate", "actions": 700, "sim_time": 139.99999999994037, "elapsed": 952.4758990049995, "ncon": 154}
+{"phase": "generate", "actions": 800, "sim_time": 160.00000000003587, "elapsed": 1156.8057059209996, "ncon": 153}
+{"actions": 800, "substeps": 80000, "cpu_limit": 1, "generate_seconds": 1156.9072180269995, "replay_seconds": 929.1055652469995, "peak_rss_kib": 182540, "recording_bytes": 10633331, "input_request_recording_sha256": "9b54b2c7a37be6de96d3e8c2fb5ed1a4b74d26d915cdda463dbce8ae02e30da5", "sim_sha256": "e4e047b6a4b4726379eadbbf5da8cc3dabf4ab5f1f600b1da5e41d4c35d4a658", "verify_sha256": "76bc20400dc0ddfed5b1b058bb3ecd8abc4fb18ed5fbce096531d0b75f5c5feb", "grade": {"reward": 1, "problems": [], "verdict": {"success": true, "checks": {"pass": true, "checks": {"winding": true, "groove": true, "continuous_groove_coverage": true, "ends": true, "no_core_crossing": true, "no_backtracking": true, "hold": true}, "angle": 12.809231944697922, "groove_fraction": 0.9875000000266555, "start_tail_m": 0.0, "end_tail_m": 0.01354502892062647, "backward_rad": -0.0, "continuous_groove_interval_rad": [0.0, 12.65358022569642]}}, "entries": 801}, "min_contact_distance": -0.0005499364408777171, "within_3600_seconds": true}
