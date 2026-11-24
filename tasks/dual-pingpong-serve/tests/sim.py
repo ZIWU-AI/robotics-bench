@@ -13,15 +13,23 @@ class Sim:
         params = json.loads((ROOT / 'scene.json').read_text())
         params.update(scene)
         self.scene = params
-        self.layout = scene['layout']
+        self.case_order = scene['case_order']
+        self.case_index = 0
+        self.completed_cases = []
+        self._load_case()
+
+    def _load_case(self):
+        self.layout = self.case_order[self.case_index]
+        self.target_size = self.scene['layouts'][self.layout].get('target_size', self.scene['target_size'])
         self.model = mujoco.MjModel.from_xml_path(str(ROOT / f'{self.layout}.xml'))
         if self.model.nflex:
-            self.model.flexedge_length0[:] *= params['net']['rest_length_scale']
+            self.model.flexedge_length0[:] *= self.scene['net']['rest_length_scale']
         self.data = mujoco.MjData(self.model)
         self.actuator_joints = self.model.actuator_trnid[:, 0]
         self.wrist_sites = [i for i in range(self.model.nsite)
                             if self.model.site(i).name.endswith(('attachment_site', 'wrist_site'))]
         self.attempt = 1
+        self.attempt_history = []
         self.reset()
 
     def kinematics_xml(self):
@@ -121,7 +129,12 @@ class Sim:
         return (velocity[3:] + np.cross(velocity[:3], point - self.data.body(name).xpos)).tolist()
 
     def snapshot(self):
-        return {'attempt': self.attempt, 'time_s': float(self.data.time),
+        return {'layout': self.layout, 'case_number': self.case_index + 1,
+                'case_count': len(self.case_order), 'completed_cases': list(self.completed_cases),
+                'case_passed': self.case_success(), 'case_complete': self.case_complete(),
+                'attempt_history': list(self.attempt_history), 'failure_reasons': self.failure_reasons(),
+                'target_size': self.target_size,
+                'attempt': self.attempt, 'time_s': float(self.data.time),
                 'actuator_ctrl': self.data.ctrl.tolist(),
                 'actuator_qpos': self.data.qpos[self.model.jnt_qposadr[self.actuator_joints]].tolist(),
                 'actuator_qvel': self.data.qvel[self.model.jnt_dofadr[self.actuator_joints]].tolist(),
@@ -190,8 +203,40 @@ class Sim:
         return self.snapshot()
 
     def retry(self):
+        if self.attempt >= self.scene['attempts_per_case']:
+            raise ValueError('all attempts for the current case have been used')
+        self._end_attempt('retry')
         self.attempt += 1
         self.reset()
+
+    def advance(self):
+        if not self.case_complete():
+            raise ValueError('pass the current case or use all attempts before advancing')
+        if self.case_index + 1 == len(self.case_order):
+            raise ValueError('this is the final case; call finish when complete')
+        self._end_attempt('advance')
+        self.completed_cases.append(self.case_result())
+        self.case_index += 1
+        self._load_case()
+
+    def finish(self, by_collector=False):
+        if not by_collector and (self.case_index + 1 != len(self.case_order) or not self.case_complete()):
+            raise ValueError('complete every case before finishing; pass or use all attempts in each case')
+        self._end_attempt('collector' if by_collector else 'finish')
+
+    def _end_attempt(self, ended_by):
+        self.attempt_history.append(dict(self.attempt_result(), ended_by=ended_by))
+
+    def attempt_result(self):
+        return {'attempt': self.attempt, 'time_s': float(self.data.time), 'passed': self.case_success(),
+                'failure_reasons': self.failure_reasons(), 'first_landing': self.first_landing,
+                'paddle_events': self.paddle_events, 'grasp_lifted': dict(self.grasp_lifted),
+                'net_crossed': self.net_crossed}
+
+    def case_result(self):
+        return {**self.attempt_result(), 'layout': self.layout,
+                'target': self.scene['layouts'][self.layout]['target'], 'target_size': self.target_size,
+                'attempts': list(self.attempt_history)}
 
     def _record_events(self, ball_before, incoming):
         ball = self.model.body('ball').id
@@ -269,13 +314,31 @@ class Sim:
         if ball_table and self.paddle_events and self.first_landing is None:
             self.first_landing = [float(pos[0]), float(pos[1])]
 
-    def success(self):
-        if self.paddle_events != 1 or self.first_landing is None or not all(self.grasp_lifted.values()):
-            return False
+    def failure_reasons(self):
+        reasons = [name + '_grasp_lift_incomplete' for name, lifted in self.grasp_lifted.items() if not lifted]
+        if self.paddle_events == 0:
+            reasons.append('no_paddle_contact')
+        elif self.paddle_events > 1:
+            reasons.append('multiple_paddle_contacts')
+        if self.first_landing is None:
+            reasons.append('no_table_landing')
+        else:
+            tx, ty = self.scene['layouts'][self.layout]['target']
+            width, length = self.target_size
+            x, y = self.first_landing
+            if not (abs(x - tx) < width / 2 and abs(y - ty) < length / 2):
+                reasons.append('landing_outside_target')
         layout = self.scene['layouts'][self.layout]
         if layout['net'] and not self.net_crossed:
-            return False
-        tx, ty = layout['target']
-        width, length = self.scene['target_size']
-        x, y = self.first_landing
-        return abs(x - tx) < width / 2 and abs(y - ty) < length / 2
+            reasons.append('net_not_cleared')
+        return reasons
+
+    def case_success(self):
+        return not self.failure_reasons()
+
+    def case_complete(self):
+        return self.case_success() or self.attempt == self.scene['attempts_per_case']
+
+    def success(self):
+        return (len(self.completed_cases) == len(self.case_order) - 1 and
+                all(result['passed'] for result in self.completed_cases) and self.case_success())

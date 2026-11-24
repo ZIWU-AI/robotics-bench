@@ -7,7 +7,8 @@
     g.observe()              # joints, object and wrist poses, world velocities, contacts, events
     g.trajectory(waypoints)  # actuator waypoints with absolute times          (one action)
     g.retry()               # reset the scene and event history for the next attempt
-    g.finish()               # end the episode
+    g.advance()             # save a passed/exhausted case and load the next; refresh info()
+    g.finish()              # submit after the final case passes or exhausts its attempts
 Every answer is a dict with "ok"; a refused request has "refused": [reasons] and nothing moved.
 """
 import json
@@ -56,3 +57,6 @@ class Client:
 
     def retry(self):
         return self.call("retry")
+
+    def advance(self):
+        return self.call("advance")

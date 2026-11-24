@@ -40,6 +40,8 @@
     "rubber_mass_each": 0.04,
     "handle_mass": 0.03,
     "handle_friction": [0.8, 0.008, 0.005],
+    "handle_shape": "rounded_elliptic_cylinder",
+    "handle_end_rounding": 0.01,
     "handle_halfsize": [
       0.014,
       0.055,
@@ -123,6 +125,11 @@
         0.25,
         0.60
       ],
+      "net": true
+    },
+    "opponent-net-close": {
+      "target": [-0.25, 0.08],
+      "target_size": [0.15, 0.06],
       "net": true
     }
   }

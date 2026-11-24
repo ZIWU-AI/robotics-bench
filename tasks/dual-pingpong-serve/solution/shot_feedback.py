@@ -7,7 +7,7 @@ velocities (extrapolate nearby observation samples to the contact time).
 The caller executes release and paddle trajectories through the public client.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import math
 
 import numpy as np
@@ -15,13 +15,14 @@ import numpy as np
 
 @dataclass(frozen=True)
 class ShotParameters:
-    """Five controls; drop_speed is downward speed at contact after release at rest."""
+    """Five feedback controls plus planned swing elevation; drop_speed is downward."""
 
     yaw: float
     pitch: float
     drop_speed: float
     swing_yaw: float
     swing_speed: float
+    swing_pitch: float = 0.0
 
     def release_height(self, impact_height: float, gravity: float = 9.81) -> float:
         """Ball-centre release height; realize drop_speed using gravity alone."""
@@ -37,9 +38,10 @@ class ShotParameters:
                          math.sin(self.pitch)])
 
     def paddle_velocity(self) -> np.ndarray:
-        """Commanded horizontal velocity at the paddle contact point."""
-        return self.swing_speed * np.array([math.sin(self.swing_yaw),
-                                           math.cos(self.swing_yaw), 0.0])
+        """Commanded three-dimensional velocity at the paddle contact point."""
+        return self.swing_speed * np.array([math.sin(self.swing_yaw) * math.cos(self.swing_pitch),
+                                           math.cos(self.swing_yaw) * math.cos(self.swing_pitch),
+                                           math.sin(self.swing_pitch)])
 
 
 def _wrap_angle(angle):
@@ -80,7 +82,7 @@ class ShotLimits:
         return ShotParameters(float(_wrap_angle(yaw)), float(pitch),
                               float(np.clip(parameters.drop_speed, self.drop_speed[0], drop_max)),
                               float(_wrap_angle(swing_yaw)),
-                              float(np.clip(parameters.swing_speed, *self.swing_speed)))
+                              float(np.clip(parameters.swing_speed, *self.swing_speed)), parameters.swing_pitch)
 
 
 @dataclass(frozen=True)
@@ -115,6 +117,7 @@ class ShotObservation:
     table_height: float = 0.0
     ball_radius: float = 0.02
     face_normal: tuple[float, float, float] | None = None
+    net_blocked: bool = False
 
 
 @dataclass(frozen=True)
@@ -219,7 +222,7 @@ def moving_plane_intercept(ball_position, ball_velocity, paddle_position, normal
 
     paddle_position is the blade's mid-thickness centre; offset is ball radius
     plus face half-thickness. Supply a fixed face normal towards the ball and
-    constant planned horizontal paddle velocity. Ball velocity can point up or
+    constant planned paddle velocity. Ball velocity can point up or
     down. radial_margin reserves distance inside the blade edge. Return None
     when the ballistic path has no approaching face contact within these limits.
     """
@@ -306,7 +309,7 @@ def inverse_initial_shot(impact_position, target, *, drop_speed: float = 1.0,
                          restitution: float = 0.8, gravity: float = 9.81,
                          table_height: float = 0.0, ball_radius: float = 0.02,
                          net: NetConfig | None = None) -> ShotParameters:
-    """Invert flight and impact for a stationary release and horizontal swing.
+    """Invert flight and impact for a stationary release and a 3D swing.
 
     Target must have nonzero horizontal displacement and a path between posts.
     Default flight starts horizontally; a net can increase its duration to
@@ -322,10 +325,12 @@ def inverse_initial_shot(impact_position, target, *, drop_speed: float = 1.0,
     normal = impulse / np.linalg.norm(impulse)
     normal_speed = np.dot(incoming, normal) + np.linalg.norm(impulse) / (1 + restitution)
     paddle = normal[:2] * normal_speed / np.dot(normal[:2], normal[:2])
+    swing_pitch = math.atan2(normal[2], np.linalg.norm(normal[:2])) if np.linalg.norm(paddle) > 3 else 0.0
+    speed = normal_speed if swing_pitch else np.linalg.norm(paddle)
     return ShotParameters(math.atan2(normal[0], normal[1]),
                           math.atan2(normal[2], np.linalg.norm(normal[:2])),
                           drop_speed, math.atan2(paddle[0], paddle[1]),
-                          float(np.linalg.norm(paddle)))
+                          float(speed), swing_pitch)
 
 
 def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
@@ -357,14 +362,17 @@ def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
     response_args = dict(restitution=response.restitution,
                          tangential_gain=response.tangential_gain, friction=response.friction)
     baseline = impact_velocity(incoming, paddle, normal, **response_args)
+    net = obs.net
+    if obs.net_blocked:
+        net = replace(net, clearance=net.clearance + obs.ball_radius)
     configuration = dict(gravity=obs.gravity, table_height=obs.table_height,
-                         ball_radius=obs.ball_radius, net=obs.net)
+                         ball_radius=obs.ball_radius, net=net)
     flight = predict_flight(obs.impact_position, outgoing, **configuration)
-    landing_bias = np.asarray(obs.first_landing) - flight.landing
+    landing_bias = np.zeros(2) if obs.net_blocked else np.asarray(obs.first_landing) - flight.landing
     desired = _launch_velocity(obs.impact_position,
                                np.asarray(obs.target) - landing_bias,
                                flight.flight_time, obs.gravity, obs.table_height,
-                               obs.ball_radius, obs.net)
+                               obs.ball_radius, net)
     if limits is None:
         limits = ShotLimits(parameters)
     bounded = limits.project(parameters, obs.impact_position[2], obs.gravity)
@@ -374,7 +382,7 @@ def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
 
     def shifted(step):
         values = origin + scales * step
-        return limits.project(ShotParameters(*values), obs.impact_position[2], obs.gravity)
+        return limits.project(ShotParameters(*values, swing_pitch=parameters.swing_pitch), obs.impact_position[2], obs.gravity)
 
     def residual(candidate):
         vin = incoming + np.array([0.0, 0.0, parameters.drop_speed - candidate.drop_speed])
@@ -384,8 +392,7 @@ def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
         prediction = predict_flight(obs.impact_position, vout, **configuration)
         errors = [*(np.asarray(prediction.landing) + landing_bias - obs.target),
                   *(velocity_weight * flight.flight_time * (vout - desired))]
-        if obs.net is not None:
-            net = obs.net
+        if net is not None:
             # With zero forward speed, evaluate net deficits at the landing time.
             t = prediction.net_time if prediction.net_time is not None else prediction.flight_time
             point = np.asarray(obs.impact_position) + vout * t

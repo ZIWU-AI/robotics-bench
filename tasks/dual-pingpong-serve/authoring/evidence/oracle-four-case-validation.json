@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-24",
+  "engine": "MuJoCo 3.3.7",
+  "attempt_limit": 5,
+  "runner": "Local Oracle over HTTP with independent replay",
+  "source_sha256": {
+    "solution/oracle.py": "94d12a169adb49087b6b5404be5fcd82a85c202a78d11b8d65492ca4b9b64fed",
+    "solution/grasp.py": "be26cbe0a4b545e0f1f57736eaed9b9ecf474fac1d5fab7251d645b5d27b0821",
+    "solution/shot_feedback.py": "22a0530077701a3a7efb3556d35329ce675cb9aeb5eadf06bf050a119b55fca8",
+    "environment/service/sim.py": "27d8e545c44c75078b90e02504455c48286c8993072665d184fbbef06bcd03ee",
+    "tests/sim.py": "27d8e545c44c75078b90e02504455c48286c8993072665d184fbbef06bcd03ee",
+    "environment/runtime.tar.gz": "c7368050073b4f9016751c38fe628e38afb1b514b02493c4d1f6b7dfcee42bcf"
+  },
+  "oracle_used": {
+    "trajectory": 255,
+    "observations": 6,
+    "retry": 2
+  },
+  "replay": {
+    "reward": 1,
+    "success": true,
+    "problems": [],
+    "entries": 267,
+    "cases": [
+      {
+        "attempt": 1,
+        "time_s": 27.772999999980623,
+        "passed": true,
+        "failure_reasons": [],
+        "first_landing": [
+          0.30329480965043587,
+          -0.4848575533376875
+        ],
+        "paddle_events": 1,
+        "grasp_lifted": {
+          "ball": true,
+          "paddle": true
+        },
+        "net_crossed": false,
+        "layout": "near",
+        "target": [
+          0.3,
+          -0.5
+        ],
+        "target_size": [
+          0.15,
+          0.16
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "time_s": 27.772999999980623,
+            "passed": true,
+            "failure_reasons": [],
+            "first_landing": [
+              0.30329480965043587,
+              -0.4848575533376875
+            ],
+            "paddle_events": 1,
+            "grasp_lifted": {
+              "ball": true,
+              "paddle": true
+            },
+            "net_crossed": false,
+            "ended_by": "advance"
+          }
+        ]
+      },
+      {
+        "attempt": 3,
+        "time_s": 28.08799999997989,
+        "passed": true,
+        "failure_reasons": [],
+        "first_landing": [
+          6.916473717716716E-05,
+          0.8408908286474256
+        ],
+        "paddle_events": 1,
+        "grasp_lifted": {
+          "ball": true,
+          "paddle": true
+        },
+        "net_crossed": true,
+        "layout": "opponent",
+        "target": [
+          0,
+          0.85
+        ],
+        "target_size": [
+          0.15,
+          0.16
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "time_s": 28.127999999979796,
+            "passed": false,
+            "failure_reasons": [
+              "landing_outside_target"
+            ],
+            "first_landing": [
+              -0.06263838896280453,
+              0.9358812317284654
+            ],
+            "paddle_events": 1,
+            "grasp_lifted": {
+              "ball": true,
+              "paddle": true
+            },
+            "net_crossed": true,
+            "ended_by": "retry"
+          },
+          {
+            "attempt": 2,
+            "time_s": 28.067999999979936,
+            "passed": false,
+            "failure_reasons": [
+              "landing_outside_target"
+            ],
+            "first_landing": [
+              -0.002366871701080183,
+              0.6832409201362346
+            ],
+            "paddle_events": 1,
+            "grasp_lifted": {
+              "ball": true,
+              "paddle": true
+            },
+            "net_crossed": true,
+            "ended_by": "retry"
+          },
+          {
+            "attempt": 3,
+            "time_s": 28.08799999997989,
+            "passed": true,
+            "failure_reasons": [],
+            "first_landing": [
+              6.916473717716716E-05,
+              0.8408908286474256
+            ],
+            "paddle_events": 1,
+            "grasp_lifted": {
+              "ball": true,
+              "paddle": true
+            },
+            "net_crossed": true,
+            "ended_by": "advance"
+          }
+        ]
+      },
+      {
+        "attempt": 1,
+        "time_s": 28.007999999980076,
+        "passed": true,
+        "failure_reasons": [],
+        "first_landing": [
+          0.2446664589044237,
+          0.6057602638568025
+        ],
+        "paddle_events": 1,
+        "grasp_lifted": {
+          "ball": true,
+          "paddle": true
+        },
+        "net_crossed": true,
+        "layout": "opponent-net",
+        "target": [
+          0.25,
+          0.6
+        ],
+        "target_size": [
+          0.15,
+          0.16
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "time_s": 28.007999999980076,
+            "passed": true,
+            "failure_reasons": [],
+            "first_landing": [
+              0.2446664589044237,
+              0.6057602638568025
+            ],
+            "paddle_events": 1,
+            "grasp_lifted": {
+              "ball": true,
+              "paddle": true
+            },
+            "net_crossed": true,
+            "ended_by": "advance"
+          }
+        ]
+      },
+      {
+        "attempt": 1,
+        "time_s": 28.092999999979877,
+        "passed": true,
+        "failure_reasons": [],
+        "first_landing": [
+          -0.29407832022282,
+          0.09859123711521822
+        ],
+        "paddle_events": 1,
+        "grasp_lifted": {
+          "ball": true,
+          "paddle": true
+        },
+        "net_crossed": true,
+        "layout": "opponent-net-close",
+        "target": [
+          -0.25,
+          0.08
+        ],
+        "target_size": [
+          0.15,
+          0.06
+        ],
+        "attempts": [
+          {
+            "attempt": 1,
+            "time_s": 28.092999999979877,
+            "passed": true,
+            "failure_reasons": [],
+            "first_landing": [
+              -0.29407832022282,
+              0.09859123711521822
+            ],
+            "paddle_events": 1,
+            "grasp_lifted": {
+              "ball": true,
+              "paddle": true
+            },
+            "net_crossed": true,
+            "ended_by": "finish"
+          }
+        ]
+      }
+    ]
+  },
+  "rendered_videos": [
+    {
+      "path": "oracle-near.mp4",
+      "duration_seconds": 30.75,
+      "decoded": true
+    },
+    {
+      "path": "oracle-opponent.mp4",
+      "duration_seconds": 87.3,
+      "decoded": true
+    },
+    {
+      "path": "oracle-opponent-net.mp4",
+      "duration_seconds": 31.0,
+      "decoded": true
+    },
+    {
+      "path": "oracle-opponent-net-close.mp4",
+      "duration_seconds": 31.1,
+      "decoded": true
+    }
+  ]
+}

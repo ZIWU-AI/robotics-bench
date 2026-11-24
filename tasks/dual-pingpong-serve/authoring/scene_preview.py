@@ -60,6 +60,20 @@ def add_net(root, world):
     for x in [-p['half_width'], p['half_width']]:
         element(world, 'geom', name=f'post_{x}', type='cylinder', pos=[x,0,z0+p['height']/2], size=[0.012,p['height']/2], rgba=[0.3,0.32,0.36,1])
 
+def add_handle_mesh(assets, paddle):
+    rx, half_length, rz = paddle['handle_halfsize']
+    cap = paddle['handle_end_rounding']
+    vertices = []
+    for sign in (-1, 1):
+        for phi in np.linspace(0, np.pi / 2, 7)[:-1]:
+            y = sign * (half_length - cap + cap * np.sin(phi))
+            for theta in np.linspace(0, 2 * np.pi, 64, endpoint=False):
+                vertices.extend([rx * np.cos(phi) * np.cos(theta), y,
+                                 rz * np.cos(phi) * np.sin(theta)])
+        vertices.extend([0, sign * half_length, 0])
+    element(assets, 'mesh', name='paddle_handle', vertex=vertices)
+
+
 def build(layout):
     p, table = PARAMS, PARAMS['table']
     root = ET.Element('mujoco', model='dual-pingpong-serve-'+layout)
@@ -100,7 +114,7 @@ def build(layout):
     for y in [-1.36,1.36]:
         element(world, 'geom', type='box', pos=[0,y,0.76015], size=[0.7625,0.008,0.00015], rgba=[0.9,0.95,0.95,1], contype=0, conaffinity=0)
     cx,cy = p['layouts'][layout]['target']
-    hx,hy = np.array(p['target_size'])/2
+    hx,hy = np.array(p['layouts'][layout].get('target_size', p['target_size']))/2
     for dx,dy,sx,sy in [(-hx,0,.002,hy),(hx,0,.002,hy),(0,-hy,hx,.002),(0,hy,hx,.002)]:
         element(world, 'geom', type='box', pos=[cx+dx,cy+dy,.7605], size=[sx,sy,.0005], rgba=[1,.42,.08,1], contype=0, conaffinity=0)
     ball = element(world, 'body', name='ball', pos=p['ball']['position'])
@@ -118,7 +132,8 @@ def build(layout):
     element(paddle, 'geom', name='blade', type='cylinder', size=[pp['radius'],pp['wood_thickness']/2], mass=pp['wood_mass'], rgba=[.65,.43,.2,1])
     for sign,color in [(1,[.85,.045,.065,1]),(-1,[.045,.045,.05,1])]:
         element(paddle, 'geom', name='rubber_'+str(sign), type='cylinder', pos=[0,0,sign*(pp['wood_thickness']+pp['rubber_thickness'])/2], size=[pp['radius'],pp['rubber_thickness']/2], mass=pp['rubber_mass_each'], rgba=color, friction=pp['friction'], condim=6)
-    element(paddle, 'geom', name='handle', type='box', pos=[0,-.125,0], size=pp['handle_halfsize'], mass=pp['handle_mass'], rgba=[.48,.28,.1,1], friction=pp['handle_friction'], condim=6)
+    add_handle_mesh(assets, pp)
+    element(paddle, 'geom', name='handle', type='mesh', mesh='paddle_handle', pos=[0,-.125,0], mass=pp['handle_mass'], rgba=[.48,.28,.1,1], friction=pp['handle_friction'], condim=6)
     surface = p['ball_surface_contact']
     for name, material in [('tabletop', 'table'), ('rubber_1', 'rubber'), ('rubber_-1', 'rubber')]:
         element(contacts, 'pair', geom1='ball_geom', geom2=name, condim=6,

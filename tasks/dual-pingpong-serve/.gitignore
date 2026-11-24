@@ -5,9 +5,4 @@ authoring/evidence/*
 !authoring/evidence/panda-leap-static.json
 !authoring/evidence/preview-metrics.json
 !authoring/evidence/restitution-calibration.json
-!authoring/evidence/oracle-validation.json
-!authoring/evidence/submission-checks.json
-!authoring/evidence/oracle-*-grip.png
-!authoring/evidence/oracle-*-landing.png
-!authoring/evidence/oracle-*-shots.json
 !authoring/evidence/oracle-*.mp4
