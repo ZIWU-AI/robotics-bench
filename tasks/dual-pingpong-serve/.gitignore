@@ -1,0 +1,8 @@
+# Retain selected current scene and calibration evidence.
+authoring/evidence/*
+!authoring/evidence/*-initial.png
+!authoring/evidence/*-overview.png
+!authoring/evidence/panda-leap-static.json
+!authoring/evidence/preview-metrics.json
+!authoring/evidence/restitution-calibration.json
+!authoring/evidence/oracle-*.mp4

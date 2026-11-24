@@ -1,0 +1,33 @@
+{
+  "source_id": "maniladder-leap-hands",
+  "source": "https://github.com/HeegerGao/ManiLadder-Benchmark",
+  "license": "MIT",
+  "registry_status": "registration_requested",
+  "commit": "936c50effd7ab2e312bcb8cf98d142f6d9a20ef4",
+  "conversion": "prepare_leap.py; hand subtree with original visual/collision geometry and joint transforms",
+  "files": {
+    "assets/menagerie/leap_reference/assets/left/visual/palm_lower_left.obj": "6c683af7d5768211aa26957def2db7b6d7a67d1ce0a01d6dde5582f6f4c3b583",
+    "assets/menagerie/leap_reference/assets/left/visual/mcp_joint.obj": "ced48acb00872d78108e6111ac5ca9ba81f216765bf5d4f929b4824a0b759b6f",
+    "assets/menagerie/leap_reference/assets/left/visual/pip.obj": "0ff42ce0c0fceef19ab597f52c972652bdc8170708addac1f25c6a7d94aa82d7",
+    "assets/menagerie/leap_reference/assets/left/visual/dip.obj": "43cb2f231f1e0ca051609f97a6901ae0b77566c9ccd9cda7368164d4c4e5cc60",
+    "assets/menagerie/leap_reference/assets/left/visual/fingertip.obj": "570e9adfd81d7f505a066e649b8aa80c6d918c50878fac2516d0f33dab723e7a",
+    "assets/menagerie/leap_reference/assets/left/collision/white_tip.obj": "71db28929b35bcc70ad9a4522e6752545b27f6c9b868751ab9fa4642d58ea3ab",
+    "assets/menagerie/leap_reference/assets/left/visual/pip_left.obj": "f5a932f8d8be051e2920f2bbab25f4ac19ee876831cd058df6e42212c74b5bbe",
+    "assets/menagerie/leap_reference/assets/left/visual/thumb_pip.obj": "8185f060990c31610a9c14055b5e25fcf54e454a6e6fe2d3d71aeb1a1b2bd894",
+    "assets/menagerie/leap_reference/assets/left/visual/thumb_dip.obj": "94e8eec3fbe66fe0943dca375ac3391d4375fc75973c710e9b93c73c6b874e35",
+    "assets/menagerie/leap_reference/assets/left/visual/thumb_fingertip.obj": "45bb6eab1a65d98acc9dd8a67b0b63dbb2b28606a10aa78f5e5b4e76b6211675",
+    "assets/menagerie/leap_reference/assets/left/collision/white_tip_thumb.obj": "95933f968c431f60fc8e0a31ac206960dbea84f09a12fe6ba2117f4cdacc4dcb",
+    "assets/menagerie/leap_reference/left_hand.xml": "a613a2a04e8b775eec14b4be5aa4a534030df4e939334a2d19b308b3f99a723a",
+    "assets/menagerie/leap_reference/assets/right/visual/palm_lower.obj": "b9c590a7fb237610a10ff69602c077042314ab21baacd5de73dbb3929818d171",
+    "assets/menagerie/leap_reference/assets/right/visual/mcp_joint.obj": "ced48acb00872d78108e6111ac5ca9ba81f216765bf5d4f929b4824a0b759b6f",
+    "assets/menagerie/leap_reference/assets/right/visual/pip.obj": "0ff42ce0c0fceef19ab597f52c972652bdc8170708addac1f25c6a7d94aa82d7",
+    "assets/menagerie/leap_reference/assets/right/visual/dip.obj": "43cb2f231f1e0ca051609f97a6901ae0b77566c9ccd9cda7368164d4c4e5cc60",
+    "assets/menagerie/leap_reference/assets/right/visual/fingertip.obj": "570e9adfd81d7f505a066e649b8aa80c6d918c50878fac2516d0f33dab723e7a",
+    "assets/menagerie/leap_reference/assets/right/collision/white_tip.obj": "71db28929b35bcc70ad9a4522e6752545b27f6c9b868751ab9fa4642d58ea3ab",
+    "assets/menagerie/leap_reference/assets/right/visual/thumb_pip.obj": "8185f060990c31610a9c14055b5e25fcf54e454a6e6fe2d3d71aeb1a1b2bd894",
+    "assets/menagerie/leap_reference/assets/right/visual/thumb_dip.obj": "94e8eec3fbe66fe0943dca375ac3391d4375fc75973c710e9b93c73c6b874e35",
+    "assets/menagerie/leap_reference/assets/right/visual/thumb_fingertip.obj": "45bb6eab1a65d98acc9dd8a67b0b63dbb2b28606a10aa78f5e5b4e76b6211675",
+    "assets/menagerie/leap_reference/assets/right/collision/white_tip_thumb.obj": "95933f968c431f60fc8e0a31ac206960dbea84f09a12fe6ba2117f4cdacc4dcb",
+    "assets/menagerie/leap_reference/right_hand.xml": "74d5d81f63c08b36925373743ec0e15a2925087b69ee9daae45d28593ab5dec2"
+  }
+}

@@ -1,0 +1,1 @@
+{"task":"dual-pingpong-serve","layout":"near","case_order":["near","opponent","opponent-net","opponent-net-close"],"attempts_per_case":5,"target_size":[0.15,0.16],"budgets":{"trajectory":2400,"observations":1200,"retry":16}}

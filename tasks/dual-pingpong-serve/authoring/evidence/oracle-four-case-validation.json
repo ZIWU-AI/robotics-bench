@@ -1,0 +1,233 @@
+{
+  "date": "2026-11-24",
+  "runner": "Harbor Docker with independent replay",
+  "runtime": {
+    "python": "3.12.16",
+    "system": "Linux",
+    "machine": "x86_64",
+    "mujoco": "3.3.7",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3"
+  },
+  "attempt_limit": 5,
+  "source_sha256": {
+    "solution/oracle.py": "34e27d5f2a71867e76f08489c73950001913e2114548c9974e7cc43fd24b33f8",
+    "solution/grasp.py": "be26cbe0a4b545e0f1f57736eaed9b9ecf474fac1d5fab7251d645b5d27b0821",
+    "solution/shot_feedback.py": "febaebfabf670365078af2bb59e7e143b4a9080f5591243e663e072766672320",
+    "environment/service/sim.py": "cc48d95713908972da80b08da95101f93e764b7ffbe9a0535f4d92f7ad6bc109",
+    "tests/sim.py": "cc48d95713908972da80b08da95101f93e764b7ffbe9a0535f4d92f7ad6bc109",
+    "environment/runtime.tar.gz": "c7368050073b4f9016751c38fe628e38afb1b514b02493c4d1f6b7dfcee42bcf"
+  },
+  "baseline_comparison": {
+    "commit": "5bbfac9182d03a983ebedbcdc3905e7fb409d91b",
+    "layout": "opponent-net-close",
+    "matches_previous_harbor_shots": true,
+    "attempts": [
+      {
+        "attempt": 1,
+        "passed": false,
+        "first_landing": [
+          -0.34408241331066103,
+          0.2239229693524072
+        ]
+      },
+      {
+        "attempt": 2,
+        "passed": false,
+        "first_landing": [
+          -0.2252893537737524,
+          -0.014101468211316422
+        ]
+      },
+      {
+        "attempt": 3,
+        "passed": false,
+        "first_landing": [
+          -0.2744931426065247,
+          0.11010468456079016
+        ]
+      },
+      {
+        "attempt": 4,
+        "passed": false,
+        "first_landing": [
+          -0.26323433843048033,
+          0.19876390190456078
+        ]
+      },
+      {
+        "attempt": 5,
+        "passed": false,
+        "first_landing": [
+          -0.22831290507989133,
+          -0.14928360746787878
+        ]
+      }
+    ]
+  },
+  "oracle_runs": [
+    {
+      "job": "pingpong-fix-feedback",
+      "reward": 1.0,
+      "problems": [],
+      "cases": [
+        {
+          "layout": "near",
+          "passed": true,
+          "attempt": 1,
+          "first_landing": [
+            0.3256587262655081,
+            -0.451857833546548
+          ],
+          "failure_reasons": []
+        },
+        {
+          "layout": "opponent",
+          "passed": true,
+          "attempt": 2,
+          "first_landing": [
+            -0.03621334661205898,
+            0.8143090464881377
+          ],
+          "failure_reasons": []
+        },
+        {
+          "layout": "opponent-net",
+          "passed": true,
+          "attempt": 1,
+          "first_landing": [
+            0.23173353620961884,
+            0.5920205812789742
+          ],
+          "failure_reasons": []
+        },
+        {
+          "layout": "opponent-net-close",
+          "passed": true,
+          "attempt": 2,
+          "first_landing": [
+            -0.2694153138184782,
+            0.07299762951305598
+          ],
+          "failure_reasons": []
+        }
+      ]
+    },
+    {
+      "job": "pingpong-oracle-final",
+      "reward": 1.0,
+      "problems": [],
+      "cases": [
+        {
+          "layout": "near",
+          "passed": true,
+          "attempt": 1,
+          "first_landing": [
+            0.3256587262655081,
+            -0.451857833546548
+          ],
+          "failure_reasons": []
+        },
+        {
+          "layout": "opponent",
+          "passed": true,
+          "attempt": 2,
+          "first_landing": [
+            -0.03621334661205898,
+            0.8143090464881377
+          ],
+          "failure_reasons": []
+        },
+        {
+          "layout": "opponent-net",
+          "passed": true,
+          "attempt": 1,
+          "first_landing": [
+            0.23173353620961884,
+            0.5920205812789742
+          ],
+          "failure_reasons": []
+        },
+        {
+          "layout": "opponent-net-close",
+          "passed": true,
+          "attempt": 2,
+          "first_landing": [
+            -0.2694153138184782,
+            0.07299762951305598
+          ],
+          "failure_reasons": []
+        }
+      ]
+    }
+  ],
+  "repeated_shot_records_identical": true,
+  "nop_reward": 0.0,
+  "static_checks": {
+    "scripts": 27,
+    "passed": true
+  },
+  "readme_current": true,
+  "casekit_in_sync": true,
+  "casekit_gate": {
+    "task": "tasks\\dual-pingpong-serve",
+    "pass": true,
+    "checks": [
+      {
+        "check": "layout",
+        "pass": true,
+        "detail": "collect /opt/pingpong-service/collect.py, export /var/lib/pingpong/export, agent agent"
+      },
+      {
+        "check": "isolation",
+        "pass": true,
+        "detail": "launcher /usr/local/bin/start-pingpong-service; service, state and collector closed"
+      },
+      {
+        "check": "api",
+        "pass": true,
+        "detail": "/run/pingpong/endpoint.json; info api=dual-pingpong-serve-v1 backend=mujoco budgets={'trajectory': 2400, 'observations': 1200, 'retry': 16}"
+      },
+      {
+        "check": "envelope",
+        "pass": true,
+        "detail": "noauth -> 401, unknown -> 404, badjson -> 400"
+      },
+      {
+        "check": "finish",
+        "pass": true,
+        "detail": "finish ok; second finish refused: True; ops after finish accepted: none (of ['advance', 'observe', 'retry', 'trajectory'])"
+      },
+      {
+        "check": "nop",
+        "pass": true,
+        "detail": "reward 0; "
+      },
+      {
+        "check": "oracle",
+        "pass": true,
+        "detail": "solve.sh rc 0 in 553 s; reward 1; used None"
+      },
+      {
+        "check": "recording",
+        "pass": true,
+        "detail": "247 entries, ends with finish; edited line: reward 0"
+      },
+      {
+        "check": "replay",
+        "pass": true,
+        "detail": "entry 245 state actuator_ctrl.0 +0.01: reward 0; ValueError: recording.jsonl does not match its seal"
+      },
+      {
+        "check": "truncated",
+        "pass": true,
+        "detail": "finish entry removed: reward 0; ValueError: recording.jsonl does not match its seal"
+      },
+      {
+        "check": "unfinished",
+        "pass": true,
+        "detail": "collected without a finish from the agent: last entry finish {'by': 'collector'}; oracle with the collector's finish: reward 0; ValueError: recording.jsonl does not match its seal"
+      }
+    ]
+  }
+}
