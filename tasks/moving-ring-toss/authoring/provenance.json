@@ -1,0 +1,17 @@
+{
+  "assets": [
+    {
+      "name": "MuJoCo Menagerie Universal Robots UR5e",
+      "copyright": "2018 ROS Industrial Consortium",
+      "source": "https://github.com/google-deepmind/mujoco_menagerie/tree/fb36886b3023db08c198264e1e9956ab202c3e3b/universal_robots_ur5e",
+      "revision": "fb36886b3023db08c198264e1e9956ab202c3e3b",
+      "license": "BSD-3-Clause",
+      "license_file": "authoring/licenses/ur5e.txt",
+      "files": [
+        "environment/service/ur5e/ur5e.xml",
+        "tests/ur5e/ur5e.xml"
+      ],
+      "adaptation": "Keeps the upstream UR5e joint, inertial and collision descriptions. The task renders the collision primitives and a procedural base."
+    }
+  ]
+}
