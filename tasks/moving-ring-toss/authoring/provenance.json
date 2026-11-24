@@ -1,0 +1,36 @@
+{
+  "assets": [
+    {
+      "name": "MuJoCo Menagerie Universal Robots UR5e",
+      "copyright": "2018 ROS Industrial Consortium",
+      "source": "https://github.com/google-deepmind/mujoco_menagerie/tree/fb36886b3023db08c198264e1e9956ab202c3e3b/universal_robots_ur5e",
+      "revision": "fb36886b3023db08c198264e1e9956ab202c3e3b",
+      "license": "BSD-3-Clause",
+      "license_file": "authoring/licenses/ur5e.txt",
+      "files": [
+        "environment/service/ur5e/ur5e.xml",
+        "environment/service/ur5e/assets/base_0.obj",
+        "environment/service/ur5e/assets/base_1.obj",
+        "environment/service/ur5e/assets/forearm_0.obj",
+        "environment/service/ur5e/assets/forearm_1.obj",
+        "environment/service/ur5e/assets/forearm_2.obj",
+        "environment/service/ur5e/assets/forearm_3.obj",
+        "environment/service/ur5e/assets/shoulder_0.obj",
+        "environment/service/ur5e/assets/shoulder_1.obj",
+        "environment/service/ur5e/assets/shoulder_2.obj",
+        "environment/service/ur5e/assets/upperarm_0.obj",
+        "environment/service/ur5e/assets/upperarm_1.obj",
+        "environment/service/ur5e/assets/upperarm_2.obj",
+        "environment/service/ur5e/assets/upperarm_3.obj",
+        "environment/service/ur5e/assets/wrist1_0.obj",
+        "environment/service/ur5e/assets/wrist1_1.obj",
+        "environment/service/ur5e/assets/wrist1_2.obj",
+        "environment/service/ur5e/assets/wrist2_0.obj",
+        "environment/service/ur5e/assets/wrist2_1.obj",
+        "environment/service/ur5e/assets/wrist2_2.obj",
+        "environment/service/ur5e/assets/wrist3.obj",
+        "tests/ur5e/ur5e.xml"
+      ]
+    }
+  ]
+}
