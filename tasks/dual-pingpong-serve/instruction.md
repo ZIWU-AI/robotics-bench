@@ -32,8 +32,8 @@ the selected target are available through `info()`.
 - `g.advance()` ends the current attempt, saves the case result, and loads the next case with attempt 1.
   It is available when the current case passes or is on attempt 5, including a failed fifth attempt.
   Call `info()` again for the new model and target. On the final case use `finish()`.
-- `g.finish()` ends the final attempt and seals the episode once the final case passes or reaches attempt 5.
-  Earlier submission is refused so all four cases can be attempted. Nothing moves after sealing.
+- `g.finish()` ends the current attempt and seals the episode. Submitting with an unfinished case gives reward 0.
+  Nothing moves after sealing.
 
 `attempt_history` in `info()` and observations stores ended attempts for the current case. Each item contains
 `attempt`, `time_s`, `passed`, `failure_reasons`, `ended_by`, and the measured landing, strike count, grasp/lift
@@ -61,7 +61,7 @@ re-executes that record in a new simulator and compares the resulting states.
 
 ## Success
 
-All four cases must be completed and their attempt histories saved before the agent submits with `finish()`.
+Reward 1 requires all four cases to be completed with their attempt histories saved when the agent calls `finish()`.
 A case that exhausts five failed attempts still advances to the next case. Reward is 1 only when all four
 case results pass; any failed case makes the final reward 0. Each passing case requires:
 

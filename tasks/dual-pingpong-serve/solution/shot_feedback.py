@@ -15,7 +15,7 @@ import numpy as np
 
 @dataclass(frozen=True)
 class ShotParameters:
-    """Five feedback controls plus planned swing elevation; drop_speed is downward."""
+    """Six feedback controls; drop_speed is downward."""
 
     yaw: float
     pitch: float
@@ -64,6 +64,7 @@ class ShotLimits:
     pitch: tuple[float, float] = (0.05, 1.35)
     drop_speed: tuple[float, float] = (0.6, 1.8)
     swing_speed: tuple[float, float] = (0.1, 3.0)
+    swing_pitch: tuple[float, float] = (-1.35, 1.35)
     max_release_height: float | None = None
 
     def project(self, parameters: ShotParameters, impact_height: float,
@@ -82,7 +83,8 @@ class ShotLimits:
         return ShotParameters(float(_wrap_angle(yaw)), float(pitch),
                               float(np.clip(parameters.drop_speed, self.drop_speed[0], drop_max)),
                               float(_wrap_angle(swing_yaw)),
-                              float(np.clip(parameters.swing_speed, *self.swing_speed)), parameters.swing_pitch)
+                              float(np.clip(parameters.swing_speed, *self.swing_speed)),
+                              float(np.clip(parameters.swing_pitch, *self.swing_pitch)))
 
 
 @dataclass(frozen=True)
@@ -334,16 +336,16 @@ def inverse_initial_shot(impact_position, target, *, drop_speed: float = 1.0,
 
 
 def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
-                damping: float = 0.08, gain: float = 0.8,
+                damping: float = 0.08, gain: float = 0.4,
                 velocity_weight: float = 0.15,
-                control_scales: tuple[float, ...] = (0.12, 0.12, 0.4, 0.16, 0.4),
+                control_scales: tuple[float, ...] = (0.12, 0.12, 0.4, 0.16, 0.4, 0.12),
                 difference_step: float = 1e-3, limits: ShotLimits | None = None,
                 friction_limit: float | None = None) -> ShotParameters:
     """Apply one measured-data, regularized finite-difference feedback step.
 
     Fit normal and tangential response from measured relative contact velocity.
     Rotate perturbed normals by the minimal commanded-to-measured orientation
-    bias. Anchor velocity and landing to this shot; perturb all five controls.
+    bias. Anchor velocity and landing to this shot; perturb all six controls.
     Supply fixed-initial ShotLimits to retain relative bounds across shots;
     default limits apply the physical speed and pitch ranges. Residuals combine
     two landing errors, three launch-velocity errors and net constraints. Ridge
@@ -377,12 +379,12 @@ def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
         limits = ShotLimits(parameters)
     bounded = limits.project(parameters, obs.impact_position[2], obs.gravity)
     origin = np.array([bounded.yaw, bounded.pitch, bounded.drop_speed,
-                       bounded.swing_yaw, bounded.swing_speed])
+                       bounded.swing_yaw, bounded.swing_speed, bounded.swing_pitch])
     scales = np.asarray(control_scales)
 
     def shifted(step):
         values = origin + scales * step
-        return limits.project(ShotParameters(*values, swing_pitch=parameters.swing_pitch), obs.impact_position[2], obs.gravity)
+        return limits.project(ShotParameters(*values), obs.impact_position[2], obs.gravity)
 
     def residual(candidate):
         vin = incoming + np.array([0.0, 0.0, parameters.drop_speed - candidate.drop_speed])
@@ -405,11 +407,11 @@ def update_shot(parameters: ShotParameters, observation: ShotObservation, *,
         return np.asarray(errors)
 
     error = residual(bounded)
-    perturbations = difference_step * np.eye(5)
+    perturbations = difference_step * np.eye(6)
     jacobian = np.column_stack([(residual(shifted(delta)) - residual(shifted(-delta)))
                                 / (2 * difference_step) for delta in perturbations])
-    step = np.linalg.lstsq(np.vstack([jacobian, damping * np.eye(5)]),
-                           np.concatenate([-error, np.zeros(5)]), rcond=None)[0]
+    step = np.linalg.lstsq(np.vstack([jacobian, damping * np.eye(6)]),
+                           np.concatenate([-error, np.zeros(6)]), rcond=None)[0]
     step *= gain / max(1.0, np.linalg.norm(step))
     candidates = [bounded] + [shifted(step * fraction) for fraction in (1, 0.5, 0.25, 0.125)]
     return min(candidates, key=lambda candidate: np.linalg.norm(residual(candidate)))

@@ -291,7 +291,7 @@ def face_rotation(normal):
     return np.column_stack([np.cross(y, normal), y, normal])
 
 
-def perform_shot(controller, parameters, impact, paddle_grasp, ball_grasp):
+def perform_shot(controller, parameters, impact, paddle_grasp, ball_grasp, *, release_during_ramp=False):
     c = controller
     normal = parameters.face_normal()
     rotation = face_rotation(normal)
@@ -314,7 +314,7 @@ def perform_shot(controller, parameters, impact, paddle_grasp, ball_grasp):
     opening_time = .09
     release_latency = .015
     start = hit_center - velocity * (ramp_time / 2 + parameters.release_delay() + release_latency)
-    if parameters.swing_pitch:
+    if release_during_ramp:
         ramp_time = parameters.release_delay() + release_latency
         start = hit_center - velocity * ramp_time / 2
     c.place_object('paddle', 'left', start, rotation, paddle_transform, 3.0)
@@ -324,9 +324,9 @@ def perform_shot(controller, parameters, impact, paddle_grasp, ball_grasp):
     c.log('ready', parameters=asdict(parameters), impact=impact.tolist(), release=release.tolist(),
           **c.paddle_slip(grip_reference))
     c.stroke(start, rotation, paddle_transform, velocity, ramp_time, accelerating=True,
-             fingers=ball_grasp.opened if parameters.swing_pitch else None, retreat=bool(parameters.swing_pitch))
+             fingers=ball_grasp.opened if release_during_ramp else None, retreat=release_during_ramp)
     reference = start + velocity * ramp_time / 2
-    if not parameters.swing_pitch:
+    if not release_during_ramp:
         c.stroke(reference, rotation, paddle_transform, velocity, opening_time, fingers=ball_grasp.opened)
         reference += velocity * opening_time
     c.log('released')
@@ -381,13 +381,15 @@ def main():
             net = NetConfig(net.y, net.height, net.x_min, net.x_max, .084)
             shot = inverse_initial_shot(impact, target, drop_speed=1.5, restitution=.75,
                                        flight_time=flight_time, table_height=table['height'], net=net)
+        release_during_ramp = bool(shot.swing_pitch)
         limits = ShotLimits(shot, yaw_offset=(-.4, .4), pitch_offset=(-.4, .4),
-                            swing_yaw_offset=(-.4, .4), max_release_height=1.16)
+                            swing_yaw_offset=(-.4, .4), max_release_height=1.16,
+                            swing_pitch=(.05, 1.35) if release_during_ramp else (-.4, .4))
         for attempt in range(c.info['attempts']):
             try:
                 paddle = c.grasp('paddle')
                 ball = c.grasp('ball')
-                state = perform_shot(c, shot, impact, paddle, ball)
+                state = perform_shot(c, shot, impact, paddle, ball, release_during_ramp=release_during_ramp)
                 landing = state['first_landing']
                 success = state['case_passed']
                 attempts.append(dict(layout=c.info['layout'], attempt=state['attempt'], parameters=asdict(shot),

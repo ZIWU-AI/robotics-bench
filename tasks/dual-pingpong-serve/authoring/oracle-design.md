@@ -37,11 +37,11 @@ The Oracle uses the public interface for inverse kinematics, approach planning, 
 
 ## Landing Feedback
 
-`solution/shot_feedback.py` adjusts five measured controls: paddle-face yaw and pitch, ball downward speed at impact, swing yaw, and swing speed. Initial trajectory planning also selects the upward swing angle. The close-net shot swings along the paddle-face normal to create a lofted arc.
+`solution/shot_feedback.py` adjusts six measured controls: paddle-face yaw and pitch, ball downward speed at impact, swing yaw, swing speed, and swing elevation. Swing elevation can change within the planned stroke's reachable range. Each case retains its initial release schedule throughout feedback.
 
 `inverse_initial_shot()` jointly solves the ballistic path and moving-paddle collision. Net layouts require the ball bottom to clear the net with a 30 mm planned margin. Impact records include incoming and outgoing ball velocity, paddle normal, contact-point velocity, end-of-contact position, and first landing. Contact-point velocity includes paddle angular motion.
 
-`fit_impact_response()` estimates normal restitution and tangential dissipation from relative velocities. `update_shot()` compensates orientation using the measured paddle normal and uses finite differences for the five controls. A damped least-squares update reduces landing, outgoing-velocity, and net-clearance errors; a short line search selects the update step. Control bounds follow reachable joint ranges and the release-height limit. The planned downward speed is realized by changing release height.
+`fit_impact_response()` estimates normal restitution and tangential dissipation from relative velocities. `update_shot()` compensates orientation using the measured paddle normal and uses finite differences for the six controls. A damped least-squares update with a 0.4 gain reduces landing, outgoing-velocity, and net-clearance errors; a short line search selects the update step. Control bounds follow reachable joint ranges and the release-height limit. The planned downward speed is realized by changing release height.
 
 ## Contact Parameters
 

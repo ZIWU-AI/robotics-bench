@@ -220,8 +220,6 @@ class Sim:
         self._load_case()
 
     def finish(self, by_collector=False):
-        if not by_collector and (self.case_index + 1 != len(self.case_order) or not self.case_complete()):
-            raise ValueError('complete every case before finishing; pass or use all attempts in each case')
         self._end_attempt('collector' if by_collector else 'finish')
 
     def _end_attempt(self, ended_by):

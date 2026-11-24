@@ -11,6 +11,7 @@ COPY service /opt/pingpong-service
 COPY runtime.tar.gz runtime.sha256 /tmp/
 RUN cd /tmp && sha256sum -c runtime.sha256 && tar -xzf runtime.tar.gz -C /opt/pingpong-service && rm runtime.tar.gz runtime.sha256
 COPY start-pingpong-service /usr/local/bin/start-pingpong-service
+RUN sed -i 's/\r$//' /usr/local/bin/start-pingpong-service
 # public to the agent: the client
 COPY app/ /app/
 RUN chmod -R go-rwx /opt/pingpong-service && chmod 0755 /usr/local/bin/start-pingpong-service && \
