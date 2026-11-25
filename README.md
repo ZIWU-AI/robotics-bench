@@ -45,6 +45,12 @@ Robotics-Bench runs on the [Harbor](https://github.com/harbor-framework/harbor) 
 validation automation are adapted from [Terminal-Bench-Science](https://github.com/harbor-framework/terminal-bench-science)
 under the Apache License 2.0; see [NOTICE](NOTICE).
 
+We thank [Volcengine](https://www.volcengine.com/activity/ai618?utm_source=5&utm_medium=sem_bing&utm_term=sem_bing_pinpaici_618shenghui_ssdingdan_gw&utm_campaign=76554047868156&utm_content=618_shenghui_guanwang&msclkid=069caee39b8510cb8ebdc5e5d2a43d14)
+for token credits and CPU compute resources, [Alibaba Qoder](https://qoder.com/) for token credits, and
+[Intel](https://www.intel.com/content/www/us/en/developer/overview.html) for CPU compute resources supporting Robotics-Bench.
+We also thank [AWS](https://startups.aws.com/programs) for support through its accelerator program, and
+[NVIDIA](https://www.nvidia.com/en-us/about-nvidia/partners/) for its support as an ecosystem partner.
+
 ## License
 
 [Apache License 2.0](LICENSE).
